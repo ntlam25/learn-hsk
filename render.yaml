@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: hanzi-course-api
+    name: comaixinh-hsk-api
     runtime: node
     rootDir: server
     plan: free
