@@ -1,0 +1,479 @@
+{
+  "lessonNumber": 5,
+  "seal": "五课",
+  "titleZh": "第5课",
+  "titleVi": "Bài 5 · 这是王老师",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "这",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhè",
+      "pos": "Đại từ",
+      "meaning": "đây; này",
+      "examples": [
+        [
+          "这是我爸爸。",
+          "",
+          "Đây là bố tôi."
+        ],
+        [
+          "这是我学校。",
+          "",
+          "Đây là trường của tôi."
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "是",
+          "p": ""
+        }
+      ],
+      "pinyin": "shì",
+      "pos": "Động từ",
+      "meaning": "là; đúng"
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "老",
+          "p": ""
+        },
+        {
+          "h": "师",
+          "p": ""
+        }
+      ],
+      "pinyin": "lǎoshī",
+      "pos": "Danh từ",
+      "meaning": "giáo viên",
+      "examples": [
+        [
+          "我是老师。",
+          "",
+          "Tôi là giáo viên."
+        ],
+        [
+          "那是我老师。",
+          "",
+          "Kia là giáo viên của tôi."
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "您",
+          "p": ""
+        }
+      ],
+      "pinyin": "nín",
+      "pos": "Đại từ",
+      "meaning": "ngài; ông/bà (kính ngữ)",
+      "note": "Cách xưng hô lịch sự của 你.",
+      "examples": [
+        [
+          "您好！",
+          "",
+          "Xin chào ngài!"
+        ],
+        [
+          "您是老师吗？",
+          "",
+          "Ngài là giáo viên phải không?"
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "请",
+          "p": ""
+        }
+      ],
+      "pinyin": "qǐng",
+      "pos": "Động từ",
+      "meaning": "mời; xin",
+      "examples": [
+        [
+          "请进！",
+          "",
+          "Mời vào!"
+        ],
+        [
+          "请说。",
+          "",
+          "Xin mời nói."
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "进",
+          "p": ""
+        }
+      ],
+      "pinyin": "jìn",
+      "pos": "Động từ",
+      "meaning": "vào",
+      "note": "辶 thường viết sau cùng.",
+      "examples": [
+        [
+          "请进！",
+          "",
+          "Mời vào!"
+        ],
+        [
+          "老师，请进。",
+          "",
+          "Thưa thầy/cô, mời vào."
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "坐",
+          "p": ""
+        }
+      ],
+      "pinyin": "zuò",
+      "pos": "Động từ",
+      "meaning": "ngồi",
+      "examples": [
+        [
+          "请坐！",
+          "",
+          "Mời ngồi!"
+        ],
+        [
+          "你坐哪儿？",
+          "",
+          "Bạn ngồi ở đâu?"
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "喝",
+          "p": ""
+        }
+      ],
+      "pinyin": "hē",
+      "pos": "Động từ",
+      "meaning": "uống",
+      "examples": [
+        [
+          "请喝茶。",
+          "",
+          "Mời uống trà."
+        ],
+        [
+          "我不喝咖啡。",
+          "",
+          "Tôi không uống cà phê."
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "茶",
+          "p": ""
+        }
+      ],
+      "pinyin": "chá",
+      "pos": "Danh từ",
+      "meaning": "trà; chè",
+      "examples": [
+        [
+          "请喝茶。",
+          "",
+          "Mời uống trà."
+        ],
+        [
+          "哥哥不喝茶。",
+          "",
+          "Anh trai không uống trà."
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "谢",
+          "p": ""
+        },
+        {
+          "h": "谢",
+          "p": ""
+        }
+      ],
+      "pinyin": "xièxie",
+      "pos": "Động từ/Cụm từ",
+      "meaning": "cảm ơn"
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "不",
+          "p": ""
+        },
+        {
+          "h": "客",
+          "p": ""
+        },
+        {
+          "h": "气",
+          "p": ""
+        }
+      ],
+      "pinyin": "bú kèqi",
+      "pos": "Cụm từ",
+      "meaning": "không có gì; đừng khách sáo",
+      "wordlist": [
+        {
+          "h": "客气",
+          "p": "kèqi",
+          "m": "khách sáo; lịch sự"
+        }
+      ],
+      "examples": [
+        [
+          "A：谢谢！ B：不客气！",
+          "",
+          "A: Cảm ơn! B: Không có gì!"
+        ],
+        [
+          "你太客气了。",
+          "",
+          "Bạn khách sáo quá."
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "工",
+          "p": ""
+        },
+        {
+          "h": "作",
+          "p": ""
+        }
+      ],
+      "pinyin": "gōngzuò",
+      "pos": "Danh từ/Động từ",
+      "meaning": "công việc; làm việc",
+      "examples": [
+        [
+          "你工作忙吗？",
+          "",
+          "Công việc của bạn có bận không?"
+        ],
+        [
+          "我工作很忙。",
+          "",
+          "Công việc của tôi rất bận."
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "身",
+          "p": ""
+        },
+        {
+          "h": "体",
+          "p": ""
+        }
+      ],
+      "pinyin": "shēntǐ",
+      "pos": "Danh từ",
+      "meaning": "cơ thể; sức khỏe",
+      "wordlist": [
+        {
+          "h": "身",
+          "p": "shēn",
+          "m": "thân; cơ thể"
+        }
+      ],
+      "examples": [
+        [
+          "你身体好吗？",
+          "",
+          "Bạn có khỏe không?"
+        ],
+        [
+          "我身体很好。",
+          "",
+          "Tôi rất khỏe."
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "十",
+          "p": ""
+        }
+      ],
+      "pinyin": "shí",
+      "pos": "Số từ",
+      "meaning": "mười"
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "日",
+          "p": ""
+        }
+      ],
+      "pinyin": "rì",
+      "pos": "Danh từ",
+      "meaning": "mặt trời; ngày"
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "课文",
+      "lines": [
+        {
+          "role": "A",
+          "text": "这是王老师，这是我爸爸。"
+        },
+        {
+          "role": "B",
+          "text": "王老师，您好！"
+        },
+        {
+          "role": "C",
+          "text": "您好！请进！请坐！请喝茶！"
+        },
+        {
+          "role": "B",
+          "text": "谢谢！"
+        },
+        {
+          "role": "C",
+          "text": "不客气！"
+        },
+        {
+          "role": "C",
+          "text": "工作忙吗？"
+        },
+        {
+          "role": "B",
+          "text": "不太忙。"
+        },
+        {
+          "role": "C",
+          "text": "身体好吗？"
+        },
+        {
+          "role": "B",
+          "text": "很好！"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "notes": [
+      {
+        "title": "轻声 · Thanh nhẹ",
+        "content": "谢谢 xièxie、不客气 búkèqi、身体 shēntǐ: âm tiết nhẹ đọc ngắn, không nhấn."
+      },
+      {
+        "title": "j / q / x",
+        "content": "进 jìn、请 qǐng、谢谢 xièxie: đầu lưỡi đặt thấp, mặt lưỡi tiến gần vòm cứng."
+      },
+      {
+        "title": "Ngữ điệu lịch sự",
+        "content": "您好、请进、请坐、请喝茶 đọc rõ, tốc độ vừa phải và hạ giọng nhẹ ở cuối câu mời."
+      }
+    ],
+    "chips": [
+      {
+        "title": "认读练习",
+        "desc": "Đọc chữ Hán rồi đối chiếu phiên âm.",
+        "items": [
+          [
+            "在",
+            "zài"
+          ],
+          [
+            "这",
+            "zhè"
+          ],
+          [
+            "老师",
+            "lǎoshī"
+          ],
+          [
+            "您",
+            "nín"
+          ],
+          [
+            "进",
+            "jìn"
+          ],
+          [
+            "请",
+            "qǐng"
+          ],
+          [
+            "坐",
+            "zuò"
+          ],
+          [
+            "喝",
+            "hē"
+          ],
+          [
+            "茶",
+            "chá"
+          ],
+          [
+            "谢",
+            "xiè"
+          ],
+          [
+            "不客气",
+            "búkèqi"
+          ],
+          [
+            "工作",
+            "gōngzuò"
+          ]
+        ]
+      }
+    ]
+  },
+  "extra": {}
+}

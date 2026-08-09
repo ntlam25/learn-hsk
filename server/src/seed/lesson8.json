@@ -1,0 +1,678 @@
+{
+  "lessonNumber": 8,
+  "seal": "八课",
+  "titleZh": "第8课",
+  "titleVi": "Bài 8 · 苹果一斤多少钱",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "买",
+          "p": ""
+        }
+      ],
+      "pinyin": "mǎi",
+      "pos": "Động từ",
+      "meaning": "mua",
+      "examples": [
+        [
+          "我去买水果。",
+          "",
+          "Tôi đi mua hoa quả."
+        ],
+        [
+          "你去哪儿买书？",
+          "",
+          "Bạn đi đâu mua sách?"
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "水",
+          "p": ""
+        },
+        {
+          "h": "果",
+          "p": ""
+        }
+      ],
+      "pinyin": "shuǐguǒ",
+      "pos": "Danh từ",
+      "meaning": "hoa quả; trái cây",
+      "examples": [
+        [
+          "今天早上我吃水果。",
+          "",
+          "Sáng nay tôi ăn hoa quả."
+        ],
+        [
+          "请吃水果。",
+          "",
+          "Mời ăn hoa quả."
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "苹",
+          "p": ""
+        },
+        {
+          "h": "果",
+          "p": ""
+        }
+      ],
+      "pinyin": "píngguǒ",
+      "pos": "Danh từ",
+      "meaning": "táo",
+      "examples": [
+        [
+          "我买美国苹果。",
+          "",
+          "Tôi mua táo Mỹ."
+        ],
+        [
+          "苹果一斤多少钱？",
+          "",
+          "Một cân táo bao nhiêu tiền?"
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "斤",
+          "p": ""
+        }
+      ],
+      "pinyin": "jīn",
+      "pos": "Lượng từ",
+      "meaning": "cân Trung Quốc (0,5 kg)",
+      "wordlist": [
+        {
+          "h": "公斤",
+          "p": "gōngjīn",
+          "m": "kilôgam"
+        }
+      ],
+      "examples": [
+        [
+          "我买五斤苹果。",
+          "",
+          "Tôi mua 5 cân táo."
+        ],
+        [
+          "橘子两块一斤。",
+          "",
+          "Quýt 2 tệ một cân."
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "多",
+          "p": ""
+        },
+        {
+          "h": "少",
+          "p": ""
+        }
+      ],
+      "pinyin": "duōshao",
+      "pos": "Đại từ",
+      "meaning": "bao nhiêu",
+      "wordlist": [
+        {
+          "h": "多",
+          "p": "duō",
+          "m": "nhiều"
+        },
+        {
+          "h": "少",
+          "p": "shǎo",
+          "m": "ít"
+        }
+      ],
+      "examples": [
+        [
+          "苹果多少钱一斤？",
+          "",
+          "Táo bao nhiêu tiền một cân?"
+        ],
+        [
+          "你们班有多少人？",
+          "",
+          "Lớp bạn có bao nhiêu người?"
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "块",
+          "p": ""
+        },
+        {
+          "h": "元",
+          "p": ""
+        }
+      ],
+      "pinyin": "kuài (yuán)",
+      "pos": "Lượng từ",
+      "meaning": "đồng; tệ",
+      "wordlist": [
+        {
+          "h": "角（毛）",
+          "p": "jiǎo (máo)",
+          "m": "hào; 1/10 tệ"
+        },
+        {
+          "h": "分",
+          "p": "fēn",
+          "m": "xu; 1/100 tệ"
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "贵",
+          "p": ""
+        }
+      ],
+      "pinyin": "guì",
+      "pos": "Tính từ",
+      "meaning": "đắt"
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "太",
+          "p": ""
+        },
+        {
+          "h": "了",
+          "p": ""
+        }
+      ],
+      "pinyin": "tài…le",
+      "pos": "Cấu trúc",
+      "meaning": "quá… rồi"
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "便",
+          "p": ""
+        },
+        {
+          "h": "宜",
+          "p": ""
+        }
+      ],
+      "pinyin": "piányi",
+      "pos": "Tính từ",
+      "meaning": "rẻ"
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "一",
+          "p": ""
+        },
+        {
+          "h": "点",
+          "p": ""
+        },
+        {
+          "h": "儿",
+          "p": ""
+        }
+      ],
+      "pinyin": "(yì) diǎnr",
+      "pos": "Lượng từ",
+      "meaning": "một chút; một ít"
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "来",
+          "p": ""
+        }
+      ],
+      "pinyin": "lái",
+      "pos": "Động từ",
+      "meaning": "lấy; mua (dùng khi gọi món/mua hàng)"
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "吧",
+          "p": ""
+        }
+      ],
+      "pinyin": "ba",
+      "pos": "Trợ từ",
+      "meaning": "nhé; đi; nào",
+      "examples": [
+        [
+          "我们去吃饭吧！",
+          "",
+          "Chúng ta đi ăn nhé!"
+        ],
+        [
+          "两块五吧。",
+          "",
+          "Hai tệ rưỡi nhé."
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "还",
+          "p": ""
+        }
+      ],
+      "pinyin": "hái",
+      "pos": "Phó từ",
+      "meaning": "còn; vẫn; thêm nữa",
+      "examples": [
+        [
+          "我学习英语，还学汉语。",
+          "",
+          "Tôi học tiếng Anh, còn học cả tiếng Hán."
+        ],
+        [
+          "你还要什么吗？",
+          "",
+          "Bạn còn cần gì nữa không?"
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "别",
+          "p": ""
+        },
+        {
+          "h": "的",
+          "p": ""
+        }
+      ],
+      "pinyin": "biéde",
+      "pos": "Đại từ",
+      "meaning": "cái khác; thứ khác",
+      "examples": [
+        [
+          "你还要别的吗？",
+          "",
+          "Bạn còn muốn thứ khác không?"
+        ],
+        [
+          "这是别的老师。",
+          "",
+          "Đây là giáo viên khác."
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "橘",
+          "p": ""
+        },
+        {
+          "h": "子",
+          "p": ""
+        }
+      ],
+      "pinyin": "júzi",
+      "pos": "Danh từ",
+      "meaning": "quýt",
+      "note": "子 đọc thanh nhẹ.",
+      "examples": [
+        [
+          "橘子一斤多少钱？",
+          "",
+          "Một cân quýt bao nhiêu tiền?"
+        ],
+        [
+          "我去买越南橘子。",
+          "",
+          "Tôi đi mua quýt Việt Nam."
+        ]
+      ]
+    },
+    {
+      "num": 16,
+      "chars": [
+        {
+          "h": "怎",
+          "p": ""
+        },
+        {
+          "h": "么",
+          "p": ""
+        }
+      ],
+      "pinyin": "zěnme",
+      "pos": "Đại từ",
+      "meaning": "như thế nào; làm sao",
+      "examples": [
+        [
+          "橘子怎么卖？",
+          "",
+          "Quýt bán thế nào?"
+        ],
+        [
+          "你怎么学汉语？",
+          "",
+          "Bạn học tiếng Hán như thế nào?"
+        ]
+      ]
+    },
+    {
+      "num": 17,
+      "chars": [
+        {
+          "h": "卖",
+          "p": ""
+        }
+      ],
+      "pinyin": "mài",
+      "pos": "Động từ",
+      "meaning": "bán",
+      "examples": [
+        [
+          "你卖什么？",
+          "",
+          "Bạn bán gì?"
+        ],
+        [
+          "我卖馒头。",
+          "",
+          "Tôi bán bánh bao chay."
+        ]
+      ]
+    },
+    {
+      "num": 18,
+      "chars": [
+        {
+          "h": "两",
+          "p": ""
+        }
+      ],
+      "pinyin": "liǎng",
+      "pos": "Số từ",
+      "meaning": "hai (đứng trước lượng từ)",
+      "note": "Dùng 二 khi đếm số; dùng 两 trước lượng từ.",
+      "examples": [
+        [
+          "两个人。",
+          "",
+          "Hai người."
+        ],
+        [
+          "两斤苹果。",
+          "",
+          "Hai cân táo."
+        ]
+      ]
+    },
+    {
+      "num": 19,
+      "chars": [
+        {
+          "h": "一",
+          "p": ""
+        },
+        {
+          "h": "共",
+          "p": ""
+        }
+      ],
+      "pinyin": "yígòng",
+      "pos": "Phó từ",
+      "meaning": "tổng cộng",
+      "examples": [
+        [
+          "我一共买三斤橘子。",
+          "",
+          "Tôi tổng cộng mua ba cân quýt."
+        ],
+        [
+          "一共多少钱？",
+          "",
+          "Tổng cộng bao nhiêu tiền?"
+        ]
+      ]
+    },
+    {
+      "num": 20,
+      "chars": [
+        {
+          "h": "给",
+          "p": ""
+        }
+      ],
+      "pinyin": "gěi",
+      "pos": "Động từ",
+      "meaning": "đưa; cho",
+      "examples": [
+        [
+          "妈妈给我书。",
+          "",
+          "Mẹ đưa sách cho tôi."
+        ],
+        [
+          "给你钱。",
+          "",
+          "Đưa bạn tiền."
+        ]
+      ]
+    },
+    {
+      "num": 21,
+      "chars": [
+        {
+          "h": "找",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhǎo",
+      "pos": "Động từ",
+      "meaning": "trả lại tiền thừa; tìm",
+      "examples": [
+        [
+          "你找什么？",
+          "",
+          "Bạn tìm gì?"
+        ],
+        [
+          "找您三十四块。",
+          "",
+          "Trả lại ngài 34 tệ."
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "课文",
+      "lines": [
+        {
+          "role": "A",
+          "text": "您好，您买什么？"
+        },
+        {
+          "role": "B",
+          "text": "我买水果。苹果一斤多少钱？"
+        },
+        {
+          "role": "A",
+          "text": "六块。"
+        },
+        {
+          "role": "B",
+          "text": "六块？太贵了。便宜点儿吧。"
+        },
+        {
+          "role": "A",
+          "text": "你要多少？"
+        },
+        {
+          "role": "B",
+          "text": "来五个吧。"
+        },
+        {
+          "role": "A",
+          "text": "还要别的吗？"
+        },
+        {
+          "role": "B",
+          "text": "橘子怎么卖？"
+        },
+        {
+          "role": "A",
+          "text": "八块。"
+        },
+        {
+          "role": "B",
+          "text": "要两斤吧。一共多少钱？"
+        },
+        {
+          "role": "A",
+          "text": "一共二十一块三（毛）。你给二十一吧。"
+        },
+        {
+          "role": "B",
+          "text": "好。给你钱。"
+        },
+        {
+          "role": "A",
+          "text": "这是五十，找您二十九块。"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "notes": [
+      {
+        "title": "多音节词重音",
+        "content": "Từ có ba âm tiết trở lên thường nhấn âm tiết cuối: 留学生、图书馆、飞机场、火车站、大使馆。"
+      },
+      {
+        "title": "一的变调",
+        "content": "一斤 yì jīn、一共 yígòng: trước thanh 1/2/3 đọc yì; trước thanh 4 đọc yí."
+      },
+      {
+        "title": "轻声",
+        "content": "多少 duōshao、橘子 júzi、别的 biéde: âm cuối đọc nhẹ."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "太……了",
+        "content": "Cảm thán mức độ cao: 太贵了、太多了、太好吃了。"
+      },
+      {
+        "title": "多少钱一斤？",
+        "content": "Hỏi giá theo đơn vị: 苹果多少钱一斤？— 三块一斤。"
+      },
+      {
+        "title": "两 và 二",
+        "content": "两 đứng trước lượng từ: 两斤、两个；二 dùng để đếm và trong số: 二、十二、二十。"
+      },
+      {
+        "title": "Tiền tệ",
+        "content": "1 元/块 = 10 角/毛. 两块五 thường hiểu là 2,5 tệ trong khẩu ngữ."
+      },
+      {
+        "title": "还要别的吗？",
+        "content": "还 + động từ: còn/tiếp tục; 别的: thứ khác. Mẫu dùng khi hỏi khách còn mua thêm gì không."
+      }
+    ],
+    "chips": [
+      {
+        "title": "认读练习",
+        "desc": "Đọc chữ Hán rồi đối chiếu phiên âm.",
+        "items": [
+          [
+            "买",
+            "mǎi"
+          ],
+          [
+            "卖",
+            "mài"
+          ],
+          [
+            "水果",
+            "shuǐguǒ"
+          ],
+          [
+            "苹果",
+            "píngguǒ"
+          ],
+          [
+            "斤",
+            "jīn"
+          ],
+          [
+            "公斤",
+            "gōngjīn"
+          ],
+          [
+            "了",
+            "le"
+          ],
+          [
+            "吧",
+            "ba"
+          ],
+          [
+            "多",
+            "duō"
+          ],
+          [
+            "少",
+            "shǎo"
+          ],
+          [
+            "多少",
+            "duōshao"
+          ],
+          [
+            "块",
+            "kuài"
+          ]
+        ]
+      }
+    ]
+  },
+  "extra": {}
+}

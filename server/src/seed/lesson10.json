@@ -1,0 +1,550 @@
+{
+  "lessonNumber": 10,
+  "seal": "十课",
+  "titleZh": "第10课",
+  "titleVi": "Bài 10 · 他住哪儿",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "办",
+          "p": ""
+        },
+        {
+          "h": "公",
+          "p": ""
+        },
+        {
+          "h": "室",
+          "p": ""
+        }
+      ],
+      "pinyin": "bàngōngshì",
+      "pos": "Danh từ",
+      "meaning": "văn phòng",
+      "wordlist": [
+        {
+          "h": "办公",
+          "p": "bàngōng",
+          "m": "làm việc văn phòng"
+        }
+      ],
+      "examples": [
+        [
+          "我去学校办公室找老师。",
+          "",
+          "Tôi đến văn phòng trường tìm giáo viên."
+        ],
+        [
+          "我在他的办公室等你。",
+          "",
+          "Tôi đợi bạn ở văn phòng của anh ấy."
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "找",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhǎo",
+      "pos": "Động từ",
+      "meaning": "tìm; tìm gặp"
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "在",
+          "p": ""
+        }
+      ],
+      "pinyin": "zài",
+      "pos": "Động từ/Giới từ",
+      "meaning": "ở; tại"
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "家",
+          "p": ""
+        }
+      ],
+      "pinyin": "jiā",
+      "pos": "Danh từ/Lượng từ",
+      "meaning": "nhà; gia đình; lượng từ cho cơ quan/cửa hàng"
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "呢",
+          "p": ""
+        }
+      ],
+      "pinyin": "ne",
+      "pos": "Trợ từ",
+      "meaning": "nhỉ; thế còn…; xác nhận trạng thái",
+      "note": "呢 đọc thanh nhẹ. Nghĩa cụ thể phụ thuộc câu đứng trước và ngữ cảnh.",
+      "examples": [
+        [
+          "我是越南人，你呢？",
+          "",
+          "Tôi là người Việt Nam, còn bạn?"
+        ],
+        [
+          "你的书呢？",
+          "",
+          "Sách của bạn đâu?"
+        ],
+        [
+          "他在家呢。",
+          "",
+          "Anh ấy đang ở nhà đấy."
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "住",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhù",
+      "pos": "Động từ",
+      "meaning": "ở; cư trú",
+      "note": "在 có thể được lược trong một số câu: 我住河内 / 我住在河内.",
+      "examples": [
+        [
+          "我住在河内。",
+          "",
+          "Tôi sống ở Hà Nội."
+        ],
+        [
+          "他住哪儿？",
+          "",
+          "Anh ấy sống ở đâu?"
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "号",
+          "p": ""
+        }
+      ],
+      "pinyin": "hào",
+      "pos": "Danh từ",
+      "meaning": "số; ngày",
+      "examples": [
+        [
+          "你的房间号是多少？",
+          "",
+          "Số phòng của bạn là bao nhiêu?"
+        ],
+        [
+          "今天几号？",
+          "",
+          "Hôm nay ngày mấy?"
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "楼",
+          "p": ""
+        }
+      ],
+      "pinyin": "lóu",
+      "pos": "Danh từ",
+      "meaning": "tòa nhà; tầng",
+      "examples": [
+        [
+          "我家在四楼。",
+          "",
+          "Nhà tôi ở tầng bốn."
+        ],
+        [
+          "我公司在九楼。",
+          "",
+          "Công ty tôi ở tầng chín."
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "门",
+          "p": ""
+        }
+      ],
+      "pinyin": "mén",
+      "pos": "Danh từ",
+      "meaning": "cửa; cổng",
+      "examples": [
+        [
+          "他住十八楼一门。",
+          "",
+          "Anh ấy ở tầng 18, cổng/đơn nguyên số 1."
+        ],
+        [
+          "请开门。",
+          "",
+          "Mời mở cửa."
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "零",
+          "p": ""
+        },
+        {
+          "h": "〇",
+          "p": ""
+        }
+      ],
+      "pinyin": "líng",
+      "pos": "Số từ",
+      "meaning": "số không"
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "房",
+          "p": ""
+        },
+        {
+          "h": "间",
+          "p": ""
+        }
+      ],
+      "pinyin": "fángjiān",
+      "pos": "Danh từ",
+      "meaning": "phòng",
+      "examples": [
+        [
+          "你的房间在哪儿？",
+          "",
+          "Phòng của bạn ở đâu?"
+        ],
+        [
+          "我的房间不太大。",
+          "",
+          "Phòng của tôi không lớn lắm."
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "知",
+          "p": ""
+        },
+        {
+          "h": "道",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhīdào",
+      "pos": "Động từ",
+      "meaning": "biết",
+      "examples": [
+        [
+          "你知道他吗？",
+          "",
+          "Bạn có biết anh ấy không?"
+        ],
+        [
+          "我知道这个职员。",
+          "",
+          "Tôi biết nhân viên này."
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "电",
+          "p": ""
+        },
+        {
+          "h": "话",
+          "p": ""
+        }
+      ],
+      "pinyin": "diànhuà",
+      "pos": "Danh từ",
+      "meaning": "điện thoại",
+      "wordlist": [
+        {
+          "h": "电",
+          "p": "diàn",
+          "m": "điện"
+        },
+        {
+          "h": "话",
+          "p": "huà",
+          "m": "lời nói"
+        }
+      ],
+      "examples": [
+        [
+          "他的电话是多少？",
+          "",
+          "Số điện thoại của anh ấy là bao nhiêu?"
+        ],
+        [
+          "我给妈妈打电话。",
+          "",
+          "Tôi gọi điện cho mẹ."
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "号",
+          "p": ""
+        },
+        {
+          "h": "码",
+          "p": ""
+        }
+      ],
+      "pinyin": "hàomǎ",
+      "pos": "Danh từ",
+      "meaning": "số; mã số",
+      "examples": [
+        [
+          "你的电话号码是多少？",
+          "",
+          "Số điện thoại của bạn là bao nhiêu?"
+        ],
+        [
+          "我的手机号码是……",
+          "",
+          "Số điện thoại di động của tôi là…"
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "手",
+          "p": ""
+        },
+        {
+          "h": "机",
+          "p": ""
+        }
+      ],
+      "pinyin": "shǒujī",
+      "pos": "Danh từ",
+      "meaning": "điện thoại di động",
+      "wordlist": [
+        {
+          "h": "手",
+          "p": "shǒu",
+          "m": "tay"
+        }
+      ],
+      "examples": [
+        [
+          "你的手机在哪儿？",
+          "",
+          "Điện thoại của bạn ở đâu?"
+        ],
+        [
+          "爸爸的手机在家。",
+          "",
+          "Điện thoại của bố ở nhà."
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "课文",
+      "lines": [
+        {
+          "role": "李昌浩",
+          "text": "请问，这是办公室吗？"
+        },
+        {
+          "role": "老师",
+          "text": "是。你找谁？"
+        },
+        {
+          "role": "李昌浩",
+          "text": "王老师在吗？我是他的学生。"
+        },
+        {
+          "role": "老师",
+          "text": "他不在。他在家呢。"
+        },
+        {
+          "role": "李昌浩",
+          "text": "他住哪儿？"
+        },
+        {
+          "role": "老师",
+          "text": "他住18号楼1门601房间。"
+        },
+        {
+          "role": "李昌浩",
+          "text": "您知道他家的电话号码吗？"
+        },
+        {
+          "role": "老师",
+          "text": "知道，62931074。"
+        },
+        {
+          "role": "李昌浩",
+          "text": "他的手机号码是多少？"
+        },
+        {
+          "role": "老师",
+          "text": "不知道。"
+        },
+        {
+          "role": "李昌浩",
+          "text": "谢谢您。"
+        },
+        {
+          "role": "老师",
+          "text": "不客气。"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "notes": [
+      {
+        "title": "号码的读法 · Cách đọc mã số",
+        "content": "Mã số, số phòng và số điện thoại được đọc từng chữ số một, không đọc theo hàng chục, hàng trăm."
+      },
+      {
+        "title": "“一”读 yāo",
+        "content": "Trong mã số và số điện thoại, số 1 thường đọc yāo để tránh nhầm: 601 → liù líng yāo."
+      },
+      {
+        "title": "“二”读 èr",
+        "content": "Trong mã số, số 2 đọc èr, không đọc liǎng: 223 → èr èr sān."
+      },
+      {
+        "title": "零 líng",
+        "content": "Số 0 đọc líng. Ví dụ: 62931074 → liù èr jiǔ sān yāo líng qī sì."
+      },
+      {
+        "title": "轻声“呢”",
+        "content": "呢 đọc ngắn, nhẹ; không ghi dấu thanh. Khi đọc câu 他在家呢, giọng cuối mềm và có tính xác nhận."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "“呢”询问地点",
+        "content": "Khi không có câu trước, 呢 có thể hỏi đồ vật/người ở đâu: 我的书呢？你爸爸呢？"
+      },
+      {
+        "title": "“呢”承接上文",
+        "content": "Sau một câu trước đó, 呢 dùng để hỏi tương tự: 我是越南人，你呢？"
+      },
+      {
+        "title": "住（在）+ 地点",
+        "content": "Cấu trúc nói nơi cư trú: 我住在河内；他住十八楼一门。"
+      },
+      {
+        "title": "号码是多少",
+        "content": "Dùng “danh từ + 号码是多少？” để hỏi mã số: 你的电话号码是多少？他的房间号码是多少？"
+      },
+      {
+        "title": "知道 / 不知道",
+        "content": "Dùng 知道 để nói biết thông tin; phủ định bằng 不知道: 你知道吗？— 知道。/ 不知道。"
+      },
+      {
+        "title": "在 / 不在",
+        "content": "Dùng 在 để hỏi một người có mặt không: 王老师在吗？— 他不在。"
+      }
+    ],
+    "chips": [
+      {
+        "title": "认读练习",
+        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
+        "items": [
+          [
+            "办公室",
+            "bàngōngshì"
+          ],
+          [
+            "职员",
+            "zhíyuán"
+          ],
+          [
+            "呢",
+            "ne"
+          ],
+          [
+            "住",
+            "zhù"
+          ],
+          [
+            "楼",
+            "lóu"
+          ],
+          [
+            "门",
+            "mén"
+          ],
+          [
+            "房间",
+            "fángjiān"
+          ],
+          [
+            "号",
+            "hào"
+          ],
+          [
+            "知道",
+            "zhīdào"
+          ],
+          [
+            "电话",
+            "diànhuà"
+          ],
+          [
+            "号码",
+            "hàomǎ"
+          ],
+          [
+            "零",
+            "líng"
+          ]
+        ]
+      }
+    ]
+  },
+  "extra": {}
+}

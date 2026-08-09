@@ -1,0 +1,748 @@
+{
+  "lessonNumber": 13,
+  "seal": "十三",
+  "titleZh": "第13课",
+  "titleVi": "Bài 13 · 这是不是中药",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "没",
+          "p": ""
+        },
+        {
+          "h": "有",
+          "p": ""
+        }
+      ],
+      "pinyin": "méi (yǒu)",
+      "pos": "Động từ/Phó từ",
+      "meaning": "không có; chưa",
+      "note": "没有 phủ định 有; 没 còn dùng để phủ định việc đã xảy ra.",
+      "examples": [
+        [
+          "我没有钱。",
+          "",
+          "Tôi không có tiền."
+        ],
+        [
+          "她没吃早饭。",
+          "",
+          "Cô ấy chưa ăn sáng."
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "箱",
+          "p": ""
+        },
+        {
+          "h": "子",
+          "p": ""
+        }
+      ],
+      "pinyin": "xiāngzi",
+      "pos": "Danh từ",
+      "meaning": "hòm; vali; thùng",
+      "note": "子 đọc thanh nhẹ.",
+      "examples": [
+        [
+          "我没有箱子。",
+          "",
+          "Tôi không có vali."
+        ],
+        [
+          "这是谁的箱子？",
+          "",
+          "Đây là vali của ai?"
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "有",
+          "p": ""
+        }
+      ],
+      "pinyin": "yǒu",
+      "pos": "Động từ",
+      "meaning": "có"
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "这",
+          "p": ""
+        },
+        {
+          "h": "儿",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhèr",
+      "pos": "Đại từ",
+      "meaning": "đây; ở đây",
+      "examples": [
+        [
+          "我坐在这儿。",
+          "",
+          "Tôi ngồi ở đây."
+        ],
+        [
+          "这儿的水果很好吃。",
+          "",
+          "Hoa quả ở đây rất ngon."
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "重",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhòng",
+      "pos": "Tính từ",
+      "meaning": "nặng",
+      "examples": [
+        [
+          "那个箱子很重。",
+          "",
+          "Cái vali kia rất nặng."
+        ],
+        [
+          "箱子重不重？",
+          "",
+          "Vali có nặng không?"
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "黑",
+          "p": ""
+        }
+      ],
+      "pinyin": "hēi",
+      "pos": "Tính từ",
+      "meaning": "đen",
+      "examples": [
+        [
+          "黑箱子很重。",
+          "",
+          "Vali đen rất nặng."
+        ],
+        [
+          "黑色的手机是我的。",
+          "",
+          "Điện thoại màu đen là của tôi."
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "红",
+          "p": ""
+        }
+      ],
+      "pinyin": "hóng",
+      "pos": "Tính từ",
+      "meaning": "đỏ",
+      "examples": [
+        [
+          "红苹果很好吃。",
+          "",
+          "Táo đỏ rất ngon."
+        ],
+        [
+          "红箱子很重。",
+          "",
+          "Vali đỏ rất nặng."
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "轻",
+          "p": ""
+        }
+      ],
+      "pinyin": "qīng",
+      "pos": "Tính từ",
+      "meaning": "nhẹ",
+      "examples": [
+        [
+          "这些杂志很轻。",
+          "",
+          "Những tạp chí này rất nhẹ."
+        ],
+        [
+          "你的箱子轻不轻？",
+          "",
+          "Vali của bạn có nhẹ không?"
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "旧",
+          "p": ""
+        }
+      ],
+      "pinyin": "jiù",
+      "pos": "Tính từ",
+      "meaning": "cũ; đã qua sử dụng",
+      "examples": [
+        [
+          "我的书很旧。",
+          "",
+          "Sách của tôi rất cũ."
+        ],
+        [
+          "这儿有很多旧杂志。",
+          "",
+          "Ở đây có nhiều tạp chí cũ."
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "药",
+          "p": ""
+        }
+      ],
+      "pinyin": "yào",
+      "pos": "Danh từ",
+      "meaning": "thuốc",
+      "examples": [
+        [
+          "我要去买药。",
+          "",
+          "Tôi muốn đi mua thuốc."
+        ],
+        [
+          "你吃药吗？",
+          "",
+          "Bạn có uống thuốc không?"
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "中",
+          "p": ""
+        },
+        {
+          "h": "药",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhōngyào",
+      "pos": "Danh từ",
+      "meaning": "thuốc Đông y",
+      "wordlist": [
+        {
+          "h": "西药",
+          "p": "xīyào",
+          "m": "thuốc Tây"
+        }
+      ],
+      "examples": [
+        [
+          "我要去买中药。",
+          "",
+          "Tôi muốn đi mua thuốc Đông y."
+        ],
+        [
+          "这是不是中药？",
+          "",
+          "Đây có phải thuốc Đông y không?"
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "茶",
+          "p": ""
+        },
+        {
+          "h": "叶",
+          "p": ""
+        }
+      ],
+      "pinyin": "cháyè",
+      "pos": "Danh từ",
+      "meaning": "lá chè; trà",
+      "examples": [
+        [
+          "茶叶怎么卖？",
+          "",
+          "Trà bán thế nào?"
+        ],
+        [
+          "越南的茶叶很好。",
+          "",
+          "Trà Việt Nam rất ngon."
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "里",
+          "p": ""
+        }
+      ],
+      "pinyin": "lǐ",
+      "pos": "Danh từ",
+      "meaning": "bên trong",
+      "examples": [
+        [
+          "房间里有很多书。",
+          "",
+          "Trong phòng có rất nhiều sách."
+        ],
+        [
+          "箱子里是什么？",
+          "",
+          "Trong vali là gì?"
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "日",
+          "p": ""
+        },
+        {
+          "h": "用",
+          "p": ""
+        },
+        {
+          "h": "品",
+          "p": ""
+        }
+      ],
+      "pinyin": "rìyòngpǐn",
+      "pos": "Danh từ",
+      "meaning": "đồ dùng hằng ngày",
+      "examples": [
+        [
+          "我要去买日用品。",
+          "",
+          "Tôi muốn đi mua đồ dùng hàng ngày."
+        ],
+        [
+          "箱子里是我的日用品。",
+          "",
+          "Trong vali là đồ dùng hàng ngày của tôi."
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "件",
+          "p": ""
+        }
+      ],
+      "pinyin": "jiàn",
+      "pos": "Lượng từ",
+      "meaning": "chiếc; món (quần áo/sự việc)",
+      "examples": [
+        [
+          "两件衣服。",
+          "",
+          "Hai bộ quần áo."
+        ],
+        [
+          "这件衣服很贵。",
+          "",
+          "Bộ quần áo này rất đắt."
+        ]
+      ]
+    },
+    {
+      "num": 16,
+      "chars": [
+        {
+          "h": "衣",
+          "p": ""
+        },
+        {
+          "h": "服",
+          "p": ""
+        }
+      ],
+      "pinyin": "yīfu",
+      "pos": "Danh từ",
+      "meaning": "quần áo",
+      "note": "服 đọc thanh nhẹ.",
+      "examples": [
+        [
+          "我买两件衣服。",
+          "",
+          "Tôi mua hai bộ quần áo."
+        ],
+        [
+          "箱子里有很多衣服。",
+          "",
+          "Trong vali có nhiều quần áo."
+        ]
+      ]
+    },
+    {
+      "num": 17,
+      "chars": [
+        {
+          "h": "把",
+          "p": ""
+        }
+      ],
+      "pinyin": "bǎ",
+      "pos": "Lượng từ",
+      "meaning": "cái (đồ có tay cầm)",
+      "examples": [
+        [
+          "一把雨伞。",
+          "",
+          "Một chiếc ô."
+        ],
+        [
+          "两把椅子。",
+          "",
+          "Hai cái ghế."
+        ]
+      ]
+    },
+    {
+      "num": 18,
+      "chars": [
+        {
+          "h": "雨",
+          "p": ""
+        },
+        {
+          "h": "伞",
+          "p": ""
+        }
+      ],
+      "pinyin": "yǔsǎn",
+      "pos": "Danh từ",
+      "meaning": "ô; dù",
+      "wordlist": [
+        {
+          "h": "雨",
+          "p": "yǔ",
+          "m": "mưa"
+        }
+      ],
+      "examples": [
+        [
+          "我有两把雨伞。",
+          "",
+          "Tôi có hai chiếc ô."
+        ],
+        [
+          "下雨了，我没有雨伞。",
+          "",
+          "Trời mưa rồi, tôi không có ô."
+        ]
+      ]
+    },
+    {
+      "num": 19,
+      "chars": [
+        {
+          "h": "平",
+          "p": ""
+        },
+        {
+          "h": "板",
+          "p": ""
+        },
+        {
+          "h": "电",
+          "p": ""
+        },
+        {
+          "h": "脑",
+          "p": ""
+        }
+      ],
+      "pinyin": "píngbǎn diànnǎo",
+      "pos": "Danh từ",
+      "meaning": "máy tính bảng",
+      "examples": [
+        [
+          "我要买一个平板电脑。",
+          "",
+          "Tôi muốn mua một máy tính bảng."
+        ],
+        [
+          "平板电脑很贵。",
+          "",
+          "Máy tính bảng rất đắt."
+        ]
+      ]
+    },
+    {
+      "num": 20,
+      "chars": [
+        {
+          "h": "本",
+          "p": ""
+        }
+      ],
+      "pinyin": "běn",
+      "pos": "Lượng từ",
+      "meaning": "quyển (sách)",
+      "examples": [
+        [
+          "箱子里有三本书。",
+          "",
+          "Trong vali có ba quyển sách."
+        ],
+        [
+          "我买两本杂志。",
+          "",
+          "Tôi mua hai cuốn tạp chí."
+        ]
+      ]
+    },
+    {
+      "num": 21,
+      "chars": [
+        {
+          "h": "词",
+          "p": ""
+        },
+        {
+          "h": "典",
+          "p": ""
+        }
+      ],
+      "pinyin": "cídiǎn",
+      "pos": "Danh từ",
+      "meaning": "từ điển",
+      "examples": [
+        [
+          "我要两本词典。",
+          "",
+          "Tôi muốn hai quyển từ điển."
+        ],
+        [
+          "这本词典多少钱？",
+          "",
+          "Quyển từ điển này bao nhiêu tiền?"
+        ]
+      ]
+    },
+    {
+      "num": 22,
+      "chars": [
+        {
+          "h": "优",
+          "p": ""
+        },
+        {
+          "h": "盘",
+          "p": ""
+        }
+      ],
+      "pinyin": "yōupán",
+      "pos": "Danh từ",
+      "meaning": "USB; ổ flash",
+      "examples": [
+        [
+          "我有两个优盘。",
+          "",
+          "Tôi có hai chiếc USB."
+        ],
+        [
+          "一个黑色，一个红色。",
+          "",
+          "Một cái màu đen, một cái màu đỏ."
+        ]
+      ]
+    },
+    {
+      "num": 23,
+      "chars": [
+        {
+          "h": "支",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhī",
+      "pos": "Lượng từ",
+      "meaning": "cây; chiếc (bút)",
+      "examples": [
+        [
+          "三支毛笔。",
+          "",
+          "Ba cây bút lông."
+        ],
+        [
+          "两支红笔。",
+          "",
+          "Hai cây bút đỏ."
+        ]
+      ]
+    },
+    {
+      "num": 24,
+      "chars": [
+        {
+          "h": "毛",
+          "p": ""
+        },
+        {
+          "h": "笔",
+          "p": ""
+        }
+      ],
+      "pinyin": "máobǐ",
+      "pos": "Danh từ",
+      "meaning": "bút lông",
+      "wordlist": [
+        {
+          "h": "笔",
+          "p": "bǐ",
+          "m": "bút"
+        }
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "（一）这个黑箱子很重",
+      "lines": [
+        {
+          "role": "A",
+          "text": "你没有箱子吗？"
+        },
+        {
+          "role": "B",
+          "text": "有啊。我的在这儿呢。"
+        },
+        {
+          "role": "A",
+          "text": "我的很重，你的重不重？"
+        },
+        {
+          "role": "B",
+          "text": "这个黑的很重，那个红的比较轻。"
+        },
+        {
+          "role": "A",
+          "text": "你的箱子很新，我的很旧。"
+        },
+        {
+          "role": "B",
+          "text": "那个新的是朋友的。这个旧的是我的。"
+        }
+      ]
+    },
+    {
+      "title": "（二）这是不是中药",
+      "lines": [
+        {
+          "role": "A",
+          "text": "先生，这些黑的是什么？"
+        },
+        {
+          "role": "B",
+          "text": "这是一些药。"
+        },
+        {
+          "role": "A",
+          "text": "什么药？"
+        },
+        {
+          "role": "B",
+          "text": "中药。"
+        },
+        {
+          "role": "A",
+          "text": "这是不是药？"
+        },
+        {
+          "role": "B",
+          "text": "这不是药，这是茶叶。"
+        },
+        {
+          "role": "A",
+          "text": "那个箱子里是什么？"
+        },
+        {
+          "role": "B",
+          "text": "都是日用品。有两件衣服、一把雨伞和一个平板电脑，还有一本书、一本词典、两个优盘和三支毛笔。"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "grammar": [
+      {
+        "title": "数量词“些”",
+        "content": "些 biểu thị số lượng không xác định; thường đi sau 一、哪、这、那: 一些人、这些书、那些杂志. Không dùng với số từ khác."
+      },
+      {
+        "title": "形容词谓语句",
+        "content": "Câu vị ngữ tính từ: chủ ngữ + phó từ + tính từ. Ví dụ: 这个箱子很重；苹果比较贵。Không thêm 是 trước tính từ."
+      },
+      {
+        "title": "正反疑问句",
+        "content": "Dùng dạng khẳng định + phủ định để hỏi: 是不是、有没有、重不重、去不去. Trả lời bằng dạng khẳng định hoặc phủ định."
+      },
+      {
+        "title": "定语和“的”",
+        "content": "Miêu tả/sở hữu + 的 + danh từ: 黑色的箱子、我的书. Tính từ đơn âm tiết có thể bỏ 的: 黑箱子、旧书."
+      },
+      {
+        "title": "“的”字短语",
+        "content": "的 có thể thay cho danh từ bị lược: 我的很旧；红的是我的；那个新的是朋友的。"
+      },
+      {
+        "title": "方位词“里”",
+        "content": "Danh từ + 里 biểu thị bên trong: 箱子里、房间里、学校里."
+      },
+      {
+        "title": "量词搭配",
+        "content": "件衣服、把雨伞、本词典、个优盘、支笔、瓶香水、张地图。"
+      }
+    ]
+  },
+  "extra": {}
+}

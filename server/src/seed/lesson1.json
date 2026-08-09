@@ -1,0 +1,403 @@
+{
+  "lessonNumber": 1,
+  "seal": "一课",
+  "titleZh": "第1课",
+  "titleVi": "Bài 1 · 你好",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "你",
+          "p": ""
+        }
+      ],
+      "pinyin": "nǐ",
+      "pos": "Đại từ",
+      "meaning": "bạn; anh; chị; ông; bà",
+      "examples": [
+        [
+          "你好！",
+          "",
+          "Xin chào!"
+        ],
+        [
+          "你好吗？",
+          "",
+          "Bạn khỏe không?"
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "好",
+          "p": ""
+        }
+      ],
+      "pinyin": "hǎo",
+      "pos": "Tính từ",
+      "meaning": "tốt; khỏe; đẹp; ngon",
+      "note": "Trong 你好, 你 đứng trước một thanh 3 nên thường đọc thành ní.",
+      "wordlist": [
+        {
+          "h": "你好",
+          "p": "nǐ hǎo",
+          "m": "xin chào"
+        }
+      ],
+      "examples": [
+        [
+          "我很好。",
+          "",
+          "Tôi rất khỏe."
+        ],
+        [
+          "好吗？",
+          "",
+          "Có được không?"
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "一",
+          "p": ""
+        }
+      ],
+      "pinyin": "yī",
+      "pos": "Số từ",
+      "meaning": "một",
+      "examples": [
+        [
+          "一个人。",
+          "",
+          "Một người."
+        ],
+        [
+          "一本书。",
+          "",
+          "Một quyển sách."
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "五",
+          "p": ""
+        }
+      ],
+      "pinyin": "wǔ",
+      "pos": "Số từ",
+      "meaning": "năm",
+      "examples": [
+        [
+          "五个人。",
+          "",
+          "Năm người."
+        ],
+        [
+          "五本书。",
+          "",
+          "Năm quyển sách."
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "八",
+          "p": ""
+        }
+      ],
+      "pinyin": "bā",
+      "pos": "Số từ",
+      "meaning": "tám",
+      "examples": [
+        [
+          "八个人。",
+          "",
+          "Tám người."
+        ],
+        [
+          "八本书。",
+          "",
+          "Tám quyển sách."
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "大",
+          "p": ""
+        }
+      ],
+      "pinyin": "dà",
+      "pos": "Tính từ",
+      "meaning": "to; lớn",
+      "examples": [
+        [
+          "马很大。",
+          "",
+          "Con ngựa rất lớn."
+        ],
+        [
+          "这个很大。",
+          "",
+          "Cái này rất lớn."
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "不",
+          "p": ""
+        }
+      ],
+      "pinyin": "bù",
+      "pos": "Phó từ",
+      "meaning": "không",
+      "note": "Đứng trước âm tiết thanh 4, 不 thường biến thành bú.",
+      "examples": [
+        [
+          "不好。",
+          "",
+          "Không tốt."
+        ],
+        [
+          "不大。",
+          "",
+          "Không lớn."
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "口",
+          "p": ""
+        }
+      ],
+      "pinyin": "kǒu",
+      "pos": "Danh từ/Lượng từ",
+      "meaning": "miệng; nhân khẩu",
+      "examples": [
+        [
+          "五口人。",
+          "",
+          "Gia đình năm người."
+        ],
+        [
+          "张大口。",
+          "",
+          "Há miệng to."
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "白",
+          "p": ""
+        }
+      ],
+      "pinyin": "bái",
+      "pos": "Tính từ",
+      "meaning": "trắng",
+      "examples": [
+        [
+          "白马。",
+          "",
+          "Ngựa trắng."
+        ],
+        [
+          "白的。",
+          "",
+          "Cái màu trắng."
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "女",
+          "p": ""
+        }
+      ],
+      "pinyin": "nǚ",
+      "pos": "Tính từ",
+      "meaning": "nữ",
+      "note": "ü: tròn môi như u nhưng giữ vị trí lưỡi của i.",
+      "examples": [
+        [
+          "女老师。",
+          "",
+          "Giáo viên nữ."
+        ],
+        [
+          "她是女学生。",
+          "",
+          "Cô ấy là học sinh nữ."
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "马",
+          "p": ""
+        }
+      ],
+      "pinyin": "mǎ",
+      "pos": "Danh từ",
+      "meaning": "con ngựa",
+      "examples": [
+        [
+          "白马。",
+          "",
+          "Ngựa trắng."
+        ],
+        [
+          "大马。",
+          "",
+          "Ngựa lớn."
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "课文",
+      "lines": [
+        {
+          "role": "A",
+          "text": "你好！"
+        },
+        {
+          "role": "B",
+          "text": "你好！"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "notes": [
+      {
+        "title": "拼音的三部分 · Ba thành phần của Pinyin",
+        "content": "Một âm tiết tiếng Hán thường gồm thanh mẫu, vận mẫu và thanh điệu."
+      },
+      {
+        "title": "声母 · Thanh mẫu nhập môn",
+        "content": "b、p、m、f、d、t、n、l、g、k、h、j、q、x. Chú ý cặp không bật hơi/bật hơi: b–p, d–t, g–k, j–q."
+      },
+      {
+        "title": "韵母 · Vận mẫu nhập môn",
+        "content": "a、o、e、i、u、ü；ai、ei、ao、ou. Đọc nguyên âm rõ, không kéo sang âm cuối tiếng Việt."
+      },
+      {
+        "title": "四声 · Bốn thanh điệu",
+        "content": "Thanh 1 cao đều; thanh 2 đi lên; thanh 3 hạ rồi lên; thanh 4 đi xuống mạnh: mā / má / mǎ / mà."
+      },
+      {
+        "title": "三声变调 · Biến điệu thanh 3",
+        "content": "Khi hai thanh 3 đứng liền nhau, thanh 3 thứ nhất đọc thành thanh 2: nǐ hǎo → ní hǎo."
+      },
+      {
+        "title": "ü 的发音 · Cách đọc ü",
+        "content": "Giữ lưỡi như khi đọc i rồi tròn môi. Không đọc thành u."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "汉字、笔画、笔顺",
+        "content": "汉字 là chữ Hán; 笔画 là nét chữ; 笔顺 là thứ tự viết nét. Khi luyện viết cần đúng cả hình chữ và thứ tự nét."
+      },
+      {
+        "title": "六种基本笔画",
+        "content": "Nét cơ bản trong bài nhập môn: ngang, sổ, phẩy, chấm, hất, mác."
+      },
+      {
+        "title": "常见变体笔画",
+        "content": "Một số nét biến thể: ngang móc, sổ móc, sổ hất, ngang gập, ngang phẩy, ngang gập móc."
+      },
+      {
+        "title": "六书概念",
+        "content": "Sáu cách cấu tạo và sử dụng chữ Hán: tượng hình, chỉ sự, hội ý, hình thanh, chuyển chú và giả tá."
+      },
+      {
+        "title": "简单问候",
+        "content": "你好 dùng để chào hỏi; 你好吗？ dùng để hỏi thăm; có thể trả lời 我很好。"
+      }
+    ],
+    "chips": [
+      {
+        "title": "认读练习",
+        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
+        "items": [
+          [
+            "你",
+            "nǐ"
+          ],
+          [
+            "好",
+            "hǎo"
+          ],
+          [
+            "一",
+            "yī"
+          ],
+          [
+            "五",
+            "wǔ"
+          ],
+          [
+            "八",
+            "bā"
+          ],
+          [
+            "大",
+            "dà"
+          ],
+          [
+            "不",
+            "bù"
+          ],
+          [
+            "口",
+            "kǒu"
+          ],
+          [
+            "白",
+            "bái"
+          ],
+          [
+            "女",
+            "nǚ"
+          ],
+          [
+            "马",
+            "mǎ"
+          ]
+        ]
+      }
+    ]
+  },
+  "extra": {}
+}

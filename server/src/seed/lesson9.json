@@ -1,0 +1,550 @@
+{
+  "lessonNumber": 9,
+  "seal": "九课",
+  "titleZh": "第9课",
+  "titleVi": "Bài 9 · 我换人民币",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "下",
+          "p": ""
+        },
+        {
+          "h": "午",
+          "p": ""
+        }
+      ],
+      "pinyin": "xiàwǔ",
+      "pos": "Danh từ",
+      "meaning": "buổi chiều",
+      "wordlist": [
+        {
+          "h": "上午",
+          "p": "shàngwǔ",
+          "m": "buổi sáng"
+        }
+      ],
+      "examples": [
+        [
+          "下午我学习汉语。",
+          "",
+          "Buổi chiều tôi học tiếng Hán."
+        ],
+        [
+          "下午我去图书馆。",
+          "",
+          "Buổi chiều tôi đi thư viện."
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "图",
+          "p": ""
+        },
+        {
+          "h": "书",
+          "p": ""
+        },
+        {
+          "h": "馆",
+          "p": ""
+        }
+      ],
+      "pinyin": "túshūguǎn",
+      "pos": "Danh từ",
+      "meaning": "thư viện",
+      "examples": [
+        [
+          "学校的图书馆很大。",
+          "",
+          "Thư viện của trường rất lớn."
+        ],
+        [
+          "星期一我去图书馆。",
+          "",
+          "Thứ Hai tôi đi thư viện."
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "换",
+          "p": ""
+        }
+      ],
+      "pinyin": "huàn",
+      "pos": "Động từ",
+      "meaning": "đổi; thay",
+      "examples": [
+        [
+          "我去银行换钱。",
+          "",
+          "Tôi đến ngân hàng đổi tiền."
+        ],
+        [
+          "你要换多少钱？",
+          "",
+          "Bạn muốn đổi bao nhiêu tiền?"
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "小",
+          "p": ""
+        },
+        {
+          "h": "姐",
+          "p": ""
+        }
+      ],
+      "pinyin": "xiǎojiě",
+      "pos": "Danh từ",
+      "meaning": "cô; tiểu thư",
+      "note": "Dùng như cách xưng hô lịch sự trong ngữ cảnh của bài học.",
+      "examples": [
+        [
+          "小姐，我要换钱。",
+          "",
+          "Cô ơi, tôi muốn đổi tiền."
+        ],
+        [
+          "那个小姐是我的老师。",
+          "",
+          "Cô gái kia là giáo viên của tôi."
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "营",
+          "p": ""
+        },
+        {
+          "h": "业",
+          "p": ""
+        },
+        {
+          "h": "员",
+          "p": ""
+        }
+      ],
+      "pinyin": "yíngyèyuán",
+      "pos": "Danh từ",
+      "meaning": "nhân viên giao dịch; nhân viên bán hàng",
+      "examples": [
+        [
+          "我姐姐是银行的营业员。",
+          "",
+          "Chị tôi là giao dịch viên ngân hàng."
+        ],
+        [
+          "我找营业员。",
+          "",
+          "Tôi tìm nhân viên giao dịch."
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "人",
+          "p": ""
+        },
+        {
+          "h": "民",
+          "p": ""
+        },
+        {
+          "h": "币",
+          "p": ""
+        }
+      ],
+      "pinyin": "rénmínbì",
+      "pos": "Danh từ",
+      "meaning": "Nhân dân tệ",
+      "examples": [
+        [
+          "我要换人民币。",
+          "",
+          "Tôi muốn đổi Nhân dân tệ."
+        ],
+        [
+          "你换多少人民币？",
+          "",
+          "Bạn đổi bao nhiêu Nhân dân tệ?"
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "百",
+          "p": ""
+        }
+      ],
+      "pinyin": "bǎi",
+      "pos": "Số từ",
+      "meaning": "trăm",
+      "wordlist": [
+        {
+          "h": "千",
+          "p": "qiān",
+          "m": "nghìn"
+        },
+        {
+          "h": "万",
+          "p": "wàn",
+          "m": "mười nghìn"
+        }
+      ],
+      "examples": [
+        [
+          "二百美元。",
+          "",
+          "Hai trăm đô la Mỹ."
+        ],
+        [
+          "我有五百块钱。",
+          "",
+          "Tôi có năm trăm tệ."
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "美",
+          "p": ""
+        },
+        {
+          "h": "元",
+          "p": ""
+        }
+      ],
+      "pinyin": "měiyuán",
+      "pos": "Danh từ",
+      "meaning": "đô la Mỹ",
+      "wordlist": [
+        {
+          "h": "港币",
+          "p": "gǎngbì",
+          "m": "đô la Hồng Kông"
+        },
+        {
+          "h": "日元",
+          "p": "rìyuán",
+          "m": "yên Nhật"
+        },
+        {
+          "h": "韩元",
+          "p": "hányuán",
+          "m": "won Hàn Quốc"
+        },
+        {
+          "h": "欧元",
+          "p": "ōuyuán",
+          "m": "euro"
+        }
+      ],
+      "examples": [
+        [
+          "我要换美元。",
+          "",
+          "Tôi muốn đổi đô la Mỹ."
+        ],
+        [
+          "二百美元换多少人民币？",
+          "",
+          "Hai trăm đô la Mỹ đổi được bao nhiêu Nhân dân tệ?"
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "等",
+          "p": ""
+        }
+      ],
+      "pinyin": "děng",
+      "pos": "Động từ",
+      "meaning": "đợi; chờ",
+      "examples": [
+        [
+          "请等我。",
+          "",
+          "Xin hãy đợi tôi."
+        ],
+        [
+          "不要等我。",
+          "",
+          "Đừng đợi tôi."
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "一",
+          "p": ""
+        },
+        {
+          "h": "会",
+          "p": ""
+        },
+        {
+          "h": "儿",
+          "p": ""
+        }
+      ],
+      "pinyin": "yíhuìr",
+      "pos": "Lượng từ thời gian",
+      "meaning": "một lát; một lúc",
+      "examples": [
+        [
+          "请等一会儿。",
+          "",
+          "Xin chờ một lát."
+        ],
+        [
+          "我们坐一会儿吧。",
+          "",
+          "Chúng ta ngồi một lát nhé."
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "先",
+          "p": ""
+        },
+        {
+          "h": "生",
+          "p": ""
+        }
+      ],
+      "pinyin": "xiānsheng",
+      "pos": "Danh từ",
+      "meaning": "ông; ngài; anh",
+      "note": "sheng thường đọc thanh nhẹ.",
+      "examples": [
+        [
+          "先生，您换什么钱？",
+          "",
+          "Thưa ông, ông đổi tiền gì?"
+        ],
+        [
+          "李先生，您好！",
+          "",
+          "Chào ông Lý!"
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "数",
+          "p": ""
+        }
+      ],
+      "pinyin": "shǔ",
+      "pos": "Động từ",
+      "meaning": "đếm",
+      "note": "Trong 数数, âm tiết thứ hai thường đọc nhẹ: shǔshu.",
+      "examples": [
+        [
+          "请数数。",
+          "",
+          "Vui lòng đếm lại."
+        ],
+        [
+          "我要数钱。",
+          "",
+          "Tôi muốn đếm tiền."
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "课文",
+      "lines": [
+        {
+          "role": "玛丽",
+          "text": "下午我去图书馆，你去不去？"
+        },
+        {
+          "role": "麦克",
+          "text": "我不去。我要去银行换钱。"
+        }
+      ]
+    },
+    {
+      "title": "在中国银行换钱",
+      "lines": [
+        {
+          "role": "麦克",
+          "text": "小姐，我换钱。"
+        },
+        {
+          "role": "营业员",
+          "text": "您换什么钱？"
+        },
+        {
+          "role": "麦克",
+          "text": "我换人民币。"
+        },
+        {
+          "role": "营业员",
+          "text": "换多少？"
+        },
+        {
+          "role": "麦克",
+          "text": "二百美元。"
+        },
+        {
+          "role": "营业员",
+          "text": "请等一会儿。……先生，给您钱。请数数。"
+        },
+        {
+          "role": "麦克",
+          "text": "对。谢谢！"
+        },
+        {
+          "role": "营业员",
+          "text": "不客气！"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "notes": [
+      {
+        "title": "三个三声 · Chuỗi ba thanh 3",
+        "content": "Khi ba hoặc nhiều thanh 3 đứng liền nhau, có thể chia theo cụm nghĩa: 我很好 có thể đọc wǒ hén hǎo hoặc wó hén hǎo tùy nhịp."
+      },
+      {
+        "title": "一 的变调 · Ôn biến điệu 一",
+        "content": "一会儿 đọc yíhuìr vì 一 đứng trước thanh 4."
+      },
+      {
+        "title": "不 的变调 · Ôn biến điệu 不",
+        "content": "不去 có thể đọc bú qù; 不客气 đọc bú kèqi."
+      },
+      {
+        "title": "轻声 · Thanh nhẹ",
+        "content": "先生 xiānsheng、数数 shǔshu: âm tiết cuối đọc nhẹ, ngắn."
+      },
+      {
+        "title": "数词重音 · Trọng âm số lớn",
+        "content": "Khi đọc 百、千、万 và tiền tệ, ngắt theo đơn vị số: 二百美元、三万五千九百。"
+      }
+    ],
+    "grammar": [
+      {
+        "title": "时间词作状语",
+        "content": "Từ chỉ thời gian thường đứng trước chủ ngữ hoặc sau chủ ngữ: 下午我去图书馆；我下午去图书馆。"
+      },
+      {
+        "title": "要 + 动词",
+        "content": "要 đứng trước động từ để biểu thị ý muốn hoặc nhu cầu: 我要去银行；我要换人民币。"
+      },
+      {
+        "title": "连动句",
+        "content": "Chuỗi động từ biểu thị mục đích: 去银行换钱、去图书馆看书。"
+      },
+      {
+        "title": "钱数表达",
+        "content": "Đọc tiền theo số + đơn vị tiền: 二百美元、一千人民币、三万越南盾。"
+      },
+      {
+        "title": "礼貌称呼",
+        "content": "小姐、先生 có thể đứng đầu câu để gọi người đối thoại: 先生，您换什么钱？"
+      },
+      {
+        "title": "请 + 动词",
+        "content": "请 làm câu yêu cầu lịch sự: 请等一会儿；请数数。"
+      }
+    ],
+    "chips": [
+      {
+        "title": "认读练习",
+        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
+        "items": [
+          [
+            "上午",
+            "shàngwǔ"
+          ],
+          [
+            "下午",
+            "xiàwǔ"
+          ],
+          [
+            "图书馆",
+            "túshūguǎn"
+          ],
+          [
+            "换",
+            "huàn"
+          ],
+          [
+            "小姐",
+            "xiǎojiě"
+          ],
+          [
+            "营业员",
+            "yíngyèyuán"
+          ],
+          [
+            "百",
+            "bǎi"
+          ],
+          [
+            "千",
+            "qiān"
+          ],
+          [
+            "万",
+            "wàn"
+          ],
+          [
+            "要",
+            "yào"
+          ],
+          [
+            "美元",
+            "měiyuán"
+          ],
+          [
+            "港币",
+            "gǎngbì"
+          ]
+        ]
+      }
+    ]
+  },
+  "extra": {}
+}

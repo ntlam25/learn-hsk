@@ -1,0 +1,551 @@
+{
+  "lessonNumber": 14,
+  "seal": "十四",
+  "titleZh": "第14课",
+  "titleVi": "Bài 14 · 你的车是新的还是旧的",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "经",
+          "p": ""
+        },
+        {
+          "h": "理",
+          "p": ""
+        }
+      ],
+      "pinyin": "jīnglǐ",
+      "pos": "Danh từ",
+      "meaning": "giám đốc; quản lý",
+      "examples": [
+        [
+          "我去办公室找经理。",
+          "",
+          "Tôi đến văn phòng tìm giám đốc."
+        ],
+        [
+          "我爸爸是这个公司的经理。",
+          "",
+          "Bố tôi là giám đốc công ty này."
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "好",
+          "p": ""
+        },
+        {
+          "h": "久",
+          "p": ""
+        }
+      ],
+      "pinyin": "hǎojiǔ",
+      "pos": "Danh từ/Trạng từ",
+      "meaning": "rất lâu; lâu rồi",
+      "note": "Mẫu thường gặp: 好久不 + động từ + 了。",
+      "examples": [
+        [
+          "好久不见！",
+          "",
+          "Lâu rồi không gặp!"
+        ],
+        [
+          "我等你好久了！",
+          "",
+          "Tôi đợi bạn lâu rồi!"
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "啊",
+          "p": ""
+        }
+      ],
+      "pinyin": "à",
+      "pos": "Thán từ",
+      "meaning": "à; a (thể hiện chợt hiểu)",
+      "examples": [
+        [
+          "啊，我知道了。",
+          "",
+          "À, tôi biết rồi."
+        ],
+        [
+          "啊，我的车在那儿。",
+          "",
+          "À, xe của tôi ở kia."
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "马",
+          "p": ""
+        },
+        {
+          "h": "马",
+          "p": ""
+        },
+        {
+          "h": "虎",
+          "p": ""
+        },
+        {
+          "h": "虎",
+          "p": ""
+        }
+      ],
+      "pinyin": "mǎmǎhūhū",
+      "pos": "Tính từ",
+      "meaning": "tàm tạm; bình thường",
+      "examples": [
+        [
+          "我的身体马马虎虎。",
+          "",
+          "Sức khỏe tôi tạm được."
+        ],
+        [
+          "你学习怎么样？马马虎虎吧。",
+          "",
+          "Việc học thế nào? Cũng bình thường."
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "最",
+          "p": ""
+        },
+        {
+          "h": "近",
+          "p": ""
+        }
+      ],
+      "pinyin": "zuìjìn",
+      "pos": "Danh từ/Trạng từ",
+      "meaning": "gần đây; dạo này",
+      "examples": [
+        [
+          "你最近怎么样？",
+          "",
+          "Dạo này bạn thế nào?"
+        ],
+        [
+          "我最近工作不太忙。",
+          "",
+          "Gần đây công việc tôi không quá bận."
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "刚",
+          "p": ""
+        }
+      ],
+      "pinyin": "gāng",
+      "pos": "Phó từ",
+      "meaning": "vừa mới",
+      "examples": [
+        [
+          "他刚去学校了。",
+          "",
+          "Anh ấy vừa đi đến trường."
+        ],
+        [
+          "我同屋刚回家。",
+          "",
+          "Bạn cùng phòng của tôi vừa về nhà."
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "开",
+          "p": ""
+        },
+        {
+          "h": "学",
+          "p": ""
+        }
+      ],
+      "pinyin": "kāi xué",
+      "pos": "Động từ",
+      "meaning": "khai giảng; bắt đầu học kỳ",
+      "wordlist": [
+        {
+          "h": "开",
+          "p": "kāi",
+          "m": "mở; bắt đầu"
+        }
+      ],
+      "examples": [
+        [
+          "刚开学，有点儿忙。",
+          "",
+          "Vừa khai giảng nên hơi bận."
+        ],
+        [
+          "学校什么时候开学？",
+          "",
+          "Trường khi nào khai giảng?"
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "有",
+          "p": ""
+        },
+        {
+          "h": "一",
+          "p": ""
+        },
+        {
+          "h": "点",
+          "p": ""
+        },
+        {
+          "h": "儿",
+          "p": ""
+        }
+      ],
+      "pinyin": "yǒu (yì) diǎnr",
+      "pos": "Phó từ",
+      "meaning": "hơi; có một chút"
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "还",
+          "p": ""
+        },
+        {
+          "h": "是",
+          "p": ""
+        }
+      ],
+      "pinyin": "háishi",
+      "pos": "Liên từ",
+      "meaning": "hay là (trong câu hỏi lựa chọn)",
+      "note": "Trong câu hỏi lựa chọn dùng 还是, không dùng 或者.",
+      "examples": [
+        [
+          "你买苹果还是橘子？",
+          "",
+          "Bạn mua táo hay quýt?"
+        ],
+        [
+          "你喝茶还是咖啡？",
+          "",
+          "Bạn uống trà hay cà phê?"
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "咖",
+          "p": ""
+        },
+        {
+          "h": "啡",
+          "p": ""
+        }
+      ],
+      "pinyin": "kāfēi",
+      "pos": "Danh từ",
+      "meaning": "cà phê",
+      "examples": [
+        [
+          "咖啡最好喝。",
+          "",
+          "Cà phê ngon nhất."
+        ],
+        [
+          "你喝咖啡还是喝茶？",
+          "",
+          "Bạn uống cà phê hay trà?"
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "杯",
+          "p": ""
+        }
+      ],
+      "pinyin": "bēi",
+      "pos": "Danh từ/Lượng từ",
+      "meaning": "cốc; ly",
+      "examples": [
+        [
+          "我要一杯茶。",
+          "",
+          "Tôi muốn một cốc trà."
+        ],
+        [
+          "给我两杯酒。",
+          "",
+          "Cho tôi hai ly rượu."
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "车",
+          "p": ""
+        }
+      ],
+      "pinyin": "chē",
+      "pos": "Danh từ",
+      "meaning": "xe",
+      "wordlist": [
+        {
+          "h": "自行车",
+          "p": "zìxíngchē",
+          "m": "xe đạp"
+        },
+        {
+          "h": "汽车",
+          "p": "qìchē",
+          "m": "ô tô"
+        },
+        {
+          "h": "摩托车",
+          "p": "mótuōchē",
+          "m": "xe máy"
+        },
+        {
+          "h": "出租车",
+          "p": "chūzūchē",
+          "m": "taxi"
+        }
+      ],
+      "examples": [
+        [
+          "那是我同学的车。",
+          "",
+          "Kia là xe của bạn học tôi."
+        ],
+        [
+          "我的车是红色的。",
+          "",
+          "Xe của tôi màu đỏ."
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "颜",
+          "p": ""
+        },
+        {
+          "h": "色",
+          "p": ""
+        }
+      ],
+      "pinyin": "yánsè",
+      "pos": "Danh từ",
+      "meaning": "màu sắc",
+      "examples": [
+        [
+          "这是什么颜色？",
+          "",
+          "Đây là màu gì?"
+        ],
+        [
+          "你的车是什么颜色的？",
+          "",
+          "Xe của bạn màu gì?"
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "蓝",
+          "p": ""
+        }
+      ],
+      "pinyin": "lán",
+      "pos": "Tính từ",
+      "meaning": "màu xanh lam"
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "辆",
+          "p": ""
+        }
+      ],
+      "pinyin": "liàng",
+      "pos": "Lượng từ",
+      "meaning": "chiếc (xe)",
+      "examples": [
+        [
+          "这辆车很贵。",
+          "",
+          "Chiếc xe này rất đắt."
+        ],
+        [
+          "那辆蓝色的摩托车是我的。",
+          "",
+          "Chiếc xe máy màu xanh kia là của tôi."
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "（一）您身体好吗",
+      "lines": [
+        {
+          "role": "关经理",
+          "text": "王老师，好久不见了。"
+        },
+        {
+          "role": "王老师",
+          "text": "啊！关经理，欢迎，欢迎！"
+        },
+        {
+          "role": "关经理",
+          "text": "您身体好吗？"
+        },
+        {
+          "role": "王老师",
+          "text": "很好。您身体怎么样？"
+        },
+        {
+          "role": "关经理",
+          "text": "马马虎虎。"
+        },
+        {
+          "role": "王老师",
+          "text": "最近工作忙不忙？"
+        },
+        {
+          "role": "关经理",
+          "text": "不太忙。您呢？"
+        },
+        {
+          "role": "王老师",
+          "text": "刚开学，有点儿忙。喝点儿什么？茶还是咖啡？"
+        },
+        {
+          "role": "关经理",
+          "text": "来杯茶吧！"
+        }
+      ]
+    },
+    {
+      "title": "（二）你的自行车是新的还是旧的",
+      "lines": [
+        {
+          "role": "田芳",
+          "text": "我的车呢？"
+        },
+        {
+          "role": "张东",
+          "text": "你的车是什么颜色的？"
+        },
+        {
+          "role": "田芳",
+          "text": "蓝的。"
+        },
+        {
+          "role": "张东",
+          "text": "是新的还是旧的？"
+        },
+        {
+          "role": "田芳",
+          "text": "新的。"
+        },
+        {
+          "role": "张东",
+          "text": "那辆蓝的是不是你的？"
+        },
+        {
+          "role": "田芳",
+          "text": "哪辆？"
+        },
+        {
+          "role": "张东",
+          "text": "那辆。"
+        },
+        {
+          "role": "田芳",
+          "text": "不是。……啊，在那儿呢。"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "grammar": [
+      {
+        "title": "选择疑问句“还是”",
+        "content": "Khi đưa ra hai hoặc nhiều khả năng để người nghe lựa chọn, dùng 还是: 你今天去还是明天去？茶还是咖啡？"
+      },
+      {
+        "title": "省略疑问句“呢”",
+        "content": "Không có câu trước: 我的自行车呢？= 我的自行车在哪儿？ Có câu trước: 我是英国人，你呢？"
+      },
+      {
+        "title": "主谓谓语句",
+        "content": "Câu có vị ngữ là một cụm chủ-vị: 我身体很好；她工作很忙。 Chủ ngữ lớn nêu đối tượng, cụm chủ-vị phía sau miêu tả đối tượng đó."
+      },
+      {
+        "title": "有点儿 + 形容词",
+        "content": "有点儿 đứng trước tính từ: 有点儿忙、有点儿贵、有点儿重. Thường mang sắc thái chưa hài lòng."
+      },
+      {
+        "title": "动词 + 一点儿",
+        "content": "一点儿 đứng sau động từ hoặc trước danh từ: 喝一点儿、吃一点儿、买一点儿水果。"
+      },
+      {
+        "title": "最 + 形容词/动词",
+        "content": "最 biểu thị mức độ cao nhất: 最好、最难、最好吃、最好看。"
+      },
+      {
+        "title": "刚 + 动词",
+        "content": "刚 biểu thị hành động vừa xảy ra: 刚开学、刚回家、刚去银行。"
+      },
+      {
+        "title": "“的”字短语",
+        "content": "Có thể lược danh từ sau 的 khi đã rõ: 蓝的、新的、旧的、我的、田芳的。"
+      }
+    ]
+  },
+  "extra": {}
+}

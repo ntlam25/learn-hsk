@@ -1,0 +1,588 @@
+{
+  "lessonNumber": 3,
+  "seal": "三课",
+  "titleZh": "第3课",
+  "titleVi": "Bài 3 · 明天见",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "学",
+          "p": ""
+        }
+      ],
+      "pinyin": "xué",
+      "pos": "Động từ",
+      "meaning": "học",
+      "examples": [
+        [
+          "我学汉语。",
+          "",
+          "Tôi học tiếng Hán."
+        ],
+        [
+          "你学什么？",
+          "",
+          "Bạn học gì?"
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "英",
+          "p": ""
+        },
+        {
+          "h": "语",
+          "p": ""
+        }
+      ],
+      "pinyin": "Yīngyǔ",
+      "pos": "Danh từ",
+      "meaning": "tiếng Anh",
+      "wordlist": [
+        {
+          "h": "阿拉伯语",
+          "p": "Ālābóyǔ",
+          "m": "tiếng Ả Rập"
+        },
+        {
+          "h": "德语",
+          "p": "Déyǔ",
+          "m": "tiếng Đức"
+        },
+        {
+          "h": "俄语",
+          "p": "Éyǔ",
+          "m": "tiếng Nga"
+        },
+        {
+          "h": "法语",
+          "p": "Fǎyǔ",
+          "m": "tiếng Pháp"
+        },
+        {
+          "h": "韩国语",
+          "p": "Hánguóyǔ",
+          "m": "tiếng Hàn"
+        },
+        {
+          "h": "日语",
+          "p": "Rìyǔ",
+          "m": "tiếng Nhật"
+        },
+        {
+          "h": "西班牙语",
+          "p": "Xībānyáyǔ",
+          "m": "tiếng Tây Ban Nha"
+        }
+      ],
+      "examples": [
+        [
+          "我学英语。",
+          "",
+          "Tôi học tiếng Anh."
+        ],
+        [
+          "英语很难。",
+          "",
+          "Tiếng Anh rất khó."
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "去",
+          "p": ""
+        }
+      ],
+      "pinyin": "qù",
+      "pos": "Động từ",
+      "meaning": "đi; đến",
+      "examples": [
+        [
+          "你去吗？",
+          "",
+          "Bạn có đi không?"
+        ],
+        [
+          "我不去。",
+          "",
+          "Tôi không đi."
+        ],
+        [
+          "你去不去？",
+          "",
+          "Bạn có đi hay không?"
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "对",
+          "p": ""
+        }
+      ],
+      "pinyin": "duì",
+      "pos": "Tính từ",
+      "meaning": "đúng; phải",
+      "examples": [
+        [
+          "对不对？",
+          "",
+          "Đúng hay không?"
+        ],
+        [
+          "对。",
+          "",
+          "Đúng."
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "邮",
+          "p": ""
+        },
+        {
+          "h": "局",
+          "p": ""
+        }
+      ],
+      "pinyin": "yóujú",
+      "pos": "Danh từ",
+      "meaning": "bưu điện",
+      "examples": [
+        [
+          "明天我去邮局。",
+          "",
+          "Ngày mai tôi đi bưu điện."
+        ],
+        [
+          "你去邮局吗？",
+          "",
+          "Bạn có đi bưu điện không?"
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "寄",
+          "p": ""
+        }
+      ],
+      "pinyin": "jì",
+      "pos": "Động từ",
+      "meaning": "gửi",
+      "examples": [
+        [
+          "我去邮局寄信。",
+          "",
+          "Tôi đến bưu điện gửi thư."
+        ],
+        [
+          "你去寄信吗？",
+          "",
+          "Bạn đi gửi thư không?"
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "信",
+          "p": ""
+        }
+      ],
+      "pinyin": "xìn",
+      "pos": "Danh từ",
+      "meaning": "thư",
+      "examples": [
+        [
+          "我去寄信。",
+          "",
+          "Tôi đi gửi thư."
+        ],
+        [
+          "这是谁的信？",
+          "",
+          "Đây là thư của ai?"
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "银",
+          "p": ""
+        },
+        {
+          "h": "行",
+          "p": ""
+        }
+      ],
+      "pinyin": "yínháng",
+      "pos": "Danh từ",
+      "meaning": "ngân hàng",
+      "examples": [
+        [
+          "我去银行。",
+          "",
+          "Tôi đi ngân hàng."
+        ],
+        [
+          "银行很大。",
+          "",
+          "Ngân hàng rất lớn."
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "取",
+          "p": ""
+        }
+      ],
+      "pinyin": "qǔ",
+      "pos": "Động từ",
+      "meaning": "lấy; rút",
+      "examples": [
+        [
+          "我去银行取钱。",
+          "",
+          "Tôi đến ngân hàng rút tiền."
+        ],
+        [
+          "你去取钱吗？",
+          "",
+          "Bạn đi rút tiền không?"
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "钱",
+          "p": ""
+        }
+      ],
+      "pinyin": "qián",
+      "pos": "Danh từ",
+      "meaning": "tiền",
+      "examples": [
+        [
+          "我有钱。",
+          "",
+          "Tôi có tiền."
+        ],
+        [
+          "我没有钱。",
+          "",
+          "Tôi không có tiền."
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "明",
+          "p": ""
+        },
+        {
+          "h": "天",
+          "p": ""
+        }
+      ],
+      "pinyin": "míngtiān",
+      "pos": "Danh từ",
+      "meaning": "ngày mai",
+      "wordlist": [
+        {
+          "h": "天",
+          "p": "tiān",
+          "m": "ngày"
+        }
+      ],
+      "examples": [
+        [
+          "明天见！",
+          "",
+          "Ngày mai gặp lại!"
+        ],
+        [
+          "明天我去北京。",
+          "",
+          "Ngày mai tôi đi Bắc Kinh."
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "见",
+          "p": ""
+        }
+      ],
+      "pinyin": "jiàn",
+      "pos": "Động từ",
+      "meaning": "gặp; thấy",
+      "note": "Có thể dùng “thời gian/địa điểm + 见” để hẹn gặp.",
+      "examples": [
+        [
+          "明天见！",
+          "",
+          "Ngày mai gặp lại!"
+        ],
+        [
+          "北京见！",
+          "",
+          "Gặp nhau ở Bắc Kinh!"
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "六",
+          "p": ""
+        }
+      ],
+      "pinyin": "liù",
+      "pos": "Số từ",
+      "meaning": "sáu",
+      "examples": [
+        [
+          "六个人。",
+          "",
+          "Sáu người."
+        ],
+        [
+          "六本书。",
+          "",
+          "Sáu quyển sách."
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "七",
+          "p": ""
+        }
+      ],
+      "pinyin": "qī",
+      "pos": "Số từ",
+      "meaning": "bảy",
+      "examples": [
+        [
+          "七个人。",
+          "",
+          "Bảy người."
+        ],
+        [
+          "七封信。",
+          "",
+          "Bảy lá thư."
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "九",
+          "p": ""
+        }
+      ],
+      "pinyin": "jiǔ",
+      "pos": "Số từ",
+      "meaning": "chín",
+      "examples": [
+        [
+          "九个人。",
+          "",
+          "Chín người."
+        ],
+        [
+          "九块钱。",
+          "",
+          "Chín đồng."
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "（一）学汉语",
+      "lines": [
+        {
+          "role": "A",
+          "text": "你学英语吗？"
+        },
+        {
+          "role": "B",
+          "text": "不，学汉语。"
+        },
+        {
+          "role": "A",
+          "text": "去北京吗？"
+        },
+        {
+          "role": "B",
+          "text": "对。"
+        }
+      ]
+    },
+    {
+      "title": "（二）明天见",
+      "lines": [
+        {
+          "role": "A",
+          "text": "你去邮局寄信吗？"
+        },
+        {
+          "role": "B",
+          "text": "不去。去银行取钱。"
+        },
+        {
+          "role": "A",
+          "text": "明天见！"
+        },
+        {
+          "role": "B",
+          "text": "明天见！"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "notes": [
+      {
+        "title": "z、c、s",
+        "content": "z không bật hơi; c bật hơi; s là âm xát. Luyện: zī、cí、sī và 再见、词典、公司。"
+      },
+      {
+        "title": "zh、ch、sh、r",
+        "content": "Nhóm âm đầu cuốn lưỡi. Đầu lưỡi cong nhẹ lên phía vòm cứng; ch bật hơi mạnh hơn zh."
+      },
+      {
+        "title": "特殊韵母 -i",
+        "content": "Sau z、c、s、zh、ch、sh、r, chữ i không đọc như “i” thông thường mà gần âm “ư”: zi、ci、si、zhi、chi、shi、ri."
+      },
+      {
+        "title": "韵母 er",
+        "content": "er có thể tự tạo thành âm tiết, không cần thanh mẫu: 儿、耳、二。"
+      },
+      {
+        "title": "儿化音",
+        "content": "Thêm r sau âm tiết để tạo vần cuốn lưỡi: 画儿 huàr、花儿 huār、哪儿 nǎr、那儿 nàr、玩儿 wánr。"
+      },
+      {
+        "title": "u 系列韵母",
+        "content": "ua、uo、uai、ui(uei)、uan、un(uen)、uang、ueng. Chú ý dạng viết tắt ui và un."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "吗 疑问句",
+        "content": "Thêm 吗 cuối câu trần thuật để hỏi có/không: 你学英语吗？你去北京吗？"
+      },
+      {
+        "title": "正反疑问句",
+        "content": "Đặt động từ khẳng định và phủ định cạnh nhau: 去不去、对不对. Không thêm 吗 ở cuối."
+      },
+      {
+        "title": "连动结构",
+        "content": "Dùng nhiều động từ liên tiếp để biểu thị mục đích: 去邮局寄信、去银行取钱。"
+      },
+      {
+        "title": "时间 + 见",
+        "content": "Dùng thời gian hoặc địa điểm trước 见 để hẹn gặp: 明天见、北京见、韩国见。"
+      },
+      {
+        "title": "省略主语",
+        "content": "Trong hội thoại, chủ ngữ có thể được lược khi ngữ cảnh rõ: 不去。去银行取钱。"
+      }
+    ],
+    "chips": [
+      {
+        "title": "认读练习",
+        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
+        "items": [
+          [
+            "学",
+            "xué"
+          ],
+          [
+            "英语",
+            "Yīngyǔ"
+          ],
+          [
+            "日语",
+            "rìyǔ"
+          ],
+          [
+            "阿拉伯语",
+            "Ālābóyǔ"
+          ],
+          [
+            "德语",
+            "Déyǔ"
+          ],
+          [
+            "俄语",
+            "Éyǔ"
+          ],
+          [
+            "法语",
+            "Fǎyǔ"
+          ],
+          [
+            "韩国语",
+            "Hánguóyǔ"
+          ],
+          [
+            "西班牙语",
+            "Xībānyáyǔ"
+          ],
+          [
+            "对",
+            "duì"
+          ],
+          [
+            "明天",
+            "míngtiān"
+          ],
+          [
+            "见",
+            "jiàn"
+          ]
+        ]
+      }
+    ]
+  },
+  "extra": {}
+}

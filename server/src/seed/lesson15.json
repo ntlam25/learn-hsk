@@ -1,0 +1,578 @@
+{
+  "lessonNumber": 15,
+  "seal": "十五",
+  "titleZh": "第15课",
+  "titleVi": "Bài 15 · 你家有几口人",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "全",
+          "p": ""
+        }
+      ],
+      "pinyin": "quán",
+      "pos": "Tính từ/Phó từ",
+      "meaning": "toàn bộ; tất cả; hoàn toàn",
+      "examples": [
+        [
+          "这本书不全。",
+          "",
+          "Quyển sách này không đầy đủ."
+        ],
+        [
+          "我全家人都很好。",
+          "",
+          "Cả gia đình tôi đều khỏe."
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "照",
+          "p": ""
+        },
+        {
+          "h": "片",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhàopiàn",
+      "pos": "Danh từ",
+      "meaning": "ảnh; bức ảnh",
+      "note": "Lượng từ: 张.",
+      "examples": [
+        [
+          "这是我们全家的照片。",
+          "",
+          "Đây là ảnh cả gia đình chúng tôi."
+        ],
+        [
+          "你有几张照片？",
+          "",
+          "Bạn có mấy bức ảnh?"
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "张",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhāng",
+      "pos": "Lượng từ",
+      "meaning": "tờ; bức; chiếc (vật phẳng)"
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "看",
+          "p": ""
+        }
+      ],
+      "pinyin": "kàn",
+      "pos": "Động từ",
+      "meaning": "nhìn; xem; đọc",
+      "examples": [
+        [
+          "你看什么？",
+          "",
+          "Bạn xem gì?"
+        ],
+        [
+          "我看书，他看杂志。",
+          "",
+          "Tôi đọc sách, anh ấy đọc tạp chí."
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "姐",
+          "p": ""
+        },
+        {
+          "h": "姐",
+          "p": ""
+        }
+      ],
+      "pinyin": "jiějie",
+      "pos": "Danh từ",
+      "meaning": "chị gái"
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "只",
+          "p": ""
+        }
+      ],
+      "pinyin": "zhǐ",
+      "pos": "Phó từ",
+      "meaning": "chỉ; chỉ có",
+      "examples": [
+        [
+          "我只喝茶，不喝咖啡。",
+          "",
+          "Tôi chỉ uống trà, không uống cà phê."
+        ],
+        [
+          "我只有一个姐姐。",
+          "",
+          "Tôi chỉ có một chị gái."
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "做",
+          "p": ""
+        }
+      ],
+      "pinyin": "zuò",
+      "pos": "Động từ",
+      "meaning": "làm",
+      "examples": [
+        [
+          "爸爸给我做午饭。",
+          "",
+          "Bố làm bữa trưa cho tôi."
+        ],
+        [
+          "你会做饭吗？",
+          "",
+          "Bạn biết nấu cơm không?"
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "大",
+          "p": ""
+        },
+        {
+          "h": "夫",
+          "p": ""
+        }
+      ],
+      "pinyin": "dàifu",
+      "pos": "Danh từ",
+      "meaning": "bác sĩ",
+      "examples": [
+        [
+          "这位大夫很好。",
+          "",
+          "Vị bác sĩ này rất tốt."
+        ],
+        [
+          "今天我去看大夫。",
+          "",
+          "Hôm nay tôi đi khám bác sĩ."
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "医",
+          "p": ""
+        },
+        {
+          "h": "院",
+          "p": ""
+        }
+      ],
+      "pinyin": "yīyuàn",
+      "pos": "Danh từ",
+      "meaning": "bệnh viện",
+      "examples": [
+        [
+          "明天早上我要去医院看大夫。",
+          "",
+          "Sáng mai tôi muốn đến bệnh viện khám bác sĩ."
+        ],
+        [
+          "你要住院吗？",
+          "",
+          "Bạn có cần nhập viện không?"
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "公",
+          "p": ""
+        },
+        {
+          "h": "司",
+          "p": ""
+        }
+      ],
+      "pinyin": "gōngsī",
+      "pos": "Danh từ",
+      "meaning": "công ty",
+      "examples": [
+        [
+          "你们是什么公司？",
+          "",
+          "Các bạn là công ty gì?"
+        ],
+        [
+          "全公司的职员都是河内人。",
+          "",
+          "Nhân viên toàn công ty đều là người Hà Nội."
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "商",
+          "p": ""
+        },
+        {
+          "h": "店",
+          "p": ""
+        }
+      ],
+      "pinyin": "shāngdiàn",
+      "pos": "Danh từ",
+      "meaning": "cửa hàng",
+      "examples": [
+        [
+          "这个商店很大。",
+          "",
+          "Cửa hàng này rất lớn."
+        ],
+        [
+          "我姐姐是这个商店的职员。",
+          "",
+          "Chị tôi là nhân viên cửa hàng này."
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "律",
+          "p": ""
+        },
+        {
+          "h": "师",
+          "p": ""
+        }
+      ],
+      "pinyin": "lǜshī",
+      "pos": "Danh từ",
+      "meaning": "luật sư",
+      "examples": [
+        [
+          "这位是我的律师。",
+          "",
+          "Vị này là luật sư của tôi."
+        ],
+        [
+          "我爸爸是律师。",
+          "",
+          "Bố tôi là luật sư."
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "外",
+          "p": ""
+        },
+        {
+          "h": "贸",
+          "p": ""
+        }
+      ],
+      "pinyin": "wàimào",
+      "pos": "Danh từ",
+      "meaning": "ngoại thương",
+      "examples": [
+        [
+          "我在外贸大学学习。",
+          "",
+          "Tôi học ở Đại học Ngoại thương."
+        ],
+        [
+          "这是一家外贸公司。",
+          "",
+          "Đây là một công ty ngoại thương."
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "小",
+          "p": ""
+        }
+      ],
+      "pinyin": "xiǎo",
+      "pos": "Tính từ",
+      "meaning": "nhỏ; bé",
+      "examples": [
+        [
+          "我们的公司很小。",
+          "",
+          "Công ty của chúng tôi rất nhỏ."
+        ],
+        [
+          "这些苹果都很小。",
+          "",
+          "Những quả táo này đều rất nhỏ."
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "员",
+          "p": ""
+        },
+        {
+          "h": "工",
+          "p": ""
+        }
+      ],
+      "pinyin": "yuángōng",
+      "pos": "Danh từ",
+      "meaning": "nhân viên",
+      "examples": [
+        [
+          "他们都是公司的员工。",
+          "",
+          "Họ đều là nhân viên công ty."
+        ],
+        [
+          "公司有多少员工？",
+          "",
+          "Công ty có bao nhiêu nhân viên?"
+        ]
+      ]
+    },
+    {
+      "num": 16,
+      "chars": [
+        {
+          "h": "大",
+          "p": ""
+        },
+        {
+          "h": "概",
+          "p": ""
+        }
+      ],
+      "pinyin": "dàgài",
+      "pos": "Phó từ",
+      "meaning": "khoảng; đại khái",
+      "examples": [
+        [
+          "这家公司大概有七百员工。",
+          "",
+          "Công ty này có khoảng 700 nhân viên."
+        ],
+        [
+          "这里大概有三十个人。",
+          "",
+          "Ở đây có khoảng 30 người."
+        ]
+      ]
+    },
+    {
+      "num": 17,
+      "chars": [
+        {
+          "h": "多",
+          "p": ""
+        }
+      ],
+      "pinyin": "duō",
+      "pos": "Số từ",
+      "meaning": "hơn; lẻ (đứng sau số)",
+      "note": "Mẫu: số từ + 多 + lượng từ + danh từ.",
+      "examples": [
+        [
+          "十多个人。",
+          "",
+          "Hơn mười người."
+        ],
+        [
+          "一百多公斤。",
+          "",
+          "Hơn một trăm kilôgam."
+        ]
+      ]
+    },
+    {
+      "num": 18,
+      "chars": [
+        {
+          "h": "外",
+          "p": ""
+        },
+        {
+          "h": "国",
+          "p": ""
+        }
+      ],
+      "pinyin": "wàiguó",
+      "pos": "Danh từ",
+      "meaning": "nước ngoài",
+      "examples": [
+        [
+          "我去外国留学。",
+          "",
+          "Tôi đi nước ngoài du học."
+        ],
+        [
+          "我在一家外国公司工作。",
+          "",
+          "Tôi làm việc ở một công ty nước ngoài."
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "（一）你家有几口人",
+      "lines": [
+        {
+          "role": "麦克",
+          "text": "你家有几口人？"
+        },
+        {
+          "role": "玛丽",
+          "text": "我家有五口人，爸爸、妈妈、哥哥、姐姐和我。"
+        },
+        {
+          "role": "麦克",
+          "text": "你有没有全家的照片？"
+        },
+        {
+          "role": "玛丽",
+          "text": "有一张。你看，这是我们全家的照片。"
+        },
+        {
+          "role": "麦克",
+          "text": "你有哥哥姐姐吗？"
+        },
+        {
+          "role": "玛丽",
+          "text": "我没有哥哥，也没有姐姐，只有两个弟弟。"
+        },
+        {
+          "role": "玛丽",
+          "text": "你爸爸、妈妈做什么工作？"
+        },
+        {
+          "role": "麦克",
+          "text": "我妈妈是大夫，在医院工作，爸爸是一家公司的经理。"
+        },
+        {
+          "role": "玛丽",
+          "text": "我妈妈在商店工作，爸爸是律师。"
+        }
+      ]
+    },
+    {
+      "title": "（二）你们公司有多少员工",
+      "lines": [
+        {
+          "role": "王老师",
+          "text": "你们是一家什么公司？"
+        },
+        {
+          "role": "关经理",
+          "text": "是一家外贸公司。"
+        },
+        {
+          "role": "王老师",
+          "text": "是一家大公司吗？"
+        },
+        {
+          "role": "关经理",
+          "text": "不是。是一家比较小的公司。"
+        },
+        {
+          "role": "王老师",
+          "text": "有多少员工？"
+        },
+        {
+          "role": "关经理",
+          "text": "大概有一百多个员工。"
+        },
+        {
+          "role": "王老师",
+          "text": "都是中国员工吗？"
+        },
+        {
+          "role": "关经理",
+          "text": "不都是中国员工，也有外国员工。"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "grammar": [
+      {
+        "title": "有字句 · Sở hữu",
+        "content": "Chủ ngữ + 有 + tân ngữ: 我有一本词典. Phủ định dùng 没有; nghi vấn dùng 有……吗 hoặc 有没有……？"
+      },
+      {
+        "title": "有字句 · Tồn tại",
+        "content": "Địa điểm/tổ chức + 有 + người/vật: 我家有五口人；公司有一百多个职员。"
+      },
+      {
+        "title": "几 và 多少",
+        "content": "几 thường hỏi số nhỏ, có thể dự đoán dưới 10; 多少 hỏi số lớn hoặc không ước tính được."
+      },
+      {
+        "title": "Cụm số lượng",
+        "content": "Số từ + lượng từ + danh từ: 一张照片、两本书、三辆车、五口人。"
+      },
+      {
+        "title": "二 và 两",
+        "content": "两 dùng trước lượng từ, 千, 万: 两个人、两千；二 dùng khi đếm và trong 二十、二百、二月、二楼。"
+      },
+      {
+        "title": "不都是 và 都不是",
+        "content": "不都是 = không phải tất cả; 都不是 = tất cả đều không/phủ định toàn bộ."
+      },
+      {
+        "title": "只",
+        "content": "只 đứng trước động từ hoặc 有: 我只看书；我只有两个弟弟。"
+      }
+    ]
+  },
+  "extra": {}
+}

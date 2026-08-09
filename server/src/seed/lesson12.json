@@ -1,0 +1,549 @@
+{
+  "lessonNumber": 12,
+  "seal": "十二",
+  "titleZh": "第12课",
+  "titleVi": "Bài 12 · 你在哪儿学习汉语",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "语",
+          "p": ""
+        },
+        {
+          "h": "言",
+          "p": ""
+        }
+      ],
+      "pinyin": "yǔyán",
+      "pos": "Danh từ",
+      "meaning": "ngôn ngữ",
+      "examples": [
+        [
+          "我要学习语言。",
+          "",
+          "Tôi muốn học ngôn ngữ."
+        ],
+        [
+          "这是语言学校。",
+          "",
+          "Đây là trường ngôn ngữ."
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "大",
+          "p": ""
+        },
+        {
+          "h": "学",
+          "p": ""
+        }
+      ],
+      "pinyin": "dàxué",
+      "pos": "Danh từ",
+      "meaning": "đại học",
+      "examples": [
+        [
+          "我们的大学很大。",
+          "",
+          "Trường đại học của chúng tôi rất lớn."
+        ],
+        [
+          "我们在大学学习语言。",
+          "",
+          "Chúng tôi học ngôn ngữ ở đại học."
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "怎",
+          "p": ""
+        },
+        {
+          "h": "么",
+          "p": ""
+        },
+        {
+          "h": "样",
+          "p": ""
+        }
+      ],
+      "pinyin": "zěnmeyàng",
+      "pos": "Đại từ",
+      "meaning": "như thế nào",
+      "examples": [
+        [
+          "你妈妈怎么样？",
+          "",
+          "Mẹ bạn thế nào?"
+        ],
+        [
+          "你们的大学怎么样？",
+          "",
+          "Trường đại học của các bạn thế nào?"
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "觉",
+          "p": ""
+        },
+        {
+          "h": "得",
+          "p": ""
+        }
+      ],
+      "pinyin": "juéde",
+      "pos": "Động từ",
+      "meaning": "cảm thấy; cho rằng",
+      "examples": [
+        [
+          "你觉得汉语怎么样？",
+          "",
+          "Bạn cảm thấy tiếng Hán thế nào?"
+        ],
+        [
+          "我觉得茶很好喝。",
+          "",
+          "Tôi thấy trà rất ngon."
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "语",
+          "p": ""
+        },
+        {
+          "h": "法",
+          "p": ""
+        }
+      ],
+      "pinyin": "yǔfǎ",
+      "pos": "Danh từ",
+      "meaning": "ngữ pháp",
+      "examples": [
+        [
+          "汉语语法难吗？",
+          "",
+          "Ngữ pháp tiếng Hán khó không?"
+        ],
+        [
+          "汉语语法不太难。",
+          "",
+          "Ngữ pháp tiếng Hán không quá khó."
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "听",
+          "p": ""
+        }
+      ],
+      "pinyin": "tīng",
+      "pos": "Động từ",
+      "meaning": "nghe",
+      "examples": [
+        [
+          "请听一下儿。",
+          "",
+          "Hãy nghe một chút."
+        ],
+        [
+          "你要听妈妈的话。",
+          "",
+          "Bạn phải nghe lời mẹ."
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "说",
+          "p": ""
+        }
+      ],
+      "pinyin": "shuō",
+      "pos": "Động từ",
+      "meaning": "nói",
+      "examples": [
+        [
+          "请你说。",
+          "",
+          "Mời bạn nói."
+        ],
+        [
+          "他会说汉语。",
+          "",
+          "Anh ấy biết nói tiếng Hán."
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "比",
+          "p": ""
+        },
+        {
+          "h": "较",
+          "p": ""
+        }
+      ],
+      "pinyin": "bǐjiào",
+      "pos": "Phó từ/Động từ",
+      "meaning": "khá; tương đối; so sánh",
+      "examples": [
+        [
+          "这个苹果比较好吃。",
+          "",
+          "Quả táo này khá ngon."
+        ],
+        [
+          "你的汉语比较好。",
+          "",
+          "Tiếng Hán của bạn khá tốt."
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "容",
+          "p": ""
+        },
+        {
+          "h": "易",
+          "p": ""
+        }
+      ],
+      "pinyin": "róngyì",
+      "pos": "Tính từ",
+      "meaning": "dễ",
+      "examples": [
+        [
+          "汉语的发音比较容易。",
+          "",
+          "Phát âm tiếng Hán tương đối dễ."
+        ],
+        [
+          "韩国语容易吗？",
+          "",
+          "Tiếng Hàn có dễ không?"
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "但",
+          "p": ""
+        },
+        {
+          "h": "是",
+          "p": ""
+        }
+      ],
+      "pinyin": "dànshì",
+      "pos": "Liên từ",
+      "meaning": "nhưng",
+      "examples": [
+        [
+          "听和说很容易，但是读和写很难。",
+          "",
+          "Nghe và nói dễ, nhưng đọc và viết khó."
+        ],
+        [
+          "苹果很贵，但是不好吃。",
+          "",
+          "Táo đắt nhưng không ngon."
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "读",
+          "p": ""
+        }
+      ],
+      "pinyin": "dú",
+      "pos": "Động từ",
+      "meaning": "đọc",
+      "examples": [
+        [
+          "我读书和杂志。",
+          "",
+          "Tôi đọc sách và tạp chí."
+        ],
+        [
+          "这个汉字怎么读？",
+          "",
+          "Chữ Hán này đọc thế nào?"
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "写",
+          "p": ""
+        }
+      ],
+      "pinyin": "xiě",
+      "pos": "Động từ",
+      "meaning": "viết",
+      "examples": [
+        [
+          "我写信。",
+          "",
+          "Tôi viết thư."
+        ],
+        [
+          "这个汉字怎么写？",
+          "",
+          "Chữ Hán này viết thế nào?"
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "给",
+          "p": ""
+        }
+      ],
+      "pinyin": "gěi",
+      "pos": "Giới từ",
+      "meaning": "cho; đối với",
+      "note": "Mẫu: 给 + người + động từ.",
+      "examples": [
+        [
+          "我给他写信。",
+          "",
+          "Tôi viết thư cho anh ấy."
+        ],
+        [
+          "我给妈妈买书。",
+          "",
+          "Tôi mua sách cho mẹ."
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "新",
+          "p": ""
+        }
+      ],
+      "pinyin": "xīn",
+      "pos": "Tính từ",
+      "meaning": "mới",
+      "examples": [
+        [
+          "这是我的新朋友。",
+          "",
+          "Đây là bạn mới của tôi."
+        ],
+        [
+          "他是我们学校的新校长。",
+          "",
+          "Ông ấy là hiệu trưởng mới của trường chúng tôi."
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "同",
+          "p": ""
+        },
+        {
+          "h": "学",
+          "p": ""
+        }
+      ],
+      "pinyin": "tóngxué",
+      "pos": "Danh từ",
+      "meaning": "bạn học",
+      "examples": [
+        [
+          "他们是我的新同学。",
+          "",
+          "Họ là bạn học mới của tôi."
+        ],
+        [
+          "他是我的男同学。",
+          "",
+          "Anh ấy là bạn học nam của tôi."
+        ]
+      ]
+    },
+    {
+      "num": 16,
+      "chars": [
+        {
+          "h": "同",
+          "p": ""
+        },
+        {
+          "h": "屋",
+          "p": ""
+        }
+      ],
+      "pinyin": "tóngwū",
+      "pos": "Danh từ",
+      "meaning": "bạn cùng phòng",
+      "examples": [
+        [
+          "他是我的同屋。",
+          "",
+          "Anh ấy là bạn cùng phòng của tôi."
+        ],
+        [
+          "我的同屋是西班牙人。",
+          "",
+          "Bạn cùng phòng của tôi là người Tây Ban Nha."
+        ]
+      ]
+    },
+    {
+      "num": 17,
+      "chars": [
+        {
+          "h": "班",
+          "p": ""
+        }
+      ],
+      "pinyin": "bān",
+      "pos": "Danh từ",
+      "meaning": "lớp",
+      "examples": [
+        [
+          "这是我们班的老师。",
+          "",
+          "Đây là giáo viên lớp chúng tôi."
+        ],
+        [
+          "我们班在一楼。",
+          "",
+          "Lớp chúng tôi ở tầng một."
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "（一）你在哪儿学习汉语",
+      "lines": [
+        {
+          "role": "A",
+          "text": "你在哪儿学习汉语？"
+        },
+        {
+          "role": "B",
+          "text": "在北京语言大学。"
+        },
+        {
+          "role": "A",
+          "text": "你们的老师怎么样？"
+        },
+        {
+          "role": "B",
+          "text": "很好！"
+        },
+        {
+          "role": "A",
+          "text": "你觉得学习汉语难吗？"
+        },
+        {
+          "role": "B",
+          "text": "我觉得汉语语法不太难。听和说也比较容易，但是读和写很难。"
+        }
+      ]
+    },
+    {
+      "title": "（二）你们的老师是谁",
+      "lines": [
+        {
+          "role": "A",
+          "text": "我给你们介绍一下儿，这是新同学，是我的同屋。"
+        },
+        {
+          "role": "B",
+          "text": "你好！你在哪个班学习？"
+        },
+        {
+          "role": "C",
+          "text": "在103班。"
+        },
+        {
+          "role": "B",
+          "text": "你们的老师是谁？"
+        },
+        {
+          "role": "C",
+          "text": "我们的老师是林老师。"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "grammar": [
+      {
+        "title": "疑问代词 · Đại từ nghi vấn",
+        "content": "谁、什么、哪、哪儿、怎么、怎么样、几、多少 thay thế phần cần hỏi; không thêm 吗 vào cuối câu hỏi này."
+      },
+      {
+        "title": "定语 + 的 + 中心语",
+        "content": "Danh từ/đại từ biểu thị sở hữu thường thêm 的: 我的书、老师的本子、我们的老师。"
+      },
+      {
+        "title": "Khi không dùng 的",
+        "content": "Tính từ đơn âm tiết hoặc danh từ phân loại/nguồn gốc thường không dùng 的: 新同学、中文书、男同学。"
+      },
+      {
+        "title": "在 + địa điểm + động từ",
+        "content": "Biểu thị nơi xảy ra hành động: 我在北京语言大学学习；我在食堂吃饭。"
+      },
+      {
+        "title": "给 + người + động từ",
+        "content": "Biểu thị người tiếp nhận/đối tượng: 我给你介绍一下儿；她给妈妈打电话。"
+      },
+      {
+        "title": "但是",
+        "content": "Nối hai vế tương phản: 语法不太难，但是汉字很难。"
+      }
+    ]
+  },
+  "extra": {}
+}

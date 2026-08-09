@@ -1,0 +1,485 @@
+{
+  "lessonNumber": 4,
+  "seal": "四课",
+  "titleZh": "第4课",
+  "titleVi": "Bài 4 · 你去哪儿",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "今",
+          "p": ""
+        },
+        {
+          "h": "天",
+          "p": ""
+        }
+      ],
+      "pinyin": "jīntiān",
+      "pos": "Danh từ",
+      "meaning": "hôm nay",
+      "wordlist": [
+        {
+          "h": "昨天",
+          "p": "zuótiān",
+          "m": "hôm qua"
+        }
+      ],
+      "examples": [
+        [
+          "今天星期几？",
+          "",
+          "Hôm nay là thứ mấy?"
+        ],
+        [
+          "今天我学汉语。",
+          "",
+          "Hôm nay tôi học tiếng Hán."
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "星",
+          "p": ""
+        },
+        {
+          "h": "期",
+          "p": ""
+        }
+      ],
+      "pinyin": "xīngqī",
+      "pos": "Danh từ",
+      "meaning": "tuần; thứ",
+      "wordlist": [
+        {
+          "h": "星期一",
+          "p": "xīngqīyī",
+          "m": "thứ Hai"
+        },
+        {
+          "h": "星期二",
+          "p": "xīngqī’èr",
+          "m": "thứ Ba"
+        },
+        {
+          "h": "星期三",
+          "p": "xīngqīsān",
+          "m": "thứ Tư"
+        },
+        {
+          "h": "星期四",
+          "p": "xīngqīsì",
+          "m": "thứ Năm"
+        },
+        {
+          "h": "星期五",
+          "p": "xīngqīwǔ",
+          "m": "thứ Sáu"
+        },
+        {
+          "h": "星期六",
+          "p": "xīngqīliù",
+          "m": "thứ Bảy"
+        },
+        {
+          "h": "星期天",
+          "p": "xīngqītiān",
+          "m": "Chủ nhật"
+        }
+      ],
+      "examples": [
+        [
+          "今天星期二。",
+          "",
+          "Hôm nay là thứ Ba."
+        ],
+        [
+          "星期六你去哪儿？",
+          "",
+          "Thứ Bảy bạn đi đâu?"
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "几",
+          "p": ""
+        }
+      ],
+      "pinyin": "jǐ",
+      "pos": "Đại từ",
+      "meaning": "mấy; bao nhiêu (số lượng nhỏ)",
+      "note": "Mẫu: 几 + lượng từ + danh từ.",
+      "examples": [
+        [
+          "今天星期几？",
+          "",
+          "Hôm nay là thứ mấy?"
+        ],
+        [
+          "你有几本书？",
+          "",
+          "Bạn có mấy quyển sách?"
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "二",
+          "p": ""
+        }
+      ],
+      "pinyin": "èr",
+      "pos": "Số từ",
+      "meaning": "hai"
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "三",
+          "p": ""
+        }
+      ],
+      "pinyin": "sān",
+      "pos": "Số từ",
+      "meaning": "ba"
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "四",
+          "p": ""
+        }
+      ],
+      "pinyin": "sì",
+      "pos": "Số từ",
+      "meaning": "bốn"
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "哪",
+          "p": ""
+        },
+        {
+          "h": "儿",
+          "p": ""
+        }
+      ],
+      "pinyin": "nǎr",
+      "pos": "Đại từ",
+      "meaning": "ở đâu",
+      "wordlist": [
+        {
+          "h": "那儿",
+          "p": "nàr",
+          "m": "ở đó; ở kia"
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "我",
+          "p": ""
+        }
+      ],
+      "pinyin": "wǒ",
+      "pos": "Đại từ",
+      "meaning": "tôi; mình",
+      "examples": [
+        [
+          "我学汉语。",
+          "",
+          "Tôi học tiếng Hán."
+        ],
+        [
+          "我很好。",
+          "",
+          "Tôi rất khỏe."
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "回",
+          "p": ""
+        }
+      ],
+      "pinyin": "huí",
+      "pos": "Động từ",
+      "meaning": "về; trở về",
+      "examples": [
+        [
+          "周末我回家。",
+          "",
+          "Cuối tuần tôi về nhà."
+        ],
+        [
+          "明天我回公司。",
+          "",
+          "Ngày mai tôi về công ty."
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "学",
+          "p": ""
+        },
+        {
+          "h": "校",
+          "p": ""
+        }
+      ],
+      "pinyin": "xuéxiào",
+      "pos": "Danh từ",
+      "meaning": "trường học",
+      "examples": [
+        [
+          "妹妹去学校。",
+          "",
+          "Em gái đi đến trường."
+        ],
+        [
+          "明天我回学校。",
+          "",
+          "Ngày mai tôi trở lại trường."
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "再",
+          "p": ""
+        },
+        {
+          "h": "见",
+          "p": ""
+        }
+      ],
+      "pinyin": "zàijiàn",
+      "pos": "Động từ/Cụm từ",
+      "meaning": "tạm biệt",
+      "note": "再: lại; 见: gặp.",
+      "examples": [
+        [
+          "老师，再见！",
+          "",
+          "Thưa thầy/cô, tạm biệt!"
+        ],
+        [
+          "明天见！",
+          "",
+          "Ngày mai gặp lại!"
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "对",
+          "p": ""
+        },
+        {
+          "h": "不",
+          "p": ""
+        },
+        {
+          "h": "起",
+          "p": ""
+        }
+      ],
+      "pinyin": "duìbuqǐ",
+      "pos": "Cụm từ",
+      "meaning": "xin lỗi",
+      "examples": [
+        [
+          "对不起，我今天不去。",
+          "",
+          "Xin lỗi, hôm nay tôi không đi."
+        ],
+        [
+          "A：对不起！ B：没关系！",
+          "",
+          "A: Xin lỗi! B: Không sao!"
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "没",
+          "p": ""
+        },
+        {
+          "h": "关",
+          "p": ""
+        },
+        {
+          "h": "系",
+          "p": ""
+        }
+      ],
+      "pinyin": "méi guānxi",
+      "pos": "Cụm từ",
+      "meaning": "không sao; không có gì",
+      "examples": [
+        [
+          "A：对不起！ B：没关系！",
+          "",
+          "A: Xin lỗi! B: Không sao!"
+        ],
+        [
+          "没关系，明天见。",
+          "",
+          "Không sao, ngày mai gặp lại."
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "（一）你去哪儿",
+      "lines": [
+        {
+          "role": "A",
+          "text": "今天星期几？"
+        },
+        {
+          "role": "B",
+          "text": "今天星期二（一、三、四、五、六、天）。"
+        },
+        {
+          "role": "A",
+          "text": "你去哪儿？"
+        },
+        {
+          "role": "B",
+          "text": "我去天安门，你去不去？"
+        },
+        {
+          "role": "A",
+          "text": "不去，我回学校。"
+        },
+        {
+          "role": "B",
+          "text": "再见！"
+        },
+        {
+          "role": "A",
+          "text": "再见！"
+        }
+      ]
+    },
+    {
+      "title": "（二）对不起",
+      "lines": [
+        {
+          "role": "A",
+          "text": "对不起！"
+        },
+        {
+          "role": "B",
+          "text": "没关系！"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "notes": [
+      {
+        "title": "四和十 · Phân biệt s và sh",
+        "content": "四是四，十是十，十四是十四，四十是四十，十四不是四十，四十不是十四。"
+      },
+      {
+        "title": "Biến điệu của 不",
+        "content": "去 qù là thanh 4 nên 不去 đọc là bú qù. Trong 不回, 不 giữ thanh 4: bù huí."
+      },
+      {
+        "title": "Âm cuốn lưỡi 儿",
+        "content": "哪儿 nǎr、那儿 nàr: 儿 nhập vào âm tiết trước, không đọc tách thành ér."
+      }
+    ],
+    "chips": [
+      {
+        "title": "认读练习",
+        "desc": "Đọc chữ Hán rồi đối chiếu phiên âm.",
+        "items": [
+          [
+            "是",
+            "shì"
+          ],
+          [
+            "今天",
+            "jīntiān"
+          ],
+          [
+            "昨天",
+            "zuótiān"
+          ],
+          [
+            "星期",
+            "xīngqī"
+          ],
+          [
+            "周末",
+            "zhōumò"
+          ],
+          [
+            "几",
+            "jǐ"
+          ],
+          [
+            "那",
+            "nà"
+          ],
+          [
+            "哪",
+            "nǎ"
+          ],
+          [
+            "我",
+            "wǒ"
+          ],
+          [
+            "家",
+            "jiā"
+          ],
+          [
+            "回",
+            "huí"
+          ],
+          [
+            "学校",
+            "xuéxiào"
+          ]
+        ]
+      }
+    ]
+  },
+  "extra": {}
+}

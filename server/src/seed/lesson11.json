@@ -1,0 +1,505 @@
+{
+  "lessonNumber": 11,
+  "seal": "十一",
+  "titleZh": "第11课",
+  "titleVi": "Bài 11 · 我们都是留学生",
+  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "published": true,
+  "vocab": [
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "秘",
+          "p": ""
+        },
+        {
+          "h": "书",
+          "p": ""
+        }
+      ],
+      "pinyin": "mìshū",
+      "pos": "Danh từ",
+      "meaning": "thư ký",
+      "examples": [
+        [
+          "我去办公室找秘书。",
+          "",
+          "Tôi đến văn phòng tìm thư ký."
+        ],
+        [
+          "你的秘书是谁？",
+          "",
+          "Thư ký của bạn là ai?"
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "先",
+          "p": ""
+        }
+      ],
+      "pinyin": "xiān",
+      "pos": "Phó từ",
+      "meaning": "trước; trước tiên",
+      "note": "先 + động từ: làm việc gì trước.",
+      "examples": [
+        [
+          "你先回家吧！",
+          "",
+          "Bạn về nhà trước đi!"
+        ],
+        [
+          "我先吃饭。",
+          "",
+          "Tôi ăn cơm trước."
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "介",
+          "p": ""
+        },
+        {
+          "h": "绍",
+          "p": ""
+        }
+      ],
+      "pinyin": "jièshào",
+      "pos": "Động từ",
+      "meaning": "giới thiệu",
+      "examples": [
+        [
+          "我先介绍，这是我爸爸。",
+          "",
+          "Tôi xin giới thiệu trước, đây là bố tôi."
+        ],
+        [
+          "请介绍你的学校。",
+          "",
+          "Hãy giới thiệu trường của bạn."
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "一",
+          "p": ""
+        },
+        {
+          "h": "下",
+          "p": ""
+        },
+        {
+          "h": "儿",
+          "p": ""
+        }
+      ],
+      "pinyin": "yíxiàr",
+      "pos": "Lượng từ",
+      "meaning": "một chút; một lát (sau động từ)",
+      "note": "Mẫu: Động từ + 一下儿.",
+      "examples": [
+        [
+          "我问一下儿。",
+          "",
+          "Tôi hỏi một chút."
+        ],
+        [
+          "请介绍一下儿你的家。",
+          "",
+          "Hãy giới thiệu một chút về gia đình bạn."
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "校",
+          "p": ""
+        },
+        {
+          "h": "长",
+          "p": ""
+        }
+      ],
+      "pinyin": "xiàozhǎng",
+      "pos": "Danh từ",
+      "meaning": "hiệu trưởng; hiệu trưởng đại học",
+      "examples": [
+        [
+          "这位是我们学校的校长。",
+          "",
+          "Vị này là hiệu trưởng trường chúng tôi."
+        ],
+        [
+          "我去找王校长。",
+          "",
+          "Tôi đi tìm hiệu trưởng Vương."
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "位",
+          "p": ""
+        }
+      ],
+      "pinyin": "wèi",
+      "pos": "Lượng từ",
+      "meaning": "vị (lượng từ lịch sự cho người)",
+      "examples": [
+        [
+          "这位是王老师。",
+          "",
+          "Vị này là thầy Vương."
+        ],
+        [
+          "哪位是王教授？",
+          "",
+          "Vị nào là giáo sư Vương?"
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "教",
+          "p": ""
+        },
+        {
+          "h": "授",
+          "p": ""
+        }
+      ],
+      "pinyin": "jiàoshòu",
+      "pos": "Danh từ",
+      "meaning": "giáo sư",
+      "examples": [
+        [
+          "那位是王教授。",
+          "",
+          "Vị kia là giáo sư Vương."
+        ],
+        [
+          "哪位教授教你中文？",
+          "",
+          "Giáo sư nào dạy bạn tiếng Trung?"
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "欢",
+          "p": ""
+        },
+        {
+          "h": "迎",
+          "p": ""
+        }
+      ],
+      "pinyin": "huānyíng",
+      "pos": "Động từ",
+      "meaning": "hoan nghênh; chào đón",
+      "examples": [
+        [
+          "欢迎大家！",
+          "",
+          "Chào mừng mọi người!"
+        ],
+        [
+          "欢迎王教授！",
+          "",
+          "Chào mừng giáo sư Vương!"
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "留",
+          "p": ""
+        },
+        {
+          "h": "学",
+          "p": ""
+        },
+        {
+          "h": "生",
+          "p": ""
+        }
+      ],
+      "pinyin": "liúxuéshēng",
+      "pos": "Danh từ",
+      "meaning": "du học sinh",
+      "wordlist": [
+        {
+          "h": "留学",
+          "p": "liúxué",
+          "m": "du học"
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "我",
+          "p": ""
+        },
+        {
+          "h": "们",
+          "p": ""
+        }
+      ],
+      "pinyin": "wǒmen",
+      "pos": "Đại từ",
+      "meaning": "chúng tôi; chúng ta",
+      "wordlist": [
+        {
+          "h": "你们",
+          "p": "nǐmen",
+          "m": "các bạn"
+        },
+        {
+          "h": "他们",
+          "p": "tāmen",
+          "m": "họ"
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "都",
+          "p": ""
+        }
+      ],
+      "pinyin": "dōu",
+      "pos": "Phó từ",
+      "meaning": "đều; cả",
+      "examples": [
+        [
+          "我们都是越南人。",
+          "",
+          "Chúng tôi đều là người Việt Nam."
+        ],
+        [
+          "水果都很好吃。",
+          "",
+          "Hoa quả đều rất ngon."
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "和",
+          "p": ""
+        }
+      ],
+      "pinyin": "hé",
+      "pos": "Liên từ",
+      "meaning": "và"
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "俩",
+          "p": ""
+        }
+      ],
+      "pinyin": "liǎ",
+      "pos": "Số từ",
+      "meaning": "hai người",
+      "examples": [
+        [
+          "我们俩是朋友。",
+          "",
+          "Hai chúng tôi là bạn."
+        ],
+        [
+          "你们俩都是留学生吗？",
+          "",
+          "Hai bạn đều là du học sinh phải không?"
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "学",
+          "p": ""
+        },
+        {
+          "h": "生",
+          "p": ""
+        }
+      ],
+      "pinyin": "xuésheng",
+      "pos": "Danh từ",
+      "meaning": "học sinh; sinh viên",
+      "examples": [
+        [
+          "我们都是越南学生。",
+          "",
+          "Chúng tôi đều là học sinh Việt Nam."
+        ],
+        [
+          "他们俩都是小学生。",
+          "",
+          "Hai em ấy đều là học sinh tiểu học."
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "没",
+          "p": ""
+        },
+        {
+          "h": "什",
+          "p": ""
+        },
+        {
+          "h": "么",
+          "p": ""
+        }
+      ],
+      "pinyin": "méi shénme",
+      "pos": "Cụm từ",
+      "meaning": "không sao; không có gì",
+      "examples": [
+        [
+          "A：对不起！ B：没什么！",
+          "",
+          "A: Xin lỗi! B: Không sao!"
+        ]
+      ]
+    }
+  ],
+  "properNouns": [],
+  "dialogues": [
+    {
+      "title": "（一）这位是王教授",
+      "lines": [
+        {
+          "role": "秘书",
+          "text": "我先介绍一下儿，这是马校长，这位是王教授。"
+        },
+        {
+          "role": "马校长",
+          "text": "欢迎您，王教授。"
+        },
+        {
+          "role": "王教授",
+          "text": "谢谢！"
+        }
+      ]
+    },
+    {
+      "title": "（二）我们都是留学生",
+      "lines": [
+        {
+          "role": "A",
+          "text": "你是留学生吗？"
+        },
+        {
+          "role": "B",
+          "text": "是。"
+        },
+        {
+          "role": "A",
+          "text": "罗兰也是留学生吗？"
+        },
+        {
+          "role": "B",
+          "text": "她也是留学生。我们都是留学生。"
+        },
+        {
+          "role": "A",
+          "text": "张东和田芳也都是留学生吗？"
+        },
+        {
+          "role": "B",
+          "text": "不，他们俩不是留学生。他们都是中国学生。"
+        }
+      ]
+    },
+    {
+      "title": "（三）你也是中国人吗",
+      "lines": [
+        {
+          "role": "爱德华",
+          "text": "他是中国人吗？"
+        },
+        {
+          "role": "李昌浩",
+          "text": "是。"
+        },
+        {
+          "role": "爱德华",
+          "text": "你也是中国人吗？"
+        },
+        {
+          "role": "李昌浩",
+          "text": "不是。我是韩国人。"
+        },
+        {
+          "role": "爱德华",
+          "text": "对不起。"
+        },
+        {
+          "role": "李昌浩",
+          "text": "没什么。"
+        }
+      ]
+    }
+  ],
+  "exercises": {
+    "grammar": [
+      {
+        "title": "吗疑问句",
+        "content": "Câu trần thuật + 吗 tạo câu hỏi có/không: 你是留学生吗？— 是。/不是。"
+      },
+      {
+        "title": "状语 · Trạng ngữ",
+        "content": "Phó từ đứng trước động từ hoặc tính từ: 都很好、不太难、也学习。"
+      },
+      {
+        "title": "也 và 都",
+        "content": "也 = cũng, nói thêm một chủ thể/sự việc tương đồng; 都 = đều, khái quát toàn bộ nhóm."
+      },
+      {
+        "title": "俩",
+        "content": "俩 đã mang nghĩa “hai người”, không dùng thêm 个: 我们俩、他们俩。"
+      },
+      {
+        "title": "一下儿",
+        "content": "Động từ + 一下儿 làm ngữ khí nhẹ và lịch sự: 介绍一下儿、问一下儿。"
+      }
+    ]
+  },
+  "extra": {}
+}
