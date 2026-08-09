@@ -24,7 +24,7 @@ services:
         value: 15
 
   - type: web
-    name: hanzi-course-client
+    name: comaixinh-hsk
     runtime: static
     rootDir: client
     buildCommand: npm install && npm run build
