@@ -248,7 +248,7 @@ html:not(.book-mode) ::-webkit-scrollbar-track {
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
-  z-index: 60;
+  z-index: 100; /* trên các thanh dính của trang (thanh soạn bài, thanh điều hướng bài học) để menu tài khoản không bị che */
   transition: background 0.3s;
 }
 .topnav-brand {
@@ -2535,7 +2535,7 @@ html.dark[data-mood] {
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
-  z-index: 40;
+  z-index: 100; /* trên các thanh dính của trang (thanh soạn bài, thanh điều hướng bài học) để menu tài khoản không bị che */
   transition: background 0.3s;
 }
 .admin-topbar-left,
@@ -2609,6 +2609,9 @@ html.dark[data-mood] {
   .admin-shell.mobile-open .admin-sidebar {
     transform: none;
   }
+  .admin-sidebar {
+    z-index: 120; /* ngăn kéo nằm trên cả thanh trên cùng */
+  }
   .admin-shell.collapsed .admin-sidebar {
     width: 240px;
   }
@@ -2631,7 +2634,7 @@ html.dark[data-mood] {
     display: block;
     position: fixed;
     inset: 0;
-    z-index: 45;
+    z-index: 110;
     background: var(--overlay);
   }
   .admin-topbar {
