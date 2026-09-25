@@ -1,8 +1,38 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../api/client';
+import { useAuth } from '../context/AuthContext';
+
+// Lời mời cuối trang theo người xem: khách → đăng ký / đăng nhập; học viên → nhập mã lớp; GV/admin → không hiện
+function PreviewCta({ user }) {
+  if (!user) {
+    return (
+      <div className="preview-page-cta">
+        <p>Thích những gì bạn thấy? Đăng ký tài khoản, rồi nhập mã lớp giáo viên gửi để học đầy đủ.</p>
+        <div className="preview-page-cta-actions">
+          <Link to="/register" className="btn-primary">
+            Đăng ký học viên
+          </Link>
+          <Link to="/login" className="btn-secondary">
+            Đã có tài khoản? Đăng nhập
+          </Link>
+        </div>
+      </div>
+    );
+  }
+  if (user.role !== 'student') return null;
+  return (
+    <div className="preview-page-cta">
+      <p>Muốn học đầy đủ các bài? Nhập mã lớp giáo viên gửi cho bạn để vào lớp.</p>
+      <Link to="/me/courses" className="btn-primary">
+        Nhập mã lớp
+      </Link>
+    </div>
+  );
+}
 
 export default function PreviewLessonsPage() {
+  const { user } = useAuth();
   const [lessons, setLessons] = useState(null);
   const [error, setError] = useState('');
 
@@ -39,12 +69,7 @@ export default function PreviewLessonsPage() {
         ))}
       </div>
 
-      <div className="preview-page-cta">
-        <p>Thích những gì bạn thấy? Đăng ký tài khoản để được thêm vào lớp và học đầy đủ.</p>
-        <Link to="/register" className="btn-primary">
-          Đăng ký học viên
-        </Link>
-      </div>
+      <PreviewCta user={user} />
     </main>
   );
 }

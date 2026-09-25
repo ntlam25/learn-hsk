@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AuthLayout from '../components/AuthLayout';
 import PasswordInput from '../components/PasswordInput';
+import { safeNext, withNext } from '../lib/nextPath';
 
 export default function RegisterPage() {
   const { register, user } = useAuth();
   const navigate = useNavigate();
+  const next = safeNext(useLocation().search);
   const [fullName, setFullName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -15,10 +17,8 @@ export default function RegisterPage() {
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
-  if (user) {
-    navigate('/me/courses', { replace: true });
-    return null;
-  }
+  // Đã đăng nhập: chuyển trang bằng <Navigate> (gọi navigate() ngay trong lúc render bị React Router bỏ qua → trang trắng)
+  if (user) return <Navigate to={next || (user.role === 'student' ? '/me/courses' : '/admin')} replace />;
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -30,7 +30,7 @@ export default function RegisterPage() {
     setSubmitting(true);
     try {
       await register(username, email, password, fullName);
-      navigate('/me/courses', { replace: true });
+      navigate(next || '/me/courses', { replace: true });
     } catch (err) {
       setError(err.response?.data?.message || 'Đăng ký thất bại.');
     } finally {
@@ -86,7 +86,7 @@ export default function RegisterPage() {
         </button>
 
         <p className="login-sub">
-          Đã có tài khoản? <Link to="/login">Đăng nhập</Link>
+          Đã có tài khoản? <Link to={withNext('/login', next)}>Đăng nhập</Link>
         </p>
       </form>
     </AuthLayout>

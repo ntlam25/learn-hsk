@@ -1,22 +1,74 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useCallback, useEffect, useState } from 'react';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import api from '../api/client';
+import { useAuth } from '../context/AuthContext';
+import { useCourseNav } from '../context/CourseNavContext';
+import JoinClassForm from '../components/JoinClassForm';
+import { formatDate } from '../lib/format';
+import { withNext } from '../lib/nextPath';
+
+// Nhãn trạng thái của bài với học viên: khoá / đã hoàn thành / đang học (% từ đã thuộc)
+function lessonBadge(l) {
+  if (!l.open) return l.releaseAt ? `🔒 Mở ngày ${formatDate(l.releaseAt)}` : '🔒 Chưa mở';
+  if (l.status === 'completed') return '✓ Đã hoàn thành';
+  if (l.status === 'in_progress') return l.vocabTotal ? `Đang học · thuộc ${l.knownCount}/${l.vocabTotal} từ` : 'Đang học';
+  return l.isPreview ? 'Xem trước' : 'Chưa học';
+}
+
+function LessonCard({ lesson: l, mine }) {
+  const body = (
+    <>
+      <div className="lesson-card-seal">{l.status === 'completed' ? '✓' : l.seal || `${l.lessonNumber}课`}</div>
+      <div className="lesson-card-body">
+        <div className="lesson-card-zh">{l.titleZh}</div>
+        <div className="lesson-card-vi">{l.titleVi}</div>
+        <div className="lesson-card-tag">{mine ? lessonBadge(l) : l.isPreview ? 'Xem trước' : l.tag}</div>
+      </div>
+    </>
+  );
+  const cls = 'lesson-card' + (mine ? ` lesson-${l.open ? l.status : 'locked'}` : '');
+  if (mine && !l.open) {
+    return (
+      <div className={cls} aria-disabled="true" title="Giáo viên chưa mở bài này cho lớp của bạn">
+        {body}
+      </div>
+    );
+  }
+  return (
+    <Link to={`/lessons/${l.id}`} className={cls}>
+      {body}
+    </Link>
+  );
+}
 
 export default function CourseDetailPage() {
   const { courseId } = useParams();
+  const { user } = useAuth();
+  const location = useLocation();
+  const isStudent = user?.role === 'student';
   const [course, setCourse] = useState(null);
   const [lessons, setLessons] = useState(null);
+  const [mine, setMine] = useState(null); // dữ liệu /me/courses/:id của học viên
   const [error, setError] = useState('');
 
-  useEffect(() => {
+  const load = useCallback(() => {
     setError('');
-    Promise.all([api.get(`/courses/${courseId}`), api.get(`/courses/${courseId}/lessons`)])
-      .then(([courseRes, lessonsRes]) => {
+    const reqs = [api.get(`/courses/${courseId}`), api.get(`/courses/${courseId}/lessons`)];
+    if (isStudent) reqs.push(api.get(`/me/courses/${courseId}`));
+    Promise.all(reqs)
+      .then(([courseRes, lessonsRes, mineRes]) => {
         setCourse(courseRes.data);
         setLessons(lessonsRes.data);
+        setMine(mineRes?.data || null);
       })
       .catch(() => setError('Không tìm thấy khoá học này.'));
-  }, [courseId]);
+  }, [courseId, isStudent]);
+
+  useEffect(load, [load]);
+
+  // Sidebar học viên xổ danh sách bài của khoá đang xem
+  const { setActiveCourse } = useCourseNav();
+  useEffect(() => setActiveCourse(courseId), [courseId, setActiveCourse]);
 
   if (error) {
     return (
@@ -37,6 +89,9 @@ export default function CourseDetailPage() {
     );
   }
 
+  const enrolled = !!mine?.enrolled;
+  const list = enrolled ? mine.lessons : lessons;
+
   return (
     <main className="page lesson-list-page">
       <header className="page-hero">
@@ -45,18 +100,42 @@ export default function CourseDetailPage() {
         <p>{course.description}</p>
       </header>
 
-      {lessons.length === 0 && <div className="empty-state">Khoá học này chưa có bài học nào.</div>}
+      {enrolled ? (
+        <div className="course-me-bar">
+          <div>
+            {mine.classes.map((c) => (
+              <div key={c.id}>
+                <strong>Lớp {c.name}</strong>
+                {c.teacherName ? ` · GV ${c.teacherName}` : ''}
+                {c.ended ? ' · Đã kết thúc (chỉ xem lại)' : ''}
+              </div>
+            ))}
+            <span>
+              Đã hoàn thành {mine.completedCount}/{mine.openCount} bài đã mở · khoá có {mine.lessons.length} bài
+            </span>
+          </div>
+          {mine.resumeLesson && (
+            <Link to={`/lessons/${mine.resumeLesson.id}`} className="btn-primary">
+              {mine.resumeLesson.started ? '▶ Học tiếp' : '▶ Bắt đầu học'} · Bài {mine.resumeLesson.lessonNumber}
+            </Link>
+          )}
+        </div>
+      ) : isStudent ? (
+        <JoinClassForm onJoined={load} />
+      ) : !user ? (
+        <div className="course-me-bar">
+          <span>Đăng nhập và nhập mã lớp giáo viên gửi để học khoá này (bài có nhãn "Xem trước" thì xem được ngay).</span>
+          <Link to={withNext('/login', location.pathname)} className="btn-primary">
+            Đăng nhập
+          </Link>
+        </div>
+      ) : null}
+
+      {list.length === 0 && <div className="empty-state">Khoá học này chưa có bài học nào.</div>}
 
       <div className="lesson-grid">
-        {lessons.map((l) => (
-          <Link key={l.id} to={`/lessons/${l.id}`} className="lesson-card">
-            <div className="lesson-card-seal">{l.seal || `${l.lessonNumber}课`}</div>
-            <div className="lesson-card-body">
-              <div className="lesson-card-zh">{l.titleZh}</div>
-              <div className="lesson-card-vi">{l.titleVi}</div>
-              <div className="lesson-card-tag">{l.isPreview ? 'Xem trước' : l.tag}</div>
-            </div>
-          </Link>
+        {list.map((l) => (
+          <LessonCard key={l.id} lesson={l} mine={enrolled} />
         ))}
       </div>
     </main>

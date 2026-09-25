@@ -9,7 +9,7 @@ create extension if not exists pgcrypto; -- cho gen_random_uuid()
 create table if not exists users (
   id uuid primary key default gen_random_uuid(),
   username text unique not null,
-  email text unique not null,
+  email text unique, -- có thể trống với tài khoản học viên do giáo viên tạo sẵn
   password_hash text not null,
   full_name text default '',
   avatar_url text,
@@ -78,6 +78,7 @@ create table if not exists lesson_audio_tracks (
   audio_url text not null,
   duration_sec numeric,
   code text not null default '',
+  size_bytes bigint,
   sort_order integer not null default 0,
   created_at timestamptz not null default now()
 );
@@ -145,11 +146,22 @@ create index if not exists idx_submissions_student on submissions (student_id, e
 alter table submissions enable row level security;
 
 -- ============== classes ==============
+-- Mã mời 6 ký tự (bỏ các ký tự dễ nhầm 0/O/1/I/L) — học viên nhập mã / mở link /join/MÃ để vào lớp
+create or replace function gen_join_code() returns text language sql volatile as $$
+  select string_agg(substr('ABCDEFGHJKMNPQRSTUVWXYZ23456789', 1 + floor(random() * 31)::int, 1), '')
+  from generate_series(1, 6)
+$$;
+
 create table if not exists classes (
   id uuid primary key default gen_random_uuid(),
   course_id uuid not null references courses(id) on delete cascade,
   teacher_id uuid references users(id) on delete set null,
   name text not null,
+  join_code text not null unique default gen_join_code(),
+  join_enabled boolean not null default true,
+  start_date date,
+  end_date date, -- qua ngày này (hoặc archived) thì lớp "đã kết thúc": học viên chỉ xem lại, không nộp bài
+  archived boolean not null default false,
   created_at timestamptz not null default now()
 );
 
@@ -173,6 +185,21 @@ create index if not exists idx_enrollments_class on enrollments (class_id);
 
 alter table enrollments enable row level security;
 
+-- ============== class_lessons (giáo viên mở/khoá từng bài cho từng lớp) ==============
+-- Bài mở với lớp khi released = true hoặc đã tới release_at.
+create table if not exists class_lessons (
+  id uuid primary key default gen_random_uuid(),
+  class_id uuid not null references classes(id) on delete cascade,
+  lesson_id uuid not null references lessons(id) on delete cascade,
+  released boolean not null default false,
+  release_at timestamptz,
+  unique (class_id, lesson_id)
+);
+
+create index if not exists idx_class_lessons_class on class_lessons (class_id);
+
+alter table class_lessons enable row level security;
+
 -- ============== lesson_progress (tiến độ xem bài, dùng cho báo cáo giáo viên) ==============
 create table if not exists lesson_progress (
   id uuid primary key default gen_random_uuid(),
@@ -180,6 +207,8 @@ create table if not exists lesson_progress (
   lesson_id uuid not null references lessons(id) on delete cascade,
   status text not null default 'not_started' check (status in ('not_started', 'in_progress', 'completed')),
   last_viewed_at timestamptz not null default now(),
+  known_vocab jsonb not null default '[]'::jsonb, -- khoá các từ học viên đã đánh dấu "đã thuộc"
+  completed_at timestamptz,
   unique (student_id, lesson_id)
 );
 

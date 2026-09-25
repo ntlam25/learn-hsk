@@ -1,71 +1,1043 @@
 {
   "lessonNumber": 7,
-  "seal": "七课",
-  "titleZh": "第7课",
-  "titleVi": "Bài 7 · 中午你吃什么",
-  "tag": "Từ mới · Bài khóa · Luyện tập",
+  "seal": "吃饭",
+  "titleZh": "第七课 · 你吃什么？",
+  "titleVi": "Bài 7 · 你吃什么",
+  "tag": "Từ mới · Ngữ âm · Bài khóa · Luyện tập",
   "published": true,
   "vocab": [
-    {"num": 1, "chars": [{"h": "中", "p": "zhōng"}, {"h": "午", "p": "wǔ"}], "pinyin": "zhōngwǔ", "pos": "Danh từ", "meaning": "buổi trưa", "meaning_en": "noon", "note": "Âm Hán Việt: TRUNG NGỌ", "examples": [["你中午吃什么？", "Nǐ zhōngwǔ chī shénme?", "Buổi trưa bạn ăn gì?"], ["中午我去食堂吃饭。", "Zhōngwǔ wǒ qù shítáng chīfàn.", "Buổi trưa tôi đến nhà ăn ăn cơm."]]},
-    {"num": 2, "chars": [{"h": "吃", "p": "chī"}], "pinyin": "chī", "pos": "Động từ", "meaning": "ăn", "meaning_en": "to eat", "examples": [["我吃米饭。", "Wǒ chī mǐfàn.", "Tôi ăn cơm."], ["你吃不吃饺子？", "Nǐ chī bu chī jiǎozi?", "Bạn có ăn bánh chẻo không?"]]},
-    {"num": 3, "chars": [{"h": "饭", "p": "fàn"}], "pinyin": "fàn", "pos": "Danh từ", "meaning": "cơm; bữa ăn", "meaning_en": "meal; cooked rice", "note": "饭 có bộ 饣 — bộ Thực, liên quan đến ăn uống.", "examples": [["这碗饭很好吃。", "Zhè wǎn fàn hěn hǎochī.", "Bát cơm này rất ngon."], ["我们中午一起吃饭。", "Wǒmen zhōngwǔ yìqǐ chīfàn.", "Buổi trưa chúng ta cùng ăn cơm."]]},
-    {"num": 4, "chars": [{"h": "食", "p": "shí"}, {"h": "堂", "p": "táng"}], "pinyin": "shítáng", "pos": "Danh từ", "meaning": "nhà ăn", "meaning_en": "dining hall; canteen", "note": "食: thức ăn · 堂: gian nhà/phòng lớn.", "examples": [["我去食堂。", "Wǒ qù shítáng.", "Tôi đi đến nhà ăn."], ["那是学校的食堂吗？", "Nà shì xuéxiào de shítáng ma?", "Kia có phải nhà ăn của trường không?"]]},
-    {"num": 5, "chars": [{"h": "馒", "p": "mán"}, {"h": "头", "p": "tou"}], "pinyin": "mántou", "pos": "Danh từ", "meaning": "bánh bao chay", "meaning_en": "plain steamed bun", "note": "头 trong 馒头 đọc thanh nhẹ: tou.", "examples": [["我吃馒头。", "Wǒ chī mántou.", "Tôi ăn bánh bao chay."], ["你要几个馒头？", "Nǐ yào jǐ ge mántou?", "Bạn muốn mấy cái bánh bao chay?"]]},
-    {"num": 6, "chars": [{"h": "要", "p": "yào"}], "pinyin": "yào", "pos": "Động từ", "meaning": "muốn; cần", "meaning_en": "to want; to need", "examples": [["我要一碗鸡蛋汤。", "Wǒ yào yì wǎn jīdàn tāng.", "Tôi muốn một bát canh trứng."], ["你要几个包子？", "Nǐ yào jǐ ge bāozi?", "Bạn muốn mấy cái bánh bao?"]]},
-    {"num": 7, "chars": [{"h": "个", "p": "gè"}], "pinyin": "gè", "pos": "Lượng từ", "meaning": "cái, con, chiếc…", "meaning_en": "general measure word", "note": "Trong khẩu ngữ, 个 thường đọc nhẹ là ge: 一个 yí ge, 几个 jǐ ge.", "examples": [["我要两个馒头。", "Wǒ yào liǎng ge mántou.", "Tôi muốn hai cái bánh bao chay."], ["这是三个鸡蛋。", "Zhè shì sān ge jīdàn.", "Đây là ba quả trứng gà."]]},
-    {"num": 8, "chars": [{"h": "米", "p": "mǐ"}, {"h": "饭", "p": "fàn"}], "pinyin": "mǐfàn", "pos": "Danh từ", "meaning": "cơm", "meaning_en": "cooked rice", "note": "米 mǐ: gạo; 米饭: cơm đã nấu.", "related": [["米", "mǐ", "gạo"]], "examples": [["我不吃馒头，我吃米饭。", "Wǒ bù chī mántou, wǒ chī mǐfàn.", "Tôi không ăn bánh bao chay, tôi ăn cơm."], ["晚上我在家吃米饭。", "Wǎnshang wǒ zài jiā chī mǐfàn.", "Buổi tối tôi ăn cơm ở nhà."]]},
-    {"num": 9, "chars": [{"h": "碗", "p": "wǎn"}], "pinyin": "wǎn", "pos": "Danh từ / Lượng từ", "meaning": "bát; bát (lượng từ)", "meaning_en": "bowl; bowlful", "note": "碗 có bộ 石 — bộ Thạch.", "examples": [["我要一碗汤。", "Wǒ yào yì wǎn tāng.", "Tôi muốn một bát canh."], ["我吃一碗米饭。", "Wǒ chī yì wǎn mǐfàn.", "Tôi ăn một bát cơm."]]},
-    {"num": 10, "chars": [{"h": "鸡", "p": "jī"}, {"h": "蛋", "p": "dàn"}], "pinyin": "jīdàn", "pos": "Danh từ", "meaning": "trứng gà", "meaning_en": "egg", "note": "鸡: gà · 蛋: trứng.", "related": [["鸡", "jī", "gà"], ["蛋", "dàn", "trứng"]], "examples": [["这是鸡蛋吗？", "Zhè shì jīdàn ma?", "Đây có phải trứng gà không?"], ["鸡蛋汤很好喝。", "Jīdàn tāng hěn hǎohē.", "Canh trứng rất ngon/dễ uống."]]},
-    {"num": 11, "chars": [{"h": "汤", "p": "tāng"}], "pinyin": "tāng", "pos": "Danh từ", "meaning": "canh, súp", "meaning_en": "soup", "examples": [["你喝鸡蛋汤吗？", "Nǐ hē jīdàn tāng ma?", "Bạn có uống canh trứng không?"], ["这是什么汤？", "Zhè shì shénme tāng?", "Đây là canh gì?"]]},
-    {"num": 12, "chars": [{"h": "啤", "p": "pí"}, {"h": "酒", "p": "jiǔ"}], "pinyin": "píjiǔ", "pos": "Danh từ", "meaning": "bia", "meaning_en": "beer", "note": "酒 có bộ 酉 — hình bình rượu cổ.", "related": [["酒", "jiǔ", "rượu; đồ uống có cồn"]], "examples": [["我喝啤酒。", "Wǒ hē píjiǔ.", "Tôi uống bia."], ["这是越南啤酒。", "Zhè shì Yuènán píjiǔ.", "Đây là bia Việt Nam."]]},
-    {"num": 13, "chars": [{"h": "这", "p": "zhè"}, {"h": "些", "p": "xiē"}], "pinyin": "zhèxiē", "pos": "Đại từ", "meaning": "những… này", "meaning_en": "these", "note": "这 + 些 → 这些. Dùng trước danh từ số nhiều hoặc đứng độc lập.", "related": [["些", "xiē", "vài, một số"], ["一些", "yìxiē", "một số"], ["那些", "nàxiē", "những… kia"]], "examples": [["这些是什么？", "Zhèxiē shì shénme?", "Những thứ này là gì?"], ["这些饺子很好吃。", "Zhèxiē jiǎozi hěn hǎochī.", "Những chiếc bánh chẻo này rất ngon."]]},
-    {"num": 14, "chars": [{"h": "饺", "p": "jiǎo"}, {"h": "子", "p": "zi"}], "pinyin": "jiǎozi", "pos": "Danh từ", "meaning": "bánh chẻo, há cảo", "meaning_en": "dumpling", "note": "子 trong 饺子 đọc thanh nhẹ: zi.", "examples": [["这是饺子。", "Zhè shì jiǎozi.", "Đây là bánh chẻo."], ["我去食堂吃饺子。", "Wǒ qù shítáng chī jiǎozi.", "Tôi đến nhà ăn ăn bánh chẻo."]]},
-    {"num": 15, "chars": [{"h": "包", "p": "bāo"}, {"h": "子", "p": "zi"}], "pinyin": "bāozi", "pos": "Danh từ", "meaning": "bánh bao", "meaning_en": "steamed stuffed bun", "note": "子 trong 包子 đọc thanh nhẹ: zi.", "examples": [["这是包子。", "Zhè shì bāozi.", "Đây là bánh bao."], ["我要五个包子。", "Wǒ yào wǔ ge bāozi.", "Tôi muốn năm cái bánh bao."]]},
-    {"num": 16, "chars": [{"h": "面", "p": "miàn"}, {"h": "条", "p": "tiáo"}, {"h": "儿", "p": "r"}], "pinyin": "miàntiáor", "pos": "Danh từ", "meaning": "mì sợi", "meaning_en": "noodles", "note": "儿化: 儿 không tách thành một âm tiết riêng; đọc gộp thành miàntiáor.", "examples": [["那是面条儿。", "Nà shì miàntiáor.", "Kia là mì sợi."], ["食堂的面条儿很好吃。", "Shítáng de miàntiáor hěn hǎochī.", "Mì sợi của nhà ăn rất ngon."]]}
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "中"
+        },
+        {
+          "h": "午"
+        }
+      ],
+      "pinyin": "zhōngwǔ",
+      "pos": "Danh từ",
+      "meaning": "buổi trưa",
+      "note": "Âm Hán Việt: TRUNG NGỌ",
+      "examples": [
+        [
+          "你中午吃什么？",
+          "Nǐ zhōngwǔ chī shénme?",
+          "Buổi trưa bạn ăn gì?"
+        ],
+        [
+          "中午我去食堂吃饭。",
+          "Zhōngwǔ wǒ qù shítáng chīfàn.",
+          "Buổi trưa tôi đến nhà ăn ăn cơm."
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "吃"
+        }
+      ],
+      "pinyin": "chī",
+      "pos": "Động từ",
+      "meaning": "ăn",
+      "examples": [
+        [
+          "我吃米饭。",
+          "Wǒ chī mǐfàn.",
+          "Tôi ăn cơm."
+        ],
+        [
+          "你吃不吃饺子？",
+          "Nǐ chī bu chī jiǎozi?",
+          "Bạn có ăn bánh chẻo không?"
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "饭"
+        }
+      ],
+      "pinyin": "fàn",
+      "pos": "Danh từ",
+      "meaning": "cơm; bữa ăn",
+      "note": "饭 có bộ 饣 — bộ Thực, liên quan đến ăn uống.",
+      "examples": [
+        [
+          "这碗饭很好吃。",
+          "Zhè wǎn fàn hěn hǎochī.",
+          "Bát cơm này rất ngon."
+        ],
+        [
+          "我们中午一起吃饭。",
+          "Wǒmen zhōngwǔ yìqǐ chīfàn.",
+          "Buổi trưa chúng ta cùng ăn cơm."
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "食"
+        },
+        {
+          "h": "堂"
+        }
+      ],
+      "pinyin": "shítáng",
+      "pos": "Danh từ",
+      "meaning": "nhà ăn; căng tin",
+      "note": "食: thức ăn · 堂: gian nhà/phòng lớn.",
+      "examples": [
+        [
+          "我去食堂。",
+          "Wǒ qù shítáng.",
+          "Tôi đi đến nhà ăn."
+        ],
+        [
+          "那是学校的食堂吗？",
+          "Nà shì xuéxiào de shítáng ma?",
+          "Kia có phải nhà ăn của trường không?"
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "馒"
+        },
+        {
+          "h": "头"
+        }
+      ],
+      "pinyin": "mántou",
+      "pos": "Danh từ",
+      "meaning": "bánh bao chay",
+      "note": "头 trong 馒头 đọc thanh nhẹ: tou.",
+      "examples": [
+        [
+          "我吃馒头。",
+          "Wǒ chī mántou.",
+          "Tôi ăn bánh bao chay."
+        ],
+        [
+          "你要几个馒头？",
+          "Nǐ yào jǐ ge mántou?",
+          "Bạn muốn mấy cái bánh bao chay?"
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "要"
+        }
+      ],
+      "pinyin": "yào",
+      "pos": "Động từ",
+      "meaning": "muốn; cần",
+      "examples": [
+        [
+          "我要一碗鸡蛋汤。",
+          "Wǒ yào yì wǎn jīdàn tāng.",
+          "Tôi muốn một bát canh trứng."
+        ],
+        [
+          "你要几个包子？",
+          "Nǐ yào jǐ ge bāozi?",
+          "Bạn muốn mấy cái bánh bao?"
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "个"
+        }
+      ],
+      "pinyin": "gè",
+      "pos": "Lượng từ",
+      "meaning": "cái; người (lượng từ thông dụng)",
+      "note": "Trong khẩu ngữ, 个 thường đọc nhẹ là ge: 一个 yí ge, 几个 jǐ ge.",
+      "examples": [
+        [
+          "我要两个馒头。",
+          "Wǒ yào liǎng ge mántou.",
+          "Tôi muốn hai cái bánh bao chay."
+        ],
+        [
+          "这是三个鸡蛋。",
+          "Zhè shì sān ge jīdàn.",
+          "Đây là ba quả trứng gà."
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "米"
+        },
+        {
+          "h": "饭"
+        }
+      ],
+      "pinyin": "mǐfàn",
+      "pos": "Danh từ",
+      "meaning": "cơm",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
+      "wordlist": [
+        {
+          "h": "米",
+          "p": "mǐ",
+          "m": "gạo"
+        }
+      ],
+      "note": "米 mǐ: gạo; 米饭: cơm đã nấu.",
+      "examples": [
+        [
+          "我不吃馒头，我吃米饭。",
+          "Wǒ bù chī mántou, wǒ chī mǐfàn.",
+          "Tôi không ăn bánh bao chay, tôi ăn cơm."
+        ],
+        [
+          "晚上我在家吃米饭。",
+          "Wǎnshang wǒ zài jiā chī mǐfàn.",
+          "Buổi tối tôi ăn cơm ở nhà."
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "碗"
+        }
+      ],
+      "pinyin": "wǎn",
+      "pos": "Lượng từ/Danh từ",
+      "meaning": "bát; cái bát",
+      "note": "碗 có bộ 石 — bộ Thạch.",
+      "examples": [
+        [
+          "我要一碗汤。",
+          "Wǒ yào yì wǎn tāng.",
+          "Tôi muốn một bát canh."
+        ],
+        [
+          "我吃一碗米饭。",
+          "Wǒ chī yì wǎn mǐfàn.",
+          "Tôi ăn một bát cơm."
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "鸡"
+        },
+        {
+          "h": "蛋"
+        }
+      ],
+      "pinyin": "jīdàn",
+      "pos": "Danh từ",
+      "meaning": "trứng gà",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
+      "wordlist": [
+        {
+          "h": "鸡",
+          "p": "jī",
+          "m": "gà"
+        },
+        {
+          "h": "蛋",
+          "p": "dàn",
+          "m": "trứng"
+        }
+      ],
+      "note": "鸡: gà · 蛋: trứng.",
+      "examples": [
+        [
+          "这是鸡蛋吗？",
+          "Zhè shì jīdàn ma?",
+          "Đây có phải trứng gà không?"
+        ],
+        [
+          "鸡蛋汤很好喝。",
+          "Jīdàn tāng hěn hǎohē.",
+          "Canh trứng rất ngon/dễ uống."
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "汤"
+        }
+      ],
+      "pinyin": "tāng",
+      "pos": "Danh từ",
+      "meaning": "canh; súp",
+      "examples": [
+        [
+          "你喝鸡蛋汤吗？",
+          "Nǐ hē jīdàn tāng ma?",
+          "Bạn có uống canh trứng không?"
+        ],
+        [
+          "这是什么汤？",
+          "Zhè shì shénme tāng?",
+          "Đây là canh gì?"
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "啤"
+        },
+        {
+          "h": "酒"
+        }
+      ],
+      "pinyin": "píjiǔ",
+      "pos": "Danh từ",
+      "meaning": "bia",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
+      "wordlist": [
+        {
+          "h": "酒",
+          "p": "jiǔ",
+          "m": "rượu; đồ uống có cồn"
+        }
+      ],
+      "note": "酒 có bộ 酉 — hình bình rượu cổ.",
+      "examples": [
+        [
+          "我喝啤酒。",
+          "Wǒ hē píjiǔ.",
+          "Tôi uống bia."
+        ],
+        [
+          "这是越南啤酒。",
+          "Zhè shì Yuènán píjiǔ.",
+          "Đây là bia Việt Nam."
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "这"
+        },
+        {
+          "h": "些"
+        }
+      ],
+      "pinyin": "zhèxiē",
+      "pos": "Đại từ",
+      "meaning": "những… này",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
+      "wordlist": [
+        {
+          "h": "些",
+          "p": "xiē",
+          "m": "một số; vài"
+        },
+        {
+          "h": "一些",
+          "p": "yìxiē",
+          "m": "một ít; một số"
+        },
+        {
+          "h": "那些",
+          "p": "nàxiē",
+          "m": "những… kia"
+        }
+      ],
+      "note": "这 + 些 → 这些. Dùng trước danh từ số nhiều hoặc đứng độc lập.",
+      "examples": [
+        [
+          "这些是什么？",
+          "Zhèxiē shì shénme?",
+          "Những thứ này là gì?"
+        ],
+        [
+          "这些饺子很好吃。",
+          "Zhèxiē jiǎozi hěn hǎochī.",
+          "Những chiếc bánh chẻo này rất ngon."
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "饺"
+        },
+        {
+          "h": "子"
+        }
+      ],
+      "pinyin": "jiǎozi",
+      "pos": "Danh từ",
+      "meaning": "sủi cảo; bánh chẻo",
+      "note": "子 trong 饺子 đọc thanh nhẹ: zi.",
+      "examples": [
+        [
+          "这是饺子。",
+          "Zhè shì jiǎozi.",
+          "Đây là bánh chẻo."
+        ],
+        [
+          "我去食堂吃饺子。",
+          "Wǒ qù shítáng chī jiǎozi.",
+          "Tôi đến nhà ăn ăn bánh chẻo."
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "包"
+        },
+        {
+          "h": "子"
+        }
+      ],
+      "pinyin": "bāozi",
+      "pos": "Danh từ",
+      "meaning": "bánh bao",
+      "note": "子 trong 包子 đọc thanh nhẹ: zi.",
+      "examples": [
+        [
+          "这是包子。",
+          "Zhè shì bāozi.",
+          "Đây là bánh bao."
+        ],
+        [
+          "我要五个包子。",
+          "Wǒ yào wǔ ge bāozi.",
+          "Tôi muốn năm cái bánh bao."
+        ]
+      ]
+    },
+    {
+      "num": 16,
+      "chars": [
+        {
+          "h": "面"
+        },
+        {
+          "h": "条"
+        },
+        {
+          "h": "儿"
+        }
+      ],
+      "pinyin": "miàntiáor",
+      "pos": "Danh từ",
+      "meaning": "mì sợi",
+      "note": "儿化: 儿 không tách thành một âm tiết riêng; đọc gộp thành miàntiáor.",
+      "examples": [
+        [
+          "那是面条儿。",
+          "Nà shì miàntiáor.",
+          "Kia là mì sợi."
+        ],
+        [
+          "食堂的面条儿很好吃。",
+          "Shítáng de miàntiáor hěn hǎochī.",
+          "Mì sợi của nhà ăn rất ngon."
+        ]
+      ]
+    }
   ],
   "properNouns": [
-    {"chars": [{"h": "玛", "p": "Mǎ"}, {"h": "丽", "p": "lì"}], "pinyin": "Mǎlì", "pos": "Tên riêng", "meaning": "Mary", "meaning_en": "Mary", "examples": [["玛丽去食堂吃饭。", "Mǎlì qù shítáng chīfàn.", "Mary đến nhà ăn ăn cơm."]]}
+    {
+      "hanzi": "玛丽",
+      "pinyin": "Mǎlì",
+      "meaning": "Mary"
+    }
   ],
   "dialogues": [
-    { "title": "中午你去哪儿吃饭？",
+    {
+      "title": "课文",
+      "context": "（在教室）",
       "lines": [
-        { "loc": "（在教室 · Trong phòng học）" },
-        { "role": "麦克", "side": "A", "text": "中午你去哪儿吃饭？" },
-        { "role": "玛丽", "side": "B", "text": "我去食堂。" },
-        { "loc": "（在食堂 · Trong nhà ăn）" },
-        { "role": "麦克", "side": "A", "text": "你吃什么？" },
-        { "role": "玛丽", "side": "B", "text": "我吃馒头。" },
-        { "role": "麦克", "side": "A", "text": "你要几个？" },
-        { "role": "玛丽", "side": "B", "text": "一个。你也吃馒头吗？" },
-        { "role": "麦克", "side": "A", "text": "我不吃馒头，我吃米饭。你喝什么？" },
-        { "role": "玛丽", "side": "B", "text": "我要一碗鸡蛋汤。你要吗？" },
-        { "role": "麦克", "side": "A", "text": "不要，我喝啤酒。" },
-        { "role": "玛丽", "side": "B", "text": "这些是什么？" },
-        { "role": "麦克", "side": "A", "text": "这是饺子，这是包子，那是面条儿。" }
-      ] }
+        {
+          "role": "麦克",
+          "text": "中午你去哪儿吃饭？"
+        },
+        {
+          "role": "玛丽",
+          "text": "我去食堂。"
+        }
+      ]
+    },
+    {
+      "title": "课文",
+      "context": "（在食堂）",
+      "lines": [
+        {
+          "role": "麦克",
+          "text": "你吃什么？"
+        },
+        {
+          "role": "玛丽",
+          "text": "我吃馒头。"
+        },
+        {
+          "role": "麦克",
+          "text": "你要几个？"
+        },
+        {
+          "role": "玛丽",
+          "text": "<span class=\"focus\">一个</span>。你也吃馒头吗？"
+        },
+        {
+          "role": "麦克",
+          "text": "我不吃馒头，我吃米饭。你喝什么？"
+        },
+        {
+          "role": "玛丽",
+          "text": "我要<span class=\"focus\">一碗</span>鸡蛋汤。你要吗？"
+        },
+        {
+          "role": "麦克",
+          "text": "<span class=\"focus\">不要</span>，我喝啤酒。"
+        },
+        {
+          "role": "玛丽",
+          "text": "这些是什么？"
+        },
+        {
+          "role": "麦克",
+          "text": "这是饺子，这是包子，那是<span class=\"focus\">面条儿</span>。"
+        }
+      ]
+    }
   ],
+  "phoneticsNotes": [
+    {
+      "title": "不的变调 · Biến điệu của 不",
+      "content": "Trước thanh 4, <b>bù</b> đổi thành <b>bú</b>: <span class=\"tone-y2\">不要 bú yào</span>. Trước các thanh khác vẫn đọc bù."
+    },
+    {
+      "title": "轻声 · Thanh nhẹ",
+      "content": "Trong <b>馒头 mántou、饺子 jiǎozi、包子 bāozi</b>, âm cuối <b>tou / zi</b> đọc ngắn và nhẹ, không nhấn thanh."
+    },
+    {
+      "title": "儿化 · Âm cuốn lưỡi",
+      "content": "<b>面条儿 miàntiáor</b>: 儿 nhập vào âm tiết trước, không đọc tách thành “ér”."
+    }
+  ],
+  "grammar": [],
   "exercises": {
-    "chips": [
-      { "title": "词组朗读 · Đọc cụm từ", "desc": "Đọc rõ thanh điệu; bấm vào từng ô sau khi đã đọc xong.",
-        "items": [["吃馒头", "chī mántou"], ["吃面包", "chī miànbāo"], ["吃米饭", "chī mǐfàn"], ["吃饺子", "chī jiǎozi"], ["吃包子", "chī bāozi"], ["喝咖啡", "hē kāfēi"], ["喝牛奶", "hē niúnǎi"], ["喝啤酒", "hē píjiǔ"], ["喝茶", "hē chá"], ["喝酸奶", "hē suānnǎi"]] },
-      { "title": "替换练习 · Luyện thay thế", "desc": "Đọc theo từng hàng, thay danh từ nhưng giữ nguyên khung cấu trúc.",
-        "items": [["吃馒头 · 吃包子 · 吃米饭 · 吃面条儿 · 吃饺子", ""], ["喝什么 · 喝汤 · 喝茶 · 喝啤酒 · 喝鸡蛋汤", ""], ["什么汤 · 什么书 · 什么人 · 什么酒 · 什么名字", ""]] }
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 7 (5 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
+      {
+        "pageNumber": 93,
+        "label": "练习",
+        "text": "第七课 seta |\n\nLesson 7 What would you eat \\\n\n\n1) 语音 Phonetics\n\nC1) BEYN Distinguish the pronunciations and tones\n\ntóu                shéu             bi                yen              kõu\nï                  ya                 niú              yáng            geou\nfon             cài              guð           chó            ni\nrou                    dàn                   táng               yän                 jiù\nmántou          nánshòu        baozi            paozi\n\njidon             qixion           shibao        shiboo\n\ndā chë         dò chë         nali             noli\n\n(2) 多音节连读 Multisyllabic liaison\nchi méntou chi miònbāo chi mifon        chī baozi\n\nhē kāfēi  héniingi  hépijii hēchá hē suðnnði\n\n(3) “—” HAW The tone sandhi of “—”\n\nyifeng         yì tin        yì zhāng        yishuong\nyicéng        yì huí         yijié            yi nión\nyì běn          yib          yì kõu          yì din\nyí zuò          yí kè          yí jiùn            yí pion\n(4) “不”的变调The tone sandhi of “不”\nbù chi       bù hē        bushu6 bù duō       bù sun\n\nbù lái bixing bùtóng bùnéng bù tión\nbumii bùlěng bùdă        buhso bù xičo\nbúmài bú qù        bú pà        búzuð búè\n\n(5) 轻南 The neutral tone\ndõozi chōzi shéozi kudizi jinzi  qiánzi\nwūzi  zhuōzi yizi          guìzi  xiāngzi hézi"
+      },
+      {
+        "pageNumber": 94,
+        "label": "练习",
+        "text": "NERE (F3) PM E\n\nC6) JIMIA Colocations of tones\n\nféngjian           mingtian         niénqing         guójiā\nmíngnián         huidé             téngxué          liú xué\nniúnăi                pijid                  yéuySng          ménkču\nxuéxido           bú yao            chidao           xiguon\nbié de             péngyou         juéde             mófan\n\n2) 认读 Identify and read\n吃馒头     吃包了于     吃米饭     吃面条儿 ERF\n喝什么     喝汤      喝茶      喝啤酒     喝鸡蛋汤\n什么汤    什么书 什么人 什么酒     什么名字\n\n3) 回答问题 Answer the questions\n(1) Ni qù năr chi fòn?\n(2) Ni chì shénme?\n(3) Ni chiji ge méntou?\n(4) Ni hë shénme?\n(5) Ni hē shénme tang?\nC6) Ni yao shénme jiù?\n\n4) 完成会话 Complete the dialogues\n\nA:                           ?\nB: Wò qù shiténg chi fòn.\n\nA o?\nB: Zhé shi móntou.\n\nA:                           2\nB: Nò shi baozi."
+      },
+      {
+        "pageNumber": 95,
+        "label": "练习",
+        "text": "Lesson 7 What would you eat \\\n\nA:                                                  ?\n\nB: Noxié shi jiðozi.\n\nA:                                                  ?\n\nB: Wò chi méntou.\n\nA:                                                  ?\n\nB: Wò yào yí ge. Ni yë chi méntou ma?\n\nA:               „wò chi                          . Ni hē tāng ma?\n\nB: Hë. Wò yào yì wòn jidàntāng. Ni hē shénme tang?\nA: Wò bù hë         ,wo hē\n\n5) 看图问答 Look at the picture and answer the question\n\nA: 这是什么?\n\nB: 这是\n\nRF   硫    书   词典   电脑\nkuoizi   wăn   shūù   cídiðn  diànnăo\nchopsticks  bowl   book  dictionary  computer\n\n`,\n\na S m  =\na   汽车   电视   冰箱   手机\nsőn   qìchë  diànshì bīngxiāng  shõujī\numbrella   car    Tv   fridge  mobile phone"
+      },
+      {
+        "pageNumber": 96,
+        "label": "练习",
+        "text": "NERE (P3) BM 上\n\n©) 交际会话 Communication\n点菜 Ordering dishes\nA: Nichi shénme?\nB: Wò chi mifon.\nA: Ni hē shénme?\nB: Wö hē píjiù.\n\n1) IREME Read and retell\n\n中午我去食堂吃饭。这是馒头，这是包子，那是面条儿，\nBERT. REER, BEH, RATER, RAAE\n汤，他吃米饭，喝啤酒。\n\n8) 5汉字 Write the characters\ne7 信人不\n\n个\n午\n\naj tė\n\n子\n\ntu | ”二关头"
+      },
+      {
+        "pageNumber": 97,
+        "label": "练习",
+        "text": "第七课 你吃什么\nLesson 7 What would you eat\n\nYo] rreg\n| J   T   I\nsa    |   |\n\nchi |i! or o y oE\n\n|          |\n吃|        |\nfan 7 At ry yi\n\n|I    |    |\nKS        |\nsel treri\nw     | | |\n\nbo aaae\n\n包  |\n\nmòn 7r AnA A N Á\n\n面                           |\n\nW606|”了从各争箱条\n|\n\nhe oe e e o on ot oP og og g E\n\nEN    |   |\n\nm| rrn"
+      }
     ],
-    "questions": ["你去哪儿吃饭？", "你吃什么？", "你吃几个馒头？", "你喝什么？", "你喝什么汤？", "你要什么啤酒？"],
-    "reading": "中午／我去食堂吃饭。这是馒头，这是包子，那是面条儿，这些是饺子。我吃馒头，喝鸡蛋汤。麦克不吃馒头，不喝鸡蛋汤；他吃米饭，喝啤酒。",
-    "homework": [
-      "Ghi âm đọc bài khóa, chú ý biến điệu trong 一个、一碗、不要 và âm 儿 hóa trong 面条儿.",
-      "Ghi âm các cụm từ ở Luyện tập 1 và đoạn văn ở Luyện tập 4.",
-      "Chép và học 16 từ mới; các từ liên quan không đánh số riêng.",
-      "Tự tạo một hội thoại gọi món gồm ít nhất 6 lượt nói."
+    "blocks": [
+      {
+        "title": "<span class=\"hanzi\">词组朗读</span> — Đọc cụm từ",
+        "desc": "Đọc rõ thanh điệu; bấm vào từng ô sau khi đã đọc xong.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "吃馒头",
+                "pp": "chī mántou"
+              },
+              {
+                "ph": "吃面包",
+                "pp": "chī miànbāo"
+              },
+              {
+                "ph": "吃米饭",
+                "pp": "chī mǐfàn"
+              },
+              {
+                "ph": "吃饺子",
+                "pp": "chī jiǎozi"
+              },
+              {
+                "ph": "吃包子",
+                "pp": "chī bāozi"
+              },
+              {
+                "ph": "喝咖啡",
+                "pp": "hē kāfēi"
+              },
+              {
+                "ph": "喝牛奶",
+                "pp": "hē niúnǎi"
+              },
+              {
+                "ph": "喝啤酒",
+                "pp": "hē píjiǔ"
+              },
+              {
+                "ph": "喝茶",
+                "pp": "hē chá"
+              },
+              {
+                "ph": "喝酸奶",
+                "pp": "hē suānnǎi"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "<span class=\"hanzi\">替换练习</span> — Luyện thay thế",
+        "desc": "Đọc theo từng hàng, thay danh từ nhưng giữ nguyên khung cấu trúc.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "吃馒头 · 吃包子 · 吃米饭 · 吃面条儿 · 吃饺子",
+                "pp": ""
+              },
+              {
+                "ph": "喝什么 · 喝汤 · 喝茶 · 喝啤酒 · 喝鸡蛋汤",
+                "pp": ""
+              },
+              {
+                "ph": "什么汤 · 什么书 · 什么人 · 什么酒 · 什么名字",
+                "pp": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "<span class=\"hanzi\">回答问题</span> — Trả lời câu hỏi",
+        "desc": "Trả lời thành câu hoàn chỉnh bằng tiếng Trung, không chỉ trả lời một từ.",
+        "parts": [
+          {
+            "type": "sentences",
+            "hanzi": true,
+            "items": [
+              "你去哪儿吃饭？",
+              "你吃什么？",
+              "你吃几个馒头？",
+              "你喝什么？",
+              "你喝什么汤？",
+              "你要什么啤酒？"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "<span class=\"hanzi\">短文朗读</span> — Đọc đoạn văn",
+        "desc": "Ngắt nghỉ theo cụm nghĩa, sau đó thuật lại mà không nhìn văn bản.",
+        "parts": [
+          {
+            "type": "reading",
+            "prose": false,
+            "html": "中午／我去食堂吃饭。<br/>这是馒头，这是包子，那是面条儿，这些是饺子。<br/>我吃馒头，喝鸡蛋汤。<br/>麦克不吃馒头，不喝鸡蛋汤；他吃米饭，喝啤酒。"
+          }
+        ]
+      },
+      {
+        "title": "<span class=\"hanzi\">课后任务</span> — Bài tập về nhà",
+        "desc": "Đã bỏ yêu cầu làm ba bài nghe theo đề nghị của bạn.",
+        "parts": [
+          {
+            "type": "homework",
+            "items": [
+              "✓ Ghi âm đọc bài khóa, chú ý biến điệu trong 一个、一碗、不要 và âm 儿 hóa trong 面条儿.",
+              "✓ Ghi âm các cụm từ ở Luyện tập 1 và đoạn văn ở Luyện tập 4.",
+              "✓ Chép và học 16 từ mới; các từ liên quan không đánh số riêng.",
+              "✓ Tự tạo một hội thoại gọi món gồm ít nhất 6 lượt nói."
+            ]
+          }
+        ]
+      }
     ]
   },
   "extra": {
-    "extensions": [
-      ["吃饭", "chīfàn", "ăn cơm / dùng bữa"], ["好吃", "hǎochī", "ngon (đồ ăn)"], ["好喝", "hǎohē", "ngon, dễ uống"],
-      ["面包", "miànbāo", "bánh mì"], ["河粉", "héfěn", "phở"], ["火锅", "huǒguō", "lẩu"], ["春卷", "chūnjuǎn", "nem cuốn"],
-      ["咖啡", "kāfēi", "cà phê"], ["牛奶", "niúnǎi", "sữa bò"], ["奶茶", "nǎichá", "trà sữa"], ["可乐", "kělè", "coca"],
-      ["果汁", "guǒzhī", "nước ép"], ["水", "shuǐ", "nước"]
-    ]
-  }
+    "tabs": [
+      "vocab",
+      "phonetics",
+      "dialogue",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "phonetics": {
+        "title": "语音 · Ngữ âm",
+        "desc": "Trọng tâm: biến điệu của 一, thanh nhẹ và âm cuốn lưỡi 儿化",
+        "note": ""
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Tham khảo hệ thống luyện tập trong bài giảng; đã bỏ các bài nghe và bài điền ở cuối",
+        "note": ""
+      }
+    },
+    "properNounsTitle": {
+      "zh": "专名",
+      "vi": "Tên riêng"
+    },
+    "phoneticsHero": {
+      "big": "一",
+      "title": "Biến điệu của “一”",
+      "rules": [
+        {
+          "title": "Giữ nguyên thanh 1",
+          "form": "<span class=\"tone-y1\">yī</span>",
+          "desc": "Khi đứng độc lập hoặc đọc như số thứ tự: 一、第一."
+        },
+        {
+          "title": "Đổi thành thanh 4",
+          "form": "<span class=\"tone-y4\">yì</span> + thanh 1 / 2 / 3",
+          "desc": "一天 yì tiān · 一年 yì nián · 一本 yì běn · 一碗 yì wǎn"
+        },
+        {
+          "title": "Đổi thành thanh 2",
+          "form": "<span class=\"tone-y2\">yí</span> + thanh 4",
+          "desc": "一个 yí ge · 一刻 yí kè · 一件 yí jiàn · 一片 yí piàn"
+        }
+      ],
+      "note": "<b>Ghi nhớ:</b> chữ Hán vẫn viết là <b>一</b>; chỉ cách đọc thay đổi. Trong bài khóa: <b>一个 → yí ge</b>, <b>一碗 → yì wǎn</b>."
+    },
+    "phoneticsBlocks": [
+      {
+        "title": "<span class=\"hanzi\">选择正确读音</span> — Nhận dạng cách đọc đúng",
+        "desc": "Chọn phiên âm đầy đủ của cả cụm từ, ví dụ: 一天 → yì tiān.",
+        "parts": [
+          {
+            "type": "toneQuiz",
+            "wrongText": "Chưa đúng — hãy nhận dạng thanh điệu của âm tiết đứng sau 一.",
+            "items": [
+              {
+                "word": "一",
+                "options": [
+                  "yī",
+                  "yí",
+                  "yì"
+                ],
+                "answer": 0,
+                "note": "Đứng độc lập"
+              },
+              {
+                "word": "一天",
+                "options": [
+                  "yī tiān",
+                  "yí tiān",
+                  "yì tiān"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 1"
+              },
+              {
+                "word": "一年",
+                "options": [
+                  "yī nián",
+                  "yí nián",
+                  "yì nián"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 2"
+              },
+              {
+                "word": "一本",
+                "options": [
+                  "yī běn",
+                  "yí běn",
+                  "yì běn"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 3"
+              },
+              {
+                "word": "一张",
+                "options": [
+                  "yī zhāng",
+                  "yí zhāng",
+                  "yì zhāng"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 1"
+              },
+              {
+                "word": "一双",
+                "options": [
+                  "yī shuāng",
+                  "yí shuāng",
+                  "yì shuāng"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 1"
+              },
+              {
+                "word": "一层",
+                "options": [
+                  "yī céng",
+                  "yí céng",
+                  "yì céng"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 2"
+              },
+              {
+                "word": "一回",
+                "options": [
+                  "yī huí",
+                  "yí huí",
+                  "yì huí"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 2"
+              },
+              {
+                "word": "一节",
+                "options": [
+                  "yī jié",
+                  "yí jié",
+                  "yì jié"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 2"
+              },
+              {
+                "word": "一口",
+                "options": [
+                  "yī kǒu",
+                  "yí kǒu",
+                  "yì kǒu"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 3"
+              },
+              {
+                "word": "一点",
+                "options": [
+                  "yī diǎn",
+                  "yí diǎn",
+                  "yì diǎn"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 3"
+              },
+              {
+                "word": "一个",
+                "options": [
+                  "yī ge",
+                  "yí ge",
+                  "yì ge"
+                ],
+                "answer": 1,
+                "note": "Trước thanh 4; 个 đọc nhẹ"
+              },
+              {
+                "word": "一刻",
+                "options": [
+                  "yī kè",
+                  "yí kè",
+                  "yì kè"
+                ],
+                "answer": 1,
+                "note": "Trước thanh 4"
+              },
+              {
+                "word": "一件",
+                "options": [
+                  "yī jiàn",
+                  "yí jiàn",
+                  "yì jiàn"
+                ],
+                "answer": 1,
+                "note": "Trước thanh 4"
+              },
+              {
+                "word": "一片",
+                "options": [
+                  "yī piàn",
+                  "yí piàn",
+                  "yì piàn"
+                ],
+                "answer": 1,
+                "note": "Trước thanh 4"
+              },
+              {
+                "word": "一碗",
+                "options": [
+                  "yī wǎn",
+                  "yí wǎn",
+                  "yì wǎn"
+                ],
+                "answer": 2,
+                "note": "Trước thanh 3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "<span class=\"hanzi\">轻声练习</span> — Luyện thanh nhẹ “子”",
+        "desc": "Đọc nhanh, ngắn và nhẹ phần zi được gạch chấm.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "刀子",
+                "pp": "dāo<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "叉子",
+                "pp": "chā<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "勺子",
+                "pp": "sháo<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "筷子",
+                "pp": "kuài<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "剪子",
+                "pp": "jiǎn<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "钳子",
+                "pp": "qián<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "屋子",
+                "pp": "wū<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "桌子",
+                "pp": "zhuō<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "椅子",
+                "pp": "yǐ<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "柜子",
+                "pp": "guì<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "箱子",
+                "pp": "xiāng<span class=\"zi-light\">zi</span>"
+              },
+              {
+                "ph": "盒子",
+                "pp": "hé<span class=\"zi-light\">zi</span>"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "好好吃饭，好好学习",
+      "text": "· Chúc các bạn học tốt Bài 7!"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "07-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文 · Nghe bài khóa",
+      "code": "07-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "07-3",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 93,
+      "caption": "Trang bài tập trong PDF: 93",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 94,
+      "caption": "Trang bài tập trong PDF: 94",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 95,
+      "caption": "Trang bài tập trong PDF: 95",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 96,
+      "caption": "Trang bài tập trong PDF: 96",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 97,
+      "caption": "Trang bài tập trong PDF: 97",
+      "imageUrl": ""
+    }
+  ]
 }

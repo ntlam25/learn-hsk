@@ -61,6 +61,8 @@ export default function CourseManagerPage() {
             <tr>
               <th>Tên khoá học</th>
               <th>HSK</th>
+              <th>Bài học</th>
+              <th>Lớp</th>
               <th>Trạng thái</th>
               <th></th>
             </tr>
@@ -69,10 +71,14 @@ export default function CourseManagerPage() {
             {courses.map((c) => (
               <tr key={c.id}>
                 <td>
-                  <div className="admin-table-zh">{c.title}</div>
+                  <Link to={`/admin/courses/${c.id}`} className="admin-table-zh admin-table-link">
+                    {c.title}
+                  </Link>
                   <div className="admin-table-vi">{c.description}</div>
                 </td>
                 <td>{c.hskLevel || '—'}</td>
+                <td>{c.lessonCount ?? '—'}</td>
+                <td>{c.classCount ?? '—'}</td>
                 <td>
                   <button className={'status-pill' + (c.published ? ' published' : '')} onClick={() => togglePublish(c)}>
                     <span className="status-pill-dot" />
@@ -80,6 +86,9 @@ export default function CourseManagerPage() {
                   </button>
                 </td>
                 <td className="admin-table-actions">
+                  <Link to={`/admin/courses/${c.id}`} className="btn-chip">
+                    Chi tiết
+                  </Link>
                   <Link to={`/admin/lessons/new?courseId=${c.id}`} className="btn-chip">
                     + Bài học
                   </Link>

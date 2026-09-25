@@ -10,12 +10,10 @@
       "num": 1,
       "chars": [
         {
-          "h": "经",
-          "p": ""
+          "h": "经"
         },
         {
-          "h": "理",
-          "p": ""
+          "h": "理"
         }
       ],
       "pinyin": "jīnglǐ",
@@ -38,12 +36,10 @@
       "num": 2,
       "chars": [
         {
-          "h": "好",
-          "p": ""
+          "h": "好"
         },
         {
-          "h": "久",
-          "p": ""
+          "h": "久"
         }
       ],
       "pinyin": "hǎojiǔ",
@@ -67,8 +63,7 @@
       "num": 3,
       "chars": [
         {
-          "h": "啊",
-          "p": ""
+          "h": "啊"
         }
       ],
       "pinyin": "à",
@@ -91,20 +86,16 @@
       "num": 4,
       "chars": [
         {
-          "h": "马",
-          "p": ""
+          "h": "马"
         },
         {
-          "h": "马",
-          "p": ""
+          "h": "马"
         },
         {
-          "h": "虎",
-          "p": ""
+          "h": "虎"
         },
         {
-          "h": "虎",
-          "p": ""
+          "h": "虎"
         }
       ],
       "pinyin": "mǎmǎhūhū",
@@ -127,12 +118,10 @@
       "num": 5,
       "chars": [
         {
-          "h": "最",
-          "p": ""
+          "h": "最"
         },
         {
-          "h": "近",
-          "p": ""
+          "h": "近"
         }
       ],
       "pinyin": "zuìjìn",
@@ -155,8 +144,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "刚",
-          "p": ""
+          "h": "刚"
         }
       ],
       "pinyin": "gāng",
@@ -179,17 +167,16 @@
       "num": 7,
       "chars": [
         {
-          "h": "开",
-          "p": ""
+          "h": "开"
         },
         {
-          "h": "学",
-          "p": ""
+          "h": "学"
         }
       ],
       "pinyin": "kāi xué",
       "pos": "Động từ",
       "meaning": "khai giảng; bắt đầu học kỳ",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "开",
@@ -214,20 +201,16 @@
       "num": 8,
       "chars": [
         {
-          "h": "有",
-          "p": ""
+          "h": "有"
         },
         {
-          "h": "一",
-          "p": ""
+          "h": "一"
         },
         {
-          "h": "点",
-          "p": ""
+          "h": "点"
         },
         {
-          "h": "儿",
-          "p": ""
+          "h": "儿"
         }
       ],
       "pinyin": "yǒu (yì) diǎnr",
@@ -238,12 +221,10 @@
       "num": 9,
       "chars": [
         {
-          "h": "还",
-          "p": ""
+          "h": "还"
         },
         {
-          "h": "是",
-          "p": ""
+          "h": "是"
         }
       ],
       "pinyin": "háishi",
@@ -267,12 +248,10 @@
       "num": 10,
       "chars": [
         {
-          "h": "咖",
-          "p": ""
+          "h": "咖"
         },
         {
-          "h": "啡",
-          "p": ""
+          "h": "啡"
         }
       ],
       "pinyin": "kāfēi",
@@ -295,8 +274,7 @@
       "num": 11,
       "chars": [
         {
-          "h": "杯",
-          "p": ""
+          "h": "杯"
         }
       ],
       "pinyin": "bēi",
@@ -319,13 +297,13 @@
       "num": 12,
       "chars": [
         {
-          "h": "车",
-          "p": ""
+          "h": "车"
         }
       ],
       "pinyin": "chē",
       "pos": "Danh từ",
       "meaning": "xe",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "自行车",
@@ -365,12 +343,10 @@
       "num": 13,
       "chars": [
         {
-          "h": "颜",
-          "p": ""
+          "h": "颜"
         },
         {
-          "h": "色",
-          "p": ""
+          "h": "色"
         }
       ],
       "pinyin": "yánsè",
@@ -393,8 +369,7 @@
       "num": 14,
       "chars": [
         {
-          "h": "蓝",
-          "p": ""
+          "h": "蓝"
         }
       ],
       "pinyin": "lán",
@@ -405,8 +380,7 @@
       "num": 15,
       "chars": [
         {
-          "h": "辆",
-          "p": ""
+          "h": "辆"
         }
       ],
       "pinyin": "liàng",
@@ -426,10 +400,17 @@
       ]
     }
   ],
-  "properNouns": [],
+  "properNouns": [
+    {
+      "hanzi": "关",
+      "pinyin": "Guān",
+      "meaning": "họ Quan"
+    }
+  ],
   "dialogues": [
     {
       "title": "（一）您身体好吗",
+      "context": "",
       "lines": [
         {
           "role": "关经理",
@@ -471,6 +452,7 @@
     },
     {
       "title": "（二）你的自行车是新的还是旧的",
+      "context": "（楼下的自行车很多，下课后，田芳在找自行车……）",
       "lines": [
         {
           "role": "田芳",
@@ -511,41 +493,362 @@
       ]
     }
   ],
+  "phoneticsNotes": [],
+  "grammar": [
+    {
+      "title": "选择疑问句“还是”",
+      "content": "Khi đưa ra hai hoặc nhiều khả năng để người nghe lựa chọn, dùng 还是: 你今天去还是明天去？茶还是咖啡？"
+    },
+    {
+      "title": "省略疑问句“呢”",
+      "content": "Không có câu trước: 我的自行车呢？= 我的自行车在哪儿？ Có câu trước: 我是英国人，你呢？"
+    },
+    {
+      "title": "主谓谓语句",
+      "content": "Câu có vị ngữ là một cụm chủ-vị: 我身体很好；她工作很忙。 Chủ ngữ lớn nêu đối tượng, cụm chủ-vị phía sau miêu tả đối tượng đó."
+    },
+    {
+      "title": "有点儿 + 形容词",
+      "content": "有点儿 đứng trước tính từ: 有点儿忙、有点儿贵、有点儿重. Thường mang sắc thái chưa hài lòng."
+    },
+    {
+      "title": "动词 + 一点儿",
+      "content": "一点儿 đứng sau động từ hoặc trước danh từ: 喝一点儿、吃一点儿、买一点儿水果。"
+    },
+    {
+      "title": "最 + 形容词/动词",
+      "content": "最 biểu thị mức độ cao nhất: 最好、最难、最好吃、最好看。"
+    },
+    {
+      "title": "刚 + 动词",
+      "content": "刚 biểu thị hành động vừa xảy ra: 刚开学、刚回家、刚去银行。"
+    },
+    {
+      "title": "“的”字短语",
+      "content": "Có thể lược danh từ sau 的 khi đã rõ: 蓝的、新的、旧的、我的、田芳的。"
+    }
+  ],
   "exercises": {
-    "grammar": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 14 (8 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "选择疑问句“还是”",
-        "content": "Khi đưa ra hai hoặc nhiều khả năng để người nghe lựa chọn, dùng 还是: 你今天去还是明天去？茶还是咖啡？"
+        "pageNumber": 171,
+        "label": "练习",
+        "text": "EHR 你的村是新的还是旧的\n\nLesson 14 Is your bike a new one or an old one\n\n五 55 Yúyin Phonetics\n\n1) RIRE The intonation of alternative questions\n选择问句的语调较高，语速慢，供选择的部分重读，连词“还是”\nThe pitch of an alternative question is relatively high, and the speed is\n\nslow. The choices are stressed, and the conjunction “还是\"is unstressed. The\n\nrising tone is used before “1还是\", and the falling tone is used after it, e.g.\n\n你的车是'新的还是' 旧的? N\n你'今天去还是'明天去? y\n\n2) 省脱问旬的语调 The intonation of elliptical questions\n\n用“呢”的省略问句,“呢”前的单音节词要重读,句尾读降调\n例如:\n\nIn an elliptical question with “Wg”, the monosyllabic word before “WÈ” is\nstressed. The falling tone is used at the end of the sentence, e.g.\n\nER? N\nRERA \"WE? N\n\n\n1) 语音 Phonetics\nC1) BERBMM Distinguish the pronunciations and tones\n\ngöngzuò          dòngzuò         qìchë           qí chè\nháishi                háizi                 zuijin              zuixin\nyánsè             yčnsè            huòzhě         huðchē"
       },
       {
-        "title": "省略疑问句“呢”",
-        "content": "Không có câu trước: 我的自行车呢？= 我的自行车在哪儿？ Có câu trước: 我是英国人，你呢？"
+        "pageNumber": 172,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n(2) 多音节连读 Multisyllabic liaison\nzixingché            chūzüchë          xiioqiche  mótuðchē\ngonggong qiché wúguï dianché qingguï dianché\n\n(3) 朗读 Read out the following phrases\n新书 ”新车 ”新词典 ”新电脑 ”新衣服 HAP\nwW B wik mek BAR BAS\n有点儿大 有点儿小       有点儿重       有点儿轻\n有点儿责 。 有点儿难 AELS ARIS\n\n2) Hk Substitution exercises\n\nR         lèi          tired\n加困         kùn         sleepy\nO           è             hungry\naA          léng         cold\nOE]          ke           thirsty\n加衬衣        chenyi        shirt\nOER         máoyï         woolen sweater\nORA        bao        bag\n回黄           huéng         yellow\n0k           huñ            grey\nDik           lù             green\n2#           xié            shoes\nBK          shut         water"
       },
       {
-        "title": "主谓谓语句",
-        "content": "Câu có vị ngữ là một cụm chủ-vị: 我身体很好；她工作很忙。 Chủ ngữ lớn nêu đối tượng, cụm chủ-vị phía sau miêu tả đối tượng đó."
+        "pageNumber": 173,
+        "label": "练习",
+        "text": "g+  sorennennn | (w)\n\nLesson 14 Is your bike a new one or an old one\n\n(1) A: 你身体怎么样?       (2) A: ÈRI?\nB: 很好。(我身体很好。)      B: fkilt, (Rákiè. )\n她  EE BA    R 困 馈\n王老师 你妈妈 我朋友       冷 R\n(3)A: 你的自行车是什么     (4)A: 你的车是新的还是\n颜色的?             旧的?\nB: 蓝的。( 我的自行车        B: 新的。( 我的车是\n是蓝的。)           新的。)\n衬衣 é            包   词典\n毛衣 a           箱子 ”手机\n包   灰           电脑 书\nHe 黄\n箱子 绿\n#   黑\n\n(5) A: 你喝 茶还是喝 咖啡?     吃 米饭 Rk\nB: 喝咖啡              喝啤酒 BK\n\n去邮局 ”去银行\n\nËR EAF\n\n买 杂志   买 报纸"
       },
       {
-        "title": "有点儿 + 形容词",
-        "content": "有点儿 đứng trước tính từ: 有点儿忙、有点儿贵、有点儿重. Thường mang sắc thái chưa hài lòng."
+        "pageNumber": 174,
+        "label": "练习",
+        "text": "NERE (F3) PM E\n4) iA Ask questions\nEJ 用“还是\" 提问Ask questions with \"还是\"\nBl: RR ”买杨子一你买苹果还是买橘子?\n\nO) 去银行 去邮局一\n(2) 是蓝自行车 是黑自行车一\n(3) 喝水”喝啤酒一\n\n(4) 学习英语 学习法语一\n\n(5) 是学生 是老师一\n\n(6) 是新电脑 是旧电脑一\n\n 用“……昵? ”提问 Ask questions with*……呢9\"\n\nB: A: RAR WE?\n\nB: RUHE\n\n(1) A: 麦克是美国人。               2\nB: 玛丽是英国人。\n\n(2) A: 这是我的词典。              ?\nB: 我的在这儿呢。\n\n(3) A: WFF Hi,            7\nB: 张东也学习英语。\n\n(4) A: 我骑车去学校。\nB: 我也了骑车去\n\n(5)A: 这些是中药。             ?\nB: 那些是酒。"
       },
       {
-        "title": "动词 + 一点儿",
-        "content": "一点儿 đứng sau động từ hoặc trước danh từ: 喝一点儿、吃一点儿、买一点儿水果。"
+        "pageNumber": 175,
+        "label": "练习",
+        "text": "BHR 你的车是新的还是旧的     ©\nLesson 14 Is your bike a new one or an old one\n\n(6) A: RAER             ?\nB: 我的是黑的。\n\n4)组句 Make sentences\n例: 他 日本 是 韩国 学生 还是 学生 |\n\n一他是日本学生还是韩国学生?\nDk Bh 车 是 还是 红的\n\n(2)这辆 车 是 还是 你的 aži\n\n>\n\n(3)张东 日语 英语 学习 还是\n\n(4) 还是 他的”自行车 旧的 新的 是\n\n>\n\n(5)你 喝 茶 咖啡 喝 还是\n\n—\n\nE) 按照例句做练习 Rephrase each sentence after the example given\n| 例: 这是我的箱子。一 这个征子是我的。\n(1) 这是一件红毛衣。\n\n(2) 这是王老师的书。\n\n="
       },
       {
-        "title": "最 + 形容词/动词",
-        "content": "最 biểu thị mức độ cao nhất: 最好、最难、最好吃、最好看。"
+        "pageNumber": 176,
+        "label": "练习",
+        "text": "NERE (3M) 第一船 上\n\n(3) 这是一本法文词典。\n\n—\n\n(4) 这是一辆新车。\n\n(5) 那是田芒的手机。\n\n—\n\n(6) 这是一个旧电脑。\n\nO) REME Read and retell\n\n四忽然 hiren suddenly\n\n回看见。 keénjion tosee\n\n© È      tă       it\n\n四送            song          to give (as a present)\n回好看     hðokàn good-looking; pretty\n©  hõoqi        casy to ride\n\n骑     qi       to ride (an animal or a bicycle)\nÁK  měitiūn every day\n国来     lái     to come\n\n(1) 教学楼前边的自行车很多。田芳下课后要找她的自行\n车。田劳的自行车是新的。张东问她的自行车是什么颜色的，\n田芳说是蓝的。张东问那辆蓝车是不是她的。田芳说她的自行\n\n148."
       },
       {
-        "title": "刚 + 动词",
-        "content": "刚 biểu thị hành động vừa xảy ra: 刚开学、刚回家、刚去银行。"
+        "pageNumber": 177,
+        "label": "练习",
+        "text": "BHR 你的车是新的还是旧的\nLesson 14 Is your bike a new one or an old one\n\n车是新的，不是旧的，那辆不是她的。忽然，田芳看见了她的\n自行车。好说:“啊，我的自行车在那儿呢。”\n\nQ) 我也有一辆自行车，但不是蔓的，是黑的。我的车不\n是新的，是一辆旧车。它不是我买的，是一个朋友送的。这辆\n车不好看，但是很轻，很好骑，我每天骑车来学校。\n\n相交际会话 Communication\n(1) 问候 (2) Asking about someone’s well-being (2)\nA: 好久不见了，你身体好吗?\nB: 很好。你呢?\nA: 我也很好。\n(2) 询问 (2) Making an inquiry (2)\nO A: 你喝葵还是喝咖啡?\nB: 我喝咖啡。\nDA: 你要饺子还是要包子?\nB: 我不要饺子，也不要包子，我要米饭。\n\n8) 写汉字 Write the characters\n\n经\nLM PPPAnRR Z O    |\n|  T 7 H A 刚  o   i   i   E   i  |\n刚                        |"
       },
       {
-        "title": "“的”字短语",
-        "content": "Có thể lược danh từ sau 的 khi đã rõ: 蓝的、新的、旧的、我的、田芳的。"
+        "pageNumber": 178,
+        "label": "练习",
+        "text": "NERE (3M) A-M 上\n\n加| ”广户斤开诉近\n\nEiai     |\n\nkai | FFR\n\n开     H\nM\n点|\n\né |) JL\n\nJej\n[I\n标     |\n\na r hnAAA\n\ná\n\nchè T ttg\n\n+H HE\n\n的| ”各多色\n\n6                            |\n\nn|- -errn"
+      }
+    ],
+    "blocks": [
+      {
+        "title": "还是问句",
+        "desc": "Đặt câu hỏi lựa chọn",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "去银行还是去邮局？"
+              },
+              {
+                "ph": "喝水还是喝啤酒？"
+              },
+              {
+                "ph": "学习英语还是学习法语？"
+              },
+              {
+                "ph": "是学生还是老师？"
+              },
+              {
+                "ph": "新照相机还是旧照相机？"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "呢 的问法",
+        "desc": "Hoàn thành hội thoại",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "我是美国人，你呢？"
+              },
+              {
+                "ph": "这是我的词典，你的呢？"
+              },
+              {
+                "ph": "田芳学习英语，张东呢？"
+              },
+              {
+                "ph": "我的车是蓝的，你的呢？"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "颜色与车辆",
+        "desc": "Thay thế theo mẫu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "自行车／蓝色"
+              },
+              {
+                "ph": "汽车／红色"
+              },
+              {
+                "ph": "摩托车／黑色"
+              },
+              {
+                "ph": "出租车／黄色"
+              },
+              {
+                "ph": "雨伞／灰色"
+              },
+              {
+                "ph": "箱子／绿色"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "有点儿",
+        "desc": "Đọc và đặt câu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "有点儿大"
+              },
+              {
+                "ph": "有点儿小"
+              },
+              {
+                "ph": "有点儿重"
+              },
+              {
+                "ph": "有点儿轻"
+              },
+              {
+                "ph": "有点儿贵"
+              },
+              {
+                "ph": "有点儿难"
+              },
+              {
+                "ph": "有点儿多"
+              },
+              {
+                "ph": "有点儿少"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "组句",
+        "desc": "Sắp xếp thành câu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你的／车／是／蓝的／还是／红的"
+              },
+              {
+                "ph": "这辆／车／是／你的／还是／田芳的"
+              },
+              {
+                "ph": "张东／学习／日语／还是／英语"
+              },
+              {
+                "ph": "你的／自行车／是／新的／还是／旧的"
+              },
+              {
+                "ph": "你／喝／茶／还是／喝／咖啡"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "短文表达",
+        "desc": "Đọc và thuật lại",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "教学楼前边自行车很多。"
+              },
+              {
+                "ph": "田芳的自行车是新的、蓝色的。"
+              },
+              {
+                "ph": "张东问她那辆蓝的是不是她的。"
+              },
+              {
+                "ph": "田芳忽然看见自己的车在那儿呢。"
+              },
+              {
+                "ph": "我也有一辆黑色的旧自行车。"
+              },
+              {
+                "ph": "它不好看，但是很轻、很好骑。"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ cấu trúc và kiến thức trọng tâm",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Giữ các bài nhận dạng, đọc, nói và vận dụng; không tích hợp bài nghe cuối bài",
+        "note": ""
+      }
+    },
+    "properNounsTitle": {
+      "zh": "专名",
+      "vi": "Tên riêng"
+    },
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 14"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "14-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（一）· Nghe bài khóa 1",
+      "code": "14-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（二）· Nghe bài khóa 2",
+      "code": "14-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "14-4",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 171,
+      "caption": "Trang bài tập trong PDF: 171",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 172,
+      "caption": "Trang bài tập trong PDF: 172",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 173,
+      "caption": "Trang bài tập trong PDF: 173",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 174,
+      "caption": "Trang bài tập trong PDF: 174",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 175,
+      "caption": "Trang bài tập trong PDF: 175",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 176,
+      "caption": "Trang bài tập trong PDF: 176",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 177,
+      "caption": "Trang bài tập trong PDF: 177",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 178,
+      "caption": "Trang bài tập trong PDF: 178",
+      "imageUrl": ""
+    }
+  ]
 }

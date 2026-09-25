@@ -35,7 +35,7 @@ export default function FileUploadField({ value, onChange, folder, accept, label
       formData.append('file', file);
       formData.append('folder', folder);
       const res = await api.post('/admin/uploads', formData);
-      onChange(res.data.url);
+      onChange(res.data.url, res.data); // res.data có size/mimeType để hiển thị dung lượng file
     } catch (err) {
       setError(err.response?.data?.message || 'Tải file lên thất bại.');
     } finally {

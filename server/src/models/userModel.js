@@ -55,7 +55,7 @@ async function create({ username, email, passwordHash, fullName = '', role = 'st
     .from('users')
     .insert({
       username: username.trim().toLowerCase(),
-      email: email.trim().toLowerCase(),
+      email: email ? email.trim().toLowerCase() : null, // tài khoản GV tạo sẵn có thể không có email
       password_hash: passwordHash,
       full_name: fullName,
       role,

@@ -10,21 +10,19 @@
       "num": 1,
       "chars": [
         {
-          "h": "办",
-          "p": ""
+          "h": "办"
         },
         {
-          "h": "公",
-          "p": ""
+          "h": "公"
         },
         {
-          "h": "室",
-          "p": ""
+          "h": "室"
         }
       ],
       "pinyin": "bàngōngshì",
       "pos": "Danh từ",
       "meaning": "văn phòng",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "办公",
@@ -49,8 +47,7 @@
       "num": 2,
       "chars": [
         {
-          "h": "找",
-          "p": ""
+          "h": "找"
         }
       ],
       "pinyin": "zhǎo",
@@ -61,8 +58,7 @@
       "num": 3,
       "chars": [
         {
-          "h": "在",
-          "p": ""
+          "h": "在"
         }
       ],
       "pinyin": "zài",
@@ -73,8 +69,7 @@
       "num": 4,
       "chars": [
         {
-          "h": "家",
-          "p": ""
+          "h": "家"
         }
       ],
       "pinyin": "jiā",
@@ -85,8 +80,7 @@
       "num": 5,
       "chars": [
         {
-          "h": "呢",
-          "p": ""
+          "h": "呢"
         }
       ],
       "pinyin": "ne",
@@ -115,8 +109,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "住",
-          "p": ""
+          "h": "住"
         }
       ],
       "pinyin": "zhù",
@@ -140,8 +133,7 @@
       "num": 7,
       "chars": [
         {
-          "h": "号",
-          "p": ""
+          "h": "号"
         }
       ],
       "pinyin": "hào",
@@ -164,8 +156,7 @@
       "num": 8,
       "chars": [
         {
-          "h": "楼",
-          "p": ""
+          "h": "楼"
         }
       ],
       "pinyin": "lóu",
@@ -188,8 +179,7 @@
       "num": 9,
       "chars": [
         {
-          "h": "门",
-          "p": ""
+          "h": "门"
         }
       ],
       "pinyin": "mén",
@@ -212,12 +202,10 @@
       "num": 10,
       "chars": [
         {
-          "h": "零",
-          "p": ""
+          "h": "零"
         },
         {
-          "h": "〇",
-          "p": ""
+          "h": "〇"
         }
       ],
       "pinyin": "líng",
@@ -228,12 +216,10 @@
       "num": 11,
       "chars": [
         {
-          "h": "房",
-          "p": ""
+          "h": "房"
         },
         {
-          "h": "间",
-          "p": ""
+          "h": "间"
         }
       ],
       "pinyin": "fángjiān",
@@ -256,12 +242,10 @@
       "num": 12,
       "chars": [
         {
-          "h": "知",
-          "p": ""
+          "h": "知"
         },
         {
-          "h": "道",
-          "p": ""
+          "h": "道"
         }
       ],
       "pinyin": "zhīdào",
@@ -284,17 +268,16 @@
       "num": 13,
       "chars": [
         {
-          "h": "电",
-          "p": ""
+          "h": "电"
         },
         {
-          "h": "话",
-          "p": ""
+          "h": "话"
         }
       ],
       "pinyin": "diànhuà",
       "pos": "Danh từ",
       "meaning": "điện thoại",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "电",
@@ -324,12 +307,10 @@
       "num": 14,
       "chars": [
         {
-          "h": "号",
-          "p": ""
+          "h": "号"
         },
         {
-          "h": "码",
-          "p": ""
+          "h": "码"
         }
       ],
       "pinyin": "hàomǎ",
@@ -352,17 +333,16 @@
       "num": 15,
       "chars": [
         {
-          "h": "手",
-          "p": ""
+          "h": "手"
         },
         {
-          "h": "机",
-          "p": ""
+          "h": "机"
         }
       ],
       "pinyin": "shǒujī",
       "pos": "Danh từ",
       "meaning": "điện thoại di động",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "手",
@@ -384,10 +364,17 @@
       ]
     }
   ],
-  "properNouns": [],
+  "properNouns": [
+    {
+      "hanzi": "李昌浩",
+      "pinyin": "Lǐ Chānghào",
+      "meaning": "Lee Changho"
+    }
+  ],
   "dialogues": [
     {
       "title": "课文",
+      "context": "",
       "lines": [
         {
           "role": "李昌浩",
@@ -440,111 +427,391 @@
       ]
     }
   ],
+  "phoneticsNotes": [
+    {
+      "title": "号码的读法 · Cách đọc mã số",
+      "content": "Mã số, số phòng và số điện thoại được đọc từng chữ số một, không đọc theo hàng chục, hàng trăm."
+    },
+    {
+      "title": "“一”读 yāo",
+      "content": "Trong mã số và số điện thoại, số 1 thường đọc yāo để tránh nhầm: 601 → liù líng yāo."
+    },
+    {
+      "title": "“二”读 èr",
+      "content": "Trong mã số, số 2 đọc èr, không đọc liǎng: 223 → èr èr sān."
+    },
+    {
+      "title": "零 líng",
+      "content": "Số 0 đọc líng. Ví dụ: 62931074 → liù èr jiǔ sān yāo líng qī sì."
+    },
+    {
+      "title": "轻声“呢”",
+      "content": "呢 đọc ngắn, nhẹ; không ghi dấu thanh. Khi đọc câu 他在家呢, giọng cuối mềm và có tính xác nhận."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "“呢”询问地点",
+      "content": "Khi không có câu trước, 呢 có thể hỏi đồ vật/người ở đâu: 我的书呢？你爸爸呢？"
+    },
+    {
+      "title": "“呢”承接上文",
+      "content": "Sau một câu trước đó, 呢 dùng để hỏi tương tự: 我是越南人，你呢？"
+    },
+    {
+      "title": "住（在）+ 地点",
+      "content": "Cấu trúc nói nơi cư trú: 我住在河内；他住十八楼一门。"
+    },
+    {
+      "title": "号码是多少",
+      "content": "Dùng “danh từ + 号码是多少？” để hỏi mã số: 你的电话号码是多少？他的房间号码是多少？"
+    },
+    {
+      "title": "知道 / 不知道",
+      "content": "Dùng 知道 để nói biết thông tin; phủ định bằng 不知道: 你知道吗？— 知道。/ 不知道。"
+    },
+    {
+      "title": "在 / 不在",
+      "content": "Dùng 在 để hỏi một người có mặt không: 王老师在吗？— 他不在。"
+    }
+  ],
   "exercises": {
-    "notes": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 10 (5 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "号码的读法 · Cách đọc mã số",
-        "content": "Mã số, số phòng và số điện thoại được đọc từng chữ số một, không đọc theo hàng chục, hàng trăm."
+        "pageNumber": 118,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n  Sappig \"2 mefe “èr”, KAEH “läng” Pi:\nIn such numbers as are mentioned above, “2” should be read as “èr”, not\n“ling”, e.g-\n\n212% 一 eryoerhao\n\n 相同的数字要分别读出。例如:\n\nIdentical numbers should be read out one by one, e.g.\n660041123 — liù liù ling ling sì yo yão èr hào\n\n询问号码要说 “几号\" 或者“……号码是多少\"。例如\n\nWhen inquiring about such numbers, we say “儿号”or*……号码是多少”，\neg\n(1) NÝ zhù ji hào?\n(2) Ni de dianhuo hàomă shì du6shao?\n1) EE Phonetics\nC1) HEPEHHMI] Distinguish the pronunciations and tones\ndú shū             túshū             jiè shi            xič shū\nqio mén        jido rén         bù kě           bù kè\nkèqi             kéqi            búguò          bù guò\n(2) 儿化欧。The retroflex finals\nyìdičnr          yixior          chodignr        yðudičnr\nzhù ner          zhù zhèr        pangbianr       heo diðnr\n(3) “一”的变调The tone sandhi of “一”\nyizhi             yì bão          yi bă             yi wen\nyi kè             yí jion          yia             yí piùn"
       },
       {
-        "title": "“一”读 yāo",
-        "content": "Trong mã số và số điện thoại, số 1 thường đọc yāo để tránh nhầm: 601 → liù líng yāo."
+        "pageNumber": 119,
+        "label": "练习",
+        "text": "Lesson 10 Where does he live |\n\n(4) 轻声 The neutral tone\nbízi      songzi duzi       kùzi     qúnzi bèizi běnzi\nlèima lèile èma     èle     kěma kěle lěngle\ndongle xiiole shiole duōle pole kile xidole\n\n(5 ) 三声变调The 3rd tone sandhi\n\nqing hë          niting           kénéng           hén téng\nhioléng           hiodeng          měihčo            shðubičo\nhěn do             képo               hén mon           hiokon\n(6) 多音节连读 Multisyllabic liaison\njishengci               xié Honzi              dú kewén\nting liyin                ting yinyue            zuò liànxí\nqù shangdion           mi dongxi             kòn dionying\nkòn dignshi               dă wăngqiú             tī zúqiú\n(7) 声调搭配Collocations of tones\nxiGnsheng         guiniong           gonjing            qingchu\nshénme           shihou             liángkuai          mingzi\nnimen             wémen            zňoshang          wănshang\nzhège              dìfang             zhème             piòoliang\n\n2) ik Read and learn\n找老师     找同学    找朋友    找书       找食堂\n在家         在学校 ERE ENE ”在办公室\n我知道       你知道 。 他知道       不知道       知道吗\n\n4) 回答问题 Answer the questions\n\n(1) Ni shi liúxuéshēng ma?\n(2) Ni xuéxí shénme?"
       },
       {
-        "title": "“二”读 èr",
-        "content": "Trong mã số, số 2 đọc èr, không đọc liǎng: 223 → èr èr sān."
+        "pageNumber": 120,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n(3) Ni zhù nar?\n(4) Nizhv duōshao hào lóu?\n(5) Ni de shõujī hàomă shi du6shao?\n\n1) 读后复述 Read and retell\n\n我去办公室找王老师，办公室的老师说，王老师不在， 他\n在家呢。王老师住18 号楼1 门 601 房间，他家的电话号码是\n62931074;\n\nE) 交际会话 Communication\n(1) 找人 Looking for someone\nA: Qingwen, Wéng ldoshi zài ma?\nB: T bú zài. Tā zòi jia ne.\n(2) 向住址 (1) Asking for an address (1)\nA: Tā zhù när?\nB: Tā zhù 2 mén 10 hào.\n\n(3) 间电话号码 ( 1) Asking for a telephone number (1)\nA: Ni de diùnhuà hàomă shi duôshao?\nB: 62326688.\n\n@) 写汉字 Write the characters\nmM I TEER E\n住\n\n[ban 7 A A A                    |\n\n办                                 |"
       },
       {
-        "title": "零 líng",
-        "content": "Số 0 đọc líng. Ví dụ: 62931074 → liù èr jiǔ sān yāo líng qī sì."
+        "pageNumber": 121,
+        "label": "练习",
+        "text": "BHR MERL\n\nLesson 10 Where does he live\n\ngöng 7 AAA\n\nnh o e rrrE\n\n|                            |                  I\n\nw 一做不大存在\n\nw SAFFER\n\nZ%    |   |\nne p re PP呢\n\n|      |    |\nKA    |   |\nw|’? + Atk hjg\n\n|\n知      |    |\ndoo `  六六首首首首省畜道\n\ndan npe g\n\nhò |` è E PHHH\n\nhaoo ，”””号号"
       },
       {
-        "title": "轻声“呢”",
-        "content": "呢 đọc ngắn, nhẹ; không ghi dấu thanh. Khi đọc câu 他在家呢, giọng cuối mềm và có tính xác nhận."
+        "pageNumber": 122,
+        "label": "练习",
+        "text": "NERE (P3) BM 上\n\n\n-tiè #y\n\n机\n\n常用电话号码 Useful telephone numbers\n\n救护车120     交通事效122 EEN\n\n查号台: 114      Ebi: 10     交通事故: 122\nDirectory inquiries Police          Traffic accidents\n\n火警电话: 19     急救电话: 120\nFire           First aid"
       }
     ],
-    "grammar": [
+    "blocks": [
       {
-        "title": "“呢”询问地点",
-        "content": "Khi không có câu trước, 呢 có thể hỏi đồ vật/người ở đâu: 我的书呢？你爸爸呢？"
+        "title": "号码认读",
+        "desc": "Đọc từng chữ số",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "601号"
+              },
+              {
+                "ph": "113号"
+              },
+              {
+                "ph": "223号"
+              },
+              {
+                "ph": "62931074"
+              },
+              {
+                "ph": "20261408"
+              },
+              {
+                "ph": "13800138000"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "“呢”承接上文",
-        "content": "Sau một câu trước đó, 呢 dùng để hỏi tương tự: 我是越南人，你呢？"
+        "title": "呢 的用法",
+        "desc": "Hoàn thành câu hỏi",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "我是老师，你呢？"
+              },
+              {
+                "ph": "我的书在这儿，你的呢？"
+              },
+              {
+                "ph": "王老师不在，李老师呢？"
+              },
+              {
+                "ph": "我的手机呢？"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "住（在）+ 地点",
-        "content": "Cấu trúc nói nơi cư trú: 我住在河内；他住十八楼一门。"
+        "title": "地点表达",
+        "desc": "Đọc địa chỉ phòng",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "十八楼一门"
+              },
+              {
+                "ph": "四楼二门"
+              },
+              {
+                "ph": "六楼601号"
+              },
+              {
+                "ph": "九楼908号"
+              },
+              {
+                "ph": "办公室在三楼"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "号码是多少",
-        "content": "Dùng “danh từ + 号码是多少？” để hỏi mã số: 你的电话号码是多少？他的房间号码是多少？"
+        "title": "词组认读",
+        "desc": "Đọc cụm từ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "找老师"
+              },
+              {
+                "ph": "找同学"
+              },
+              {
+                "ph": "找朋友"
+              },
+              {
+                "ph": "在家"
+              },
+              {
+                "ph": "在学校"
+              },
+              {
+                "ph": "在办公室"
+              },
+              {
+                "ph": "电话号码"
+              },
+              {
+                "ph": "手机号码"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "知道 / 不知道",
-        "content": "Dùng 知道 để nói biết thông tin; phủ định bằng 不知道: 你知道吗？— 知道。/ 不知道。"
+        "title": "回答问题",
+        "desc": "Trả lời dựa theo bài khóa",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "王老师在办公室吗？"
+              },
+              {
+                "ph": "王老师在哪儿？"
+              },
+              {
+                "ph": "王老师住哪儿？"
+              },
+              {
+                "ph": "他的房间号是多少？"
+              },
+              {
+                "ph": "他的电话号码是多少？"
+              },
+              {
+                "ph": "职员知道他的手机号码吗？"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "在 / 不在",
-        "content": "Dùng 在 để hỏi một người có mặt không: 王老师在吗？— 他不在。"
-      }
-    ],
-    "chips": [
-      {
-        "title": "认读练习",
-        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
-        "items": [
-          [
-            "办公室",
-            "bàngōngshì"
-          ],
-          [
-            "职员",
-            "zhíyuán"
-          ],
-          [
-            "呢",
-            "ne"
-          ],
-          [
-            "住",
-            "zhù"
-          ],
-          [
-            "楼",
-            "lóu"
-          ],
-          [
-            "门",
-            "mén"
-          ],
-          [
-            "房间",
-            "fángjiān"
-          ],
-          [
-            "号",
-            "hào"
-          ],
-          [
-            "知道",
-            "zhīdào"
-          ],
-          [
-            "电话",
-            "diànhuà"
-          ],
-          [
-            "号码",
-            "hàomǎ"
-          ],
-          [
-            "零",
-            "líng"
-          ]
+        "title": "短文朗读",
+        "desc": "Đọc và thuật lại",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "我去办公室找王老师。"
+              },
+              {
+                "ph": "办公室的职员说王老师不在，他在家呢。"
+              },
+              {
+                "ph": "王老师住十八楼一门601号。"
+              },
+              {
+                "ph": "他家的电话号码是62931074。"
+              }
+            ]
+          }
         ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "phonetics",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "phonetics": {
+        "title": "语音 · Ngữ âm",
+        "desc": "Quy tắc phát âm được làm nổi bật và có phần luyện nhận dạng",
+        "note": ""
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ cấu trúc và kiến thức trọng tâm",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Giữ các bài nhận dạng, đọc, nói và vận dụng; không tích hợp bài nghe cuối bài",
+        "note": ""
+      }
+    },
+    "properNounsTitle": {
+      "zh": "专名",
+      "vi": "Tên riêng"
+    },
+    "phoneticsBlocks": [
+      {
+        "title": "认读练习",
+        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "办公室 · bàngōngshì"
+              },
+              {
+                "ph": "职员 · zhíyuán"
+              },
+              {
+                "ph": "呢 · ne"
+              },
+              {
+                "ph": "住 · zhù"
+              },
+              {
+                "ph": "楼 · lóu"
+              },
+              {
+                "ph": "门 · mén"
+              },
+              {
+                "ph": "房间 · fángjiān"
+              },
+              {
+                "ph": "号 · hào"
+              },
+              {
+                "ph": "知道 · zhīdào"
+              },
+              {
+                "ph": "电话 · diànhuà"
+              },
+              {
+                "ph": "号码 · hàomǎ"
+              },
+              {
+                "ph": "零 · líng"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 10"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "10-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文 · Nghe bài khóa",
+      "code": "10-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "10-3",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 118,
+      "caption": "Trang bài tập trong PDF: 118",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 119,
+      "caption": "Trang bài tập trong PDF: 119",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 120,
+      "caption": "Trang bài tập trong PDF: 120",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 121,
+      "caption": "Trang bài tập trong PDF: 121",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 122,
+      "caption": "Trang bài tập trong PDF: 122",
+      "imageUrl": ""
+    }
+  ]
 }

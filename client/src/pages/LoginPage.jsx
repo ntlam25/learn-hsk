@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AuthLayout from '../components/AuthLayout';
 import PasswordInput from '../components/PasswordInput';
+import { safeNext, withNext } from '../lib/nextPath';
 
 export default function LoginPage() {
   const { login, user } = useAuth();
@@ -12,11 +13,10 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const next = safeNext(location.search) || location.state?.from?.pathname;
 
-  if (user) {
-    navigate(user.role === 'student' ? '/me/courses' : '/admin', { replace: true });
-    return null;
-  }
+  // Đã đăng nhập: chuyển trang bằng <Navigate> (gọi navigate() ngay trong lúc render bị React Router bỏ qua → trang trắng)
+  if (user) return <Navigate to={next || (user.role === 'student' ? '/me/courses' : '/admin')} replace />;
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -24,7 +24,7 @@ export default function LoginPage() {
     setSubmitting(true);
     try {
       const loggedInUser = await login(identifier, password);
-      const dest = location.state?.from?.pathname || (loggedInUser.role === 'student' ? '/me/courses' : '/admin');
+      const dest = next || (loggedInUser.role === 'student' ? '/me/courses' : '/admin');
       navigate(dest, { replace: true });
     } catch (err) {
       setError(err.response?.data?.message || 'Đăng nhập thất bại.');
@@ -63,7 +63,7 @@ export default function LoginPage() {
         </button>
 
         <p className="login-sub">
-          Chưa có tài khoản học viên? <Link to="/register">Đăng ký ngay</Link>
+          Chưa có tài khoản học viên? <Link to={withNext('/register', next)}>Đăng ký ngay</Link>
         </p>
       </form>
     </AuthLayout>

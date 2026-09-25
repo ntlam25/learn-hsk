@@ -21,7 +21,7 @@ hanzi-course/
 2. Vào **SQL Editor** → New query → dán toàn bộ nội dung [`sql/schema.sql`](./sql/schema.sql)
    → **Run**. Lệnh này tạo các bảng `users`, `courses`, `lessons`, `lesson_audio_tracks`,
    `lesson_pages`, `exercise_items`, `flashcard_reviews`, `submissions`, `classes`,
-   `enrollments`, `lesson_progress`, `site_settings`, và bật RLS (khoá truy cập trực
+   `class_lessons`, `enrollments`, `lesson_progress`, `site_settings`, và bật RLS (khoá truy cập trực
    tiếp — chỉ backend dùng service key mới đọc/ghi được).
 3. Vào **Storage** → **New bucket** → tên `lesson-media` → bật **Public bucket** → Create.
 4. Vào **Project Settings → API**, lấy:
@@ -53,16 +53,49 @@ khi seed nếu muốn mật khẩu khác):
 - email: `admin@hanzi-course.local` (đổi bằng `SEED_ADMIN_EMAIL`)
 - password: `ChangeMe123!`
 
+### Nội dung Bài 1–15 lấy từ giáo trình HTML
+
+Trang xem bài học (`/lessons/:id`) hiển thị y hệt file `Giáo trình Hán ngữ Bài 1–15.html`
+(CSS gốc nằm ở [`client/src/styles/book.css`](./client/src/styles/book.css)). Nội dung chữ của 15 bài
+trong `server/src/seed/lesson{1..15}.json` được sinh tự động từ file HTML đó:
+
+```bash
+pip install beautifulsoup4
+python server/scripts/import_book.py "Giáo trình Hán ngữ Bài 1–15.html"
+cd server && npm run seed -- --update   # ghi đè nội dung chữ của các bài đã có
+```
+
+**File nghe, ảnh trang sách và PDF không đi qua seed** — giáo viên tải lên trong trình soạn bài
+(tab Luyện tập có nút "Tải nhiều ảnh trang cùng lúc", số trang lấy theo số trong tên file). Bài tạo
+mới từ seed có sẵn các ô trống (tên file nghe, mã file, số trang) để điền file vào; ô chưa có file
+không hiển thị với học viên. `--update` không đụng tới file nghe / ảnh trang đã tải.
+
+Nếu DB được tạo từ `schema.sql` cũ, chạy [`sql/005_add_audio_size.sql`](./sql/005_add_audio_size.sql)
+một lần (lưu dung lượng file nghe để hiển thị "0.5 MB" như giáo trình), và
+[`sql/006_add_known_vocab.sql`](./sql/006_add_known_vocab.sql) (lưu các từ học viên đã đánh dấu "đã thuộc"),
+rồi [`sql/007_class_flow.sql`](./sql/007_class_flow.sql) (mã lớp, ngày bắt đầu/kết thúc, lịch mở bài theo lớp,
+thời điểm hoàn thành bài; các lớp đang có được mở sẵn mọi bài hiện tại để không bị gián đoạn).
+
 ### Bước tiếp theo sau khi seed
 
 1. Đăng nhập admin ở `/login`.
 2. (Tuỳ chọn) Vào **Cài đặt** đổi mood giao diện.
 3. Vào **Quản lý khoá học** để tạo thêm khoá học theo HSK2–HSK6, hoặc **Quản trị
    bài học** để soạn thêm bài trong khoá "Hán ngữ cơ sở" đã seed sẵn.
-4. Vào **Quản lý lớp học** → tạo lớp gắn với 1 khoá học.
-5. Học viên tự đăng ký ở `/register` → admin/giáo viên vào lớp vừa tạo, nhập đúng
-   email học viên để thêm vào lớp → học viên đăng nhập lại sẽ thấy khoá học ở
-   **Khoá học của tôi**.
+4. Vào **Quản lý lớp học** → **+ Tạo lớp**: chọn khoá học, giáo viên phụ trách (admin),
+   ngày bắt đầu/kết thúc. Mở trang lớp:
+   - tab **Bài học**: mở bài cho lớp (mở ngay, hẹn ngày giờ, hoặc "Mở đến bài N") —
+     lớp mới chưa mở bài nào;
+   - tab **Học viên**: thêm học viên theo 3 cách —
+     (a) gửi **mã lớp / link `/join/MÃ`** ở tab Tổng quan để học viên tự vào,
+     (b) **Thêm hàng loạt** tên đăng nhập/email của học viên đã có tài khoản,
+     (c) **Tạo tài khoản** (username, họ tên, email tuỳ chọn) — hệ thống sinh mật khẩu tạm,
+     chỉ hiện một lần để sao chép gửi học viên;
+   - tab **Báo cáo**: bảng học viên × bài (hoàn thành / % từ đã thuộc / quiz), xuất CSV.
+5. Học viên vào **Khoá học của tôi** thấy từng lớp, tiến độ và nút **Học tiếp**. Trong khoá,
+   bài chưa mở hiện 🔒 (kèm ngày mở nếu có). Bài được tính **hoàn thành** khi học viên bấm
+   "Hoàn thành bài" cuối bài, hoặc tự động khi thuộc hết từ mới và làm đúng hết quiz.
+   Lớp quá ngày kết thúc / đã lưu trữ: học viên chỉ xem lại, không nộp bài.
 6. Riêng bài nào bật **"Cho xem trước"** trong trang soạn bài thì ai cũng xem được
    ngay từ trang chủ, không cần đăng nhập/vào lớp.
 
@@ -129,8 +162,8 @@ gốc, dùng thư mục `book-pages`).
 ## 5. Tổng quan chức năng
 
 - Tài khoản 3 vai trò: `admin`, `teacher`, `student` (JWT tự quản, không dùng
-  Supabase Auth). Học viên tự đăng ký nhưng phải được giáo viên/admin thêm vào lớp
-  (theo email) mới xem được nội dung khoá học — trừ bài đánh dấu "xem trước".
+  Supabase Auth). Học viên phải thuộc một lớp của khoá (vào bằng mã lớp, hoặc được giáo viên
+  thêm / tạo tài khoản) và bài phải được lớp đó mở mới xem được — trừ bài đánh dấu "xem trước".
 - Nhiều khoá học chia theo HSK1–HSK6 (hoặc không gắn HSK), mỗi khoá nhiều bài học.
 - Mỗi bài học có tab động: Từ mới / Bài khóa / (Ngữ âm nếu có) / (Ngữ pháp nếu có) /
   Luyện tập — mỗi tab có thể gắn file nghe riêng và bài có thể gắn ảnh/PDF trang
@@ -138,7 +171,7 @@ gốc, dùng thư mục `book-pages`).
 - Bài tập có chấm điểm thật (`exercise_items` kind `quiz`, so đáp án tự động, lưu
   `submissions`) và flashcard ôn từ vựng (kind `flashcard`, học viên tự đánh giá
   thuộc/chưa thuộc, lưu `flashcard_reviews`, ưu tiên hiện lại thẻ chưa thuộc).
-- Giáo viên xem báo cáo tiến độ + điểm + % flashcard đã thuộc của từng học viên
-  trong lớp mình phụ trách.
+- Giáo viên quản lý lớp mình phụ trách: mã mời, học viên, lịch mở bài, báo cáo tiến độ
+  theo từng bài (trạng thái, % từ đã thuộc, quiz, flashcard, lần hoạt động gần nhất).
 - Admin cấu hình "mood" giao diện toàn hệ thống (vui/buồn/tập trung/thư giãn) —
   chỉ đổi màu sắc/hiệu ứng, giữ nguyên bố cục.

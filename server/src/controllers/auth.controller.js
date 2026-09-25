@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const userModel = require('../models/userModel');
 const { supabase, BUCKET } = require('../config/supabase');
 
-const USERNAME_RE = /^[a-z0-9_.]{3,32}$/;
+const { USERNAME_RE } = require('../utils/accounts');
 
 function signToken(user) {
   return jwt.sign(
@@ -27,7 +27,7 @@ function publicUser(user) {
 }
 
 // POST /api/auth/register — học viên tự đăng ký, luôn tạo role 'student'.
-// Đăng ký xong CHƯA vào được course/lớp nào — phải chờ giáo viên/admin thêm vào lớp.
+// Đăng ký xong CHƯA vào course/lớp nào — học viên nhập mã lớp (/join/MÃ) hoặc chờ giáo viên thêm vào lớp.
 async function register(req, res) {
   const { username, email, password, fullName } = req.body;
   if (!username || !email || !password) {

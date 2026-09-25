@@ -10,12 +10,10 @@
       "num": 1,
       "chars": [
         {
-          "h": "没",
-          "p": ""
+          "h": "没"
         },
         {
-          "h": "有",
-          "p": ""
+          "h": "有"
         }
       ],
       "pinyin": "méi (yǒu)",
@@ -39,12 +37,10 @@
       "num": 2,
       "chars": [
         {
-          "h": "箱",
-          "p": ""
+          "h": "箱"
         },
         {
-          "h": "子",
-          "p": ""
+          "h": "子"
         }
       ],
       "pinyin": "xiāngzi",
@@ -68,8 +64,7 @@
       "num": 3,
       "chars": [
         {
-          "h": "有",
-          "p": ""
+          "h": "有"
         }
       ],
       "pinyin": "yǒu",
@@ -80,12 +75,10 @@
       "num": 4,
       "chars": [
         {
-          "h": "这",
-          "p": ""
+          "h": "这"
         },
         {
-          "h": "儿",
-          "p": ""
+          "h": "儿"
         }
       ],
       "pinyin": "zhèr",
@@ -108,8 +101,7 @@
       "num": 5,
       "chars": [
         {
-          "h": "重",
-          "p": ""
+          "h": "重"
         }
       ],
       "pinyin": "zhòng",
@@ -132,8 +124,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "黑",
-          "p": ""
+          "h": "黑"
         }
       ],
       "pinyin": "hēi",
@@ -156,8 +147,7 @@
       "num": 7,
       "chars": [
         {
-          "h": "红",
-          "p": ""
+          "h": "红"
         }
       ],
       "pinyin": "hóng",
@@ -180,8 +170,7 @@
       "num": 8,
       "chars": [
         {
-          "h": "轻",
-          "p": ""
+          "h": "轻"
         }
       ],
       "pinyin": "qīng",
@@ -204,8 +193,7 @@
       "num": 9,
       "chars": [
         {
-          "h": "旧",
-          "p": ""
+          "h": "旧"
         }
       ],
       "pinyin": "jiù",
@@ -228,8 +216,7 @@
       "num": 10,
       "chars": [
         {
-          "h": "药",
-          "p": ""
+          "h": "药"
         }
       ],
       "pinyin": "yào",
@@ -252,17 +239,16 @@
       "num": 11,
       "chars": [
         {
-          "h": "中",
-          "p": ""
+          "h": "中"
         },
         {
-          "h": "药",
-          "p": ""
+          "h": "药"
         }
       ],
       "pinyin": "zhōngyào",
       "pos": "Danh từ",
       "meaning": "thuốc Đông y",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "西药",
@@ -287,12 +273,10 @@
       "num": 12,
       "chars": [
         {
-          "h": "茶",
-          "p": ""
+          "h": "茶"
         },
         {
-          "h": "叶",
-          "p": ""
+          "h": "叶"
         }
       ],
       "pinyin": "cháyè",
@@ -315,8 +299,7 @@
       "num": 13,
       "chars": [
         {
-          "h": "里",
-          "p": ""
+          "h": "里"
         }
       ],
       "pinyin": "lǐ",
@@ -339,16 +322,13 @@
       "num": 14,
       "chars": [
         {
-          "h": "日",
-          "p": ""
+          "h": "日"
         },
         {
-          "h": "用",
-          "p": ""
+          "h": "用"
         },
         {
-          "h": "品",
-          "p": ""
+          "h": "品"
         }
       ],
       "pinyin": "rìyòngpǐn",
@@ -371,8 +351,7 @@
       "num": 15,
       "chars": [
         {
-          "h": "件",
-          "p": ""
+          "h": "件"
         }
       ],
       "pinyin": "jiàn",
@@ -395,12 +374,10 @@
       "num": 16,
       "chars": [
         {
-          "h": "衣",
-          "p": ""
+          "h": "衣"
         },
         {
-          "h": "服",
-          "p": ""
+          "h": "服"
         }
       ],
       "pinyin": "yīfu",
@@ -424,8 +401,7 @@
       "num": 17,
       "chars": [
         {
-          "h": "把",
-          "p": ""
+          "h": "把"
         }
       ],
       "pinyin": "bǎ",
@@ -448,17 +424,16 @@
       "num": 18,
       "chars": [
         {
-          "h": "雨",
-          "p": ""
+          "h": "雨"
         },
         {
-          "h": "伞",
-          "p": ""
+          "h": "伞"
         }
       ],
       "pinyin": "yǔsǎn",
       "pos": "Danh từ",
       "meaning": "ô; dù",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "雨",
@@ -483,20 +458,16 @@
       "num": 19,
       "chars": [
         {
-          "h": "平",
-          "p": ""
+          "h": "平"
         },
         {
-          "h": "板",
-          "p": ""
+          "h": "板"
         },
         {
-          "h": "电",
-          "p": ""
+          "h": "电"
         },
         {
-          "h": "脑",
-          "p": ""
+          "h": "脑"
         }
       ],
       "pinyin": "píngbǎn diànnǎo",
@@ -519,8 +490,7 @@
       "num": 20,
       "chars": [
         {
-          "h": "本",
-          "p": ""
+          "h": "本"
         }
       ],
       "pinyin": "běn",
@@ -543,12 +513,10 @@
       "num": 21,
       "chars": [
         {
-          "h": "词",
-          "p": ""
+          "h": "词"
         },
         {
-          "h": "典",
-          "p": ""
+          "h": "典"
         }
       ],
       "pinyin": "cídiǎn",
@@ -571,12 +539,10 @@
       "num": 22,
       "chars": [
         {
-          "h": "优",
-          "p": ""
+          "h": "优"
         },
         {
-          "h": "盘",
-          "p": ""
+          "h": "盘"
         }
       ],
       "pinyin": "yōupán",
@@ -599,8 +565,7 @@
       "num": 23,
       "chars": [
         {
-          "h": "支",
-          "p": ""
+          "h": "支"
         }
       ],
       "pinyin": "zhī",
@@ -623,17 +588,16 @@
       "num": 24,
       "chars": [
         {
-          "h": "毛",
-          "p": ""
+          "h": "毛"
         },
         {
-          "h": "笔",
-          "p": ""
+          "h": "笔"
         }
       ],
       "pinyin": "máobǐ",
       "pos": "Danh từ",
       "meaning": "bút lông",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "笔",
@@ -647,6 +611,7 @@
   "dialogues": [
     {
       "title": "（一）这个黑箱子很重",
+      "context": "（在机场）",
       "lines": [
         {
           "role": "A",
@@ -676,6 +641,7 @@
     },
     {
       "title": "（二）这是不是中药",
+      "context": "（在海关）",
       "lines": [
         {
           "role": "A",
@@ -712,37 +678,385 @@
       ]
     }
   ],
+  "phoneticsNotes": [],
+  "grammar": [
+    {
+      "title": "数量词“些”",
+      "content": "些 biểu thị số lượng không xác định; thường đi sau 一、哪、这、那: 一些人、这些书、那些杂志. Không dùng với số từ khác."
+    },
+    {
+      "title": "形容词谓语句",
+      "content": "Câu vị ngữ tính từ: chủ ngữ + phó từ + tính từ. Ví dụ: 这个箱子很重；苹果比较贵。Không thêm 是 trước tính từ."
+    },
+    {
+      "title": "正反疑问句",
+      "content": "Dùng dạng khẳng định + phủ định để hỏi: 是不是、有没有、重不重、去不去. Trả lời bằng dạng khẳng định hoặc phủ định."
+    },
+    {
+      "title": "定语和“的”",
+      "content": "Miêu tả/sở hữu + 的 + danh từ: 黑色的箱子、我的书. Tính từ đơn âm tiết có thể bỏ 的: 黑箱子、旧书."
+    },
+    {
+      "title": "“的”字短语",
+      "content": "的 có thể thay cho danh từ bị lược: 我的很旧；红的是我的；那个新的是朋友的。"
+    },
+    {
+      "title": "方位词“里”",
+      "content": "Danh từ + 里 biểu thị bên trong: 箱子里、房间里、学校里."
+    },
+    {
+      "title": "量词搭配",
+      "content": "件衣服、把雨伞、本词典、个优盘、支笔、瓶香水、张地图。"
+    }
+  ],
   "exercises": {
-    "grammar": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 13 (9 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "数量词“些”",
-        "content": "些 biểu thị số lượng không xác định; thường đi sau 一、哪、这、那: 一些人、这些书、那些杂志. Không dùng với số từ khác."
+        "pageNumber": 156,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n2) 语调 (3) Intonation (3)\n\n正反问句，句调较高，肯定式重读，和否定式轻谈，句尾读降调。例如:\n\nThe pitch of an affirmative-negative question is relatively high. The\naffirmative part is stressed, the negative part unstressed. The falling tone is used\nat the end of the sentence, e.g.\n\n这'是不是中药? y\n你'去不去邮局? N\n你'吃不吃饺子? N\n\n\n1) EE Phonetics\n\n(1) HEEE Distinguish the pronunciations and tones\n\nzhöngyào         zhòngyào         xiāngzi          xiàngzi\n\ncidión             zidin              năr               nàr\n\nyifu                        yùfù                       yùsăn                 yì shòn\n(2) 多音节连读 Multisyllabic liaison\n\nriyongpin         bixipin            gongyipin\n\nyinshuGpin        zhănlěnpïn        hudzhuangpin\n\n(3) 朗读Read out the following phrases\n\nOE                     bao                     bag\n回报纸           boozhi           newspaper\n\n件衣服      个箱子      把雨伞      个本子\n-ikti 。 一支笔      一本书      一本词典"
       },
       {
-        "title": "形容词谓语句",
-        "content": "Câu vị ngữ tính từ: chủ ngữ + phó từ + tính từ. Ví dụ: 这个箱子很重；苹果比较贵。Không thêm 是 trước tính từ."
+        "pageNumber": 157,
+        "label": "练习",
+        "text": "第十三课 这是不是中药 ©\nLesson 131s this Chinese medicine\n\n谁的包   谁的报纸 B   谁的药\n谁的笔   谁的优盘 Mee 。 谁的词典\n我的    他的    老师的   留学生的\n新的    旧的    黑的    红的\n\n有没有   是不是   吃不吃   ARA\n听不听   说不说   读不读   575\n\n买不买词典 要不要米饭”在不在家  ”换不换人民币\n词典好不好 APERE ”汉字难不难 PIER\nPIREJ ”欢迎不欢迎”知道不知道”工作不工作\n\n2) Hik Substitution exercises\n\n四地图      dité       map\n回 椅子     yizi       chair\n© H       ping      bottle\nHE     qianbil      pencil\n(1) A: 这是什么?          茶叶 ”中国茶叶\nB: 这是药。            词典 汉英词典\n这是什             电脑 平板电脑\nA: 这是什么药?\nB: 中药。( 这是中药。)     ss m\ni   g      r       地图”中国地图"
       },
       {
-        "title": "正反疑问句",
-        "content": "Dùng dạng khẳng định + phủ định để hỏi: 是不是、有没有、重不重、去不去. Trả lời bằng dạng khẳng định hoặc phủ định."
+        "pageNumber": 158,
+        "label": "练习",
+        "text": "am ms sn i\n\nT Chinese Course (3rd Edition) Book TA\n\n(2) A: 你有没有箱子?             中文书 新\nB: 有                    词典    好\nA: 你的箱子重不重?           2\nB: RE.                  -0\n(3)A: 这个 箱子是谁的?     (4) A: 这些是不是药?\nB: 是我的。              B: 不是。( 这些不\nA: 那个是不是你的?           是药。)\nB: 不是\n本 书                 茶叶 酒\n把 椅子               词典 ”优盘\n件 衣服               地图 报纸\n新”啤酒\n支 笔\n把 Ae\n(5) A: 你去不去银行?       (6) A: 你买革果不买?\nB: 去                 B: TR, AFHI\n去 kt              书    词典\n吃   包子              报纸 ”地图\n喝   啤酒              毛笔 ”铅笔\n学 R"
       },
       {
-        "title": "定语和“的”",
-        "content": "Miêu tả/sở hữu + 的 + danh từ: 黑色的箱子、我的书. Tính từ đơn âm tiết có thể bỏ 的: 黑箱子、旧书."
+        "pageNumber": 159,
+        "label": "练习",
+        "text": "第十三课 这是不是中药\nLesson 13 ls this Chinese medicine\n\n4) 选择量词填空 Choose the right measure words to fill in the blanks\nm 把 本 支 个 位 件\n\na- F   (2)两 啤酒   (3)三 ”老师\n(4)四 箱子    (5)五 #      (0O)六 碗\n(7)七 词典  (8)人入 _   (9)十 衣服\n\n4) 组句 Make sentences\n例: 什么 黑 这些 的 是\n一这些黑的是什么?\n(1)黑 不 这个 你 是 的 是 箱子\n\n(2)你 朋友 有 PA 没有\n\n—\n\nGÈ 不 明天 你 lè\n\n—\n\n(OR 难 觉得 k 汉语 他\n\n(5)手机 Ë K 这个 不\n\n—\n\n(6) 平板电脑 不 E 这个 演\n\n—"
       },
       {
-        "title": "“的”字短语",
-        "content": "的 có thể thay cho danh từ bị lược: 我的很旧；红的是我的；那个新的是朋友的。"
+        "pageNumber": 160,
+        "label": "练习",
+        "text": "NERE (3M) 第一船 上\n\n3) 回答问题 Answer the questions\n例: A: 你去不去银行?\nB: 我不去银行。\n(1) A: 你去不去洗手间 (xishóujiän, toilet; lavatory; restroom ) ?\nB:\n(2) A: 你回不回宿舍 ( sishe&, dormitory ) ?\n\n有没有大箱子? B:\n\nA    AFERE? B:\n(5) A: 你要不要杂志?     B:\n\n的车新不新?Bs\nERER? B:\n: 你唱不喝啤酒?。。B:\n\n©) 完成会话 Complete the dialogues\n\n| 例: A: 你写汉字不写?\n|   B: 我不写汉字。\n\n(1)A:                        ?\nB: 这是我的雨伞。\n\n(2)A:                          ?\nB: 我不去洗手间。\n\n(3) A:                          ?\nB: 我要茶\n\n(4)A:                          ?\n\nB: 我买冰激凌 ( bingjiling, ice cream ),"
       },
       {
-        "title": "方位词“里”",
-        "content": "Danh từ + 里 biểu thị bên trong: 箱子里、房间里、学校里."
+        "pageNumber": 161,
+        "label": "练习",
+        "text": "第十三课 这是不是中药\nLesson 13 ls this Chinese medicine\n\n(5)A:                          T\nB: 她不喝鸡蛋汤。\n\n(6) A:                          T\nB: 我不买电脑。\n\n(7)A:                          ?\nB: 我有手机。\n\n(8)A:                          ?\nB: 我的手机不太新。\n\n1) 根据画线部分用疑问代词提问 Use interrogative pronouns to ask\nquestions about the underlined parts\n\n| 例: 王老师是我们的老师。一谁是你们的老师? |\n\n(1) 玛丽是我的朋友。 一\n(2) 张东是白老师的学生。一\nG) 那个箱子很重。一\n\n(4) 他是我们大学的校长。 >\n(5) 那是中药。一\n\n(6) 这是英汉词典。一\n\n(7) 这是汉语书。一\n\n(8) 这些都是英文书。一\n(9) 我喝茶。一\n\n(10) 好住二十六楼。 一"
       },
+      {
+        "pageNumber": 162,
+        "label": "练习",
+        "text": "am ms sn i\n\n\n8) 看图说话 Make dialogues based on the pictures\n例: A: 这是什么?\nB: 这是平板电脑。\nA: 那些是什么?\nB: 那些是优盘。\n\na g y a\n\n电脑           平板电脑 EEB         LE            开关\ndionndo pingbén dionnéo = xinshiq       Pein         Saan\n\ncomputer            tablet PC           monitor\n> a\nKAR                   优盘                  插头               插座             打印机\nshübio          yöupón         chatbu  chõzuð  döyinji\nmouse            USB flash drive            plog               socket               printer\n\n3) 交际会话 Communication\n\n(1) 招领Finding the possessor of an object\nA: 这把雨伞是不是你的?\n\n(2 ) 指认事物名称 Identifying the name of an object\nA: 这是什么?"
+      },
+      {
+        "pageNumber": 163,
+        "label": "练习",
+        "text": "+R 这是不是中药\nLesson 13 Is this Chinese medicine\n\nB: 这是中药。\nA: 那些是什么?\nB: 那些是茶叶。\n\n10) 写汉字 Write the characters\n\nyu -ZIARA\n有\n\nof | 六 订鹿词词词\nwW rAMA\nsen | AA d\n全|\n\nWW | ZiR\nk\n\nH D INAFE ER\nIR\n\nzhong| Aer\n重|\n\ndg- + +车加思轻轻轻\nH"
+      },
+      {
+        "pageNumber": 164,
+        "label": "练习",
+        "text": "NERE (3M) A-M 上\n\nXxin| >t taaa tayy\n\n新              |         |\n\njà 1 on on oA og\nBo   HoH\nben 一十才木本\n\n本              |         |\n\nMALLA:\n\na\n\nhóg t t ttha\n\n|                             ]\na              |         |\n\n全| e A E E\n\n£              HEE"
+      }
+    ],
+    "blocks": [
       {
         "title": "量词搭配",
-        "content": "件衣服、把雨伞、本词典、个优盘、支笔、瓶香水、张地图。"
+        "desc": "Ghép lượng từ phù hợp",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "一件衣服"
+              },
+              {
+                "ph": "一个箱子"
+              },
+              {
+                "ph": "一把雨伞"
+              },
+              {
+                "ph": "一个优盘"
+              },
+              {
+                "ph": "一支笔"
+              },
+              {
+                "ph": "一本书"
+              },
+              {
+                "ph": "一本词典"
+              },
+              {
+                "ph": "一瓶香水"
+              },
+              {
+                "ph": "一张地图"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "的 字短语",
+        "desc": "Đọc cụm rút gọn",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "我的"
+              },
+              {
+                "ph": "他的"
+              },
+              {
+                "ph": "老师的"
+              },
+              {
+                "ph": "留学生的"
+              },
+              {
+                "ph": "新的"
+              },
+              {
+                "ph": "旧的"
+              },
+              {
+                "ph": "黑的"
+              },
+              {
+                "ph": "红的"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "正反疑问",
+        "desc": "Luyện câu hỏi chính phản",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "有没有"
+              },
+              {
+                "ph": "是不是"
+              },
+              {
+                "ph": "吃不吃"
+              },
+              {
+                "ph": "喝不喝"
+              },
+              {
+                "ph": "听不听"
+              },
+              {
+                "ph": "说不说"
+              },
+              {
+                "ph": "买不买词典"
+              },
+              {
+                "ph": "箱子重不重"
+              },
+              {
+                "ph": "汉字难不难"
+              },
+              {
+                "ph": "学习忙不忙"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "回答问题",
+        "desc": "Trả lời theo thực tế",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你有没有大箱子？"
+              },
+              {
+                "ph": "你的箱子重不重？"
+              },
+              {
+                "ph": "你要不要杂志？"
+              },
+              {
+                "ph": "你的手机新不新？"
+              },
+              {
+                "ph": "你有几把雨伞？"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "组句",
+        "desc": "Sắp xếp thành câu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "这个／黑的／箱子／是／不是／你的"
+              },
+              {
+                "ph": "你／有／没有／中国朋友"
+              },
+              {
+                "ph": "明天／你／忙／不忙"
+              },
+              {
+                "ph": "他／觉得／汉语／不太难"
+              },
+              {
+                "ph": "这个／平板电脑／贵不贵"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "看箱子说话",
+        "desc": "Nói theo danh sách đồ vật",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "箱子里有两件衣服。"
+              },
+              {
+                "ph": "箱子里有一把雨伞。"
+              },
+              {
+                "ph": "还有一个平板电脑。"
+              },
+              {
+                "ph": "还有一本词典、两个优盘和三支毛笔。"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ cấu trúc và kiến thức trọng tâm",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Giữ các bài nhận dạng, đọc, nói và vận dụng; không tích hợp bài nghe cuối bài",
+        "note": ""
+      }
+    },
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 13"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "13-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（一）· Nghe bài khóa 1",
+      "code": "13-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（二）· Nghe bài khóa 2",
+      "code": "13-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "13-4",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 156,
+      "caption": "Trang bài tập trong PDF: 156",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 157,
+      "caption": "Trang bài tập trong PDF: 157",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 158,
+      "caption": "Trang bài tập trong PDF: 158",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 159,
+      "caption": "Trang bài tập trong PDF: 159",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 160,
+      "caption": "Trang bài tập trong PDF: 160",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 161,
+      "caption": "Trang bài tập trong PDF: 161",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 162,
+      "caption": "Trang bài tập trong PDF: 162",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 163,
+      "caption": "Trang bài tập trong PDF: 163",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 164,
+      "caption": "Trang bài tập trong PDF: 164",
+      "imageUrl": ""
+    }
+  ]
 }

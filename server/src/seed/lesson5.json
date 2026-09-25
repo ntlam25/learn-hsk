@@ -10,8 +10,7 @@
       "num": 1,
       "chars": [
         {
-          "h": "这",
-          "p": ""
+          "h": "这"
         }
       ],
       "pinyin": "zhè",
@@ -34,8 +33,7 @@
       "num": 2,
       "chars": [
         {
-          "h": "是",
-          "p": ""
+          "h": "是"
         }
       ],
       "pinyin": "shì",
@@ -46,12 +44,10 @@
       "num": 3,
       "chars": [
         {
-          "h": "老",
-          "p": ""
+          "h": "老"
         },
         {
-          "h": "师",
-          "p": ""
+          "h": "师"
         }
       ],
       "pinyin": "lǎoshī",
@@ -74,8 +70,7 @@
       "num": 4,
       "chars": [
         {
-          "h": "您",
-          "p": ""
+          "h": "您"
         }
       ],
       "pinyin": "nín",
@@ -99,8 +94,7 @@
       "num": 5,
       "chars": [
         {
-          "h": "请",
-          "p": ""
+          "h": "请"
         }
       ],
       "pinyin": "qǐng",
@@ -123,8 +117,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "进",
-          "p": ""
+          "h": "进"
         }
       ],
       "pinyin": "jìn",
@@ -148,8 +141,7 @@
       "num": 7,
       "chars": [
         {
-          "h": "坐",
-          "p": ""
+          "h": "坐"
         }
       ],
       "pinyin": "zuò",
@@ -172,8 +164,7 @@
       "num": 8,
       "chars": [
         {
-          "h": "喝",
-          "p": ""
+          "h": "喝"
         }
       ],
       "pinyin": "hē",
@@ -196,8 +187,7 @@
       "num": 9,
       "chars": [
         {
-          "h": "茶",
-          "p": ""
+          "h": "茶"
         }
       ],
       "pinyin": "chá",
@@ -220,12 +210,10 @@
       "num": 10,
       "chars": [
         {
-          "h": "谢",
-          "p": ""
+          "h": "谢"
         },
         {
-          "h": "谢",
-          "p": ""
+          "h": "谢"
         }
       ],
       "pinyin": "xièxie",
@@ -236,21 +224,19 @@
       "num": 11,
       "chars": [
         {
-          "h": "不",
-          "p": ""
+          "h": "不"
         },
         {
-          "h": "客",
-          "p": ""
+          "h": "客"
         },
         {
-          "h": "气",
-          "p": ""
+          "h": "气"
         }
       ],
       "pinyin": "bú kèqi",
       "pos": "Cụm từ",
       "meaning": "không có gì; đừng khách sáo",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "客气",
@@ -275,12 +261,10 @@
       "num": 12,
       "chars": [
         {
-          "h": "工",
-          "p": ""
+          "h": "工"
         },
         {
-          "h": "作",
-          "p": ""
+          "h": "作"
         }
       ],
       "pinyin": "gōngzuò",
@@ -303,17 +287,16 @@
       "num": 13,
       "chars": [
         {
-          "h": "身",
-          "p": ""
+          "h": "身"
         },
         {
-          "h": "体",
-          "p": ""
+          "h": "体"
         }
       ],
       "pinyin": "shēntǐ",
       "pos": "Danh từ",
       "meaning": "cơ thể; sức khỏe",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "身",
@@ -338,8 +321,7 @@
       "num": 14,
       "chars": [
         {
-          "h": "十",
-          "p": ""
+          "h": "十"
         }
       ],
       "pinyin": "shí",
@@ -350,8 +332,7 @@
       "num": 15,
       "chars": [
         {
-          "h": "日",
-          "p": ""
+          "h": "日"
         }
       ],
       "pinyin": "rì",
@@ -359,10 +340,17 @@
       "meaning": "mặt trời; ngày"
     }
   ],
-  "properNouns": [],
+  "properNouns": [
+    {
+      "hanzi": "王",
+      "pinyin": "Wáng",
+      "meaning": "họ Vương"
+    }
+  ],
   "dialogues": [
     {
       "title": "课文",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -403,77 +391,310 @@
       ]
     }
   ],
+  "phoneticsNotes": [
+    {
+      "title": "轻声 · Thanh nhẹ",
+      "content": "谢谢 xièxie、不客气 búkèqi、身体 shēntǐ: âm tiết nhẹ đọc ngắn, không nhấn."
+    },
+    {
+      "title": "j / q / x",
+      "content": "进 jìn、请 qǐng、谢谢 xièxie: đầu lưỡi đặt thấp, mặt lưỡi tiến gần vòm cứng."
+    },
+    {
+      "title": "Ngữ điệu lịch sự",
+      "content": "您好、请进、请坐、请喝茶 đọc rõ, tốc độ vừa phải và hạ giọng nhẹ ở cuối câu mời."
+    }
+  ],
+  "grammar": [],
   "exercises": {
-    "notes": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 5 (6 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "轻声 · Thanh nhẹ",
-        "content": "谢谢 xièxie、不客气 búkèqi、身体 shēntǐ: âm tiết nhẹ đọc ngắn, không nhấn."
+        "pageNumber": 71,
+        "label": "练习",
+        "text": "第五课 这是王老师\n\nLesson5 This is Mr. Wang\n\n2) BE- [1] The final -i [4]\nzhi, chi, shi, ri 中的葛侠是舌尖后音 [il MFE- RR AWI\n语普通话中[i] 不出现在zh、ch、sh、r之后，所以zhi、chi、shi, ri中\nAREE 1一定不能读成[i]\nThe final in zhi, chi, shi and ri is the post-alveolar [ \\]. It is represented\nby the letter -i. Since [ i ] never appears immediately after these initials in\nMandarin Chinese, the final i in zhi, chi, shi and ri cannot be pronounced as [ 1].\n\n1) fE The honorific “you”\n\n“您”是人称代词“你”的敬称。例如: 王老师，您好!\nIt is a term of respect, the polite form of the pronoun “K”, e.g.“王老师 ，\n您好!”\n\n\n1) EA Tones\nzhe   zhé   zhé   zhe — zhè   这\nshi    shí     shi     sù 一一 shi, shi 十,是\nshū   shú   sh   shù — sht   #\nzhi   zhi   zhi   zù — zézhi  杂志\nshuf   shuï   shui — shui   水\nshi   shí   shi   sh ©— lioshi  老师\nrén   rěn   rèn — rén   A\nshën   shén    shěn    shèn — shên    4\nzuð   zu6    zuð    zu — zuò    M"
       },
       {
-        "title": "j / q / x",
-        "content": "进 jìn、请 qǐng、谢谢 xièxie: đầu lưỡi đặt thấp, mặt lưỡi tiến gần vòm cứng."
+        "pageNumber": 72,
+        "label": "练习",
+        "text": "am ms sn i\n\n\n2) WEW Distinguish the pronunciations and tones\nzhi  chi  shi  ñ  zhè  chë   shè   rè\nzhàn chăn shān rón zhang chéng shing ring\nzhēn chèn shén rén zhèng chéng shéng réng\nzá   zhá  co ché  să   shă\nzé   zhé  cè chè  sè   shè\n\nð zh d ch a sh\nsishi               shisi               xiüxi                xiGoxi\nzhidao             chidao            zhenchéng = zhenzheng\n\nChéngchéng chingzhing Zhongwén chongfen\n\nchēzhàn           qixion             chintian\nchéngnién        qingnián         chuén shang chuéng shang\nshiwàng           xīiwàng           shang xin         xiGngxin\n\nzhiji                shifi               shènglì            jingli\nshēnghuó         jingguo           shangdion        jien mion\nrènshi              linshf              rénli                ñh\n\n3) =声变调 The 3rd tone sandhi\n\njičndän       hai bian          haixian        hčochī\nbiðoyáng       gěnjué              jičnchá          lüxíng\nyùfð                 chingzhing           bičoyðn            kěyï\n\nbisoi                   déngdoi                    biéoshi               genxie\nnăinai              ěrduo                    yizi                   singzi"
       },
       {
-        "title": "Ngữ điệu lịch sự",
-        "content": "您好、请进、请坐、请喝茶 đọc rõ, tốc độ vừa phải và hạ giọng nhẹ ở cuối câu mời."
+        "pageNumber": 73,
+        "label": "练习",
+        "text": "第五课  zaze) (w)\n\nLesson5 This is Mr. Wang\n\n4) 认读 Read and lean\nEa\n\nEESE,\nIIP?\n\n6六             ^A           10 +\n(2) 星期一      星期二      星期三       星期四\n\n星期五    星期六     星期天     星期日\n(3) 您好       请进        DEd        请喝茶\n\n谢谢      不客气     Ihle     身体好\n(4) A: 这是王老师，这是我敬爸\n\nB: 王老师     t\n\nC: 您好! 请进! 请坐! 请喝茶!\n\nB: 谢谢!\n\nC: REA!\n\nC: 工作忙吗?\n\nB: RAI\n\nC: 身体好吗?\n\nB: 很好!\n\na"
+      },
+      {
+        "pageNumber": 74,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\nE) 完成会话 Complete the dialogues\n(1) A: Zhé shi Wáng Ičoshī, zhè shi wò bàba.\nB:                           x                           !\nC: Nin hčo! Qing jin! Qing zuò! Qing hê chó!\nB:                                            !\nC: Bú kèqi!\n\n(2) A: G6ngzud máng ma?\n\nA: Sheénti ho ma?\n\n(3)A:                       `\nB: Wáng lăoshî, nin hčo!\nC:              !              !              !               !\nB; Xièxie!\n\nB: Bú tài móng.\nB: Hěn héo!\n\n©) 交际会话 Communication\n介绍 (1) Making an introduction (1)\nA: Zhé shi Wáng lioshi. Léoshi, zhè shi wð de péngyou Màikè.\nB: Nin héo!\nC: Nimen heéo!"
+      },
+      {
+        "pageNumber": 75,
+        "label": "练习",
+        "text": "第五课 这是王老师\nTesson5 This is Mr. Wang\n\n1) i Write the characters\nshi |一十\n\ngöng T I\n\nMAEZ\nte     HH\n\nà 1 nAg\n\nsh ， ”””号早蛙蚜是\n\n是| HH\n\nzh8|] >ra\na |        |\n过        |\nmja H\ni]          |\n进     |   |\nbol- +十办才老\n\n|\n老生       |\nshi | a\n\n|  |        |\nIp     |   |"
+      },
+      {
+        "pageNumber": 76,
+        "label": "练习",
+        "text": "NERE (3M) A-M 上\n\nshën AAAA\n\n身        |\n\nu Artek\n\nGa\n\nxè iraa"
       }
     ],
-    "chips": [
+    "blocks": [
       {
-        "title": "认读练习",
-        "desc": "Đọc chữ Hán rồi đối chiếu phiên âm.",
-        "items": [
-          [
-            "在",
-            "zài"
-          ],
-          [
-            "这",
-            "zhè"
-          ],
-          [
-            "老师",
-            "lǎoshī"
-          ],
-          [
-            "您",
-            "nín"
-          ],
-          [
-            "进",
-            "jìn"
-          ],
-          [
-            "请",
-            "qǐng"
-          ],
-          [
-            "坐",
-            "zuò"
-          ],
-          [
-            "喝",
-            "hē"
-          ],
-          [
-            "茶",
-            "chá"
-          ],
-          [
-            "谢",
-            "xiè"
-          ],
-          [
-            "不客气",
-            "búkèqi"
-          ],
-          [
-            "工作",
-            "gōngzuò"
-          ]
+        "title": "礼貌用语",
+        "desc": "Đọc cụm từ lịch sự",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "您好"
+              },
+              {
+                "ph": "请进"
+              },
+              {
+                "ph": "请坐"
+              },
+              {
+                "ph": "请喝茶"
+              },
+              {
+                "ph": "谢谢"
+              },
+              {
+                "ph": "不客气"
+              },
+              {
+                "ph": "对不起"
+              },
+              {
+                "ph": "没关系"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "替换练习",
+        "desc": "Thay đồ uống trong mẫu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "请喝茶。"
+              },
+              {
+                "ph": "请喝咖啡。"
+              },
+              {
+                "ph": "请喝牛奶。"
+              },
+              {
+                "ph": "请喝果汁。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "回答问题",
+        "desc": "Trả lời câu hỏi",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你工作忙吗？"
+              },
+              {
+                "ph": "你爸爸身体好吗？"
+              },
+              {
+                "ph": "你妹妹喝茶吗？"
+              },
+              {
+                "ph": "你今天吃什么？"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "情景会话",
+        "desc": "Đóng vai đón khách",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "A：这是王老师。"
+              },
+              {
+                "ph": "B：王老师，您好！"
+              },
+              {
+                "ph": "C：您好！请进，请坐，请喝茶！"
+              },
+              {
+                "ph": "B：谢谢！"
+              },
+              {
+                "ph": "C：不客气！"
+              }
+            ]
+          }
         ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "phonetics",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "phonetics": {
+        "title": "语音 · Ngữ âm",
+        "desc": "Điểm phát âm cần chú ý và luyện nhận dạng",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Đã loại bỏ các bài nghe và phần điền cuối bài",
+        "note": ""
+      }
+    },
+    "properNounsTitle": {
+      "zh": "专名",
+      "vi": "Tên riêng"
+    },
+    "phoneticsBlocks": [
+      {
+        "title": "认读练习",
+        "desc": "Đọc chữ Hán rồi đối chiếu phiên âm.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "在 · zài"
+              },
+              {
+                "ph": "这 · zhè"
+              },
+              {
+                "ph": "老师 · lǎoshī"
+              },
+              {
+                "ph": "您 · nín"
+              },
+              {
+                "ph": "进 · jìn"
+              },
+              {
+                "ph": "请 · qǐng"
+              },
+              {
+                "ph": "坐 · zuò"
+              },
+              {
+                "ph": "喝 · hē"
+              },
+              {
+                "ph": "茶 · chá"
+              },
+              {
+                "ph": "谢 · xiè"
+              },
+              {
+                "ph": "不客气 · búkèqi"
+              },
+              {
+                "ph": "工作 · gōngzuò"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 5"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "05-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文 · Nghe bài khóa",
+      "code": "05-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "phonetics",
+      "label": "语音 · Nghe ngữ âm",
+      "code": "05-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "05-4",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 71,
+      "caption": "Trang bài tập trong PDF: 71",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 72,
+      "caption": "Trang bài tập trong PDF: 72",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 73,
+      "caption": "Trang bài tập trong PDF: 73",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 74,
+      "caption": "Trang bài tập trong PDF: 74",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 75,
+      "caption": "Trang bài tập trong PDF: 75",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 76,
+      "caption": "Trang bài tập trong PDF: 76",
+      "imageUrl": ""
+    }
+  ]
 }

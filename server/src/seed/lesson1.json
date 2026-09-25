@@ -10,8 +10,7 @@
       "num": 1,
       "chars": [
         {
-          "h": "你",
-          "p": ""
+          "h": "你"
         }
       ],
       "pinyin": "nǐ",
@@ -34,14 +33,13 @@
       "num": 2,
       "chars": [
         {
-          "h": "好",
-          "p": ""
+          "h": "好"
         }
       ],
       "pinyin": "hǎo",
       "pos": "Tính từ",
       "meaning": "tốt; khỏe; đẹp; ngon",
-      "note": "Trong 你好, 你 đứng trước một thanh 3 nên thường đọc thành ní.",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "你好",
@@ -49,6 +47,7 @@
           "m": "xin chào"
         }
       ],
+      "note": "Trong 你好, 你 đứng trước một thanh 3 nên thường đọc thành ní.",
       "examples": [
         [
           "我很好。",
@@ -66,8 +65,7 @@
       "num": 3,
       "chars": [
         {
-          "h": "一",
-          "p": ""
+          "h": "一"
         }
       ],
       "pinyin": "yī",
@@ -90,8 +88,7 @@
       "num": 4,
       "chars": [
         {
-          "h": "五",
-          "p": ""
+          "h": "五"
         }
       ],
       "pinyin": "wǔ",
@@ -114,8 +111,7 @@
       "num": 5,
       "chars": [
         {
-          "h": "八",
-          "p": ""
+          "h": "八"
         }
       ],
       "pinyin": "bā",
@@ -138,8 +134,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "大",
-          "p": ""
+          "h": "大"
         }
       ],
       "pinyin": "dà",
@@ -162,8 +157,7 @@
       "num": 7,
       "chars": [
         {
-          "h": "不",
-          "p": ""
+          "h": "不"
         }
       ],
       "pinyin": "bù",
@@ -187,8 +181,7 @@
       "num": 8,
       "chars": [
         {
-          "h": "口",
-          "p": ""
+          "h": "口"
         }
       ],
       "pinyin": "kǒu",
@@ -211,8 +204,7 @@
       "num": 9,
       "chars": [
         {
-          "h": "白",
-          "p": ""
+          "h": "白"
         }
       ],
       "pinyin": "bái",
@@ -235,8 +227,7 @@
       "num": 10,
       "chars": [
         {
-          "h": "女",
-          "p": ""
+          "h": "女"
         }
       ],
       "pinyin": "nǚ",
@@ -260,8 +251,7 @@
       "num": 11,
       "chars": [
         {
-          "h": "马",
-          "p": ""
+          "h": "马"
         }
       ],
       "pinyin": "mǎ",
@@ -285,6 +275,7 @@
   "dialogues": [
     {
       "title": "课文",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -297,107 +288,413 @@
       ]
     }
   ],
+  "phoneticsNotes": [
+    {
+      "title": "拼音的三部分 · Ba thành phần của Pinyin",
+      "content": "Một âm tiết tiếng Hán thường gồm thanh mẫu, vận mẫu và thanh điệu."
+    },
+    {
+      "title": "声母 · Thanh mẫu nhập môn",
+      "content": "b、p、m、f、d、t、n、l、g、k、h、j、q、x. Chú ý cặp không bật hơi/bật hơi: b–p, d–t, g–k, j–q."
+    },
+    {
+      "title": "韵母 · Vận mẫu nhập môn",
+      "content": "a、o、e、i、u、ü；ai、ei、ao、ou. Đọc nguyên âm rõ, không kéo sang âm cuối tiếng Việt."
+    },
+    {
+      "title": "四声 · Bốn thanh điệu",
+      "content": "Thanh 1 cao đều; thanh 2 đi lên; thanh 3 hạ rồi lên; thanh 4 đi xuống mạnh: mā / má / mǎ / mà."
+    },
+    {
+      "title": "三声变调 · Biến điệu thanh 3",
+      "content": "Khi hai thanh 3 đứng liền nhau, thanh 3 thứ nhất đọc thành thanh 2: nǐ hǎo → ní hǎo."
+    },
+    {
+      "title": "ü 的发音 · Cách đọc ü",
+      "content": "Giữ lưỡi như khi đọc i rồi tròn môi. Không đọc thành u."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "汉字、笔画、笔顺",
+      "content": "汉字 là chữ Hán; 笔画 là nét chữ; 笔顺 là thứ tự viết nét. Khi luyện viết cần đúng cả hình chữ và thứ tự nét."
+    },
+    {
+      "title": "六种基本笔画",
+      "content": "Nét cơ bản trong bài nhập môn: ngang, sổ, phẩy, chấm, hất, mác."
+    },
+    {
+      "title": "常见变体笔画",
+      "content": "Một số nét biến thể: ngang móc, sổ móc, sổ hất, ngang gập, ngang phẩy, ngang gập móc."
+    },
+    {
+      "title": "六书概念",
+      "content": "Sáu cách cấu tạo và sử dụng chữ Hán: tượng hình, chỉ sự, hội ý, hình thanh, chuyển chú và giả tá."
+    },
+    {
+      "title": "简单问候",
+      "content": "你好 dùng để chào hỏi; 你好吗？ dùng để hỏi thăm; có thể trả lời 我很好。"
+    }
+  ],
   "exercises": {
-    "notes": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 1 (4 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "拼音的三部分 · Ba thành phần của Pinyin",
-        "content": "Một âm tiết tiếng Hán thường gồm thanh mẫu, vận mẫu và thanh điệu."
+        "pageNumber": 36,
+        "label": "练习",
+        "text": "NERE [第3版 EM 上\n\n\n\n1) EA Tones\ny             yí              yi              ý = y\nwo              wú               wù               wù — w\nyù            yú             yù             yù — yú\nba                  bo                    bă                    bù —— ba\ndā                  dó                    dð                    dà —— dà\nbū                  bú                    bù                    bù —- bù\nnü                nù —~ mù\nkõu                                        keu                  kò CO— kõu\nbăi                 bái                   băi                   bà —— bói\nlēi                 léi                   lěi                   lèi —— lèi\nmā              mg               mě               mà — mă\nni                   nf                     ni                     ù — nil\nhão                héo                 ho                  heo —— hio\n\n2) =声变调 The 3rd tone sandhi\n\nni ho         měihčo         wùbði            Béi Hăi\ngěi ni            yùfð               kéyi                fidéo\n\n3) WE Distinguish sounds\n(1) 辨别声母 Distinguish the initials\n\nba           pa           da           ta          ga           ka\nbu           pu           du           tu           gu           ku\nbai        pai        doi         tai        gai         kai\nbao po doo tao go koo\n\n人入\n\n不"
       },
       {
-        "title": "声母 · Thanh mẫu nhập môn",
-        "content": "b、p、m、f、d、t、n、l、g、k、h、j、q、x. Chú ý cặp không bật hơi/bật hơi: b–p, d–t, g–k, j–q."
+        "pageNumber": 37,
+        "label": "练习",
+        "text": "Lesson 1 Hello T\n\n(2 ) PEHI Distinguish the finals\n\nba                          bo                          he                        fo\npa                     po                     ne                   mo\nma                         mo                         de                        bo\nfa                     fo                     ke                   po\nboi                    bei                    pao                 pou\nmoi                   mei                   hao                 hou\ngoi                    gei                    kao                 kou\nhai                    hei                    gao                 gou\n\n(3) HHIHH Distinguish the pronunciations and tones\nba pù dy tō hé fó gë         kè\nbi pi dé tè hòu fòu gi         ků\nbù pù d tf hal fa gð ki\nbái pái dú tú hù fù gs dëi\nběi péi dù to hd fm gu kõu\n\nFT) 认读 Identify and read\n\nyï hào           ba hào          nï h%o           bù hio\ndà mă             bái mă            dìitú                yitú\ndòi tóu          tái tóu           dà lóu            tél6u\nkèfú                kèků               dò yú               dàyù\nyŭfð             li fà             měihčo          méi lói\n\n一五入不口自马大 女你 好\n\nn"
       },
       {
-        "title": "韵母 · Vận mẫu nhập môn",
-        "content": "a、o、e、i、u、ü；ai、ei、ao、ou. Đọc nguyên âm rõ, không kéo sang âm cuối tiếng Việt."
+        "pageNumber": 38,
+        "label": "练习",
+        "text": "NERE (3M) A-M 上\n\n\n5) 交际会话 Communication\n\n打招呼 (1) Greeting (1)\nA: Nihéo!\nB: Nihéo!\n\nE) BIRF Write the characters\n\ny |—\nöl A\nPet  |\nwi |万五\nES\n\nbi |一二不不\n不    |\ndo |一坟大\n大\n\nkõu 1 no\nn\nbi’ i nÁÁ\n白"
       },
       {
-        "title": "四声 · Bốn thanh điệu",
-        "content": "Thanh 1 cao đều; thanh 2 đi lên; thanh 3 hạ rồi lên; thanh 4 đi xuống mạnh: mā / má / mǎ / mà."
-      },
-      {
-        "title": "三声变调 · Biến điệu thanh 3",
-        "content": "Khi hai thanh 3 đứng liền nhau, thanh 3 thứ nhất đọc thành thanh 2: nǐ hǎo → ní hǎo."
-      },
-      {
-        "title": "ü 的发音 · Cách đọc ü",
-        "content": "Giữ lưỡi như khi đọc i rồi tròn môi. Không đọc thành u."
+        "pageNumber": 39,
+        "label": "练习",
+        "text": "第一课 你好\nLesson1 Hello\n\nükk\n\nHH\n\nm| 4 2 At\n\n你|一-一\n\nho (妈妈如好好\n\n好||\n\nm8 7态马\n\ns ETE]"
       }
     ],
-    "grammar": [
+    "blocks": [
       {
-        "title": "汉字、笔画、笔顺",
-        "content": "汉字 là chữ Hán; 笔画 là nét chữ; 笔顺 là thứ tự viết nét. Khi luyện viết cần đúng cả hình chữ và thứ tự nét."
+        "title": "声母识别",
+        "desc": "Nhận dạng thanh mẫu thích hợp",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "__uài → huài"
+              },
+              {
+                "ph": "__āi → bāi"
+              },
+              {
+                "ph": "__í → tí"
+              },
+              {
+                "ph": "__ǎn → mǎn"
+              },
+              {
+                "ph": "__ù → qù"
+              },
+              {
+                "ph": "__āo → dāo"
+              },
+              {
+                "ph": "__ǎi → nǎi"
+              },
+              {
+                "ph": "__ē → gē"
+              },
+              {
+                "ph": "__ǎo → kǎo"
+              },
+              {
+                "ph": "__ái → lái"
+              },
+              {
+                "ph": "__ēi → fēi"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "六种基本笔画",
-        "content": "Nét cơ bản trong bài nhập môn: ngang, sổ, phẩy, chấm, hất, mác."
+        "title": "韵母识别",
+        "desc": "Nhận dạng vận mẫu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "nǚ"
+              },
+              {
+                "ph": "wāi"
+              },
+              {
+                "ph": "bǎo"
+              },
+              {
+                "ph": "hǎo"
+              },
+              {
+                "ph": "lèi"
+              },
+              {
+                "ph": "gǒu"
+              },
+              {
+                "ph": "mǎ"
+              },
+              {
+                "ph": "bái"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "常见变体笔画",
-        "content": "Một số nét biến thể: ngang móc, sổ móc, sổ hất, ngang gập, ngang phẩy, ngang gập móc."
+        "title": "四声练习",
+        "desc": "Đọc đúng bốn thanh",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "mā / má / mǎ / mà"
+              },
+              {
+                "ph": "bā / bá / bǎ / bà"
+              },
+              {
+                "ph": "dā / dá / dǎ / dà"
+              },
+              {
+                "ph": "gē / gé / gě / gè"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "六书概念",
-        "content": "Sáu cách cấu tạo và sử dụng chữ Hán: tượng hình, chỉ sự, hội ý, hình thanh, chuyển chú và giả tá."
+        "title": "拼读练习",
+        "desc": "Ghép thanh mẫu và vận mẫu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "ba / pa / ma / fa"
+              },
+              {
+                "ph": "da / ta / na / la"
+              },
+              {
+                "ph": "ga / ka / ha"
+              },
+              {
+                "ph": "bi / pi / di / ti"
+              },
+              {
+                "ph": "bai / pai / dai / tai"
+              },
+              {
+                "ph": "bei / pei / lei / fei"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "简单问候",
-        "content": "你好 dùng để chào hỏi; 你好吗？ dùng để hỏi thăm; có thể trả lời 我很好。"
-      }
-    ],
-    "chips": [
+        "title": "汉字认读",
+        "desc": "Đọc và nhận mặt chữ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你"
+              },
+              {
+                "ph": "好"
+              },
+              {
+                "ph": "一"
+              },
+              {
+                "ph": "五"
+              },
+              {
+                "ph": "八"
+              },
+              {
+                "ph": "大"
+              },
+              {
+                "ph": "不"
+              },
+              {
+                "ph": "口"
+              },
+              {
+                "ph": "白"
+              },
+              {
+                "ph": "女"
+              },
+              {
+                "ph": "马"
+              }
+            ]
+          }
+        ]
+      },
       {
-        "title": "认读练习",
-        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
-        "items": [
-          [
-            "你",
-            "nǐ"
-          ],
-          [
-            "好",
-            "hǎo"
-          ],
-          [
-            "一",
-            "yī"
-          ],
-          [
-            "五",
-            "wǔ"
-          ],
-          [
-            "八",
-            "bā"
-          ],
-          [
-            "大",
-            "dà"
-          ],
-          [
-            "不",
-            "bù"
-          ],
-          [
-            "口",
-            "kǒu"
-          ],
-          [
-            "白",
-            "bái"
-          ],
-          [
-            "女",
-            "nǚ"
-          ],
-          [
-            "马",
-            "mǎ"
-          ]
+        "title": "对话练习",
+        "desc": "Đọc theo vai",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "A：你好！"
+              },
+              {
+                "ph": "B：你好！"
+              },
+              {
+                "ph": "A：你好吗？"
+              },
+              {
+                "ph": "B：我很好！"
+              }
+            ]
+          }
         ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "phonetics",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "phonetics": {
+        "title": "语音 · Ngữ âm",
+        "desc": "Quy tắc phát âm được làm nổi bật và có phần luyện nhận dạng",
+        "note": ""
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ cấu trúc và kiến thức trọng tâm",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Giữ các bài nhận dạng, đọc, nói và vận dụng; không tích hợp bài nghe cuối bài",
+        "note": ""
+      }
+    },
+    "phoneticsBlocks": [
+      {
+        "title": "认读练习",
+        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你 · nǐ"
+              },
+              {
+                "ph": "好 · hǎo"
+              },
+              {
+                "ph": "一 · yī"
+              },
+              {
+                "ph": "五 · wǔ"
+              },
+              {
+                "ph": "八 · bā"
+              },
+              {
+                "ph": "大 · dà"
+              },
+              {
+                "ph": "不 · bù"
+              },
+              {
+                "ph": "口 · kǒu"
+              },
+              {
+                "ph": "白 · bái"
+              },
+              {
+                "ph": "女 · nǚ"
+              },
+              {
+                "ph": "马 · mǎ"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 1"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "01-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文 · Nghe bài khóa",
+      "code": "01-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "phonetics",
+      "label": "语音 · Nghe ngữ âm",
+      "code": "01-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "01-4",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 36,
+      "caption": "Trang bài tập trong PDF: 36",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 37,
+      "caption": "Trang bài tập trong PDF: 37",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 38,
+      "caption": "Trang bài tập trong PDF: 38",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 39,
+      "caption": "Trang bài tập trong PDF: 39",
+      "imageUrl": ""
+    }
+  ]
 }

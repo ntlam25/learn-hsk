@@ -1,181 +1,258 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import api from '../api/client';
 import { useAuth } from '../context/AuthContext';
-import VocabCard from '../components/VocabCard';
-import DialogueBlock from '../components/DialogueBlock';
-import ExerciseBlock from '../components/ExerciseBlock';
-import FlashcardDeck from '../components/FlashcardDeck';
-import PhoneticsNotes from '../components/PhoneticsNotes';
-import GrammarList from '../components/GrammarList';
-import LessonAudioGroup from '../components/LessonAudioGroup';
-import LessonPagesViewer from '../components/LessonPagesViewer';
-import ProperNounTable from '../components/ProperNounTable';
-import CountryTable from '../components/CountryTable';
-import ExtensionChipGrid from '../components/ExtensionChipGrid';
+import { useCourseNav } from '../context/CourseNavContext';
+import { normalizeLesson } from '../lib/lessonContent';
+import { formatDate } from '../lib/format';
+import BookLessonView from '../components/book/BookLessonView';
+import LessonNavBar, { LessonPager } from '../components/book/LessonSwitcher';
 
+// Nút "Hoàn thành bài" cuối bài (học viên). Bài cũng tự hoàn thành khi thuộc hết từ + làm đúng hết quiz.
+function LessonCompletion({ status, canSubmit, onChange }) {
+  const [busy, setBusy] = useState(false);
+  const done = status === 'completed';
+
+  async function toggle() {
+    setBusy(true);
+    try {
+      await onChange(done ? { status: 'in_progress', undo: true } : { status: 'completed' });
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <div className={'lesson-complete' + (done ? ' done' : '')}>
+      <div>
+        <strong>{done ? '✓ Bạn đã hoàn thành bài này' : 'Học xong bài này?'}</strong>
+        <span>
+          {done
+            ? 'Bài được tính vào tiến độ lớp. Có thể bỏ đánh dấu nếu muốn học lại.'
+            : 'Đánh dấu hoàn thành — hoặc bài sẽ tự hoàn thành khi bạn thuộc hết từ mới và làm đúng hết bài kiểm tra.'}
+        </span>
+      </div>
+      {canSubmit ? (
+        <button type="button" className={'copy-exercise-text' + (done ? '' : ' copied')} disabled={busy} onClick={toggle}>
+          {busy ? 'Đang lưu…' : done ? 'Bỏ đánh dấu' : '✓ Hoàn thành bài'}
+        </button>
+      ) : null}
+    </div>
+  );
+}
+
+function denyText(data) {
+  if (data?.reason === 'locked' && data.releaseAt) {
+    return `Bài này chưa được giáo viên mở — sẽ mở vào ${formatDate(data.releaseAt, { withTime: true })}.`;
+  }
+  return data?.message || 'Không tìm thấy bài học này (có thể đã bị ẩn hoặc bạn chưa có quyền xem).';
+}
+
+// Trang xem bài học: hiển thị y hệt "Giáo trình Hán ngữ Bài 1–15.html" (nền giấy, hero, tab…) bên trong khung
+// chung (sidebar học viên / thanh điều hướng). Bật class html.book-mode để book.css áp nền/phông của giáo trình.
 export default function LessonViewPage() {
   const { id } = useParams();
   const { user } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [lesson, setLesson] = useState(null);
-  const [error, setError] = useState('');
-  const [tab, setTab] = useState('vocab');
+  const [siblings, setSiblings] = useState([]);
+  const [course, setCourse] = useState(null);
+  const { setActiveCourse, refresh: refreshCourseNav } = useCourseNav();
+  const [error, setError] = useState(null); // { text, reason, courseId }
+  const [savedDone, setSavedDone] = useState(undefined);
+  const [progress, setProgress] = useState(null); // { status, canSubmit } của học viên
+  const saveTimer = useRef(null);
+  const pendingSave = useRef(null);
+  const currentId = useRef(id);
+  currentId.current = id;
+  const isStudent = user?.role === 'student';
+  const isStaff = user?.role === 'admin' || user?.role === 'teacher'; // xem bài từ trang quản trị (cùng tab)
+
+  useEffect(() => {
+    document.documentElement.classList.add('book-mode');
+    return () => document.documentElement.classList.remove('book-mode');
+  }, []);
 
   useEffect(() => {
     setLesson(null);
-    setError('');
-    setTab('vocab');
+    setError(null);
     api
       .get(`/lessons/${id}`)
-      .then((res) => setLesson(res.data))
-      .catch((err) =>
-        setError(err.response?.data?.message || 'Không tìm thấy bài học này (có thể đã bị ẩn hoặc bạn chưa có quyền xem).')
-      );
+      .then((res) => setLesson(normalizeLesson(res.data)))
+      .catch((err) => {
+        const data = err.response?.data;
+        setError({ text: denyText(data), reason: data?.reason, courseId: data?.courseId });
+      });
   }, [id]);
 
+  // Danh sách bài cho thanh chọn bài: học viên thấy cả bài chưa mở (🔒, kèm trạng thái hoàn thành từng bài)
   useEffect(() => {
-    if (lesson && user?.role === 'student') {
-      api.post(`/lessons/${id}/progress`, { status: 'in_progress' }).catch(() => {});
+    if (!lesson?.courseId) return;
+    setActiveCourse(lesson.courseId); // sidebar học viên xổ danh sách bài của khoá này
+    const req = isStudent
+      ? api.get(`/me/courses/${lesson.courseId}`).then((res) => ({ course: res.data.course, lessons: res.data.lessons }))
+      : Promise.all([api.get(`/courses/${lesson.courseId}`), api.get(`/courses/${lesson.courseId}/lessons`)]).then(([c, l]) => ({
+          course: c.data,
+          // Khách chỉ mở được bài xem trước — các bài khác hiện 🔒 thay vì bấm vào rồi mới báo cần đăng nhập
+          lessons: user ? l.data : l.data.map((x) => ({ ...x, open: !!x.isPreview })),
+        }));
+    req
+      .then((r) => {
+        setCourse(r.course);
+        setSiblings(r.lessons);
+      })
+      .catch(() => setSiblings([]));
+  }, [lesson?.courseId, isStudent, user, setActiveCourse]);
+
+  // Học viên: ghi lần xem, rồi lấy trạng thái bài + từ "đã thuộc" (lesson_progress.known_vocab)
+  useEffect(() => {
+    setSavedDone(undefined);
+    setProgress(null);
+    if (!lesson || !isStudent) return;
+    let cancelled = false;
+    api
+      .post(`/lessons/${lesson.id}/progress`, { status: 'in_progress' })
+      .catch(() => {})
+      .then(() => api.get(`/lessons/${lesson.id}/progress`))
+      .then((res) => {
+        if (cancelled) return;
+        setSavedDone(res.data.knownVocab || []);
+        setProgress({ status: res.data.status, canSubmit: res.data.canSubmit !== false });
+      })
+      .catch(() => {}); // lỗi thì vẫn dùng bản trong localStorage
+    return () => {
+      cancelled = true;
+    };
+  }, [lesson, isStudent]);
+
+  // Trạng thái bài đổi (hoàn thành / bỏ hoàn thành) → cập nhật trang + để sidebar tải lại dấu ✓
+  const statusRef = useRef(null);
+  statusRef.current = progress?.status;
+  const applyStatus = useCallback(
+    (lessonId, status) => {
+      if (!status || lessonId !== currentId.current) return;
+      if (statusRef.current && status !== statusRef.current) refreshCourseNav();
+      setProgress((p) => (p ? { ...p, status } : p));
+    },
+    [refreshCourseNav]
+  );
+
+  const flushSave = useCallback(() => {
+    clearTimeout(saveTimer.current);
+    const pending = pendingSave.current;
+    pendingSave.current = null;
+    if (!pending) return;
+    api
+      .put(`/lessons/${pending.lessonId}/progress/vocab`, { knownVocab: pending.keys })
+      .then((res) => applyStatus(pending.lessonId, res.data?.status))
+      .catch(() => {});
+  }, [applyStatus]);
+
+  // Bấm ✓ liên tục thì gom lại, chỉ gửi bản cuối; rời trang / đổi bài thì gửi ngay
+  const saveDone = useCallback(
+    (keys) => {
+      if (!isStudent || !lesson || progress?.canSubmit === false) return;
+      pendingSave.current = { lessonId: lesson.id, keys };
+      clearTimeout(saveTimer.current);
+      saveTimer.current = setTimeout(flushSave, 600);
+    },
+    [isStudent, lesson, progress?.canSubmit, flushSave]
+  );
+
+  useEffect(() => flushSave, [id, flushSave]);
+
+  async function changeCompletion(body) {
+    const res = await api.post(`/lessons/${lesson.id}/progress`, body);
+    applyStatus(lesson.id, res.data.status);
+  }
+
+  const switcherLessons = useMemo(() => {
+    if (!lesson) return [];
+    const list = siblings.some((l) => l.id === lesson.id) ? siblings : [...siblings, lesson];
+    // Bài đang xem lấy trạng thái mới nhất (vừa bấm / tự hoàn thành) để dấu ✓ cập nhật ngay
+    const status = progress?.status;
+    return [...list]
+      .map((l) => (l.id === lesson.id && status ? { ...l, status } : l))
+      .sort((a, b) => a.lessonNumber - b.lessonNumber);
+  }, [siblings, lesson, progress?.status]);
+
+  function selectLesson(l) {
+    navigate(`/lessons/${l.id}`);
+    try {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch {
+      window.scrollTo(0, 0);
     }
-  }, [lesson, id, user]);
+  }
 
-  const audioByCategory = useMemo(() => {
-    const map = {};
-    (lesson?.audioTracks || []).forEach((t) => {
-      map[t.category] = map[t.category] || [];
-      map[t.category].push(t);
-    });
-    return map;
-  }, [lesson]);
+  const backTo = (lesson || error)?.courseId ? `/courses/${(lesson || error).courseId}` : '/';
 
-  const flashcardItems = useMemo(() => (lesson?.exerciseItems || []).filter((it) => it.kind === 'flashcard'), [lesson]);
-  const quizItems = useMemo(() => (lesson?.exerciseItems || []).filter((it) => it.kind === 'quiz'), [lesson]);
-
-  if (error) {
+  if (error || !lesson) {
     return (
-      <main className="page">
-        <div className="alert-error">{error}</div>
-        {!user && (
-          <p>
-            <Link to="/login" className="btn-ghost">
-              Đăng nhập
-            </Link>
-          </p>
-        )}
-        <Link to="/" className="btn-ghost">
-          ← Về danh sách khoá học
-        </Link>
-      </main>
+      <div className="book-view">
+        <div className="book-state">
+          {error ? (
+            <>
+              <p>{error.text}</p>
+              <div className="book-state-actions">
+                {!user && (
+                  <Link to={`/login?next=${encodeURIComponent(location.pathname)}`} className="copy-exercise-text">
+                    Đăng nhập
+                  </Link>
+                )}
+                {error.reason === 'not_enrolled' && (
+                  <Link to="/me/courses" className="copy-exercise-text">
+                    Nhập mã lớp
+                  </Link>
+                )}
+                <Link to={backTo} className="copy-exercise-text">
+                  {error.courseId ? '← Về trang khoá học' : '← Về danh sách khoá học'}
+                </Link>
+              </div>
+            </>
+          ) : (
+            <p>Đang tải bài học…</p>
+          )}
+        </div>
+      </div>
     );
   }
 
-  if (!lesson) {
-    return (
-      <main className="page">
-        <div className="page-loading">Đang tải bài học…</div>
-      </main>
-    );
-  }
-
-  const countries = lesson.extra?.countries;
-  const extensions = lesson.extra?.extensions;
-
-  const TABS = [
-    { key: 'vocab', label: 'Từ mới', zh: '生词' },
-    { key: 'dialogue', label: 'Bài khóa', zh: '课文' },
-    lesson.phoneticsNotes?.length ? { key: 'phonetics', label: 'Ngữ âm', zh: '语音' } : null,
-    lesson.grammar?.length ? { key: 'grammar', label: 'Ngữ pháp', zh: '语法' } : null,
-    { key: 'exercise', label: 'Luyện tập', zh: '练习' },
-  ].filter(Boolean);
+  const canSubmit = progress?.canSubmit !== false;
+  const openLessons = switcherLessons.filter((l) => l.open !== false);
 
   return (
-    <main className="page lesson-view-page">
-      <header className="hero">
-        <div className="seal">{lesson.seal}</div>
-        <h1>{lesson.titleZh}</h1>
-        <p className="subtitle">{lesson.titleVi}</p>
-        <span className="lesson-tag">{lesson.tag}</span>
-      </header>
-
-      <LessonPagesViewer pages={lesson.pages} sourcePdfUrl={lesson.sourcePdfUrl} />
-
-      <nav className="tabs">
-        {TABS.map((t) => (
-          <button key={t.key} className={tab === t.key ? 'active' : ''} onClick={() => setTab(t.key)}>
-            <span className="zh">{t.zh}</span>
-            {t.label}
-          </button>
-        ))}
-      </nav>
-
-      <section className={'panel' + (tab === 'vocab' ? ' active' : '')}>
-        <LessonAudioGroup tracks={audioByCategory.vocab} />
-
-        {lesson.vocab?.length ? (
-          <div className="vocab-grid">
-            {lesson.vocab.map((entry, i) => (
-              <VocabCard key={i} entry={entry} showNum />
-            ))}
-          </div>
-        ) : (
-          <div className="empty-state">Bài này chưa có từ vựng.</div>
-        )}
-
-        {lesson.properNouns?.length ? (
+    <>
+      <BookLessonView
+        key={lesson.id}
+        lesson={lesson}
+        top={
           <>
-            <h2 className="section-title">专名 · Danh từ riêng</h2>
-            <ProperNounTable entries={lesson.properNouns} />
+            <LessonNavBar
+              course={course}
+              courseHref={isStaff ? `/admin/courses/${lesson.courseId}` : undefined}
+              lessons={switcherLessons}
+              currentId={lesson.id}
+              onSelect={selectLesson}
+              lockedHint={user ? undefined : 'Đăng nhập và vào lớp để học bài này'}
+            />
+            {!canSubmit ? (
+              <div className="book-ended-banner">Lớp học đã kết thúc — bạn vẫn xem lại được bài, nhưng không nộp bài / lưu tiến độ nữa.</div>
+            ) : null}
           </>
-        ) : null}
-
-        {countries?.length ? (
+        }
+        bottom={
           <>
-            <h2 className="section-title">国家 · Tên các nước</h2>
-            <CountryTable countries={countries} />
+            {isStudent && progress ? <LessonCompletion status={progress.status} canSubmit={canSubmit} onChange={changeCompletion} /> : null}
+            <LessonPager lessons={openLessons} currentId={lesson.id} onSelect={selectLesson} />
           </>
-        ) : null}
-
-        {extensions?.length ? (
-          <>
-            <h2 className="section-title">扩展词汇 · Từ mở rộng</h2>
-            <ExtensionChipGrid extensions={extensions} />
-          </>
-        ) : null}
-
-        {flashcardItems.length > 0 && (
-          <>
-            <h2 className="section-title">卡片 · Ôn từ vựng bằng Flashcard</h2>
-            <FlashcardDeck lessonId={lesson.id} items={flashcardItems} />
-          </>
-        )}
-      </section>
-
-      <section className={'panel' + (tab === 'dialogue' ? ' active' : '')}>
-        <LessonAudioGroup tracks={audioByCategory.text} />
-        {lesson.dialogues?.length ? (
-          lesson.dialogues.map((d, i) => <DialogueBlock key={i} dialogue={d} />)
-        ) : (
-          <div className="empty-state">Bài này chưa có bài khóa.</div>
-        )}
-      </section>
-
-      {lesson.phoneticsNotes?.length ? (
-        <section className={'panel' + (tab === 'phonetics' ? ' active' : '')}>
-          <LessonAudioGroup tracks={audioByCategory.phonetics} />
-          <PhoneticsNotes notes={lesson.phoneticsNotes} />
-        </section>
-      ) : null}
-
-      {lesson.grammar?.length ? (
-        <section className={'panel' + (tab === 'grammar' ? ' active' : '')}>
-          <GrammarList items={lesson.grammar} />
-        </section>
-      ) : null}
-
-      <section className={'panel' + (tab === 'exercise' ? ' active' : '')}>
-        <LessonAudioGroup tracks={audioByCategory.practice} />
-        <ExerciseBlock lessonId={lesson.id} exercises={lesson.exercises} quizItems={quizItems} />
-      </section>
-    </main>
+        }
+        savedDone={savedDone}
+        onDoneChange={isStudent ? saveDone : undefined}
+        canSubmit={canSubmit}
+        onQuizResult={(r) => applyStatus(lesson.id, r.lessonStatus)}
+      />
+    </>
   );
 }

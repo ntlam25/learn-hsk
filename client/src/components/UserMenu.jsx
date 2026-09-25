@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { IconLogout, IconUser } from './icons';
 
 const ROLE_LABEL = { admin: 'Quản trị viên', teacher: 'Giáo viên', student: 'Học viên' };
 
@@ -42,7 +43,9 @@ export default function UserMenu({ accountPath = '/account' }) {
   return (
     <div className="user-menu" ref={ref}>
       <button type="button" className="user-menu-trigger" onClick={() => setOpen((o) => !o)}>
-        <Avatar user={user} />
+        <span className="user-menu-avatar">
+          <Avatar user={user} />
+        </span>
         <span className="user-menu-info">
           <strong>{user.fullName || user.username}</strong>
           <span>{ROLE_LABEL[user.role] || user.role}</span>
@@ -51,11 +54,16 @@ export default function UserMenu({ accountPath = '/account' }) {
       </button>
       {open && (
         <div className="user-menu-dropdown">
+          <div className="user-menu-head">
+            <strong>{user.fullName || user.username}</strong>
+            <span>{user.email || '@' + user.username}</span>
+          </div>
           <Link to={accountPath} onClick={() => setOpen(false)} className="user-menu-item">
-            <span>👤</span> Tài khoản của tôi
+            <IconUser /> Tài khoản của tôi
           </Link>
+          <div className="user-menu-divider" />
           <button type="button" className="user-menu-item user-menu-logout" onClick={handleLogout}>
-            <span>⎋</span> Đăng xuất
+            <IconLogout /> Đăng xuất
           </button>
         </div>
       )}

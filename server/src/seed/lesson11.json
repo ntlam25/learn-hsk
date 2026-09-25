@@ -10,12 +10,10 @@
       "num": 1,
       "chars": [
         {
-          "h": "秘",
-          "p": ""
+          "h": "秘"
         },
         {
-          "h": "书",
-          "p": ""
+          "h": "书"
         }
       ],
       "pinyin": "mìshū",
@@ -38,8 +36,7 @@
       "num": 2,
       "chars": [
         {
-          "h": "先",
-          "p": ""
+          "h": "先"
         }
       ],
       "pinyin": "xiān",
@@ -63,12 +60,10 @@
       "num": 3,
       "chars": [
         {
-          "h": "介",
-          "p": ""
+          "h": "介"
         },
         {
-          "h": "绍",
-          "p": ""
+          "h": "绍"
         }
       ],
       "pinyin": "jièshào",
@@ -91,16 +86,13 @@
       "num": 4,
       "chars": [
         {
-          "h": "一",
-          "p": ""
+          "h": "一"
         },
         {
-          "h": "下",
-          "p": ""
+          "h": "下"
         },
         {
-          "h": "儿",
-          "p": ""
+          "h": "儿"
         }
       ],
       "pinyin": "yíxiàr",
@@ -124,12 +116,10 @@
       "num": 5,
       "chars": [
         {
-          "h": "校",
-          "p": ""
+          "h": "校"
         },
         {
-          "h": "长",
-          "p": ""
+          "h": "长"
         }
       ],
       "pinyin": "xiàozhǎng",
@@ -152,8 +142,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "位",
-          "p": ""
+          "h": "位"
         }
       ],
       "pinyin": "wèi",
@@ -176,12 +165,10 @@
       "num": 7,
       "chars": [
         {
-          "h": "教",
-          "p": ""
+          "h": "教"
         },
         {
-          "h": "授",
-          "p": ""
+          "h": "授"
         }
       ],
       "pinyin": "jiàoshòu",
@@ -204,12 +191,10 @@
       "num": 8,
       "chars": [
         {
-          "h": "欢",
-          "p": ""
+          "h": "欢"
         },
         {
-          "h": "迎",
-          "p": ""
+          "h": "迎"
         }
       ],
       "pinyin": "huānyíng",
@@ -232,21 +217,19 @@
       "num": 9,
       "chars": [
         {
-          "h": "留",
-          "p": ""
+          "h": "留"
         },
         {
-          "h": "学",
-          "p": ""
+          "h": "学"
         },
         {
-          "h": "生",
-          "p": ""
+          "h": "生"
         }
       ],
       "pinyin": "liúxuéshēng",
       "pos": "Danh từ",
       "meaning": "du học sinh",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "留学",
@@ -259,17 +242,16 @@
       "num": 10,
       "chars": [
         {
-          "h": "我",
-          "p": ""
+          "h": "我"
         },
         {
-          "h": "们",
-          "p": ""
+          "h": "们"
         }
       ],
       "pinyin": "wǒmen",
       "pos": "Đại từ",
       "meaning": "chúng tôi; chúng ta",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "你们",
@@ -287,8 +269,7 @@
       "num": 11,
       "chars": [
         {
-          "h": "都",
-          "p": ""
+          "h": "都"
         }
       ],
       "pinyin": "dōu",
@@ -311,8 +292,7 @@
       "num": 12,
       "chars": [
         {
-          "h": "和",
-          "p": ""
+          "h": "和"
         }
       ],
       "pinyin": "hé",
@@ -323,8 +303,7 @@
       "num": 13,
       "chars": [
         {
-          "h": "俩",
-          "p": ""
+          "h": "俩"
         }
       ],
       "pinyin": "liǎ",
@@ -347,12 +326,10 @@
       "num": 14,
       "chars": [
         {
-          "h": "学",
-          "p": ""
+          "h": "学"
         },
         {
-          "h": "生",
-          "p": ""
+          "h": "生"
         }
       ],
       "pinyin": "xuésheng",
@@ -375,16 +352,13 @@
       "num": 15,
       "chars": [
         {
-          "h": "没",
-          "p": ""
+          "h": "没"
         },
         {
-          "h": "什",
-          "p": ""
+          "h": "什"
         },
         {
-          "h": "么",
-          "p": ""
+          "h": "么"
         }
       ],
       "pinyin": "méi shénme",
@@ -399,10 +373,32 @@
       ]
     }
   ],
-  "properNouns": [],
+  "properNouns": [
+    {
+      "hanzi": "马",
+      "pinyin": "Mǎ",
+      "meaning": "họ Mã"
+    },
+    {
+      "hanzi": "田芳",
+      "pinyin": "Tián Fāng",
+      "meaning": "Điền Phương"
+    },
+    {
+      "hanzi": "罗兰",
+      "pinyin": "Luólán",
+      "meaning": "Rolande"
+    },
+    {
+      "hanzi": "爱德华",
+      "pinyin": "Àidéhuá",
+      "meaning": "Edward"
+    }
+  ],
   "dialogues": [
     {
       "title": "（一）这位是王教授",
+      "context": "（秘书给校长介绍王教授……）",
       "lines": [
         {
           "role": "秘书",
@@ -420,6 +416,7 @@
     },
     {
       "title": "（二）我们都是留学生",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -449,6 +446,7 @@
     },
     {
       "title": "（三）你也是中国人吗",
+      "context": "",
       "lines": [
         {
           "role": "爱德华",
@@ -477,29 +475,333 @@
       ]
     }
   ],
+  "phoneticsNotes": [],
+  "grammar": [
+    {
+      "title": "吗疑问句",
+      "content": "Câu trần thuật + 吗 tạo câu hỏi có/không: 你是留学生吗？— 是。/不是。"
+    },
+    {
+      "title": "状语 · Trạng ngữ",
+      "content": "Phó từ đứng trước động từ hoặc tính từ: 都很好、不太难、也学习。"
+    },
+    {
+      "title": "也 và 都",
+      "content": "也 = cũng, nói thêm một chủ thể/sự việc tương đồng; 都 = đều, khái quát toàn bộ nhóm."
+    },
+    {
+      "title": "俩",
+      "content": "俩 đã mang nghĩa “hai người”, không dùng thêm 个: 我们俩、他们俩。"
+    },
+    {
+      "title": "一下儿",
+      "content": "Động từ + 一下儿 làm ngữ khí nhẹ và lịch sự: 介绍一下儿、问一下儿。"
+    }
+  ],
   "exercises": {
-    "grammar": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 11 (8 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "吗疑问句",
-        "content": "Câu trần thuật + 吗 tạo câu hỏi có/không: 你是留学生吗？— 是。/不是。"
+        "pageNumber": 129,
+        "label": "练习",
+        "text": "第十一课 aosanse |\n\nLesson 11 Both of us are international students (\n\nThere are two kinds of intonation in Chinese: the rising and the falling.\nThe rise or fall in intonation is in large part shown by the last stressed syllable.\nNormally, the rising intonation is used in interrogative sentences, while the\nfalling is used in declarative sentences, e.g.\n\n你是留学生吗? A\n我是留学生\n\nx\n\nD A Li   Exercises EE DE @\n\n1) EE Phonetics\n(1) HHH Distinguish the pronunciations and tones\n\ntomen        dà mén       jidoshou        jião shù\ndoifu          toidu          hushi            hushi\njingli         jingħ          lüshi             lishi\n(2) 多音节连读 Multisyllabic liaison\nfúwùyuán                       shòupidoyuán\nshòuhuòyuón                  lièchēyuón\ngongchéngshi                 shéyingshi\nshejishi                         jianzhishi\nZhongwén ruðnjiàn          Hen-Ying cidiin\nxuésheng shiténg            wéngshang shūdiàn\ngăigé kaifong                 fánróng fùqiáng\nrénmín xìngfú                  měihčo lixiing\nshānmíng-shuïxiù           féngjing měilì\nbéohd huénjing                fazhén jingji\nligojié Zhonggu6              xuéxí Hànyŭ\njiāqiáng tuánjié                zéngjin yduyi"
       },
       {
-        "title": "状语 · Trạng ngữ",
-        "content": "Phó từ đứng trước động từ hoặc tính từ: 都很好、不太难、也学习。"
+        "pageNumber": 130,
+        "label": "练习",
+        "text": "NERE (P3) BM 上\n\n2) 认读 Identify and read\n\n不是             不去            不好             不难\n也是             也去            也买             也要\n都是             都去            都要             都吃\n先去             先吃            先买             先介绍\n\n也是留学生 都是老师    都是朋友    都是学生\n\nD FR Substitution exercises\n\nD 经理                      manager\n回护十                      nurse\n® 律师         lshi          lawyer\n四大夫         doifu          doctor\n加记者         jizhé          reporter\n(1) A: 你是留学生吗?        (2) A: 她也是留学生吗?\nB: 是。( 我是留学生。)       B: 她也是留学生。他\n们都是留学生。\n老师 RK              老师 P+\n教授 am              学生 教授\n护士 。 律师              大夫 ”营业员"
       },
       {
-        "title": "也 và 都",
-        "content": "也 = cũng, nói thêm một chủ thể/sự việc tương đồng; 都 = đều, khái quát toàn bộ nhóm."
+        "pageNumber": 131,
+        "label": "练习",
+        "text": "第十一课 我们却是留学生\nLesson 11 Both of us are international students\n\n(3) A: 她是老师吗?         (4) A: 你也是中国人吗?\nB: 不是。( 他不是          B: 不是。( 我不是中\n老师。)      国人。)\n教授 RK    美国”法国\n经理 。 记者    #0 德国\n秘书 ”律师     日本 AB\n\nO) 回答问题 Answer the questions\n例: A: 你是中国人吗?\nB: RÈ, RAHBA\n(1) A: 你是美国人吗?\nB:            »\n(2) A: 你是老师吗?\nB:            ,\n(3) A: WFA FED?\nB:            »                  o\n(4) A: 你学习英语吗?\nB:            gr                  o\n(5) A: 你们的老师是王老师吗?\nB:            ,                   o"
       },
       {
-        "title": "俩",
-        "content": "俩 đã mang nghĩa “hai người”, không dùng thêm 个: 我们俩、他们俩。"
+        "pageNumber": 132,
+        "label": "练习",
+        "text": "NERE (HIM) -M 上\n3) 完成会话 Complete the dialogues\n例: A: 你是老师吗?\nB: Žo\nA: 他也是老师吗?\n| B: 他也是老师。\n(1) A: 他是教授吗?\n\nB: 她也是教授\n(2) A: 麦克是留学生吗?\n\nB: 玛丽也是留学生。\n(3) A: W PAŽE?\n\nB: 张东也是中国学生\n(4) A; 你爸爸是大夫吗?\n\nB: 我妈妈也是大夫。\n(5) A: 她们是老师吗?\n\nB: 我们也是老师。"
       },
       {
-        "title": "一下儿",
-        "content": "Động từ + 一下儿 làm ngữ khí nhẹ và lịch sự: 介绍一下儿、问一下儿。"
+        "pageNumber": 133,
+        "label": "练习",
+        "text": "第十一课 我们却是留学生\nLesson 11 Both of us are international students\n\n(6)A: 你是律师吗?\nB:\nA:\n\nB: 我朋友也是律师。\n\n©) 用“都”改写句子 Rewrite the sentences with “都”\n|D: 他是留学生，我也是留学生。一 我们都是留学生。|\n(1) 麦克是留学生，玛丽也是留学生。\n\n(2) 张东是中国人，田芳也是中国人。\n\n=>\n\n(3) 你是老师，他也是老师。\n\n(4) 答爸是大夫，妈妈也是大夫。\n\n>\n\n(5) 他是教授,她也是教授。\n\n(6) 他是律师，他朋友也是律师。\n\n>\n\n1) 把括号里的词语填入名中适当的位置 Put the word in each set of\nbrackets in the proper place\n(1) A这些B是书，那些C 都D是书          (也)\n(2) A我们B是C 留学生                (都)"
+      },
+      {
+        "pageNumber": 134,
+        "label": "练习",
+        "text": "NERE (3M) 第一船 上\n\n(3)我A住十楼, B她C住DD十楼。          (也)\n(4) 她爸爸A 是中国人，B 她妈妈C 是DD中国人    (也)\n(5) 她A 学习汉语，我也B 学习汉语,，C 我们DD学习汉语。\n\n(都)\n\n(6) 你A很性,我和田芳B也C很忙。          (都)\nB) IREA Read and retell\n\n你们好! 我先介绍一下儿，我叫     š      人,是\n\n留学生。这位是     ，她不是     A, XÈ.     人。\n\n她也是留学生，我们都学习汉语。\n这两位是中国人，他叫张东，她叫田芒,他们都学习英\n语，我们都是好朋友。\n\n4) Af Make sentences\n| 例: 留学生 他们 是 都一他们都是留学生。\n\n(1)是 我 不 日本人一\n\n(2)吗 老师 是 你 也一\n(3)是 校长 他 4>\n\n(4)也 学生 她 是 中国一\nOR 不 我们 留学生 是一\n(6) 大夫 REE 都 妈妈 是一\n\n10) 交际会话 Communication\n\n介绍 (2) Making an introduction (2)\n(1) A: 我先介绍一下儿，这是王先生，这是张小姐。"
+      },
+      {
+        "pageNumber": 135,
+        "label": "练习",
+        "text": "第十一课 我们都是留学生\nLesson 11 Both of us are international students\n\nB: 你好!\nC: 你好!\n(2) A: 我介绍一下儿，这位是白经理，这位是谢律师。\nB: 你好! GAR,\nC: 你好! 谢律师，很高兴认识你。\n\n4) 写汉字 Write the characters\neZ 太太介\ni\n\n介\nShio|* $% $ ppm\na\n\nwit A Cethi\n位\n\nhun 7 a w a oak\n\nsk         |\nying f e p pM M\n迎         |\n\nü|- 后向多禄留贸贸\n留\nEREI\n\n也"
+      },
+      {
+        "pageNumber": 136,
+        "label": "练习",
+        "text": "NERE (3M) A-M 上\n\ndu- +s rA AARAA\n\n都 |\n\nOSEERE\n\n和\n\nmn l itan\n\nmH\n\nzhing “二首长\n\n长\n\n”+ +丰直示走走起起\n\n起\n\nmi R\n\nz"
+      }
+    ],
+    "blocks": [
+      {
+        "title": "职业词汇",
+        "desc": "Đọc từ nghề nghiệp",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "大夫"
+              },
+              {
+                "ph": "医生"
+              },
+              {
+                "ph": "护士"
+              },
+              {
+                "ph": "经理"
+              },
+              {
+                "ph": "律师"
+              },
+              {
+                "ph": "记者"
+              },
+              {
+                "ph": "教授"
+              },
+              {
+                "ph": "老师"
+              },
+              {
+                "ph": "校长"
+              },
+              {
+                "ph": "秘书"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "也和都",
+        "desc": "Đọc cụm từ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "也是"
+              },
+              {
+                "ph": "也去"
+              },
+              {
+                "ph": "也学习"
+              },
+              {
+                "ph": "都是"
+              },
+              {
+                "ph": "都去"
+              },
+              {
+                "ph": "都吃"
+              },
+              {
+                "ph": "都是留学生"
+              },
+              {
+                "ph": "都是朋友"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "用“都”改写",
+        "desc": "Gộp hai câu bằng 都",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "麦克是留学生，玛丽也是留学生。"
+              },
+              {
+                "ph": "爸爸是大夫，妈妈也是大夫。"
+              },
+              {
+                "ph": "你是记者，她也是记者。"
+              },
+              {
+                "ph": "他是律师，他朋友也是律师。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "组句",
+        "desc": "Sắp xếp thành câu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "是／我／不／日本人"
+              },
+              {
+                "ph": "吗／老师／是／你／也"
+              },
+              {
+                "ph": "也／学生／她／是／中国"
+              },
+              {
+                "ph": "都／不／我们／留学生／是"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "自我介绍",
+        "desc": "Nói theo mẫu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "我先介绍一下儿，我叫……"
+              },
+              {
+                "ph": "我是……人，是留学生。"
+              },
+              {
+                "ph": "这位是……，她也是……"
+              },
+              {
+                "ph": "我们都学习汉语。"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ mẫu câu trọng tâm của bài",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Đã loại bỏ các bài nghe và phần điền cuối bài",
+        "note": ""
+      }
+    },
+    "properNounsTitle": {
+      "zh": "专名",
+      "vi": "Tên riêng"
+    },
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 11"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "11-4",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（一）· Nghe bài khóa 1",
+      "code": "11-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（二）· Nghe bài khóa 2",
+      "code": "11-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（三）· Nghe bài khóa 3",
+      "code": "11-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "11-5",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 129,
+      "caption": "Trang bài tập trong PDF: 129",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 130,
+      "caption": "Trang bài tập trong PDF: 130",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 131,
+      "caption": "Trang bài tập trong PDF: 131",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 132,
+      "caption": "Trang bài tập trong PDF: 132",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 133,
+      "caption": "Trang bài tập trong PDF: 133",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 134,
+      "caption": "Trang bài tập trong PDF: 134",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 135,
+      "caption": "Trang bài tập trong PDF: 135",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 136,
+      "caption": "Trang bài tập trong PDF: 136",
+      "imageUrl": ""
+    }
+  ]
 }

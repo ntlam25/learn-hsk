@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import AuthLayout from '../../components/AuthLayout';
 import PasswordInput from '../../components/PasswordInput';
@@ -13,10 +13,8 @@ export default function AdminLoginPage() {
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
-  if (user && (user.role === 'admin' || user.role === 'teacher')) {
-    navigate('/admin', { replace: true });
-    return null;
-  }
+  // Đã đăng nhập: chuyển trang bằng <Navigate> (gọi navigate() ngay trong lúc render bị React Router bỏ qua → trang trắng)
+  if (user && (user.role === 'admin' || user.role === 'teacher')) return <Navigate to={location.state?.from?.pathname || '/admin'} replace />;
 
   async function handleSubmit(e) {
     e.preventDefault();
