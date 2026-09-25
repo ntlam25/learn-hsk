@@ -760,7 +760,28 @@ html.book-mode body { font-size: medium; transition: none; }
 .book-view .lesson-picker-item.active { background:var(--seal); border-color:var(--seal); color:#fff; }
 .book-view .lesson-picker-item.active .lesson-picker-title, .book-view .lesson-picker-item.active em.done { color:#fff; }
 .book-view .lesson-picker-item.locked { opacity:.5; cursor:not-allowed; }
+.book-view .lesson-picker-item { scroll-margin-top:150px; } /* cuộn tới bài đang xem không bị thanh lọc che */
+.book-view .lesson-picker-num em.doing { width:7px; height:7px; border-radius:50%; background:var(--seal); }
+.book-view .lesson-picker-item.active .lesson-picker-num em.doing { background:#fff; }
+/* Thanh lọc: dính trên cùng popup khi cuộn lưới dài (top âm = bù padding của popup) */
+.book-view .lesson-picker-filter { position:sticky; top:-14px; z-index:1; margin:-14px -14px 10px; padding:14px 14px 10px;
+    background:var(--paper-light); border-bottom:1px solid var(--line); }
+.book-view .lesson-picker-filter .lesson-picker-head { margin-bottom:8px; }
+.book-view .lesson-picker-search { width:100%; box-sizing:border-box; padding:8px 12px; border:1px solid var(--line); border-radius:10px;
+    background:var(--paper); color:var(--ink); font-family:inherit; font-size:.84rem; outline:none; transition:border-color .15s ease; }
+.book-view .lesson-picker-search:focus { border-color:var(--seal); box-shadow:0 0 0 3px rgba(232,93,147,.12); }
+.book-view .lesson-picker-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.book-view .lesson-picker-chip { display:inline-flex; align-items:center; gap:5px; padding:4px 10px; border:1px solid var(--line); border-radius:999px;
+    background:var(--paper); color:var(--ink-soft); font-family:inherit; font-size:.75rem; font-weight:600; cursor:pointer; white-space:nowrap;
+    transition:border-color .15s ease, background .15s ease; }
+.book-view .lesson-picker-chip em { font-style:normal; font-weight:700; opacity:.7; }
+.book-view .lesson-picker-chip:hover { border-color:var(--seal); }
+.book-view .lesson-picker-chip.active { background:var(--seal); border-color:var(--seal); color:#fff; }
+.book-view .lesson-picker-empty { display:flex; flex-direction:column; align-items:center; gap:8px; padding:24px 0 12px; color:var(--ink-soft); font-size:.84rem; }
+.book-view .lesson-picker-empty button { padding:5px 14px; border:1px solid var(--seal); border-radius:999px; background:transparent; color:var(--seal-dark);
+    font-family:inherit; font-size:.78rem; font-weight:600; cursor:pointer; }
 @media (max-width:640px) {
+  .book-view .lesson-picker-chips { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; }
   .book-view { --lesson-navbar-h:92px; }
   .book-view .lesson-navbar { grid-template-columns:1fr; gap:4px; padding:6px 12px 8px; }
   .book-view .lesson-navbar-center { justify-content:space-between; }

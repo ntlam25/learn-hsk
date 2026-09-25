@@ -89,7 +89,7 @@ export default function LessonViewPage() {
   // Danh sách bài cho thanh chọn bài: học viên thấy cả bài chưa mở (🔒, kèm trạng thái hoàn thành từng bài)
   useEffect(() => {
     if (!lesson?.courseId) return;
-    setActiveCourse(lesson.courseId); // sidebar học viên xổ danh sách bài của khoá này
+    setActiveCourse(lesson.courseId); // sidebar học viên tô sáng khoá của bài này
     const req = isStudent
       ? api.get(`/me/courses/${lesson.courseId}`).then((res) => ({ course: res.data.course, lessons: res.data.lessons }))
       : Promise.all([api.get(`/courses/${lesson.courseId}`), api.get(`/courses/${lesson.courseId}/lessons`)]).then(([c, l]) => ({

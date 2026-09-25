@@ -2372,11 +2372,10 @@ html.dark[data-mood] {
   border-top: 1px solid var(--line);
 }
 
-/* Khoá trong sidebar học viên: nút ▸/▾ xổ danh sách bài */
-/* Menu dài (xổ danh sách bài) thì cuộn, không ép các mục thấp lại */
+/* Khoá trong sidebar học viên: chỉ liệt kê khoá (chọn bài nằm ở thanh trên trang bài) */
+/* Menu dài thì cuộn, không ép các mục thấp lại */
 .admin-sidebar-nav > *,
-.sidebar-classes > *,
-.sidebar-lessons > * {
+.sidebar-classes > * {
   flex-shrink: 0;
 }
 .sidebar-classes {
@@ -2384,106 +2383,20 @@ html.dark[data-mood] {
   flex-direction: column;
   gap: 4px;
 }
-.sidebar-course {
-  position: relative;
-}
-.sidebar-course > a {
-  padding-right: 34px !important;
-}
-.sidebar-course-toggle {
-  position: absolute;
-  top: 12px;
-  right: 6px;
-  width: 24px;
-  height: 24px;
-  border: 0;
-  border-radius: 6px;
-  background: transparent;
-  color: var(--muted);
-  font-size: 0.8rem;
-  cursor: pointer;
-}
-.sidebar-course-toggle:hover {
-  background: var(--paper-deep);
-  color: var(--ink);
-}
-.sidebar-lessons,
-.sidebar-lessons-loading {
-  margin: 2px 0 6px 26px;
-  padding-left: 8px;
-  border-left: 1px dashed var(--line-strong);
-}
-.sidebar-lessons {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-.sidebar-lessons-loading {
-  font-size: 0.74rem;
-  color: var(--muted);
-  padding: 6px 8px;
-}
-.admin-sidebar-nav .sidebar-lesson {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 32px;
-  padding: 0 8px;
-  border-radius: var(--radius-sm);
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--ink-soft);
-  white-space: nowrap;
+.sidebar-course-progress {
+  display: block;
+  height: 3px;
+  margin-top: 4px;
+  border-radius: 999px;
+  background: var(--line);
   overflow: hidden;
 }
-.sidebar-lesson-num {
-  flex-shrink: 0;
-  min-width: 22px;
-  height: 20px;
-  padding: 0 4px;
-  border-radius: 6px;
-  background: var(--paper-deep);
-  color: var(--ink-soft);
-  font-size: 0.68rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.sidebar-lesson-title {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.sidebar-lesson-mark {
-  flex-shrink: 0;
-  font-size: 0.7rem;
-}
-.sidebar-lesson-mark.done {
-  color: var(--jade);
-  font-weight: 800;
-}
-.admin-sidebar-nav a.sidebar-lesson.active {
-  background: var(--seal-soft);
-  color: var(--seal);
-  font-weight: 700;
-}
-.admin-sidebar-nav a.sidebar-lesson.active .sidebar-lesson-num {
-  background: var(--seal);
-  color: #fff;
-}
-.sidebar-lesson.locked {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-.admin-shell.collapsed .sidebar-lessons,
-.admin-shell.collapsed .sidebar-lessons-loading,
-.admin-shell.collapsed .sidebar-course-toggle {
-  display: none;
-}
-.admin-shell.collapsed .sidebar-course > a {
-  padding-right: 0 !important;
+.sidebar-course-progress > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--jade);
+  transition: width 0.3s ease;
 }
 
 .admin-sidebar-footer {
