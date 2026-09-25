@@ -29,26 +29,4 @@ async function reviewsForStudentInLesson(studentId, lessonId) {
   return data.map((r) => ({ exerciseItemId: r.exercise_item_id, status: r.status }));
 }
 
-// % thẻ đã "known" trong tổng số flashcard của các bài (dùng cho báo cáo lớp)
-async function knownRatioForStudentLessons(studentId, lessonIds) {
-  if (!lessonIds.length) return { total: 0, known: 0 };
-  const { data: items, error: itemsErr } = await supabase
-    .from('exercise_items')
-    .select('id')
-    .in('lesson_id', lessonIds)
-    .eq('kind', 'flashcard');
-  if (itemsErr) throw itemsErr;
-  const itemIds = items.map((i) => i.id);
-  if (!itemIds.length) return { total: 0, known: 0 };
-
-  const { data, error } = await supabase
-    .from('flashcard_reviews')
-    .select('status')
-    .eq('student_id', studentId)
-    .in('exercise_item_id', itemIds);
-  if (error) throw error;
-
-  return { total: itemIds.length, known: data.filter((r) => r.status === 'known').length };
-}
-
-module.exports = { upsertReview, reviewsForStudentInLesson, knownRatioForStudentLessons };
+module.exports = { upsertReview, reviewsForStudentInLesson };

@@ -10,8 +10,7 @@
       "num": 1,
       "chars": [
         {
-          "h": "学",
-          "p": ""
+          "h": "学"
         }
       ],
       "pinyin": "xué",
@@ -34,17 +33,16 @@
       "num": 2,
       "chars": [
         {
-          "h": "英",
-          "p": ""
+          "h": "英"
         },
         {
-          "h": "语",
-          "p": ""
+          "h": "语"
         }
       ],
       "pinyin": "Yīngyǔ",
       "pos": "Danh từ",
       "meaning": "tiếng Anh",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "阿拉伯语",
@@ -99,8 +97,7 @@
       "num": 3,
       "chars": [
         {
-          "h": "去",
-          "p": ""
+          "h": "去"
         }
       ],
       "pinyin": "qù",
@@ -128,8 +125,7 @@
       "num": 4,
       "chars": [
         {
-          "h": "对",
-          "p": ""
+          "h": "对"
         }
       ],
       "pinyin": "duì",
@@ -152,12 +148,10 @@
       "num": 5,
       "chars": [
         {
-          "h": "邮",
-          "p": ""
+          "h": "邮"
         },
         {
-          "h": "局",
-          "p": ""
+          "h": "局"
         }
       ],
       "pinyin": "yóujú",
@@ -180,8 +174,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "寄",
-          "p": ""
+          "h": "寄"
         }
       ],
       "pinyin": "jì",
@@ -204,8 +197,7 @@
       "num": 7,
       "chars": [
         {
-          "h": "信",
-          "p": ""
+          "h": "信"
         }
       ],
       "pinyin": "xìn",
@@ -228,12 +220,10 @@
       "num": 8,
       "chars": [
         {
-          "h": "银",
-          "p": ""
+          "h": "银"
         },
         {
-          "h": "行",
-          "p": ""
+          "h": "行"
         }
       ],
       "pinyin": "yínháng",
@@ -256,8 +246,7 @@
       "num": 9,
       "chars": [
         {
-          "h": "取",
-          "p": ""
+          "h": "取"
         }
       ],
       "pinyin": "qǔ",
@@ -280,8 +269,7 @@
       "num": 10,
       "chars": [
         {
-          "h": "钱",
-          "p": ""
+          "h": "钱"
         }
       ],
       "pinyin": "qián",
@@ -304,17 +292,16 @@
       "num": 11,
       "chars": [
         {
-          "h": "明",
-          "p": ""
+          "h": "明"
         },
         {
-          "h": "天",
-          "p": ""
+          "h": "天"
         }
       ],
       "pinyin": "míngtiān",
       "pos": "Danh từ",
       "meaning": "ngày mai",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "天",
@@ -339,8 +326,7 @@
       "num": 12,
       "chars": [
         {
-          "h": "见",
-          "p": ""
+          "h": "见"
         }
       ],
       "pinyin": "jiàn",
@@ -364,8 +350,7 @@
       "num": 13,
       "chars": [
         {
-          "h": "六",
-          "p": ""
+          "h": "六"
         }
       ],
       "pinyin": "liù",
@@ -388,8 +373,7 @@
       "num": 14,
       "chars": [
         {
-          "h": "七",
-          "p": ""
+          "h": "七"
         }
       ],
       "pinyin": "qī",
@@ -412,8 +396,7 @@
       "num": 15,
       "chars": [
         {
-          "h": "九",
-          "p": ""
+          "h": "九"
         }
       ],
       "pinyin": "jiǔ",
@@ -433,10 +416,17 @@
       ]
     }
   ],
-  "properNouns": [],
+  "properNouns": [
+    {
+      "hanzi": "北京",
+      "pinyin": "Běijīng",
+      "meaning": "Bắc Kinh"
+    }
+  ],
   "dialogues": [
     {
       "title": "（一）学汉语",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -458,6 +448,7 @@
     },
     {
       "title": "（二）明天见",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -478,111 +469,412 @@
       ]
     }
   ],
+  "phoneticsNotes": [
+    {
+      "title": "z、c、s",
+      "content": "z không bật hơi; c bật hơi; s là âm xát. Luyện: zī、cí、sī và 再见、词典、公司。"
+    },
+    {
+      "title": "zh、ch、sh、r",
+      "content": "Nhóm âm đầu cuốn lưỡi. Đầu lưỡi cong nhẹ lên phía vòm cứng; ch bật hơi mạnh hơn zh."
+    },
+    {
+      "title": "特殊韵母 -i",
+      "content": "Sau z、c、s、zh、ch、sh、r, chữ i không đọc như “i” thông thường mà gần âm “ư”: zi、ci、si、zhi、chi、shi、ri."
+    },
+    {
+      "title": "韵母 er",
+      "content": "er có thể tự tạo thành âm tiết, không cần thanh mẫu: 儿、耳、二。"
+    },
+    {
+      "title": "儿化音",
+      "content": "Thêm r sau âm tiết để tạo vần cuốn lưỡi: 画儿 huàr、花儿 huār、哪儿 nǎr、那儿 nàr、玩儿 wánr。"
+    },
+    {
+      "title": "u 系列韵母",
+      "content": "ua、uo、uai、ui(uei)、uan、un(uen)、uang、ueng. Chú ý dạng viết tắt ui và un."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "吗 疑问句",
+      "content": "Thêm 吗 cuối câu trần thuật để hỏi có/không: 你学英语吗？你去北京吗？"
+    },
+    {
+      "title": "正反疑问句",
+      "content": "Đặt động từ khẳng định và phủ định cạnh nhau: 去不去、对不对. Không thêm 吗 ở cuối."
+    },
+    {
+      "title": "连动结构",
+      "content": "Dùng nhiều động từ liên tiếp để biểu thị mục đích: 去邮局寄信、去银行取钱。"
+    },
+    {
+      "title": "时间 + 见",
+      "content": "Dùng thời gian hoặc địa điểm trước 见 để hẹn gặp: 明天见、北京见、韩国见。"
+    },
+    {
+      "title": "省略主语",
+      "content": "Trong hội thoại, chủ ngữ có thể được lược khi ngữ cảnh rõ: 不去。去银行取钱。"
+    }
+  ],
   "exercises": {
-    "notes": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 3 (5 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "z、c、s",
-        "content": "z không bật hơi; c bật hơi; s là âm xát. Luyện: zī、cí、sī và 再见、词典、公司。"
+        "pageNumber": 52,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\nju              jue               juan               jun\nqu              que              quan              qun\nxu              xue              xuan               xun\n\n(4)ütin, ADHI, ERU Ain:\n\nü remains unchanged when spelled with n or |, e.g.\nnü              ü\n\nCS) iou 前面加声母时要写成也，例如;\n\niou is written as iu if preceded by an initial, e.g.\nnù\n\n4) \"不\" 的变调 The tone sandhi of “R”\n\n“不”的本调是第四声,但在另一个第四声音节前边时，变为第\n例如:\n\nThe original tone of “不，\n\nis the 4th tone, but it changes to the 2nd tone\nwhen immediately followed by another 4th-tone syllable, e.g.\n\nbù hë          bù nán        bù hčo        bú qù\nbù go         bù lái          bù xičo        bú xiè\n1) ER Tones\n\nxuē        xué        xuě        xè —— xé        学\n\nqo          qv         qv          qù — qü qù 取、去\nDo än ù a — ú A\n\nqin       qián       qin       qion —— qión       钱\n\nliū          liú          liù          liù       — lv          六\n\nqi          ai          qi          à — q          上"
       },
       {
-        "title": "zh、ch、sh、r",
-        "content": "Nhóm âm đầu cuốn lưỡi. Đầu lưỡi cong nhẹ lên phía vòm cứng; ch bật hơi mạnh hơn zh."
+        "pageNumber": 53,
+        "label": "练习",
+        "text": "Lesson 3 See you tomorrow\n\n第三课  we\n\njü                      jiù          jù — jù          九\n\nmíng ming mng 一一 ming \"A\ntian        tián tión        tàn 一一 tian 天\njian                    jién        jan —— jien        LA\n\n2) “不” 的变调 The tone sandhi of “不”\n\nbù hê           bù móng         bù héo            bú yao\nbù ting           bù xué             bù döng            bú kòn\nbù bān           bù tión            bù jióng            bú niàn\nbù xin             bù xing             bù qing             bú jin\n\n4) WEHA Distinguish the pronunciations and tones\n\nï             qi            x             jü             qü              xü\njian           qian          xin          jiang          qiäng          xiang\njin            qin           xin           jing           qing           xing\njion          juon          qién          quán         xin            xuðn\njin              jün             qin             qún             xin                xün\n\nji             jú             qi            qù            xi               xü\njā              xià              ging           xing            jing             giáng\njiùo          xido          qi           xiü            jè              qiè\një            xig           giáo          xičo          jing            qing\nfa                   qf                  xiüxi                 xili\n\njixing                jixing                xüyào               xīydo\n\nni                   on                    qi qián             tiqién\njintian                   mingtian               jinnián                 mingnién\nquánxiàn               quénmion              xinxian                xinnién\ndöngbian            xibian                qiénbian            houbion"
+      },
+      {
+        "pageNumber": 54,
+        "label": "练习",
+        "text": "NERE (3M) 第一船 上\n\n4) 认读 Read and lean\n(1)对          取          钱           去\n银行         邮局          明天          英语\n去邮局       去银行       去取钱        去寄信\n学英语       学汉语       去北京        明天见\n\n(2) A: 你学英语吗?\nB: 不，学汉语。\nA: 去北京吗?\nB: 对\n\n(3)A: 你去邮局寄信吗?\nB: 不去。去银行取钱。\nA: 明天见!\nB: 明天见!\n\nE) 完成会话 Complete the dialogues\n(1) A: Ni xué Yingyŭ ma?\nB: Bù,\nA: Qù Běijing mo?\nB:\n\n(2) A:                     ?\nB: Bù, xué Hònyŭ.\nA:                     ?\nB: Dui."
+      },
+      {
+        "pageNumber": 55,
+        "label": "练习",
+        "text": "R ARA\n\nLesson 3 See you tomorrow\n\n(3) A: Ni qù yóujú jixin ma?\nB:                        -Qù\nA:                             t\nB: Míngtiän jion!\n\n(4) A:                                           ?\nB: Bú qù. Qù yinhéng qù qién.\nA: Mingtian jion!\nB:                                           !\n\nE) 交际会话 Communication\nCAD 询间 (1) Making an inquiry (1)\nA: Ni qù yinhéng ma?\nB: Bú qù. Qù yóujú.\n(2) 469 Saying goodbye\nA: Mingtian jian!\nB: Mingtian jion!\n\n1) 汉字 Write the characters\n\niù l >R\n\n\nqi 一七\n七\nMEE?\n\nJu"
+      },
+      {
+        "pageNumber": 56,
+        "label": "练习",
+        "text": "NERE (3M) A-M 上\n\ni |\n学      |    |\n\na EFE\n\nE EE O\n\nbiliar\n\nga         |      |\n\njing|””广广言序序京\n\n|\n\ndù 7相对对\n\n对 HH\n\nmng nne y AA\n\nA HHH\n\ntän ”三于天\n\nzH itt\n\njan nn\n\nA EI\n\nYn ”44和名名名名银银\n\nGa      EEH\n\nháng| 4 4 Ei"
+      }
+    ],
+    "blocks": [
+      {
+        "title": "声母辨音",
+        "desc": "Phân biệt nhóm âm đầu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "zī / cī / sī"
+              },
+              {
+                "ph": "zhī / chī / shī / rì"
+              },
+              {
+                "ph": "zài / cài / sài"
+              },
+              {
+                "ph": "zhǎo / chǎo / shǎo"
+              },
+              {
+                "ph": "rén / shén"
+              }
+            ]
+          }
+        ]
       },
       {
         "title": "特殊韵母 -i",
-        "content": "Sau z、c、s、zh、ch、sh、r, chữ i không đọc như “i” thông thường mà gần âm “ư”: zi、ci、si、zhi、chi、shi、ri."
-      },
-      {
-        "title": "韵母 er",
-        "content": "er có thể tự tạo thành âm tiết, không cần thanh mẫu: 儿、耳、二。"
+        "desc": "Đọc đúng âm “i” đặc biệt",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "字 zì"
+              },
+              {
+                "ph": "词 cí"
+              },
+              {
+                "ph": "四 sì"
+              },
+              {
+                "ph": "知道 zhīdào"
+              },
+              {
+                "ph": "支持 zhīchí"
+              },
+              {
+                "ph": "历史 lìshǐ"
+              },
+              {
+                "ph": "日语 rìyǔ"
+              }
+            ]
+          }
+        ]
       },
       {
         "title": "儿化音",
-        "content": "Thêm r sau âm tiết để tạo vần cuốn lưỡi: 画儿 huàr、花儿 huār、哪儿 nǎr、那儿 nàr、玩儿 wánr。"
+        "desc": "Đọc vần cuốn lưỡi",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "哪儿 nǎr"
+              },
+              {
+                "ph": "那儿 nàr"
+              },
+              {
+                "ph": "花儿 huār"
+              },
+              {
+                "ph": "画儿 huàr"
+              },
+              {
+                "ph": "玩儿 wánr"
+              },
+              {
+                "ph": "一下儿 yíxiàr"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "u 系列韵母",
-        "content": "ua、uo、uai、ui(uei)、uan、un(uen)、uang、ueng. Chú ý dạng viết tắt ui và un."
-      }
-    ],
-    "grammar": [
-      {
-        "title": "吗 疑问句",
-        "content": "Thêm 吗 cuối câu trần thuật để hỏi có/không: 你学英语吗？你去北京吗？"
+        "title": "词组认读",
+        "desc": "Nhận mặt chữ và đọc cụm từ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "去邮局"
+              },
+              {
+                "ph": "去银行"
+              },
+              {
+                "ph": "去取钱"
+              },
+              {
+                "ph": "去寄信"
+              },
+              {
+                "ph": "学英语"
+              },
+              {
+                "ph": "学汉语"
+              },
+              {
+                "ph": "明天见"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "正反疑问句",
-        "content": "Đặt động từ khẳng định và phủ định cạnh nhau: 去不去、对不对. Không thêm 吗 ở cuối."
+        "title": "回答问题",
+        "desc": "Trả lời thành câu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你学英语吗？"
+              },
+              {
+                "ph": "你学汉语吗？"
+              },
+              {
+                "ph": "你去北京吗？"
+              },
+              {
+                "ph": "你去邮局寄信吗？"
+              },
+              {
+                "ph": "你去银行做什么？"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "连动结构",
-        "content": "Dùng nhiều động từ liên tiếp để biểu thị mục đích: 去邮局寄信、去银行取钱。"
-      },
-      {
-        "title": "时间 + 见",
-        "content": "Dùng thời gian hoặc địa điểm trước 见 để hẹn gặp: 明天见、北京见、韩国见。"
-      },
-      {
-        "title": "省略主语",
-        "content": "Trong hội thoại, chủ ngữ có thể được lược khi ngữ cảnh rõ: 不去。去银行取钱。"
-      }
-    ],
-    "chips": [
-      {
-        "title": "认读练习",
-        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
-        "items": [
-          [
-            "学",
-            "xué"
-          ],
-          [
-            "英语",
-            "Yīngyǔ"
-          ],
-          [
-            "日语",
-            "rìyǔ"
-          ],
-          [
-            "阿拉伯语",
-            "Ālābóyǔ"
-          ],
-          [
-            "德语",
-            "Déyǔ"
-          ],
-          [
-            "俄语",
-            "Éyǔ"
-          ],
-          [
-            "法语",
-            "Fǎyǔ"
-          ],
-          [
-            "韩国语",
-            "Hánguóyǔ"
-          ],
-          [
-            "西班牙语",
-            "Xībānyáyǔ"
-          ],
-          [
-            "对",
-            "duì"
-          ],
-          [
-            "明天",
-            "míngtiān"
-          ],
-          [
-            "见",
-            "jiàn"
-          ]
+        "title": "角色朗读",
+        "desc": "Đọc theo vai",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "A：你学英语吗？"
+              },
+              {
+                "ph": "B：不。学汉语。"
+              },
+              {
+                "ph": "A：你去邮局寄信吗？"
+              },
+              {
+                "ph": "B：不去。去银行取钱。"
+              },
+              {
+                "ph": "A：明天见！"
+              },
+              {
+                "ph": "B：明天见！"
+              }
+            ]
+          }
         ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "phonetics",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "phonetics": {
+        "title": "语音 · Ngữ âm",
+        "desc": "Quy tắc phát âm được làm nổi bật và có phần luyện nhận dạng",
+        "note": ""
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ cấu trúc và kiến thức trọng tâm",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Giữ các bài nhận dạng, đọc, nói và vận dụng; không tích hợp bài nghe cuối bài",
+        "note": ""
+      }
+    },
+    "properNounsTitle": {
+      "zh": "专名",
+      "vi": "Tên riêng"
+    },
+    "phoneticsBlocks": [
+      {
+        "title": "认读练习",
+        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "学 · xué"
+              },
+              {
+                "ph": "英语 · Yīngyǔ"
+              },
+              {
+                "ph": "日语 · rìyǔ"
+              },
+              {
+                "ph": "阿拉伯语 · Ālābóyǔ"
+              },
+              {
+                "ph": "德语 · Déyǔ"
+              },
+              {
+                "ph": "俄语 · Éyǔ"
+              },
+              {
+                "ph": "法语 · Fǎyǔ"
+              },
+              {
+                "ph": "韩国语 · Hánguóyǔ"
+              },
+              {
+                "ph": "西班牙语 · Xībānyáyǔ"
+              },
+              {
+                "ph": "对 · duì"
+              },
+              {
+                "ph": "明天 · míngtiān"
+              },
+              {
+                "ph": "见 · jiàn"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 3"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "03-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（一）· Nghe bài khóa 1",
+      "code": "03-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（二）· Nghe bài khóa 2",
+      "code": "03-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "phonetics",
+      "label": "语音 · Nghe ngữ âm",
+      "code": "03-4",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "03-5",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 52,
+      "caption": "Trang bài tập trong PDF: 52",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 53,
+      "caption": "Trang bài tập trong PDF: 53",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 54,
+      "caption": "Trang bài tập trong PDF: 54",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 55,
+      "caption": "Trang bài tập trong PDF: 55",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 56,
+      "caption": "Trang bài tập trong PDF: 56",
+      "imageUrl": ""
+    }
+  ]
 }

@@ -2,15 +2,23 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import api from '../../api/client';
 import { useToast } from '../../context/ToastContext';
-import EditableHero from '../../components/admin/lesson/EditableHero';
-import TabBar, { TAB_CATEGORIES } from '../../components/admin/lesson/TabBar';
-import AudioSectionEditor from '../../components/admin/lesson/AudioSectionEditor';
-import EditableVocabSection from '../../components/admin/lesson/EditableVocabSection';
-import EditableDialogueSection from '../../components/admin/lesson/EditableDialogueSection';
-import EditablePhoneticsSection from '../../components/admin/lesson/EditablePhoneticsSection';
-import EditableGrammarSection from '../../components/admin/lesson/EditableGrammarSection';
-import EditableExerciseSection from '../../components/admin/lesson/EditableExerciseSection';
-import PageListEditor from '../../components/admin/lesson/PageListEditor';
+import Select from '../../components/ui/Select';
+import Checkbox from '../../components/ui/Checkbox';
+import Button from '../../components/ui/Button';
+import BookLessonView from '../../components/book/BookLessonView';
+import { VocabProgress } from '../../components/book/BookParts';
+import { AddMenu, TextField } from '../../components/admin/book/EditorFields';
+import {
+  AudioEditor,
+  DialogueTabEditor,
+  ExerciseTabEditor,
+  GrammarTabEditor,
+  HeadEditor,
+  NoteEditor,
+  PhoneticsTabEditor,
+  VocabTabEditor,
+} from '../../components/admin/book/TabEditors';
+import { TAB_META, TAB_KEYS, defaultFooter, normalizeLesson } from '../../lib/lessonContent';
 
 const EMPTY_LESSON = {
   courseId: '',
@@ -18,64 +26,57 @@ const EMPTY_LESSON = {
   seal: '',
   titleZh: '',
   titleVi: '',
-  tag: 'Từ mới · Bài khóa · Luyện tập',
+  tag: 'Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập',
   isPreview: false,
-  sourcePdfUrl: '',
   published: true,
   vocab: [],
   properNouns: [],
   dialogues: [],
   phoneticsNotes: [],
   grammar: [],
-  exercises: {},
-  extra: {},
+  exercises: { blocks: [], textPages: [] },
+  extra: { tabs: ['vocab', 'dialogue', 'phonetics', 'grammar', 'exercise'] },
   audioTracks: [],
   pages: [],
   exerciseItems: [],
 };
 
-const CONTENT_BY_TAB = {
-  vocab: EditableVocabSection,
-  dialogue: EditableDialogueSection,
-  phonetics: EditablePhoneticsSection,
-  grammar: EditableGrammarSection,
-  exercise: EditableExerciseSection,
+const TAB_BODY = {
+  vocab: VocabTabEditor,
+  dialogue: DialogueTabEditor,
+  phonetics: PhoneticsTabEditor,
+  grammar: GrammarTabEditor,
+  exercise: ExerciseTabEditor,
 };
 
-function hasExerciseContent(exercises, exerciseItems) {
-  const ex = exercises || {};
-  return (
-    (exerciseItems || []).some((it) => it.kind !== 'flashcard') ||
-    ex.questions?.length ||
-    ex.homework?.length ||
-    ex.chips?.length ||
-    ex.phonetics?.length ||
-    ex.textPages?.length ||
-    !!ex.reading
-  );
-}
-
-function computeActiveTabs(lesson) {
-  const tabs = [];
-  if (lesson.vocab?.length || lesson.properNouns?.length) tabs.push('vocab');
-  if (lesson.dialogues?.length) tabs.push('dialogue');
-  if (lesson.phoneticsNotes?.length) tabs.push('phonetics');
-  if (lesson.grammar?.length) tabs.push('grammar');
-  if (hasExerciseContent(lesson.exercises, lesson.exerciseItems)) tabs.push('exercise');
-  return tabs.length ? tabs : ['vocab'];
-}
-
+// Trình soạn bài học: sửa trực tiếp trên đúng giao diện giáo trình (book.css), bấm "Xem trước"
+// để thấy chính xác trang học viên sẽ xem.
 export default function LessonEditorPage({ mode }) {
   const { id } = useParams();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const toast = useToast();
-  const [lesson, setLesson] = useState(mode === 'create' ? { ...EMPTY_LESSON, courseId: searchParams.get('courseId') || '' } : null);
+  const [lesson, setLesson] = useState(() =>
+    mode === 'create' ? normalizeLesson({ ...EMPTY_LESSON, courseId: searchParams.get('courseId') || '' }) : null
+  );
   const [courses, setCourses] = useState([]);
   const [error, setError] = useState('');
   const [saving, setSaving] = useState(false);
-  const [activeTabs, setActiveTabs] = useState(mode === 'create' ? [] : []);
-  const [activeTab, setActiveTab] = useState(null);
+  const [activeTab, setActiveTab] = useState('vocab');
+  const [preview, setPreview] = useState(false);
+  const [toolbarEl, setToolbarEl] = useState(null);
+
+  // Thanh công cụ được ghim (sticky): đo chiều cao thật (có thể xuống dòng trên màn hình hẹp) để thanh tab
+  // Từ mới / Bài khóa… của bài dính ngay bên dưới nó
+  useEffect(() => {
+    if (!toolbarEl) return;
+    const host = toolbarEl.parentElement;
+    const update = () => host.style.setProperty('--editor-toolbar-h', `${toolbarEl.offsetHeight}px`);
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(toolbarEl);
+    return () => ro.disconnect();
+  }, [toolbarEl]);
 
   useEffect(() => {
     api.get('/admin/courses').then((res) => setCourses(res.data)).catch(() => {});
@@ -86,40 +87,52 @@ export default function LessonEditorPage({ mode }) {
       api
         .get(`/admin/lessons/${id}`)
         .then((res) => {
-          setLesson(res.data);
-          const tabs = computeActiveTabs(res.data);
-          setActiveTabs(tabs);
-          setActiveTab(tabs[0]);
+          const l = normalizeLesson(res.data);
+          setLesson(l);
+          setActiveTab(l.extra.tabs[0]);
         })
         .catch(() => setError('Không tải được bài học.'));
     }
   }, [mode, id]);
 
+  // Gợi ý số bài tiếp theo khi tạo mới trong một khoá
+  useEffect(() => {
+    if (mode !== 'create' || !lesson?.courseId || lesson.lessonNumber) return;
+    api
+      .get('/admin/lessons', { params: { courseId: lesson.courseId } })
+      .then((res) => {
+        const next = res.data.reduce((m, l) => Math.max(m, l.lessonNumber || 0), 0) + 1;
+        setLesson((l) => (l.lessonNumber ? l : { ...l, lessonNumber: next }));
+      })
+      .catch(() => {});
+  }, [mode, lesson?.courseId, lesson?.lessonNumber]);
+
   function setField(field, value) {
-    setLesson((l) => ({ ...l, [field]: value }));
+    setLesson((l) => ({ ...l, [field]: typeof value === 'function' ? value(l[field]) : value }));
   }
-
-  function addTab(key) {
-    setActiveTabs((tabs) => [...tabs, key]);
-    setActiveTab(key);
+  function setExtra(field, value) {
+    setLesson((l) => ({ ...l, extra: { ...l.extra, [field]: value } }));
   }
-
-  function removeTab(key) {
-    setActiveTabs((tabs) => {
-      const next = tabs.filter((t) => t !== key);
-      if (activeTab === key) setActiveTab(next[0] || null);
-      return next;
+  function setHead(key, head) {
+    setLesson((l) => ({ ...l, extra: { ...l.extra, heads: { ...l.extra.heads, [key]: head } } }));
+  }
+  function setTabs(tabs) {
+    setExtra('tabs', tabs);
+    if (!tabs.includes(activeTab)) setActiveTab(tabs[0]);
+  }
+  function setAudio(category, listOrFn) {
+    setLesson((l) => {
+      const current = l.audioTracks.filter((t) => t.category === category);
+      const next = typeof listOrFn === 'function' ? listOrFn(current) : listOrFn;
+      return { ...l, audioTracks: [...l.audioTracks.filter((t) => t.category !== category), ...next] };
     });
   }
 
-  function setAudioTracksForCategory(category, tracksForCategory) {
-    const others = (lesson.audioTracks || []).filter((t) => t.category !== category);
-    setField('audioTracks', [...others, ...tracksForCategory]);
-  }
-
-  async function handleSubmit(e) {
-    if (e?.preventDefault) e.preventDefault();
+  async function handleSave() {
     setError('');
+    if (!lesson.courseId) return setError('Chọn khoá học trước khi lưu.');
+    if (!lesson.lessonNumber) return setError('Nhập số bài.');
+    if (!lesson.titleVi?.trim()) return setError('Nhập phụ đề bài học (dòng in nghiêng dưới tiêu đề).');
     setSaving(true);
     try {
       const payload = { ...lesson, lessonNumber: Number(lesson.lessonNumber) };
@@ -128,7 +141,8 @@ export default function LessonEditorPage({ mode }) {
         toast.success('Đã tạo bài học mới.');
         navigate(`/admin/lessons/${res.data.id}/edit`, { replace: true });
       } else {
-        await api.put(`/admin/lessons/${id}`, payload);
+        const res = await api.put(`/admin/lessons/${id}`, payload);
+        setLesson(normalizeLesson(res.data));
         toast.success('Đã lưu bài học.');
       }
     } catch (err) {
@@ -146,39 +160,131 @@ export default function LessonEditorPage({ mode }) {
     );
   }
 
-  const activeMeta = TAB_CATEGORIES.find((c) => c.key === activeTab);
-  const ContentComponent = activeTab ? CONTENT_BY_TAB[activeTab] : null;
-  const audioTracksForTab = activeMeta?.audioCategory
-    ? (lesson.audioTracks || []).filter((t) => t.category === activeMeta.audioCategory)
-    : null;
+  const tabs = lesson.extra.tabs;
+  const current = tabs.includes(activeTab) ? activeTab : tabs[0];
+  const heads = lesson.extra.heads;
+  const footer = lesson.extra.footer || defaultFooter(lesson.lessonNumber);
+  const missingTabs = TAB_KEYS.filter((k) => !tabs.includes(k));
+  const audioCategory = current ? TAB_META[current].audio : null;
+  const Body = current ? TAB_BODY[current] : null;
+
+  const headAndAudio = current ? (
+    <>
+      <HeadEditor head={heads[current]} onChange={(h) => setHead(current, h)} noteInside={current === 'vocab'}>
+        {current === 'vocab' ? <VocabProgress done={0} total={lesson.vocab.length} /> : null}
+      </HeadEditor>
+      {audioCategory ? (
+        <AudioEditor
+          category={audioCategory}
+          tracks={lesson.audioTracks.filter((t) => t.category === audioCategory)}
+          onChange={(list) => setAudio(audioCategory, list)}
+        />
+      ) : null}
+      {current !== 'vocab' ? <NoteEditor value={heads[current].note} onChange={(v) => setHead(current, { ...heads[current], note: v })} /> : null}
+    </>
+  ) : null;
 
   return (
-    <main className="page lesson-view-page admin-editor-page">
+    <main className="page admin-editor-page">
+      <div className="book-editor-toolbar" ref={setToolbarEl}>
+        <div className="book-editor-toolbar-fields">
+          <Select
+            value={lesson.courseId}
+            onChange={(v) => setField('courseId', v)}
+            placeholder="-- Chọn khoá học --"
+            options={courses.map((c) => ({ value: c.id, label: `${c.title}${c.hskLevel ? ` (${c.hskLevel})` : ''}` }))}
+          />
+          <label className="book-editor-number">
+            Bài số
+            <input type="number" min="1" value={lesson.lessonNumber} onChange={(e) => setField('lessonNumber', e.target.value === '' ? '' : Number(e.target.value))} />
+          </label>
+          <Checkbox checked={lesson.published} onChange={(e) => setField('published', e.target.checked)} label="Xuất bản" />
+          <Checkbox checked={lesson.isPreview} onChange={(e) => setField('isPreview', e.target.checked)} label="Cho xem trước" />
+        </div>
+        <div className="book-editor-toolbar-actions">
+          <Button variant="secondary" type="button" onClick={() => setPreview((p) => !p)}>
+            {preview ? '✎ Tiếp tục soạn' : '👁 Xem trước'}
+          </Button>
+          <Button type="button" onClick={handleSave} disabled={saving}>
+            {saving ? 'Đang lưu…' : 'Lưu bài học'}
+          </Button>
+        </div>
+      </div>
       {error && <div className="alert-error">{error}</div>}
 
-      <EditableHero lesson={lesson} courses={courses} onChange={setField} onSubmit={handleSubmit} saving={saving} />
+      {preview ? (
+        <div className="book-editor-preview">
+          <BookLessonView lesson={normalizeLesson(lesson)} />
+        </div>
+      ) : (
+        <div className="book-view book-editor">
+          <div className="lesson-app active integrated-lesson">
+            <header className="hero">
+              <input className="seal be-seal" value={lesson.seal} onChange={(e) => setField('seal', e.target.value)} placeholder="一课" title="Con dấu" />
+              <TextField className="be-h1" value={lesson.titleZh} onChange={(v) => setField('titleZh', v)} placeholder="第1课" />
+              <TextField className="subtitle be-subtitle" value={lesson.titleVi} onChange={(v) => setField('titleVi', v)} placeholder="Bài 1 · 你好" />
+              <TextField className="lesson-tag be-tag" value={lesson.tag} onChange={(v) => setField('tag', v)} placeholder="Từ mới · Bài khóa · Luyện tập" />
+            </header>
 
-      <div className="admin-pages-editor">
-        <div className="sub-label">ẢNH TRANG SÁCH GỐC</div>
-        <PageListEditor pages={lesson.pages || []} onChange={(v) => setField('pages', v)} />
-      </div>
+            <nav className="tabs be-tabs">
+              {tabs.map((key, i) => (
+                <span key={key} className="be-tab">
+                  <button type="button" className={key === current ? 'active' : ''} onClick={() => setActiveTab(key)}>
+                    <span className="zh">{TAB_META[key].zh}</span>
+                    {TAB_META[key].label}
+                  </button>
+                  <span className="be-tab-tools">
+                    <button type="button" disabled={i === 0} title="Đưa tab sang trái" onClick={() => setTabs(tabs.map((t, j) => (j === i - 1 ? key : j === i ? tabs[i - 1] : t)))}>
+                      ‹
+                    </button>
+                    <button
+                      type="button"
+                      disabled={i === tabs.length - 1}
+                      title="Đưa tab sang phải"
+                      onClick={() => setTabs(tabs.map((t, j) => (j === i + 1 ? key : j === i ? tabs[i + 1] : t)))}
+                    >
+                      ›
+                    </button>
+                    <button type="button" className="be-danger" title="Ẩn tab (nội dung vẫn giữ)" disabled={tabs.length === 1} onClick={() => setTabs(tabs.filter((t) => t !== key))}>
+                      ×
+                    </button>
+                  </span>
+                </span>
+              ))}
+              {missingTabs.length ? (
+                <AddMenu
+                  label="+ Thêm tab"
+                  options={missingTabs.map((k) => ({ value: k, label: `${TAB_META[k].zh} ${TAB_META[k].label}` }))}
+                  onPick={(k) => {
+                    setTabs([...tabs, k]);
+                    setActiveTab(k);
+                  }}
+                />
+              ) : null}
+            </nav>
 
-      <TabBar activeKeys={activeTabs} current={activeTab} onSelect={setActiveTab} onAdd={addTab} onRemove={removeTab} />
+            <main>
+              {current ? (
+                <section className="panel active">
+                  {current === 'exercise' ? (
+                    <ExerciseTabEditor lesson={lesson} setField={setField} setExtra={setExtra} head={headAndAudio} />
+                  ) : (
+                    <>
+                      {headAndAudio}
+                      <Body lesson={lesson} setField={setField} setExtra={setExtra} />
+                    </>
+                  )}
+                </section>
+              ) : null}
+            </main>
 
-      {activeTab && (
-        <section className="panel active">
-          {audioTracksForTab !== null && (
-            <AudioSectionEditor
-              category={activeMeta.audioCategory}
-              tracks={audioTracksForTab}
-              onChange={(v) => setAudioTracksForCategory(activeMeta.audioCategory, v)}
-            />
-          )}
-          {ContentComponent && <ContentComponent lesson={lesson} setField={setField} />}
-        </section>
+            <footer>
+              <TextField className="zh be-inline" value={footer.zh} onChange={(v) => setExtra('footer', { ...footer, zh: v })} placeholder="温故而知新" />{' '}
+              <TextField className="be-inline be-wide" value={footer.text} onChange={(v) => setExtra('footer', { ...footer, text: v })} placeholder="· Ôn cũ biết mới — Bài 1" />
+            </footer>
+          </div>
+        </div>
       )}
-
-      {!activeTabs.length && <div className="empty-state">Bấm "+ Thêm tab" để bắt đầu thêm nội dung cho bài học.</div>}
     </main>
   );
 }

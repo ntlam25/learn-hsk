@@ -10,17 +10,16 @@
       "num": 1,
       "chars": [
         {
-          "h": "下",
-          "p": ""
+          "h": "下"
         },
         {
-          "h": "午",
-          "p": ""
+          "h": "午"
         }
       ],
       "pinyin": "xiàwǔ",
       "pos": "Danh từ",
       "meaning": "buổi chiều",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "上午",
@@ -45,16 +44,13 @@
       "num": 2,
       "chars": [
         {
-          "h": "图",
-          "p": ""
+          "h": "图"
         },
         {
-          "h": "书",
-          "p": ""
+          "h": "书"
         },
         {
-          "h": "馆",
-          "p": ""
+          "h": "馆"
         }
       ],
       "pinyin": "túshūguǎn",
@@ -77,8 +73,7 @@
       "num": 3,
       "chars": [
         {
-          "h": "换",
-          "p": ""
+          "h": "换"
         }
       ],
       "pinyin": "huàn",
@@ -101,12 +96,10 @@
       "num": 4,
       "chars": [
         {
-          "h": "小",
-          "p": ""
+          "h": "小"
         },
         {
-          "h": "姐",
-          "p": ""
+          "h": "姐"
         }
       ],
       "pinyin": "xiǎojiě",
@@ -130,16 +123,13 @@
       "num": 5,
       "chars": [
         {
-          "h": "营",
-          "p": ""
+          "h": "营"
         },
         {
-          "h": "业",
-          "p": ""
+          "h": "业"
         },
         {
-          "h": "员",
-          "p": ""
+          "h": "员"
         }
       ],
       "pinyin": "yíngyèyuán",
@@ -162,16 +152,13 @@
       "num": 6,
       "chars": [
         {
-          "h": "人",
-          "p": ""
+          "h": "人"
         },
         {
-          "h": "民",
-          "p": ""
+          "h": "民"
         },
         {
-          "h": "币",
-          "p": ""
+          "h": "币"
         }
       ],
       "pinyin": "rénmínbì",
@@ -194,13 +181,13 @@
       "num": 7,
       "chars": [
         {
-          "h": "百",
-          "p": ""
+          "h": "百"
         }
       ],
       "pinyin": "bǎi",
       "pos": "Số từ",
       "meaning": "trăm",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "千",
@@ -230,17 +217,16 @@
       "num": 8,
       "chars": [
         {
-          "h": "美",
-          "p": ""
+          "h": "美"
         },
         {
-          "h": "元",
-          "p": ""
+          "h": "元"
         }
       ],
       "pinyin": "měiyuán",
       "pos": "Danh từ",
       "meaning": "đô la Mỹ",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "港币",
@@ -280,8 +266,7 @@
       "num": 9,
       "chars": [
         {
-          "h": "等",
-          "p": ""
+          "h": "等"
         }
       ],
       "pinyin": "děng",
@@ -304,16 +289,13 @@
       "num": 10,
       "chars": [
         {
-          "h": "一",
-          "p": ""
+          "h": "一"
         },
         {
-          "h": "会",
-          "p": ""
+          "h": "会"
         },
         {
-          "h": "儿",
-          "p": ""
+          "h": "儿"
         }
       ],
       "pinyin": "yíhuìr",
@@ -336,12 +318,10 @@
       "num": 11,
       "chars": [
         {
-          "h": "先",
-          "p": ""
+          "h": "先"
         },
         {
-          "h": "生",
-          "p": ""
+          "h": "生"
         }
       ],
       "pinyin": "xiānsheng",
@@ -365,8 +345,7 @@
       "num": 12,
       "chars": [
         {
-          "h": "数",
-          "p": ""
+          "h": "数"
         }
       ],
       "pinyin": "shǔ",
@@ -391,6 +370,7 @@
   "dialogues": [
     {
       "title": "课文",
+      "context": "",
       "lines": [
         {
           "role": "玛丽",
@@ -404,6 +384,7 @@
     },
     {
       "title": "在中国银行换钱",
+      "context": "",
       "lines": [
         {
           "role": "麦克",
@@ -440,111 +421,404 @@
       ]
     }
   ],
+  "phoneticsNotes": [
+    {
+      "title": "三个三声 · Chuỗi ba thanh 3",
+      "content": "Khi ba hoặc nhiều thanh 3 đứng liền nhau, có thể chia theo cụm nghĩa: 我很好 có thể đọc wǒ hén hǎo hoặc wó hén hǎo tùy nhịp."
+    },
+    {
+      "title": "一 的变调 · Ôn biến điệu 一",
+      "content": "一会儿 đọc yíhuìr vì 一 đứng trước thanh 4."
+    },
+    {
+      "title": "不 的变调 · Ôn biến điệu 不",
+      "content": "不去 có thể đọc bú qù; 不客气 đọc bú kèqi."
+    },
+    {
+      "title": "轻声 · Thanh nhẹ",
+      "content": "先生 xiānsheng、数数 shǔshu: âm tiết cuối đọc nhẹ, ngắn."
+    },
+    {
+      "title": "数词重音 · Trọng âm số lớn",
+      "content": "Khi đọc 百、千、万 và tiền tệ, ngắt theo đơn vị số: 二百美元、三万五千九百。"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "时间词作状语",
+      "content": "Từ chỉ thời gian thường đứng trước chủ ngữ hoặc sau chủ ngữ: 下午我去图书馆；我下午去图书馆。"
+    },
+    {
+      "title": "要 + 动词",
+      "content": "要 đứng trước động từ để biểu thị ý muốn hoặc nhu cầu: 我要去银行；我要换人民币。"
+    },
+    {
+      "title": "连动句",
+      "content": "Chuỗi động từ biểu thị mục đích: 去银行换钱、去图书馆看书。"
+    },
+    {
+      "title": "钱数表达",
+      "content": "Đọc tiền theo số + đơn vị tiền: 二百美元、一千人民币、三万越南盾。"
+    },
+    {
+      "title": "礼貌称呼",
+      "content": "小姐、先生 có thể đứng đầu câu để gọi người đối thoại: 先生，您换什么钱？"
+    },
+    {
+      "title": "请 + 动词",
+      "content": "请 làm câu yêu cầu lịch sự: 请等一会儿；请数数。"
+    }
+  ],
   "exercises": {
-    "notes": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 9 (4 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "三个三声 · Chuỗi ba thanh 3",
-        "content": "Khi ba hoặc nhiều thanh 3 đứng liền nhau, có thể chia theo cụm nghĩa: 我很好 có thể đọc wǒ hén hǎo hoặc wó hén hǎo tùy nhịp."
+        "pageNumber": 109,
+        "label": "练习",
+        "text": "第九课 RRARD\n\nLesson 9 1 want to exchange for RMB\n\nNormally the first two are pronounced in the 2nd tone, and the third\nremains unchanged (or changes into a half 3rd tone). When the first syllable is\nemphasized or followed by a pause, it is pronounced in the half 3rd tone. For\nexample:\n\n五百美元。( “五”和“百”读第二声,\"美”读半三声。)\n\n我很好。( “我”读半三声                      好”读第\n\n\n1) 语音 Phonetics\nC1) BERIEM Distinguish the pronunciations and tones\n\nshòng          xià           huí          guò          a\nlái               qù            jin           cho           huán\nting            shu         dú           xič           yì\njiing           jiě            wèn         dá            liòn\nhuòn gión        fòn qián           měiyuán       měi nián\nxiGnsheng       shan shang       keqi             kéqi\nduihuon               tuihuàn                  yibon                yibon\n(2) 多音节连读 Multisyllabic liaison\nyou shihou           qù yinhéng          huàn měiyuán\nqù shangdion         măi dongxi           zhčo lingqién\nwūbăi yuán           zhěnlángučn         hén haokon\nkGi wonxido           méi guanxi           ydu yisi\n(3) “不”的变调”The tone sandhi of “不”\nbù shuō        bù duō        bù néng        bù lái\nbù hio          bù măi         bú jiè            bú xiè"
       },
       {
-        "title": "一 的变调 · Ôn biến điệu 一",
-        "content": "一会儿 đọc yíhuìr vì 一 đứng trước thanh 4."
+        "pageNumber": 110,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n(4) 声调搭配 Collocations of tones\ndiànchë           miànbão         dà shëng         diondeng\n\nfx               kèwén          liònxí             wèntí\nHònyù           wòiyù           zhèli              nòli\nguiing          yindong yonhui           kòn bing\nyuèliang pidoliong xiéxie            doifu\n\n2) 认读 Identify and read\n(1) 给你 AR ”给他 给你们 给他们 ”给老师\n-ý    25 Z256 五百      六百     八百\nARTF           明天下午           星期三下午\n\n(2)A: 先生,我要换钱\n\nB: 您换什么钱?\n\nA: 我换五万日元的人民币\n\nB: 请等一会儿。……小姐，给您钱。您数孝\nA: ato Hih!\n\nB: 不客气!\n\n3) 完成会话 Complete the dialogues\n(1) A: Nin huàn shénme qión?\n\nB:                           >\nA: Oing déng yihuir. … Gěi nin qién.\nB:                  !\nA: Bú kèqi!\n(2) A:                           ?\n\nB: Bú qù, wò qù yinháng."
       },
       {
-        "title": "不 的变调 · Ôn biến điệu 不",
-        "content": "不去 có thể đọc bú qù; 不客气 đọc bú kèqi."
+        "pageNumber": 111,
+        "label": "练习",
+        "text": "第九课 我挽人民而     ©\nTesson9 T want to exchange for RMB\n\n(3) A:          ,             ?\nB: Wò huàn rénminbi.\nA;          a\nB: Xièxie!\nA:                 !\n\n7) 读后复述 Read and retell\n\n玛丽问我去不去图书馆，我说不去，我要去银行换钱。银\n行的小姐问我换什么钱，我说，换二百美元的人民币。\n\n5) 交际会话 Communication\n换钱 Changing money\nA: Wò huòn gión.\nB: Nin yào huòn shénme gián?\nA: Wò huon rénminbi.\nB: Nin huàn du6shao?\nA: Wö huàn wŭbăi měiyuán.\n\n©) 汉字 Write the characters\n\nshang | F E\n\nX                   |\nx TF        E"
       },
       {
-        "title": "轻声 · Thanh nhẹ",
-        "content": "先生 xiānsheng、数数 shǔshu: âm tiết cuối đọc nhẹ, ngắn."
-      },
-      {
-        "title": "数词重音 · Trọng âm số lớn",
-        "content": "Khi đọc 百、千、万 và tiền tệ, ngắt theo đơn vị số: 二百美元、三万五千九百。"
+        "pageNumber": 112,
+        "label": "练习",
+        "text": "NERE (3M) A-M 上\n\n|\n\n\nxiðo | J oh\nbwi TTAR A\na     |   |\nqn ^ F\n+     |   |\n|      |    |\nwn ”了万\nHHHH\nmij ””¥兰兰关美\n美|     |   |\n|      i    |\nmn|” FPR\nj\nK]     |   |\n\nin| > +t\n\nCMM |\n\nshēng 生气后生"
       }
     ],
-    "grammar": [
+    "blocks": [
       {
-        "title": "时间词作状语",
-        "content": "Từ chỉ thời gian thường đứng trước chủ ngữ hoặc sau chủ ngữ: 下午我去图书馆；我下午去图书馆。"
+        "title": "货币认读",
+        "desc": "Đọc tên tiền tệ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "美元"
+              },
+              {
+                "ph": "港币"
+              },
+              {
+                "ph": "日元"
+              },
+              {
+                "ph": "韩元"
+              },
+              {
+                "ph": "欧元"
+              },
+              {
+                "ph": "人民币"
+              },
+              {
+                "ph": "越南盾"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "要 + 动词",
-        "content": "要 đứng trước động từ để biểu thị ý muốn hoặc nhu cầu: 我要去银行；我要换人民币。"
+        "title": "大数字",
+        "desc": "Đọc số lớn",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "一百"
+              },
+              {
+                "ph": "二百五十"
+              },
+              {
+                "ph": "一千五百"
+              },
+              {
+                "ph": "两千四百"
+              },
+              {
+                "ph": "一万"
+              },
+              {
+                "ph": "三万五千九百"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "连动句",
-        "content": "Chuỗi động từ biểu thị mục đích: 去银行换钱、去图书馆看书。"
+        "title": "不、一、三声",
+        "desc": "Luyện biến điệu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "不说"
+              },
+              {
+                "ph": "不多"
+              },
+              {
+                "ph": "不能"
+              },
+              {
+                "ph": "不来"
+              },
+              {
+                "ph": "不买"
+              },
+              {
+                "ph": "不谢"
+              },
+              {
+                "ph": "一封"
+              },
+              {
+                "ph": "一个"
+              },
+              {
+                "ph": "一天"
+              },
+              {
+                "ph": "一层"
+              },
+              {
+                "ph": "一会儿"
+              },
+              {
+                "ph": "五百美元"
+              },
+              {
+                "ph": "我很好"
+              },
+              {
+                "ph": "好水果"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "钱数表达",
-        "content": "Đọc tiền theo số + đơn vị tiền: 二百美元、一千人民币、三万越南盾。"
+        "title": "情景替换",
+        "desc": "Thay loại tiền và số tiền",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "我要换人民币。"
+              },
+              {
+                "ph": "我要换二百美元。"
+              },
+              {
+                "ph": "我要换五百欧元。"
+              },
+              {
+                "ph": "我要换一千港币。"
+              },
+              {
+                "ph": "请等一会儿。"
+              },
+              {
+                "ph": "请数数。"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "礼貌称呼",
-        "content": "小姐、先生 có thể đứng đầu câu để gọi người đối thoại: 先生，您换什么钱？"
+        "title": "回答问题",
+        "desc": "Trả lời thành câu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "下午你去哪儿？"
+              },
+              {
+                "ph": "你去银行做什么？"
+              },
+              {
+                "ph": "你换什么钱？"
+              },
+              {
+                "ph": "你换多少？"
+              },
+              {
+                "ph": "营业员请你做什么？"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "请 + 动词",
-        "content": "请 làm câu yêu cầu lịch sự: 请等一会儿；请数数。"
-      }
-    ],
-    "chips": [
-      {
-        "title": "认读练习",
-        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
-        "items": [
-          [
-            "上午",
-            "shàngwǔ"
-          ],
-          [
-            "下午",
-            "xiàwǔ"
-          ],
-          [
-            "图书馆",
-            "túshūguǎn"
-          ],
-          [
-            "换",
-            "huàn"
-          ],
-          [
-            "小姐",
-            "xiǎojiě"
-          ],
-          [
-            "营业员",
-            "yíngyèyuán"
-          ],
-          [
-            "百",
-            "bǎi"
-          ],
-          [
-            "千",
-            "qiān"
-          ],
-          [
-            "万",
-            "wàn"
-          ],
-          [
-            "要",
-            "yào"
-          ],
-          [
-            "美元",
-            "měiyuán"
-          ],
-          [
-            "港币",
-            "gǎngbì"
-          ]
+        "title": "角色扮演",
+        "desc": "Đóng vai tại ngân hàng",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "Khách chào và nói muốn đổi tiền."
+              },
+              {
+                "ph": "Nhân viên hỏi đổi loại tiền gì và bao nhiêu."
+              },
+              {
+                "ph": "Nhân viên yêu cầu chờ một lát."
+              },
+              {
+                "ph": "Nhân viên đưa tiền và yêu cầu đếm lại."
+              }
+            ]
+          }
         ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "phonetics",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "phonetics": {
+        "title": "语音 · Ngữ âm",
+        "desc": "Quy tắc phát âm được làm nổi bật và có phần luyện nhận dạng",
+        "note": ""
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ cấu trúc và kiến thức trọng tâm",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Giữ các bài nhận dạng, đọc, nói và vận dụng; không tích hợp bài nghe cuối bài",
+        "note": ""
+      }
+    },
+    "phoneticsBlocks": [
+      {
+        "title": "认读练习",
+        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "上午 · shàngwǔ"
+              },
+              {
+                "ph": "下午 · xiàwǔ"
+              },
+              {
+                "ph": "图书馆 · túshūguǎn"
+              },
+              {
+                "ph": "换 · huàn"
+              },
+              {
+                "ph": "小姐 · xiǎojiě"
+              },
+              {
+                "ph": "营业员 · yíngyèyuán"
+              },
+              {
+                "ph": "百 · bǎi"
+              },
+              {
+                "ph": "千 · qiān"
+              },
+              {
+                "ph": "万 · wàn"
+              },
+              {
+                "ph": "要 · yào"
+              },
+              {
+                "ph": "美元 · měiyuán"
+              },
+              {
+                "ph": "港币 · gǎngbì"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 9"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "09-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文 · Nghe bài khóa",
+      "code": "09-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "09-3",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 109,
+      "caption": "Trang bài tập trong PDF: 109",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 110,
+      "caption": "Trang bài tập trong PDF: 110",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 111,
+      "caption": "Trang bài tập trong PDF: 111",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 112,
+      "caption": "Trang bài tập trong PDF: 112",
+      "imageUrl": ""
+    }
+  ]
 }

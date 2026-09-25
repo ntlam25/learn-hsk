@@ -10,17 +10,16 @@
       "num": 1,
       "chars": [
         {
-          "h": "今",
-          "p": ""
+          "h": "今"
         },
         {
-          "h": "天",
-          "p": ""
+          "h": "天"
         }
       ],
       "pinyin": "jīntiān",
       "pos": "Danh từ",
       "meaning": "hôm nay",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "昨天",
@@ -45,17 +44,16 @@
       "num": 2,
       "chars": [
         {
-          "h": "星",
-          "p": ""
+          "h": "星"
         },
         {
-          "h": "期",
-          "p": ""
+          "h": "期"
         }
       ],
       "pinyin": "xīngqī",
       "pos": "Danh từ",
       "meaning": "tuần; thứ",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "星期一",
@@ -110,8 +108,7 @@
       "num": 3,
       "chars": [
         {
-          "h": "几",
-          "p": ""
+          "h": "几"
         }
       ],
       "pinyin": "jǐ",
@@ -135,8 +132,7 @@
       "num": 4,
       "chars": [
         {
-          "h": "二",
-          "p": ""
+          "h": "二"
         }
       ],
       "pinyin": "èr",
@@ -147,8 +143,7 @@
       "num": 5,
       "chars": [
         {
-          "h": "三",
-          "p": ""
+          "h": "三"
         }
       ],
       "pinyin": "sān",
@@ -159,8 +154,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "四",
-          "p": ""
+          "h": "四"
         }
       ],
       "pinyin": "sì",
@@ -171,17 +165,16 @@
       "num": 7,
       "chars": [
         {
-          "h": "哪",
-          "p": ""
+          "h": "哪"
         },
         {
-          "h": "儿",
-          "p": ""
+          "h": "儿"
         }
       ],
       "pinyin": "nǎr",
       "pos": "Đại từ",
       "meaning": "ở đâu",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "那儿",
@@ -194,8 +187,7 @@
       "num": 8,
       "chars": [
         {
-          "h": "我",
-          "p": ""
+          "h": "我"
         }
       ],
       "pinyin": "wǒ",
@@ -218,8 +210,7 @@
       "num": 9,
       "chars": [
         {
-          "h": "回",
-          "p": ""
+          "h": "回"
         }
       ],
       "pinyin": "huí",
@@ -242,12 +233,10 @@
       "num": 10,
       "chars": [
         {
-          "h": "学",
-          "p": ""
+          "h": "学"
         },
         {
-          "h": "校",
-          "p": ""
+          "h": "校"
         }
       ],
       "pinyin": "xuéxiào",
@@ -270,12 +259,10 @@
       "num": 11,
       "chars": [
         {
-          "h": "再",
-          "p": ""
+          "h": "再"
         },
         {
-          "h": "见",
-          "p": ""
+          "h": "见"
         }
       ],
       "pinyin": "zàijiàn",
@@ -299,16 +286,13 @@
       "num": 12,
       "chars": [
         {
-          "h": "对",
-          "p": ""
+          "h": "对"
         },
         {
-          "h": "不",
-          "p": ""
+          "h": "不"
         },
         {
-          "h": "起",
-          "p": ""
+          "h": "起"
         }
       ],
       "pinyin": "duìbuqǐ",
@@ -331,16 +315,13 @@
       "num": 13,
       "chars": [
         {
-          "h": "没",
-          "p": ""
+          "h": "没"
         },
         {
-          "h": "关",
-          "p": ""
+          "h": "关"
         },
         {
-          "h": "系",
-          "p": ""
+          "h": "系"
         }
       ],
       "pinyin": "méi guānxi",
@@ -360,10 +341,17 @@
       ]
     }
   ],
-  "properNouns": [],
+  "properNouns": [
+    {
+      "hanzi": "天安门",
+      "pinyin": "Tiān’ānmén",
+      "meaning": "Thiên An Môn"
+    }
+  ],
   "dialogues": [
     {
       "title": "（一）你去哪儿",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -397,6 +385,7 @@
     },
     {
       "title": "（二）对不起",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -409,77 +398,314 @@
       ]
     }
   ],
+  "phoneticsNotes": [
+    {
+      "title": "四和十 · Phân biệt s và sh",
+      "content": "四是四，十是十，十四是十四，四十是四十，十四不是四十，四十不是十四。"
+    },
+    {
+      "title": "Biến điệu của 不",
+      "content": "去 qù là thanh 4 nên 不去 đọc là bú qù. Trong 不回, 不 giữ thanh 4: bù huí."
+    },
+    {
+      "title": "Âm cuốn lưỡi 儿",
+      "content": "哪儿 nǎr、那儿 nàr: 儿 nhập vào âm tiết trước, không đọc tách thành ér."
+    }
+  ],
+  "grammar": [],
   "exercises": {
-    "notes": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 4 (4 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "四和十 · Phân biệt s và sh",
-        "content": "四是四，十是十，十四是十四，四十是四十，十四不是四十，四十不是十四。"
+        "pageNumber": 63,
+        "label": "练习",
+        "text": "PNR MERL\n\nLesson4 Where are you going\n\n\n1) EH Tones\n\nér    čr    è — érè JLZ\nsn        sõn sòn — sån     三\nsi      si   s — sà    四\nna    ng    nă    nà — nòr, nòr ARJU. ARU\nhui huf   hui   hì — hu    回\nxuē   xué   xuě   xuè — xué     学\nxio xio xiéo xido — xibo     R\na          zi     a — ña    F\nx   xi   xi   ù — à    系\n\n2) er和儿化鹊 The retroflex er and the r-ending finals\n\nértóng érzi           ěrji              Srduo  èrbăi\nqùnăr  qùnòr  huàhuàr yixior  hğowónr\n\n3) WEHA Distinguish the pronunciations and tones\n\nzá                             sa                zé                ce               se\n\nz              of              si                 zú                cü               sü\nzón           con            san               zing             cang            söng\nzën           cën            sên               zēng            céng            sëng\nzidin                    cidiðn                    si didn                   sì tian\nzijion                   oðidiàn                   xiònzài                   bisoi\nziigu6                    cùjin                      odise                     caice\nsùdù                     diti                       zo                       cáinéng\ncünzi                     sünzi                     songxing               song xin\nzuGtion                                              sudyi                    zuòyè\ncanjia                                        sòn bù                yüsůn\nzuihòu                   suíhòu                   desto                    bá cio"
       },
       {
-        "title": "Biến điệu của 不",
-        "content": "去 qù là thanh 4 nên 不去 đọc là bú qù. Trong 不回, 不 giữ thanh 4: bù huí."
+        "pageNumber": 64,
+        "label": "练习",
+        "text": "NERE (3M) 第一船 上\n\n1) 认读 Identify and read\n\n(1)今天          明天             昨天          再见\n去哪儿     去那儿       去银行     去邮局\n去学校     去天安门      对不起     没关系\n星期一    星期二      星期三     星期四\n星期五       星期六          星期天        星期几\n\n(2) A: 你去哪儿?\nB: 我回学校，你回不回?\nA: 不回，我去天安门。\nB: 再见!\nA: HR!\n\nG) A: 对不起!\nB: 没关系!\n\n5) 完成会话 Complete the dialogues\n(1) A: Ni qù ner?\nB:                                              ,ni qù bu qù?\n\nA: Bú qù, wō huí xuéxiào.\n\nA: Zoijion!\n\n(2)A: NI                                     ?\nB: Qù Tian'an Mén, ni qù bu qù?\n\nB: Zoijion!\n\n(3) A: Duibuqi!"
       },
       {
-        "title": "Âm cuốn lưỡi 儿",
-        "content": "哪儿 nǎr、那儿 nàr: 儿 nhập vào âm tiết trước, không đọc tách thành ér."
+        "pageNumber": 65,
+        "label": "练习",
+        "text": "PNR MERL\n\nLesson4 Where are you going\n\n©) 交际会话 Communication\n(1) 课堂用语 Classroom Chinese\nD A: Wò wèn, nimen huidé, hio ma?\nB: Héo!\n® A: Duibu duì?\nB: Duile.\n® A: Döng le ma?\nB: Déng le.\n(2) 间星期几 Asking about the day\nA: Jintian xingqi ji?\nB: Jīintiän Xingqiyi.\nC3) 打招呼 (2) Greeting (2)\nA: Ni qù năr?\nB: Wé qù Tinn Mén.\n\n1) BIRF Write the characters\n\nin ”个个今\n\nàh nnn"
+      },
+      {
+        "pageNumber": 66,
+        "label": "练习",
+        "text": "NERE (3M) A-M 上\n\ngun ””“兰关关\n\nAAEE\n\nz              |         |\n\n基期\n\n期 HHH\n\nOD A\n\nJe      |    |\nwh onnan\n\na     |   |\nxilo|-+才丰相术术术榜校\nR      |    |\n\nw ”一于于我我我\n\naI IIAMRA\n\nTACERE]\n\naR                |          |"
       }
     ],
-    "chips": [
+    "blocks": [
       {
-        "title": "认读练习",
-        "desc": "Đọc chữ Hán rồi đối chiếu phiên âm.",
-        "items": [
-          [
-            "是",
-            "shì"
-          ],
-          [
-            "今天",
-            "jīntiān"
-          ],
-          [
-            "昨天",
-            "zuótiān"
-          ],
-          [
-            "星期",
-            "xīngqī"
-          ],
-          [
-            "周末",
-            "zhōumò"
-          ],
-          [
-            "几",
-            "jǐ"
-          ],
-          [
-            "那",
-            "nà"
-          ],
-          [
-            "哪",
-            "nǎ"
-          ],
-          [
-            "我",
-            "wǒ"
-          ],
-          [
-            "家",
-            "jiā"
-          ],
-          [
-            "回",
-            "huí"
-          ],
-          [
-            "学校",
-            "xuéxiào"
-          ]
+        "title": "词组朗读",
+        "desc": "Đọc cụm từ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "今天"
+              },
+              {
+                "ph": "明天"
+              },
+              {
+                "ph": "昨天"
+              },
+              {
+                "ph": "去哪儿"
+              },
+              {
+                "ph": "去那儿"
+              },
+              {
+                "ph": "去银行"
+              },
+              {
+                "ph": "去邮局"
+              },
+              {
+                "ph": "去天安门"
+              },
+              {
+                "ph": "星期一"
+              },
+              {
+                "ph": "星期二"
+              },
+              {
+                "ph": "星期三"
+              },
+              {
+                "ph": "星期六"
+              },
+              {
+                "ph": "星期天"
+              },
+              {
+                "ph": "星期几"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "替换练习",
+        "desc": "Thay thế từ trong mẫu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你去哪儿？→ 我去银行。"
+              },
+              {
+                "ph": "你去哪儿？→ 我去邮局。"
+              },
+              {
+                "ph": "你回不回？→ 我不回。"
+              },
+              {
+                "ph": "今天星期几？→ 今天星期三。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "句子朗读",
+        "desc": "Đọc và dịch câu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "今天我学汉语。"
+              },
+              {
+                "ph": "今天你学英语吗？"
+              },
+              {
+                "ph": "昨天你学汉语吗？"
+              },
+              {
+                "ph": "今天星期几？"
+              },
+              {
+                "ph": "明天星期几？"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "回答问题",
+        "desc": "Trả lời thành câu hoàn chỉnh",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "今天星期几？"
+              },
+              {
+                "ph": "周末你去哪儿？"
+              },
+              {
+                "ph": "你回不回学校？"
+              },
+              {
+                "ph": "你什么时候去邮局？"
+              }
+            ]
+          }
         ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "phonetics",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "phonetics": {
+        "title": "语音 · Ngữ âm",
+        "desc": "Điểm phát âm cần chú ý và luyện nhận dạng",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Đã loại bỏ các bài nghe và phần điền cuối bài",
+        "note": ""
+      }
+    },
+    "properNounsTitle": {
+      "zh": "专名",
+      "vi": "Tên riêng"
+    },
+    "phoneticsBlocks": [
+      {
+        "title": "认读练习",
+        "desc": "Đọc chữ Hán rồi đối chiếu phiên âm.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "是 · shì"
+              },
+              {
+                "ph": "今天 · jīntiān"
+              },
+              {
+                "ph": "昨天 · zuótiān"
+              },
+              {
+                "ph": "星期 · xīngqī"
+              },
+              {
+                "ph": "周末 · zhōumò"
+              },
+              {
+                "ph": "几 · jǐ"
+              },
+              {
+                "ph": "那 · nà"
+              },
+              {
+                "ph": "哪 · nǎ"
+              },
+              {
+                "ph": "我 · wǒ"
+              },
+              {
+                "ph": "家 · jiā"
+              },
+              {
+                "ph": "回 · huí"
+              },
+              {
+                "ph": "学校 · xuéxiào"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 4"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "04-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（一）· Nghe bài khóa 1",
+      "code": "04-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（二）· Nghe bài khóa 2",
+      "code": "04-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "phonetics",
+      "label": "语音 · Nghe ngữ âm",
+      "code": "04-4",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "04-5",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 63,
+      "caption": "Trang bài tập trong PDF: 63",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 64,
+      "caption": "Trang bài tập trong PDF: 64",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 65,
+      "caption": "Trang bài tập trong PDF: 65",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 66,
+      "caption": "Trang bài tập trong PDF: 66",
+      "imageUrl": ""
+    }
+  ]
 }

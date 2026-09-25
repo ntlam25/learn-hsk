@@ -10,12 +10,10 @@
       "num": 1,
       "chars": [
         {
-          "h": "语",
-          "p": ""
+          "h": "语"
         },
         {
-          "h": "言",
-          "p": ""
+          "h": "言"
         }
       ],
       "pinyin": "yǔyán",
@@ -38,12 +36,10 @@
       "num": 2,
       "chars": [
         {
-          "h": "大",
-          "p": ""
+          "h": "大"
         },
         {
-          "h": "学",
-          "p": ""
+          "h": "学"
         }
       ],
       "pinyin": "dàxué",
@@ -66,16 +62,13 @@
       "num": 3,
       "chars": [
         {
-          "h": "怎",
-          "p": ""
+          "h": "怎"
         },
         {
-          "h": "么",
-          "p": ""
+          "h": "么"
         },
         {
-          "h": "样",
-          "p": ""
+          "h": "样"
         }
       ],
       "pinyin": "zěnmeyàng",
@@ -98,12 +91,10 @@
       "num": 4,
       "chars": [
         {
-          "h": "觉",
-          "p": ""
+          "h": "觉"
         },
         {
-          "h": "得",
-          "p": ""
+          "h": "得"
         }
       ],
       "pinyin": "juéde",
@@ -126,12 +117,10 @@
       "num": 5,
       "chars": [
         {
-          "h": "语",
-          "p": ""
+          "h": "语"
         },
         {
-          "h": "法",
-          "p": ""
+          "h": "法"
         }
       ],
       "pinyin": "yǔfǎ",
@@ -154,8 +143,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "听",
-          "p": ""
+          "h": "听"
         }
       ],
       "pinyin": "tīng",
@@ -178,8 +166,7 @@
       "num": 7,
       "chars": [
         {
-          "h": "说",
-          "p": ""
+          "h": "说"
         }
       ],
       "pinyin": "shuō",
@@ -202,12 +189,10 @@
       "num": 8,
       "chars": [
         {
-          "h": "比",
-          "p": ""
+          "h": "比"
         },
         {
-          "h": "较",
-          "p": ""
+          "h": "较"
         }
       ],
       "pinyin": "bǐjiào",
@@ -230,12 +215,10 @@
       "num": 9,
       "chars": [
         {
-          "h": "容",
-          "p": ""
+          "h": "容"
         },
         {
-          "h": "易",
-          "p": ""
+          "h": "易"
         }
       ],
       "pinyin": "róngyì",
@@ -258,12 +241,10 @@
       "num": 10,
       "chars": [
         {
-          "h": "但",
-          "p": ""
+          "h": "但"
         },
         {
-          "h": "是",
-          "p": ""
+          "h": "是"
         }
       ],
       "pinyin": "dànshì",
@@ -286,8 +267,7 @@
       "num": 11,
       "chars": [
         {
-          "h": "读",
-          "p": ""
+          "h": "读"
         }
       ],
       "pinyin": "dú",
@@ -310,8 +290,7 @@
       "num": 12,
       "chars": [
         {
-          "h": "写",
-          "p": ""
+          "h": "写"
         }
       ],
       "pinyin": "xiě",
@@ -334,8 +313,7 @@
       "num": 13,
       "chars": [
         {
-          "h": "给",
-          "p": ""
+          "h": "给"
         }
       ],
       "pinyin": "gěi",
@@ -359,8 +337,7 @@
       "num": 14,
       "chars": [
         {
-          "h": "新",
-          "p": ""
+          "h": "新"
         }
       ],
       "pinyin": "xīn",
@@ -383,12 +360,10 @@
       "num": 15,
       "chars": [
         {
-          "h": "同",
-          "p": ""
+          "h": "同"
         },
         {
-          "h": "学",
-          "p": ""
+          "h": "学"
         }
       ],
       "pinyin": "tóngxué",
@@ -411,12 +386,10 @@
       "num": 16,
       "chars": [
         {
-          "h": "同",
-          "p": ""
+          "h": "同"
         },
         {
-          "h": "屋",
-          "p": ""
+          "h": "屋"
         }
       ],
       "pinyin": "tóngwū",
@@ -439,8 +412,7 @@
       "num": 17,
       "chars": [
         {
-          "h": "班",
-          "p": ""
+          "h": "班"
         }
       ],
       "pinyin": "bān",
@@ -460,10 +432,22 @@
       ]
     }
   ],
-  "properNouns": [],
+  "properNouns": [
+    {
+      "hanzi": "北京语言大学",
+      "pinyin": "Běijīng Yǔyán Dàxué",
+      "meaning": "Đại học Ngôn ngữ Bắc Kinh"
+    },
+    {
+      "hanzi": "林",
+      "pinyin": "Lín",
+      "meaning": "họ Lâm"
+    }
+  ],
   "dialogues": [
     {
       "title": "（一）你在哪儿学习汉语",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -493,6 +477,7 @@
     },
     {
       "title": "（二）你们的老师是谁",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -517,33 +502,318 @@
       ]
     }
   ],
+  "phoneticsNotes": [],
+  "grammar": [
+    {
+      "title": "疑问代词 · Đại từ nghi vấn",
+      "content": "谁、什么、哪、哪儿、怎么、怎么样、几、多少 thay thế phần cần hỏi; không thêm 吗 vào cuối câu hỏi này."
+    },
+    {
+      "title": "定语 + 的 + 中心语",
+      "content": "Danh từ/đại từ biểu thị sở hữu thường thêm 的: 我的书、老师的本子、我们的老师。"
+    },
+    {
+      "title": "Khi không dùng 的",
+      "content": "Tính từ đơn âm tiết hoặc danh từ phân loại/nguồn gốc thường không dùng 的: 新同学、中文书、男同学。"
+    },
+    {
+      "title": "在 + địa điểm + động từ",
+      "content": "Biểu thị nơi xảy ra hành động: 我在北京语言大学学习；我在食堂吃饭。"
+    },
+    {
+      "title": "给 + người + động từ",
+      "content": "Biểu thị người tiếp nhận/đối tượng: 我给你介绍一下儿；她给妈妈打电话。"
+    },
+    {
+      "title": "但是",
+      "content": "Nối hai vế tương phản: 语法不太难，但是汉字很难。"
+    }
+  ],
   "exercises": {
-    "grammar": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 12 (7 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "疑问代词 · Đại từ nghi vấn",
-        "content": "谁、什么、哪、哪儿、怎么、怎么样、几、多少 thay thế phần cần hỏi; không thêm 吗 vào cuối câu hỏi này."
+        "pageNumber": 143,
+        "label": "练习",
+        "text": "BHR 你在那儿学习汉语\n\nLesson 12 Where do you study Chinese\n\nunstressed, e.g.\n我在'语言大学学习' 汉语。\n我给' 你们介绍一个' 朋友。\n\n2) 语调 (2) Intonation (2)\nFHKE, AER, KEER, ERI. AUN:\n\nThe pitch of a special question is relatively high; the interrogative pronoun\nis stressed and the rising tone is used at the end of the sentence, e.g.\n\n你学习'什么? A\nRFJ’ s y\nA Ea EUME ©\n\n1) EE Phonetics\n(1) HEHE Distinguish the pronunciations and tones\n\ntóngwū           dòngwù         dòxué            do xuě\njuéde              quêëdiðn         yùyán            yùyán\nbijiao                     biyao                  yife                    yifð\n\nbàngōnglóu jizoxuél6u göngyùlóu sùshèlóu\n(2) Wi Read out the following phrases\n\n© #           lo            old (as opp. to young)\n®© m            jiù             old (as opp. to new)\n\n什么名字 ”什么老师 。 吃什么   喝什么\nAREALE FIELA 爸爸怎么样。妈妈怎么样"
       },
       {
-        "title": "定语 + 的 + 中心语",
-        "content": "Danh từ/đại từ biểu thị sở hữu thường thêm 的: 我的书、老师的本子、我们的老师。"
+        "pageNumber": 144,
+        "label": "练习",
+        "text": "NERE (3M) 第一船 上\n\n谁的书   谁的老师 。 谁的词典 ”谁的英文杂志\n老师的书 。 玛丽的老师 麦克的词典 我的英文杂志\nFIHA 学习语言 ”学习汉语 FIRE\n\n在中国   在北京   在学校   在语言大学\n男同学   女同学   男老师   女老师\n\n中文书   法文书   日文杂志 ”韩文杂志\n\n新同学   老同学   新杂志   GEZA\n\n很多人   很多同学 。 很多老师 。 很多钱\n\n我妈妈   他哥哥   你弟弟   我们学校\n\n2) HR Substitution exercises\n\n中文学          wénxué         literature\nOAR            hshi               history\n© 法律    人6说     Taw\nOES         jingì           economics\n(1) A: 你学习什么?        (2) A: 你们的老师是谁?\nB: 我学习汉语。       B: 我们的老师是王\n老师。\n英语 ”法语         张   林\n文学 历史                        k        #\n\n法律 ”经济                 马      á\n\nne"
       },
       {
-        "title": "Khi không dùng 的",
-        "content": "Tính từ đơn âm tiết hoặc danh từ phân loại/nguồn gốc thường không dùng 的: 新同学、中文书、男同学。"
+        "pageNumber": 145,
+        "label": "练习",
+        "text": "AHR 你站万儿学习汉语\nLesson 12 Where do you study Chinese\n\n(3) A: 你在哪儿学习?      (4)A: 语言大学怎么样?\nB: 我也在语言大学学习。     B: 很好\n你们 他 ”他们      这个学校 ”你们的老师\n玛丽 麦克 KR     爸爸的身体 她的学习\n(5)A: 你觉得学习汉语难吗?     发音 Wk\nB: 我觉得不太难       听和说。读和写\nBRF\n\n9) 选词填空 Choose the right words to fill in the blanks\n\n比较 班 谁 听 觉得 介绍 新 的 说 怎么样\n(1) 我们在 201        学习汉语 。\nDA         汉语的发音比较难。\nOR      »\n(4) 你是哪个大学         学生?\n(5)    是你们的老师?\n(6) A: 你觉得汉语的语法       ki\nB: 我觉得    难。\n(7) 我给你们         一下儿, 这是我们班的         同学。\n\n1) 在适当的位置加上“的”Add “的”in the proper places\n(1)这A是B谁C汉语DD书?\n\n(2)这A是B我C妈妈DD 书。\n\n(3)你A是B哪个C大学DD 学生?\n\n(4) 他们A都B是C很好D人。"
       },
       {
-        "title": "在 + địa điểm + động từ",
-        "content": "Biểu thị nơi xảy ra hành động: 我在北京语言大学学习；我在食堂吃饭。"
+        "pageNumber": 146,
+        "label": "练习",
+        "text": "NERE (3M) 第一船 上\n\n(5) 玛丽A老师B是C王老师 D。\n(6)这A是B我C和爸爸DD 汉语词典。\n\n5) 根据画线部分用疑问代词提问 Use interrogative pronouns to ask\nquestions about the underlined parts\n\n| 例: 我叫玛丽。一你叫什么名字? |\n\n(1) 王老师是我的老师。一\n\n(2) 他的老师是林老师。一\n\nG) 我是日本人。一\n\n(4) 我们学习汉语。一\n\n(5) 我在北京大学学习。一\n\n(6) 我住十楼。一\n\n(7) 我觉得汉语的语法不太难。一\n(8) 五块五一个。一\n\n©) At Make sentences\n\n例: 老师 我们 是 王老师 的\n一我们的老师是王老师。/ 王老师是我们的老师。\n\n(1) 都 汉语 留学生 学习一\n(2)你 韩国人 吗 是一\nGHA 他 名字 y>\n(4)是 A 麦克 哪 留学生一\n(5)你 住 也 M 吗一\n(6)是 你们 谁 老师 的一\n\nne"
       },
       {
-        "title": "给 + người + động từ",
-        "content": "Biểu thị người tiếp nhận/đối tượng: 我给你介绍一下儿；她给妈妈打电话。"
+        "pageNumber": 147,
+        "label": "练习",
+        "text": "BHR 你在那儿学习汉语   ©\nLesson12 Where do you study Chinese\n\n1) 完成会话 Complete the dialogue\n\nA:                        ?\nB: 我叫张东。\n\nA:                        ka\nB: 我是中国学生。\n\nA:                        ?\nB: 我学习英语。\n\nA:                        ?\nB: 她是田芳。\n\nA:                        ?\nB: 她住五楼\n\nA:                        ?\n\nB: 和白老师是我们的老师。\n\nE) 读后复述 Read and retell\n\n我叫      ， 是      国留学生。她叫      ，也\n是留学生。好是我的同班同学。 我们都在    大学学习汉\n语。我们的老师是王老师。他是个很好的老师\n\n这是张东，她是田劳。张东和田芳不是留学生，他们是中\n国学生，他们都学习英语。我们都是       大学的学生。\n认识他们我很高兴。我们是同学，也是好朋友\n\nG) 交际会话 Communication\n(1) 打招呼 (3) Greeting (3)\nA: 你去哪儿?\nB: 我去邮局。你去哪儿?\nA: 我回学校。\nng"
       },
       {
-        "title": "但是",
-        "content": "Nối hai vế tương phản: 语法不太难，但是汉字很难。"
+        "pageNumber": 148,
+        "label": "练习",
+        "text": "NERE (P3) BM 上\n\n(2) 间住址 (2) Asking for an address (2)\nA: 你住哪儿?\nB: 我住留学生宿舍楼。\n(3) 问电话号码 (2) Asking for a telephone number (2)\nA: 她的电话是多少?\nB: 对不起，我不知道。\n\n1) 写汉字 Write the characters\n\nn| EFFE\n\nz             |\n\nT                      l\n\na a\n\nme | 24\n\n么\n\nyang AAEE EH"
+      },
+      {
+        "pageNumber": 149,
+        "label": "练习",
+        "text": "BHR 你在那儿学习汉语 ©\nLesson 12 Where do you study Chinese\n\nd |”和个和各各得程得得\n\nang \"” e y FER\n\nkiMi         |      |\n\nswal i irr\n\n说     HHH\n\na > i i oat iih it it itik\n\ng HHA\n\nx 775g\n\nB            |        |\n\ntn OAARA\n\nw | ””厂己层层居层屋\n\nB              |         |"
+      }
+    ],
+    "blocks": [
+      {
+        "title": "问答词组",
+        "desc": "Đọc cụm từ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "什么名字"
+              },
+              {
+                "ph": "身体怎么样"
+              },
+              {
+                "ph": "谁的书"
+              },
+              {
+                "ph": "谁的老师"
+              },
+              {
+                "ph": "学习什么"
+              },
+              {
+                "ph": "在中国"
+              },
+              {
+                "ph": "在学校"
+              },
+              {
+                "ph": "在语言大学"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "定语练习",
+        "desc": "Phân biệt có/không có 的",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "我的同屋"
+              },
+              {
+                "ph": "老师的书"
+              },
+              {
+                "ph": "很好的朋友"
+              },
+              {
+                "ph": "很贵的苹果"
+              },
+              {
+                "ph": "男同学"
+              },
+              {
+                "ph": "中文书"
+              },
+              {
+                "ph": "新杂志"
+              },
+              {
+                "ph": "旧杂志"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "提问",
+        "desc": "Đặt câu hỏi cho câu trả lời",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "王老师是我的老师。"
+              },
+              {
+                "ph": "我是加拿大人。"
+              },
+              {
+                "ph": "我们学习汉语。"
+              },
+              {
+                "ph": "我在北京大学学习。"
+              },
+              {
+                "ph": "我觉得汉语的语法不太难。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "组句",
+        "desc": "Sắp xếp thành câu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "都／汉语／留学生／学习"
+              },
+              {
+                "ph": "你／韩国／吗／是／人"
+              },
+              {
+                "ph": "什么／他／名字／叫"
+              },
+              {
+                "ph": "是／你们／谁／老师／的"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "翻译",
+        "desc": "Dịch sang tiếng Trung",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "Tôi là du học sinh người Anh."
+              },
+              {
+                "ph": "Tôi học tiếng Hán tại Đại học Ngôn ngữ Bắc Kinh."
+              },
+              {
+                "ph": "Cô ấy là bạn cùng lớp và cũng là bạn cùng phòng của tôi."
+              },
+              {
+                "ph": "Tôi cảm thấy ngữ pháp không quá khó nhưng chữ Hán rất khó."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ mẫu câu trọng tâm của bài",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Đã loại bỏ các bài nghe và phần điền cuối bài",
+        "note": ""
+      }
+    },
+    "properNounsTitle": {
+      "zh": "专名",
+      "vi": "Tên riêng"
+    },
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 12"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "12-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（一）· Nghe bài khóa 1",
+      "code": "12-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（二）· Nghe bài khóa 2",
+      "code": "12-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "12-4",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 143,
+      "caption": "Trang bài tập trong PDF: 143",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 144,
+      "caption": "Trang bài tập trong PDF: 144",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 145,
+      "caption": "Trang bài tập trong PDF: 145",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 146,
+      "caption": "Trang bài tập trong PDF: 146",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 147,
+      "caption": "Trang bài tập trong PDF: 147",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 148,
+      "caption": "Trang bài tập trong PDF: 148",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 149,
+      "caption": "Trang bài tập trong PDF: 149",
+      "imageUrl": ""
+    }
+  ]
 }

@@ -10,8 +10,7 @@
       "num": 1,
       "chars": [
         {
-          "h": "全",
-          "p": ""
+          "h": "全"
         }
       ],
       "pinyin": "quán",
@@ -34,12 +33,10 @@
       "num": 2,
       "chars": [
         {
-          "h": "照",
-          "p": ""
+          "h": "照"
         },
         {
-          "h": "片",
-          "p": ""
+          "h": "片"
         }
       ],
       "pinyin": "zhàopiàn",
@@ -63,8 +60,7 @@
       "num": 3,
       "chars": [
         {
-          "h": "张",
-          "p": ""
+          "h": "张"
         }
       ],
       "pinyin": "zhāng",
@@ -75,8 +71,7 @@
       "num": 4,
       "chars": [
         {
-          "h": "看",
-          "p": ""
+          "h": "看"
         }
       ],
       "pinyin": "kàn",
@@ -99,12 +94,10 @@
       "num": 5,
       "chars": [
         {
-          "h": "姐",
-          "p": ""
+          "h": "姐"
         },
         {
-          "h": "姐",
-          "p": ""
+          "h": "姐"
         }
       ],
       "pinyin": "jiějie",
@@ -115,8 +108,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "只",
-          "p": ""
+          "h": "只"
         }
       ],
       "pinyin": "zhǐ",
@@ -139,8 +131,7 @@
       "num": 7,
       "chars": [
         {
-          "h": "做",
-          "p": ""
+          "h": "做"
         }
       ],
       "pinyin": "zuò",
@@ -163,12 +154,10 @@
       "num": 8,
       "chars": [
         {
-          "h": "大",
-          "p": ""
+          "h": "大"
         },
         {
-          "h": "夫",
-          "p": ""
+          "h": "夫"
         }
       ],
       "pinyin": "dàifu",
@@ -191,12 +180,10 @@
       "num": 9,
       "chars": [
         {
-          "h": "医",
-          "p": ""
+          "h": "医"
         },
         {
-          "h": "院",
-          "p": ""
+          "h": "院"
         }
       ],
       "pinyin": "yīyuàn",
@@ -219,12 +206,10 @@
       "num": 10,
       "chars": [
         {
-          "h": "公",
-          "p": ""
+          "h": "公"
         },
         {
-          "h": "司",
-          "p": ""
+          "h": "司"
         }
       ],
       "pinyin": "gōngsī",
@@ -247,12 +232,10 @@
       "num": 11,
       "chars": [
         {
-          "h": "商",
-          "p": ""
+          "h": "商"
         },
         {
-          "h": "店",
-          "p": ""
+          "h": "店"
         }
       ],
       "pinyin": "shāngdiàn",
@@ -275,12 +258,10 @@
       "num": 12,
       "chars": [
         {
-          "h": "律",
-          "p": ""
+          "h": "律"
         },
         {
-          "h": "师",
-          "p": ""
+          "h": "师"
         }
       ],
       "pinyin": "lǜshī",
@@ -303,12 +284,10 @@
       "num": 13,
       "chars": [
         {
-          "h": "外",
-          "p": ""
+          "h": "外"
         },
         {
-          "h": "贸",
-          "p": ""
+          "h": "贸"
         }
       ],
       "pinyin": "wàimào",
@@ -331,8 +310,7 @@
       "num": 14,
       "chars": [
         {
-          "h": "小",
-          "p": ""
+          "h": "小"
         }
       ],
       "pinyin": "xiǎo",
@@ -355,12 +333,10 @@
       "num": 15,
       "chars": [
         {
-          "h": "员",
-          "p": ""
+          "h": "员"
         },
         {
-          "h": "工",
-          "p": ""
+          "h": "工"
         }
       ],
       "pinyin": "yuángōng",
@@ -383,12 +359,10 @@
       "num": 16,
       "chars": [
         {
-          "h": "大",
-          "p": ""
+          "h": "大"
         },
         {
-          "h": "概",
-          "p": ""
+          "h": "概"
         }
       ],
       "pinyin": "dàgài",
@@ -411,8 +385,7 @@
       "num": 17,
       "chars": [
         {
-          "h": "多",
-          "p": ""
+          "h": "多"
         }
       ],
       "pinyin": "duō",
@@ -436,12 +409,10 @@
       "num": 18,
       "chars": [
         {
-          "h": "外",
-          "p": ""
+          "h": "外"
         },
         {
-          "h": "国",
-          "p": ""
+          "h": "国"
         }
       ],
       "pinyin": "wàiguó",
@@ -465,6 +436,7 @@
   "dialogues": [
     {
       "title": "（一）你家有几口人",
+      "context": "（麦克和玛丽在看照片）",
       "lines": [
         {
           "role": "麦克",
@@ -506,6 +478,7 @@
     },
     {
       "title": "（二）你们公司有多少员工",
+      "context": "（王老师和关经理在谈话）",
       "lines": [
         {
           "role": "王老师",
@@ -542,37 +515,351 @@
       ]
     }
   ],
+  "phoneticsNotes": [],
+  "grammar": [
+    {
+      "title": "有字句 · Sở hữu",
+      "content": "Chủ ngữ + 有 + tân ngữ: 我有一本词典. Phủ định dùng 没有; nghi vấn dùng 有……吗 hoặc 有没有……？"
+    },
+    {
+      "title": "有字句 · Tồn tại",
+      "content": "Địa điểm/tổ chức + 有 + người/vật: 我家有五口人；公司有一百多个职员。"
+    },
+    {
+      "title": "几 và 多少",
+      "content": "几 thường hỏi số nhỏ, có thể dự đoán dưới 10; 多少 hỏi số lớn hoặc không ước tính được."
+    },
+    {
+      "title": "Cụm số lượng",
+      "content": "Số từ + lượng từ + danh từ: 一张照片、两本书、三辆车、五口人。"
+    },
+    {
+      "title": "二 và 两",
+      "content": "两 dùng trước lượng từ, 千, 万: 两个人、两千；二 dùng khi đếm và trong 二十、二百、二月、二楼。"
+    },
+    {
+      "title": "不都是 và 都不是",
+      "content": "不都是 = không phải tất cả; 都不是 = tất cả đều không/phủ định toàn bộ."
+    },
+    {
+      "title": "只",
+      "content": "只 đứng trước động từ hoặc 有: 我只看书；我只有两个弟弟。"
+    }
+  ],
   "exercises": {
-    "grammar": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 15 (8 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "有字句 · Sở hữu",
-        "content": "Chủ ngữ + 有 + tân ngữ: 我有一本词典. Phủ định dùng 没有; nghi vấn dùng 有……吗 hoặc 有没有……？"
+        "pageNumber": 186,
+        "label": "练习",
+        "text": "NERE (3M) 第一船 上\n\n入 Y Liànxí Exercises EK 0EAN @\n\n1) EE Phonetics\n(1) 辨音辨调。Distinguish the pronunciations and tones\n\nyiyuon        yìyuàn      jingi           jingli\nlishi          Nishi        gongsi         gongshi\n(2 ) 多音节连读 Multisyllabic liaison\nzhaoxiangji jisuonji     shéxiongji       fùyìnji\nshõuyïnji      diànshìji  diàònbingxiāng xiyiji\n\n(3) 朗读 Read out the following phrases\n有没有词典 有没有车   有没有哥哥 有没有朋友\n有汉语词典 有车     有哥哥    有朋友\n没有词典 ” 没有车      没有哥哥    没有朋友\n在医院工作 在大学学习 在银行换钱 ”在食堂吃饭\nLA    几个哥哥    几本词典    几张照片\n多少(个)人 多少(张)照片 多少(辆)车 多少(本)书\n两本书    三辆车      四把雨伞    EKRA\n二十本书 。 三十多辆车。 五十多把雨伞 一百多张照片\n\n2) HR Substitution exercises\n\n© aR      hudbao      pictorial\n\n© 数码相机    shima xiongji digital camera\n© $t       zhuðzi       desk\n\n@ 椅子       yizi         chair"
       },
       {
-        "title": "有字句 · Tồn tại",
-        "content": "Địa điểm/tổ chức + 有 + người/vật: 我家有五口人；公司有一百多个职员。"
+        "pageNumber": 187,
+        "label": "练习",
+        "text": "FHER seanma |\n\nLesson 15 How many people are there in your family \\\n\n(1) A: 你有汉语词典吗?      (2)A: 你有几本词典?\nB: 有                 B: 两本。\n汉语书                 个”数码相机\n中国地图                件 毛衣\n中文杂志                支 毛笔\n女/男朋友               K ”照片\n汉英词典                个 优盘\n中文画报                本 杂志\n(3) A: 你有没有中国       (4) A: 你们班有多少(个 )\n地图?                 #4?\nB: 没有。             B: 我们班有十八个\n学生、\n数码相机               十个    女同学\n自行车                 八个    男同学\n弟弟                  =tk #4\n妹妹                  tai ”椅子\n中文杂志               tak AA\n平板电脑                    五十四本 汉语书\n(5)A: 你答爸在哪儿工作?       医院 ”大学\nB: 我答爸在公司工作。        银行 。 邮局\n书店 ”商店"
       },
       {
-        "title": "几 và 多少",
-        "content": "几 thường hỏi số nhỏ, có thể dự đoán dưới 10; 多少 hỏi số lớn hoặc không ước tính được."
+        "pageNumber": 188,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n(6) A: 你妈妈做什么工作?       营业员 老师\nB: 我妈妈是大夫。           律师 aR\n经理     校长\n\n3) 读下列数目并用汉字写出来 Read the following numbers and write\nthem down in Chinese characters\n\n32                      45                       67                       99                     100\n166                    208                     423                     911                    1000\n1109              6854               7891                9806              10000\n\n4) 用汉字填写数词和量词 Fill in the blanks with numbers and measure\nwords in Chinese characters\n\n|        学生      学生\n\n(1)2 箱子一    箱子\n(2)7 #>    书\n\n(3)4 照片一    RÄ\n(4)3 ”衣服一    衣服\n(5) 1 ”自行车一     自行车\n(6)6 Æ>      £\n\n(7)5 优盘一    优盘\n(8)10 ”员工一    员工\n(9)4 ”椅子一    椅子\n(10)2 啤酒一    啤酒"
       },
       {
-        "title": "Cụm số lượng",
-        "content": "Số từ + lượng từ + danh từ: 一张照片、两本书、三辆车、五口人。"
+        "pageNumber": 189,
+        "label": "练习",
+        "text": "FHER  senza | ©\n\nLesson 15 How many people are there in your family\n\n3) 按照例句提问 Ask questions after the example given\nBl: A: 你家有几口人?\nB: 我家有六口人。\nA: 你们班有多少 (个) 学生?\nB: 我们班有十八个学生。\n\n(DD) A:                  fi\nB: 我有四本中文书 。\n\n(2) A:                  ?\nB: 他有三个中国朋友\n\n(3)A:                  ?\nB: 他家有四口人。\n\n(4) A:                  ?\nB: 这个公司有二十多个员工。\n\n(5)A:                  ?\n\nB: 我有一本《英汉词典》。\n\n例: A: 你有没有《汉英词典》?\nB: RA (RERA)\n\n(1) A:                    ?\nB: ARA (EIA).\n(2) A:                      4\n\nB: 这个大学有八千多个留学生。"
       },
       {
-        "title": "二 và 两",
-        "content": "两 dùng trước lượng từ, 千, 万: 两个人、两千；二 dùng khi đếm và trong 二十、二百、二月、二楼。"
+        "pageNumber": 190,
+        "label": "练习",
+        "text": "NERE (3M) 第一船 上\n\n(3) A:                      ?\nB: 他有中文杂志。\n\n(4) A:                      ?\nB: 我们班没有美国学生\n\n(5S) A:                      ?\nB: 她没有中国地图。\n\n©) 4 Make sentences\n|例: 有 你 吗 汉语 词典一你有汉语词典吗? |\n\n(1)没有 他 哥哥 妹妹 和一\n(2)几个 有 你 PA 朋友一\n(3)你们 有 学生 多少 班一\nWR 自行车 没有一\n\n(5)你 没有 中国 地图 有一\n\n1) 根据实际情况回答下列问题 Answer the questions according to the\nactual situations\nO) 你家有几口人?\n(2) 你爸爸在哪儿工作? 你妈妈呢?\nG) 你有没有哥哥/姐姐/弟弟/妹妹?\n(4) 他们在哪儿工作/ 学习?\n(5) 你有词典吗?\n(6) 你有什么词典?\n(7) 你有几本词典?\n(8) 你有没有中国朋友?"
       },
       {
-        "title": "不都是 và 都不是",
-        "content": "不都是 = không phải tất cả; 都不是 = tất cả đều không/phủ định toàn bộ."
+        "pageNumber": 191,
+        "label": "练习",
+        "text": "PEER 你家有几口人\nLesson 15 How many people are there in your family\n\n(9) 你们班有多少学生?\n(10) 你们班有几个男同学?几个女同学?\n\n3) 读后复述 Read and retell\n\n我叫山本。我家有四口人，和爸爸、妈妈、姐姐和我。和爸爸\n是一家医院的大夫，他每天工作都很忙。妈妈不工作，在家做\n家务( jiawu, household chores )。、姐姐是一家银行的员工，工作也\n很忙。我是北京语言大学的留学生，我学习汉语。姐姐有一个\n男朋友，姐姐说她的男朋友很好，我很高兴。我还没有男朋\n友，但我有很多朋友，有日本朋友，也有人外国朋友。\n\n自) 交际会话 Communication\n(1) 谈家庭。Talking about one’s family\nA: 你家有几口人?\nB: 四口人\nA: 你爸爸做什么工作?\nB: 我爸爸是律师\nA: 你妈妈呢?\nB: 我妈妈是经理，在一家公司工作\n(2) {KP Borrowing something\nA: 小张，你有自行车吗?\nB: 有。\nA: 我用 (yong,touse ) 一下儿，好吗?\nB: 好。给你铀是 ( yòoshi, key )\nA: 车在哪儿呢?\nB: 3t (jiù, exactly ) 在楼下。"
       },
       {
-        "title": "只",
-        "content": "只 đứng trước động từ hoặc 有: 我只看书；我只有两个弟弟。"
+        "pageNumber": 192,
+        "label": "练习",
+        "text": "NERE (P3) BM 上\n\nA: 是什么颜色的?\n\nB: 黑色。\n\nA: 新的还是旧的?\n\nB: 新的。你看，就是那辆。\n\n10) 写汉字 Write the characters\n\nHP ”op\n只\nü -+A\n夫\npion ) PA\n片\n\nwai | ”乡下外\n\n外\n\n5 |]可丫司司\n\n号\n\nquán 了 AAAA\n\n全站\n\nW | 7 7FEFRE\n\n医\n\nwn 让记户广这辽除院\nE   ]"
+      },
+      {
+        "pageNumber": 193,
+        "label": "练习",
+        "text": "第十五误 你家有几口人\nLesson 15 How many people are there in your family\n\nAEE ELEEI\n\n姐                  |            |\n\no| rrera try\n\n哥                |          |\n\n中| ”“当为弟弟\n\nA H-H\n\nkin ” ”三天不看看看看\n\nzu 7 A PARRER"
+      }
+    ],
+    "blocks": [
+      {
+        "title": "有没有",
+        "desc": "Luyện hỏi có/không",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "有没有词典"
+              },
+              {
+                "ph": "有没有车"
+              },
+              {
+                "ph": "有没有哥哥"
+              },
+              {
+                "ph": "有没有朋友"
+              },
+              {
+                "ph": "有汉语词典"
+              },
+              {
+                "ph": "没有中国地图"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "几和多少",
+        "desc": "Luyện số lượng",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "几口人"
+              },
+              {
+                "ph": "几个哥哥"
+              },
+              {
+                "ph": "几本词典"
+              },
+              {
+                "ph": "几张照片"
+              },
+              {
+                "ph": "多少人"
+              },
+              {
+                "ph": "多少辆车"
+              },
+              {
+                "ph": "多少本书"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "数量短语",
+        "desc": "Đọc cụm số lượng",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "两本书"
+              },
+              {
+                "ph": "三辆车"
+              },
+              {
+                "ph": "四把椅子"
+              },
+              {
+                "ph": "五张照片"
+              },
+              {
+                "ph": "二十本书"
+              },
+              {
+                "ph": "三十多辆车"
+              },
+              {
+                "ph": "一百多张照片"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "职业问答",
+        "desc": "Thay thế nghề nghiệp và nơi làm việc",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你爸爸在哪儿工作？— 在公司工作。"
+              },
+              {
+                "ph": "你妈妈做什么工作？— 她是大夫。"
+              },
+              {
+                "ph": "医院／大学／银行／邮局／商店"
+              },
+              {
+                "ph": "营业员／老师／律师／教授／经理／校长"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "组句",
+        "desc": "Sắp xếp thành câu",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "没有／他／哥哥／妹妹／和"
+              },
+              {
+                "ph": "几个／有／你／中国朋友"
+              },
+              {
+                "ph": "你们班／有／学生／多少"
+              },
+              {
+                "ph": "你／有／没有／中国地图"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "实际回答",
+        "desc": "Trả lời theo thực tế",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你家有几口人？"
+              },
+              {
+                "ph": "你爸爸在哪儿工作？"
+              },
+              {
+                "ph": "你有没有哥哥姐姐？"
+              },
+              {
+                "ph": "你有几本词典？"
+              },
+              {
+                "ph": "你们班有多少学生？"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ mẫu câu trọng tâm của bài",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Đã loại bỏ các bài nghe và phần điền cuối bài",
+        "note": ""
+      }
+    },
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 15"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "15-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（一）· Nghe bài khóa 1",
+      "code": "15-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（二）· Nghe bài khóa 2",
+      "code": "15-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "15-4",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 186,
+      "caption": "Trang bài tập trong PDF: 186",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 187,
+      "caption": "Trang bài tập trong PDF: 187",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 188,
+      "caption": "Trang bài tập trong PDF: 188",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 189,
+      "caption": "Trang bài tập trong PDF: 189",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 190,
+      "caption": "Trang bài tập trong PDF: 190",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 191,
+      "caption": "Trang bài tập trong PDF: 191",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 192,
+      "caption": "Trang bài tập trong PDF: 192",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 193,
+      "caption": "Trang bài tập trong PDF: 193",
+      "imageUrl": ""
+    }
+  ]
 }

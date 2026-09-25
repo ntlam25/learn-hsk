@@ -1,0 +1,780 @@
+/*
+ * CSS gốc của "Giáo trình Hán ngữ Bài 1–15.html", chuyển nguyên văn (không đổi giá trị),
+ * chỉ bọc selector trong .book-view để không ảnh hưởng phần còn lại của hệ thống.
+ * - :root  -> .book-view (biến màu dùng riêng cho trang xem/soạn bài)
+ * - body   -> html.book-mode body (nền giấy + 2 vệt màu cố định, chỉ bật ở trang xem bài)
+ * Sinh bằng script chuyển đổi — sửa giao diện bài học thì sửa ở đây hoặc ở phần "Bổ sung" bên dưới.
+ */
+.book-view, html.book-mode body { --ink:#4A2839;
+    --ink-soft:#70465B;
+    --paper:#FCEAF2;
+    --paper-light:#FFF8FB;
+    --paper-deep:#F5D7E5;
+    --seal:#E85D93;
+    --seal-dark:#C63F79;
+    --gold:#D38AAD;
+    --gold-light:#F4C6DB;
+    --jade:#A85783;
+    --jade-light:#DEA0BE;
+    --line:rgba(74,40,57,0.14);
+    --shadow: 0 10px 30px rgba(154,72,112,0.16);
+    --radius: 14px; }
+.book-view, .book-view * { box-sizing:border-box; }
+html.book-mode { scroll-behavior:smooth; }
+html.book-mode body { margin:0;
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 10% 5%, rgba(232,93,147,0.08), transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(211,138,173,0.10), transparent 40%);
+    color:var(--ink);
+    font-family:'Be Vietnam Pro', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased; }
+.book-view .hanzi { font-family:'Noto Serif SC', serif; }
+.book-view .viet-serif { font-family:'Noto Serif', serif; }
+.book-view a { color:inherit; }
+.book-view header.hero { position:relative; padding:64px 20px 48px; text-align:center; overflow:hidden;
+    border-bottom:1px solid var(--line); }
+.book-view header.hero::before { content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:34px 34px; opacity:0.35;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 72%); }
+.book-view .seal { position:relative; z-index:2; width:104px; height:104px; margin:0 auto 22px;
+    border-radius:10px; background:var(--seal); color:var(--paper-light);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Noto Serif SC', serif; font-size:2.5rem; font-weight:700;
+    box-shadow: var(--shadow); transform:rotate(-3deg);
+    border:3px solid rgba(255,248,251,0.92); letter-spacing:2px; }
+.book-view header.hero h1 { position:relative; z-index:2; font-family:'Noto Serif SC', serif;
+    font-size:clamp(2.4rem, 6vw, 4rem); margin:0 0 6px; font-weight:900; color:var(--ink); }
+.book-view header.hero .subtitle { position:relative; z-index:2; font-family:'Noto Serif', serif; font-style:italic;
+    font-size:clamp(1.05rem,2.4vw,1.35rem); color:var(--ink-soft); margin:0 0 4px; }
+.book-view header.hero .lesson-tag { position:relative; z-index:2; display:inline-block; margin-top:18px;
+    padding:6px 18px; border:1px solid var(--gold); border-radius:999px;
+    font-size:0.82rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); font-weight:600; }
+.book-view nav.tabs { position:sticky; top:0; z-index:50; display:flex; justify-content:center; gap:6px;
+    background:rgba(252,234,242,0.94); backdrop-filter:blur(6px); padding:12px 14px;
+    border-bottom:1px solid var(--line); flex-wrap:wrap; }
+.book-view nav.tabs button { font-family:'Be Vietnam Pro', sans-serif; font-weight:600; font-size:0.92rem;
+    padding:10px 20px; border-radius:999px; border:1px solid transparent; background:transparent;
+    color:var(--ink-soft); cursor:pointer; transition:all .25s ease; }
+.book-view nav.tabs button .zh { font-family:'Noto Serif SC',serif; margin-right:6px; opacity:.75; }
+.book-view nav.tabs button:hover { background:rgba(232,93,147,0.10); }
+.book-view nav.tabs button.active { background:var(--seal); color:var(--paper-light); box-shadow:var(--shadow); }
+.book-view nav.tabs button.active .zh { opacity:1; color: var(--gold-light); }
+.book-view main { max-width:1080px; margin:0 auto; padding:36px 20px 100px; }
+.book-view section.panel { display:none; animation:fadeIn .4s ease; }
+.book-view section.panel.active { display:block; }
+@keyframes fadeIn { from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+.book-view .section-head { text-align:center; margin-bottom:34px; }
+.book-view .section-head h2 { font-family:'Noto Serif SC', serif; font-size:clamp(1.8rem,4vw,2.4rem); margin:0 0 4px; }
+.book-view .section-head p { margin:0; color:var(--ink-soft); font-family:'Noto Serif',serif; font-style:italic; }
+.book-view .progress-wrap { max-width:420px; margin:18px auto 0; display:flex; align-items:center; gap:10px;
+    font-size:0.85rem; color:var(--ink-soft); }
+.book-view .progress-bar { flex:1; height:8px; background:var(--paper-deep); border-radius:999px; overflow:hidden; border:1px solid var(--line); }
+.book-view .progress-bar-fill { height:100%; background:linear-gradient(90deg, var(--seal), var(--gold)); width:0%; transition:width .3s ease; }
+.book-view .vocab-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:20px; }
+.book-view .vcard { background:var(--paper-light); border:1px solid var(--line); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:18px 18px 16px; position:relative;
+    display:flex; flex-direction:column; gap:10px; }
+.book-view .vcard.done { box-shadow:0 0 0 2px var(--jade), var(--shadow); }
+.book-view .vcard-top { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.book-view .vnum { font-size:0.72rem; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; }
+.book-view .check-btn { width:26px; height:26px; border-radius:50%; border:1.5px solid var(--jade-light);
+    background:transparent; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    color:transparent; font-size:14px; font-weight:900; transition:all .2s ease; flex-shrink:0; }
+.book-view .vcard.done .check-btn { background:var(--jade); color:#fff; border-color:var(--jade); }
+.book-view .char-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; padding:6px 0 2px; }
+.book-view .char-box { display:flex; flex-direction:column; align-items:center; gap:6px; }
+.book-view .tianzige { width:78px; height:78px; background:var(--paper-light); border:1.5px solid var(--ink);
+    position:relative; display:flex; align-items:center; justify-content:center;
+    border-radius:4px; overflow:hidden; }
+.book-view .tianzige::before, .book-view .tianzige::after { content:""; position:absolute; background:var(--line); }
+.book-view .tianzige::before { left:50%; top:0; bottom:0; width:1px; transform:translateX(-50%); }
+.book-view .tianzige::after { top:50%; left:0; right:0; height:1px; transform:translateY(-50%); }
+.book-view .tianzige .zh { position:relative; z-index:2; font-size:2.5rem; line-height:1; color:var(--ink); }
+.book-view .tianzige img.stroke { position:relative; z-index:2; width:100%; height:100%; object-fit:contain; }
+.book-view .char-pinyin { font-size:0.85rem; color:var(--ink-soft); font-weight:600; }
+.book-view .char-radical { font-size:0.68rem; color:var(--gold); background:rgba(211,138,173,0.14);
+    border:1px solid rgba(211,138,173,0.40); padding:2px 7px; border-radius:999px; white-space:nowrap; }
+.book-view .word-pinyin { text-align:center; font-size:1.05rem; font-weight:700; color:var(--seal-dark); font-family:'Noto Serif',serif; }
+.book-view .pos { text-align:center; font-size:0.78rem; color:var(--gold); font-weight:600; }
+.book-view .meaning { text-align:center; font-size:0.98rem; }
+.book-view .meaning-en { text-align:center; font-size:0.82rem; color:var(--ink-soft); font-style:italic; }
+.book-view .example-box { margin-top:4px; padding:8px 10px; background:rgba(168,87,131,0.09);
+    border-radius:8px; font-size:0.85rem; border:1px dashed var(--jade-light); }
+.book-view .example-box b { color:var(--jade); font-family:'Noto Serif SC',serif; }
+.book-view .note-box { margin-top:2px; padding:8px 10px; background:rgba(232,93,147,0.08);
+    border-radius:8px; font-size:0.82rem; border:1px dashed rgba(232,93,147,0.38); color:var(--ink-soft); }
+.book-view .sub-entry { margin-top:6px; padding-top:12px; border-top:1px dashed var(--line);
+    display:flex; flex-direction:column; gap:8px; }
+.book-view .sub-label { font-size:0.68rem; color:var(--gold); text-transform:uppercase; letter-spacing:1px; font-weight:700; text-align:center; }
+.book-view .wordlist { display:flex; flex-direction:column; gap:6px; margin-top:4px; }
+.book-view .wordlist-item { display:flex; align-items:baseline; gap:8px; padding:6px 10px; background:var(--paper);
+    border-radius:6px; font-size:0.88rem; flex-wrap:wrap; }
+.book-view .wordlist-item .wh { font-family:'Noto Serif SC',serif; font-size:1.1rem; }
+.book-view .wordlist-item .wp { color:var(--seal-dark); font-weight:600; font-family:'Noto Serif',serif; }
+.book-view .wordlist-item .wm { color:var(--ink-soft); margin-left:auto; }
+.book-view .dialogue-card { background:var(--paper-light); border:1px solid var(--line); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:30px clamp(16px,4vw,40px); max-width:760px; margin:0 auto 30px; }
+.book-view .dlg-line { display:flex; gap:14px; margin-bottom:20px; align-items:flex-start; }
+.book-view .dlg-avatar { flex-shrink:0; width:40px; height:40px; border-radius:50%; background:var(--seal); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-family:'Noto Serif SC',serif; }
+.book-view .dlg-avatar.B { background:var(--gold); }
+.book-view .dlg-avatar.C { background:var(--jade); }
+.book-view .dlg-text { font-family:'Noto Serif SC',serif; font-size:1.35rem; padding-top:4px; }
+.book-view .dlg-pinyin { font-size:0.8rem; color:var(--ink-soft); margin-top:2px; }
+.book-view .dlg-gap { height:8px; }
+.book-view .dlg-title { font-family:'Noto Serif',serif; font-style:italic; font-size:1.05rem; color:var(--gold);
+    text-align:center; margin-bottom:18px; padding-bottom:12px; border-bottom:1px dashed var(--line); }
+.book-view .ex-block { background:var(--paper-light); border:1px solid var(--line); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:24px clamp(16px,4vw,30px); margin-bottom:26px; }
+.book-view .ex-block h3 { margin:0 0 4px; font-family:'Noto Serif',serif; font-size:1.25rem; display:flex; align-items:center; gap:10px; }
+.book-view .ex-num { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%;
+    background:var(--seal); color:#fff; font-size:0.85rem; font-weight:700; flex-shrink:0; }
+.book-view .ex-desc { margin:0 0 16px; color:var(--ink-soft); font-size:0.88rem; }
+.book-view .ex-subtitle { font-weight:700; font-size:0.86rem; color:var(--seal-dark); margin:14px 0 8px; }
+.book-view .pinyin-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(110px,1fr)); gap:8px; }
+.book-view .pinyin-chip { text-align:center; padding:9px 6px; background:var(--paper); border:1px solid var(--line);
+    border-radius:8px; font-weight:600; font-size:0.9rem; cursor:pointer; user-select:none;
+    transition:all .18s ease; font-family:'Noto Serif',serif; }
+.book-view .pinyin-chip.done { background:var(--jade); color:#fff; border-color:var(--jade); }
+.book-view .sentence-list { display:flex; flex-direction:column; gap:10px; }
+.book-view .sentence-item { display:flex; align-items:center; gap:12px; padding:12px 14px; background:var(--paper);
+    border:1px solid var(--line); border-radius:8px; font-family:'Noto Serif',serif; font-size:1.05rem;
+    cursor:pointer; transition:all .18s ease; }
+.book-view .sentence-item.done { background:rgba(168,87,131,0.13); border-color:var(--jade); }
+.book-view .sentence-num { font-family:'Be Vietnam Pro',sans-serif; font-size:0.8rem; color:var(--gold); font-weight:700; flex-shrink:0; }
+.book-view .audio-card { max-width:560px; margin:0 auto 30px; background:var(--paper-light); border:1px solid var(--line);
+    border-radius:var(--radius); box-shadow:var(--shadow); padding:16px 20px; display:flex; align-items:center; gap:14px; }
+.book-view .audio-icon { flex-shrink:0; width:44px; height:44px; border-radius:50%; background:var(--seal); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+.book-view .audio-info { flex:1; min-width:0; }
+.book-view .audio-info .audio-title { font-weight:700; font-size:0.95rem; color:var(--ink); margin-bottom:2px; }
+.book-view .audio-info .audio-sub { font-size:0.78rem; color:var(--ink-soft); }
+.book-view .audio-card audio { width:100%; margin-top:8px; }
+@media (max-width:480px) {
+  .book-view .audio-card { flex-direction:column; align-items:stretch; }
+}
+.book-view .group-title { font-family:'Noto Serif SC',serif; font-size:1.3rem; margin:44px 0 18px; text-align:center;
+    color:var(--seal-dark); position:relative; }
+.book-view .group-title .vi { display:block; font-family:'Noto Serif',serif; font-style:italic; font-size:0.95rem; color:var(--ink-soft); margin-top:2px; }
+.book-view .country-table { max-width:640px; margin:0 auto; background:var(--paper-light); border:1px solid var(--line);
+    border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+.book-view .country-row { display:grid; grid-template-columns:1fr 1fr 1.6fr; gap:10px; padding:10px 18px;
+    border-bottom:1px solid var(--line); align-items:center; }
+.book-view .country-row:last-child { border-bottom:none; }
+.book-view .country-row .ch { font-family:'Noto Serif SC',serif; font-size:1.15rem; }
+.book-view .country-row .py { color:var(--seal-dark); font-weight:600; font-family:'Noto Serif',serif; font-size:0.92rem; }
+.book-view .country-row .mn { color:var(--ink-soft); font-size:0.88rem; }
+.book-view footer { text-align:center; padding:30px 20px 50px; color:var(--ink-soft); font-size:0.82rem; }
+.book-view footer .zh { font-family:'Noto Serif SC',serif; }
+@media (max-width:600px) {
+  .book-view .tianzige { width:64px; height:64px; }
+  .book-view .tianzige .zh { font-size:2rem; }
+  .book-view .dlg-text { font-size:1.15rem; }
+  .book-view .country-row { grid-template-columns:1fr 1fr; }
+  .book-view .country-row .mn { grid-column:1/3; }
+}
+.book-view .tianzige.writer-host { cursor:pointer; }
+.book-view .tianzige.writer-host svg { position:relative; z-index:2; width:100%!important; height:100%!important; display:block; }
+.book-view .tianzige.writer-host .stroke-fallback { opacity:.34; }
+.book-view .stroke-hint { margin-top:4px; text-align:center; font-size:.68rem; color:var(--jade);
+    font-weight:600; }
+.book-view .audio-state { margin-top:5px; font-size:.72rem; line-height:1.4; }
+.book-view .audio-state.ready { color:var(--jade); }
+.book-view .audio-state.error { color:var(--seal-dark); font-weight:600; }
+.book-view .tech-note { max-width:760px; margin:0 auto 24px; padding:11px 14px; border-radius:10px;
+    background:rgba(168,87,131,.09); border:1px dashed var(--jade-light);
+    color:var(--ink-soft); font-size:.82rem; text-align:center; }
+.book-view .stroke-toggle { margin-left:auto; border:1px solid var(--jade-light); background:rgba(168,87,131,.09);
+    color:var(--jade); border-radius:999px; padding:5px 10px; cursor:pointer;
+    font-family:'Be Vietnam Pro',sans-serif; font-size:.72rem; font-weight:700; white-space:nowrap; }
+.book-view .stroke-toggle:hover { background:rgba(168,87,131,.16); }
+.book-view .inline-stroke-panel { width:100%; display:none; gap:8px; flex-wrap:wrap; justify-content:center;
+    padding:10px 4px 2px; border-top:1px dashed var(--line); margin-top:7px; }
+.book-view .inline-stroke-panel.open { display:flex; }
+.book-view .mini-writer-wrap { display:flex; flex-direction:column; align-items:center; gap:3px; }
+.book-view .mini-writer { width:62px; height:62px; border:1px solid var(--line); border-radius:6px; background:var(--paper-light);
+    position:relative; overflow:hidden; }
+.book-view .mini-writer::before, .book-view .mini-writer::after { content:""; position:absolute; background:var(--line); z-index:0; }
+.book-view .mini-writer::before { left:50%; top:0; bottom:0; width:1px; }
+.book-view .mini-writer::after { top:50%; left:0; right:0; height:1px; }
+.book-view .mini-writer svg { position:relative; z-index:2; }
+.book-view .mini-label { font-family:'Noto Serif SC',serif; font-size:.82rem; color:var(--ink-soft); }
+.book-view .country-row { flex-wrap:wrap; }
+.book-view .country-main { display:contents; }
+.book-view .dlg-avatar.long-role { width:auto; min-width:54px; padding:0 9px; border-radius:999px; font-size:.8rem; }
+.book-view .lesson-app { display:none; }
+.book-view .lesson-app.active { display:block; }
+.book-view .example-list { display:flex; flex-direction:column; gap:8px; margin-top:4px; }
+.book-view .example-line { padding:9px 10px; border-radius:8px; background:rgba(75,110,94,.07); border:1px dashed var(--jade-light); }
+.book-view .example-hanzi { font-family:'Noto Serif SC',serif; font-size:1.02rem; font-weight:700; color:var(--jade); }
+.book-view .example-pinyin { font-family:'Noto Serif',serif; font-size:.78rem; color:var(--seal-dark); margin-top:2px; }
+.book-view .example-vi { font-size:.76rem; color:var(--ink-soft); margin-top:1px; }
+.book-view .official-note { max-width:820px; margin:0 auto 24px; padding:12px 16px; border-radius:10px;
+    background:rgba(211,138,173,.12); border:1px dashed var(--gold); color:var(--ink-soft); font-size:.84rem; text-align:center; }
+.book-view .extension-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+.book-view .extension-chip { padding:10px 12px; border-radius:9px; background:var(--paper-light); border:1px solid var(--line); box-shadow:0 5px 14px rgba(154,72,112,.10); }
+.book-view .extension-chip .eh { font-family:'Noto Serif SC',serif; font-size:1.15rem; font-weight:700; }
+.book-view .extension-chip .ep { font-family:'Noto Serif',serif; font-size:.82rem; color:var(--seal-dark); }
+.book-view .extension-chip .em { font-size:.76rem; color:var(--ink-soft); }
+.book-view .phonetics-hero { max-width:840px; margin:0 auto 24px; padding:22px; border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(232,93,147,.12),rgba(211,138,173,.14)); border:1px solid rgba(232,93,147,.28); box-shadow:var(--shadow); }
+.book-view .phonetics-hero h3 { font-family:'Noto Serif SC',serif; margin:0 0 8px; font-size:1.45rem; }
+.book-view .big-one { display:inline-grid; place-items:center; width:60px; height:60px; border-radius:12px; background:var(--seal); color:#fff;
+    font-family:'Noto Serif SC',serif; font-size:2.4rem; margin-right:12px; vertical-align:middle; box-shadow:0 7px 18px rgba(232,93,147,.30); }
+.book-view .rule-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:18px; }
+.book-view .rule-card { background:var(--paper-light); border:1px solid var(--line); border-radius:12px; padding:16px; }
+.book-view .rule-card strong { display:block; color:var(--seal-dark); margin-bottom:6px; }
+.book-view .rule-card .rule-form { font-family:'Noto Serif',serif; font-size:1.05rem; font-weight:700; margin-bottom:7px; }
+.book-view .tone-y1 { background:rgba(168,87,131,.16); color:var(--jade); padding:1px 5px; border-radius:5px; font-weight:800; }
+.book-view .tone-y2 { background:rgba(211,138,173,.19); color:#8a5b18; padding:1px 5px; border-radius:5px; font-weight:800; }
+.book-view .tone-y4 { background:rgba(232,93,147,.15); color:var(--seal-dark); padding:1px 5px; border-radius:5px; font-weight:800; }
+.book-view .phonetic-note { margin-top:14px; padding:11px 13px; border-left:4px solid var(--seal); background:rgba(174,52,40,.06); border-radius:0 8px 8px 0; font-size:.84rem; }
+.book-view .mini-note-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin:22px 0; }
+.book-view .mini-note { background:var(--paper-light); border:1px solid var(--line); border-radius:12px; padding:16px; box-shadow:0 5px 16px rgba(154,72,112,.10); }
+.book-view .mini-note h4 { margin:0 0 7px; font-family:'Noto Serif SC',serif; color:var(--seal-dark); }
+.book-view .tone-quiz { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px; }
+.book-view .tone-question { padding:13px; background:var(--paper); border:1px solid var(--line); border-radius:10px; }
+.book-view .tone-word { font-family:'Noto Serif SC',serif; font-size:1.25rem; font-weight:700; margin-bottom:8px; }
+.book-view .tone-options { display:flex; gap:6px; flex-wrap:wrap; }
+.book-view .tone-options button { border:1px solid var(--line); background:var(--paper-light); border-radius:999px; padding:6px 10px; cursor:pointer; font-weight:700; color:var(--ink-soft); }
+.book-view .tone-options button.correct { background:var(--jade); color:#fff; border-color:var(--jade); }
+.book-view .tone-options button.wrong { background:var(--seal); color:#fff; border-color:var(--seal); }
+.book-view .tone-result { font-size:.75rem; margin-top:6px; min-height:1.2em; color:var(--ink-soft); }
+.book-view .zi-light { color:var(--gold); font-weight:800; text-decoration:underline dotted; text-underline-offset:3px; }
+.book-view .location-divider { text-align:center; font-family:'Noto Serif',serif; font-style:italic; color:var(--gold); margin:22px 0 16px;
+    padding:7px 12px; border-top:1px dashed var(--line); border-bottom:1px dashed var(--line); }
+.book-view .dlg-text .focus, .book-view .dlg-pinyin .focus { background:rgba(211,138,173,.24); padding:1px 4px; border-radius:5px; }
+.book-view .dialogue-tip { max-width:760px; margin:0 auto 22px; padding:10px 14px; border-radius:9px; background:rgba(168,87,131,.09); border:1px dashed var(--jade-light); font-size:.82rem; color:var(--ink-soft); }
+.book-view .practice-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:9px; }
+.book-view .practice-chip { padding:10px 12px; background:var(--paper); border:1px solid var(--line); border-radius:9px; cursor:pointer; transition:.18s ease; }
+.book-view .practice-chip:hover { transform:translateY(-1px); }
+.book-view .practice-chip.done { background:rgba(168,87,131,.15); border-color:var(--jade); }
+.book-view .practice-chip .ph { font-family:'Noto Serif SC',serif; font-size:1.1rem; font-weight:700; }
+.book-view .practice-chip .pp { font-family:'Noto Serif',serif; font-size:.8rem; color:var(--seal-dark); }
+.book-view .reading-box { padding:18px; background:var(--paper); border:1px solid var(--line); border-radius:10px; font-family:'Noto Serif SC',serif; font-size:1.18rem; line-height:2; }
+.book-view .homework-list { display:grid; gap:9px; }
+.book-view .homework-item { padding:10px 12px; background:rgba(211,138,173,.10); border:1px dashed var(--gold); border-radius:8px; }
+@media(max-width:620px) {
+  .book-view .phonetics-hero { padding:16px; }
+}
+.book-view .stroke-service-state { max-width:820px;margin:0 auto 16px;padding:9px 12px;border-radius:9px;
+    background:rgba(168,87,131,.09);border:1px dashed var(--jade-light);font-size:.8rem;color:var(--ink-soft);text-align:center; }
+.book-view .stroke-service-state.ok { color:var(--jade); }
+.book-view .stroke-service-state.warn { color:var(--seal-dark); }
+.book-view .tianzige.char-runner { cursor:pointer; }
+.book-view .tianzige.char-runner::after { content:'▶';position:absolute;right:3px;bottom:1px;z-index:4;font-size:.55rem;color:var(--seal);opacity:.65; }
+.book-view .tianzige.char-runner.run .zh, .book-view .mini-writer.fallback-run.run .zh { animation:offlineInkRun 1.05s ease both; }
+@keyframes offlineInkRun {
+    0%{opacity:.08;clip-path:inset(0 100% 0 0);transform:scale(.92);filter:blur(2px)}
+    55%{opacity:.8;clip-path:inset(0 35% 0 0);filter:blur(.4px)}
+    100%{opacity:1;clip-path:inset(0 0 0 0);transform:scale(1);filter:none}
+  }
+.book-view .static-fallback-badge { font-size:.68rem;color:var(--jade);text-align:center;margin-top:4px; }
+.book-view .book-source-note { max-width:880px;margin:14px auto 22px;padding:12px 15px;border-radius:10px;background:rgba(75,110,94,.09);border:1px dashed var(--jade-light);color:var(--ink-soft);font-size:.86rem;text-align:center }
+.book-view .book-aligned-card { border-top:4px solid var(--jade) }
+.book-view .book-vocab-grid .char-row { min-height:78px }
+.book-view .legacy-dummy { display:none!important }
+.book-view .book-proper-table { max-width:760px;margin:0 auto 28px;background:var(--paper-light);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden }
+.book-view .book-proper-row { display:grid;grid-template-columns:1.2fr 1.2fr 2fr;gap:12px;padding:11px 18px;border-bottom:1px solid var(--line);align-items:center }
+.book-view .book-proper-row:last-child { border-bottom:none }
+.book-view .book-proper-row .hanzi { font-size:1.2rem;font-weight:700 }
+.book-view .book-proper-row span:nth-child(2) { color:var(--seal-dark);font-family:'Noto Serif',serif;font-weight:600 }
+.book-view .book-proper-row span:nth-child(3) { color:var(--ink-soft);font-size:.88rem }
+.book-view .book-dialogue .dlg-speaker { font-size:.76rem;color:var(--gold);font-weight:700;margin-bottom:1px }
+.book-view .book-context { text-align:center;color:var(--ink-soft);font-style:italic;margin:-6px 0 18px;font-size:.88rem }
+.book-view .book-dialogue .dlg-text { padding-top:0 }
+.book-view .book-exercises { margin:0 0 28px;background:var(--paper-light);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden }
+.book-view .book-exercises>summary { cursor:pointer;padding:18px 22px;background:rgba(211,138,173,.15);font-weight:800;color:var(--seal-dark);font-family:'Noto Serif',serif;font-size:1.08rem }
+.book-view .book-page-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px;padding:18px }
+.book-view .book-page-card { margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 5px 16px rgba(154,72,112,.12) }
+.book-view .book-page-card img { width:100%;height:auto;display:block;cursor:zoom-in }
+.book-view .book-page-card figcaption { padding:8px 10px;text-align:center;font-size:.76rem;color:var(--ink-soft);background:var(--paper-light) }
+.book-view .teacher-extra-divider { text-align:center;margin:28px 0;color:var(--gold);font-family:'Noto Serif',serif;font-weight:700;border-top:1px dashed var(--line);padding-top:20px }
+@media(max-width:600px) {
+  .book-view .book-proper-row { grid-template-columns:1fr 1fr }
+  .book-view .book-proper-row span:nth-child(3) { grid-column:1/3 }
+  .book-view .book-page-grid { grid-template-columns:1fr;padding:10px }
+  .book-view .book-exercises>summary { padding:14px 16px;font-size:.95rem }
+}
+html.book-mode body::before, html.book-mode body::after { content:""; position:fixed; z-index:-1; pointer-events:none; border-radius:50%; filter:blur(2px); }
+html.book-mode body::before { width:260px;height:260px;left:-90px;top:18vh;background:rgba(244,198,219,.24); }
+html.book-mode body::after { width:320px;height:320px;right:-130px;bottom:8vh;background:rgba(232,93,147,.13); }
+.book-view .vcard, .book-view .dialogue-card, .book-view .ex-block, .book-view .book-exercises, .book-view .book-proper-table { backdrop-filter:blur(2px); }
+.book-view .tianzige.char-runner.auto-writing { box-shadow:0 0 0 3px rgba(232,93,147,.14); }
+.book-view .embedded-audio-panel { max-width:1080px;margin:0 auto; }
+.book-view .embedded-audio-note { max-width:760px;margin:0 auto 24px;padding:11px 14px;border-radius:12px;
+    background:rgba(232,93,147,.09);border:1px dashed var(--jade-light);
+    color:var(--ink-soft);font-size:.84rem;text-align:center; }
+.book-view .embedded-audio-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px; }
+.book-view .embedded-audio-track { background:var(--paper-light);border:1px solid var(--line);border-radius:16px;
+    box-shadow:var(--shadow);padding:17px;overflow:hidden; }
+.book-view .embedded-audio-track-head { display:flex;align-items:center;gap:12px;margin-bottom:12px; }
+.book-view .embedded-audio-icon { width:42px;height:42px;display:grid;place-items:center;flex:0 0 auto;border-radius:50%;
+    background:linear-gradient(135deg,var(--seal),var(--gold));color:#fff;
+    font-family:'Noto Serif',serif;font-size:1.25rem;font-weight:800; }
+.book-view .embedded-audio-meta { display:flex;flex-direction:column;min-width:0;flex:1; }
+.book-view .embedded-audio-meta strong { font-size:.98rem;color:var(--ink); }
+.book-view .embedded-audio-meta span { font-size:.73rem;color:var(--ink-soft);margin-top:2px; }
+.book-view .embedded-audio-index { min-width:32px;height:32px;display:grid;place-items:center;border-radius:999px;
+    background:var(--paper-deep);color:var(--seal-dark);font-size:.72rem;font-weight:800; }
+.book-view .embedded-audio-track audio { display:block;width:100%;height:42px;accent-color:var(--seal); }
+@media(max-width:520px) {
+  .book-view .embedded-audio-grid { grid-template-columns:1fr;gap:14px; }
+  .book-view .embedded-audio-track { padding:14px; }
+}
+.book-view .section-audio-group { margin:0 auto 30px;padding:18px;border:1px solid rgba(232,93,147,.24);border-radius:18px;background:linear-gradient(135deg,rgba(255,248,251,.96),rgba(252,234,242,.86));box-shadow:0 9px 24px rgba(154,72,112,.12) }
+.book-view .section-audio-title { display:flex;align-items:center;gap:12px;margin-bottom:15px }
+.book-view .section-audio-title>div { display:flex;flex-direction:column;min-width:0 }
+.book-view .section-audio-title strong { color:var(--seal-dark);font-family:'Noto Serif SC','Be Vietnam Pro',sans-serif;font-size:1.02rem }
+.book-view .section-audio-title span:not(.section-audio-badge) { color:var(--ink-soft);font-size:.76rem;margin-top:2px }
+.book-view .section-audio-badge { width:42px;height:42px;display:grid;place-items:center;flex:0 0 auto;border-radius:50%;background:linear-gradient(135deg,var(--seal),var(--gold));color:#fff }
+.book-view .section-audio-grid { grid-template-columns:repeat(auto-fit,minmax(270px,1fr)) }
+.book-view .section-audio-group .embedded-audio-track { box-shadow:0 6px 16px rgba(154,72,112,.10) }
+@media(max-width:520px) {
+  .book-view .section-audio-group { padding:14px;margin-bottom:24px }
+  .book-view .section-audio-grid { grid-template-columns:1fr }
+}
+.book-view .exercise-text-extract { margin:18px 18px 24px;padding:18px;border-radius:18px;background:linear-gradient(145deg,rgba(255,248,251,.98),rgba(252,234,242,.88));border:1px solid rgba(232,93,147,.25);box-shadow:0 9px 24px rgba(154,72,112,.12) }
+.book-view .exercise-text-intro { display:flex;align-items:center;gap:13px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px dashed var(--jade-light) }
+.book-view .exercise-text-intro-icon { width:44px;height:44px;display:grid;place-items:center;flex:0 0 auto;border-radius:13px;background:linear-gradient(135deg,var(--seal),var(--gold));color:#fff;font-family:'Noto Serif SC',serif;font-size:1.35rem;font-weight:800;box-shadow:0 6px 14px rgba(232,93,147,.22) }
+.book-view .exercise-text-intro>div { display:flex;flex-direction:column;min-width:0 }
+.book-view .exercise-text-intro strong { color:var(--seal-dark);font-size:1rem }
+.book-view .exercise-text-intro span:not(.exercise-text-intro-icon) { margin-top:3px;color:var(--ink-soft);font-size:.78rem;line-height:1.5 }
+.book-view .exercise-text-pages { display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px }
+.book-view .exercise-text-page { min-width:0;background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:0 5px 14px rgba(154,72,112,.08) }
+.book-view .exercise-text-page-head { display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 13px;background:rgba(232,93,147,.08);border-bottom:1px solid var(--line) }
+.book-view .exercise-text-page-head>div { display:flex;align-items:center;gap:8px }
+.book-view .exercise-text-page-head strong { color:var(--ink);font-size:.9rem }
+.book-view .exercise-text-page-label { padding:3px 8px;border-radius:999px;background:var(--seal);color:#fff;font-family:'Noto Serif SC',serif;font-size:.7rem;font-weight:700 }
+.book-view .copy-exercise-text { border:1px solid var(--jade-light);background:var(--paper-light);color:var(--seal-dark);border-radius:999px;padding:6px 10px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-size:.7rem;font-weight:700;transition:.18s ease }
+.book-view .copy-exercise-text:hover { background:var(--seal);border-color:var(--seal);color:#fff }
+.book-view .copy-exercise-text.copied { background:var(--jade);border-color:var(--jade);color:#fff }
+.book-view .exercise-copyable-text { margin:0;padding:15px;max-height:520px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;tab-size:4;font-family:'Noto Serif SC','Noto Serif',serif;font-size:.9rem;line-height:1.72;color:var(--ink);background:transparent;user-select:text }
+.book-view .exercise-copyable-text:focus { outline:2px solid rgba(232,93,147,.28);outline-offset:-2px }
+.book-view .original-page-divider { text-align:center;margin:26px 18px 12px;padding-top:18px;border-top:1px dashed var(--line);font-family:'Noto Serif',serif;font-weight:700;color:var(--gold) }
+.book-view .original-pages-toggle { margin:0 18px 20px;border:1px solid var(--line);border-radius:13px;background:rgba(255,248,251,.7);overflow:hidden }
+.book-view .original-pages-toggle>summary { cursor:pointer;padding:13px 16px;font-weight:700;color:var(--seal-dark);background:rgba(211,138,173,.10) }
+.book-view .original-pages-toggle .book-page-grid { padding:14px }
+@media(max-width:620px) {
+  .book-view .exercise-text-extract { margin:12px 10px 20px;padding:13px }
+  .book-view .exercise-text-pages { grid-template-columns:1fr }
+  .book-view .exercise-copyable-text { font-size:.84rem;max-height:460px }
+  .book-view .original-pages-toggle { margin-left:10px;margin-right:10px }
+}
+.book-view .original-pages-toggle { margin:0 0 28px !important;
+    width:100%; }
+.book-view .original-pages-toggle .book-page-grid, .book-view .book-exercises .book-page-grid { display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:28px !important;
+    padding:22px 12px 30px !important; }
+.book-view .original-pages-toggle .book-page-card, .book-view .book-exercises .book-page-card { width:min(100%, 980px) !important;
+    max-width:980px !important;
+    border-radius:14px !important;
+    box-shadow:0 10px 30px rgba(154,72,112,.18) !important; }
+.book-view .original-pages-toggle .book-page-card img, .book-view .book-exercises .book-page-card img { width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    cursor:zoom-in !important; }
+.book-view .original-pages-toggle .book-page-card figcaption, .book-view .book-exercises .book-page-card figcaption { font-size:.92rem !important;
+    padding:11px 14px !important;
+    font-weight:600; }
+.book-view .pdf-view-hint { display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin:10px auto 20px;
+    padding:10px 14px;
+    max-width:720px;
+    border-radius:999px;
+    background:rgba(232,93,147,.10);
+    border:1px dashed rgba(232,93,147,.35);
+    color:var(--seal-dark);
+    font-size:.84rem;
+    font-weight:600;
+    text-align:center; }
+.book-view .pdf-lightbox { position:fixed;
+    inset:0;
+    z-index:99999;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+    background:rgba(33,16,25,.94);
+    backdrop-filter:blur(5px); }
+.book-view .pdf-lightbox.open { display:flex; }
+.book-view .pdf-lightbox-inner { position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:auto; }
+.book-view .pdf-lightbox img { display:block;
+    width:auto;
+    height:auto;
+    max-width:96vw;
+    max-height:94vh;
+    object-fit:contain;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 18px 55px rgba(0,0,0,.45);
+    cursor:zoom-out; }
+.book-view .pdf-lightbox-close { position:fixed;
+    top:14px;
+    right:18px;
+    z-index:100000;
+    width:46px;
+    height:46px;
+    border:0;
+    border-radius:50%;
+    background:#fff;
+    color:#8f315f;
+    font-size:1.7rem;
+    line-height:1;
+    font-weight:800;
+    cursor:pointer;
+    box-shadow:0 8px 24px rgba(0,0,0,.25); }
+.book-view .pdf-lightbox-caption { position:fixed;
+    left:50%;
+    bottom:14px;
+    transform:translateX(-50%);
+    z-index:100000;
+    max-width:90vw;
+    padding:8px 14px;
+    border-radius:999px;
+    background:rgba(255,255,255,.95);
+    color:#6f3654;
+    font-size:.82rem;
+    font-weight:600;
+    text-align:center; }
+@media(max-width:700px) {
+  .book-view .original-pages-toggle .book-page-grid, .book-view .book-exercises .book-page-grid { padding:14px 0 22px !important;
+      gap:20px !important; }
+  .book-view .original-pages-toggle .book-page-card, .book-view .book-exercises .book-page-card { width:100% !important;
+      border-radius:8px !important; }
+  .book-view .pdf-lightbox { padding:8px; }
+  .book-view .pdf-lightbox img { max-width:98vw;
+      max-height:92vh; }
+}
+
+/* ===================================================================================
+ * BỔ SUNG CHO HỆ THỐNG (không có trong file gốc) — không sinh tự động, sửa trực tiếp ở đây
+ * =================================================================================== */
+
+/* Giữ đúng phông/cỡ chữ mặc định của giáo trình (theme.css của app đặt body 14px, button kế thừa phông) */
+html.book-mode body { font-size: medium; transition: none; }
+.book-view {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+}
+.book-view button { font-family: revert; }
+.book-view h1, .book-view h2, .book-view h3, .book-view h4 { color: inherit; }
+
+/* Trạng thái đang tải / lỗi */
+.book-view .book-state {
+  max-width: 640px; margin: 72px auto; padding: 22px 24px; text-align: center;
+  background: var(--paper-light); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); color: var(--ink-soft);
+}
+.book-view .book-state p { margin: 0 0 12px; }
+.book-view .book-state-actions { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.book-view a.copy-exercise-text { text-decoration: none; display: inline-block; }
+
+/* Quiz chấm điểm (exercise_items kind=quiz) — dựng trên kiểu .tone-question của giáo trình */
+.book-view .graded-quiz { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.book-view .graded-question-title { font-weight: 700; margin-bottom: 8px; }
+.book-view .tone-options button.picked { border-color: var(--seal); color: var(--seal-dark); }
+.book-view .tone-options button:disabled { cursor: default; }
+.book-view .graded-submit { margin-top: 10px; }
+.book-view .graded-submit:disabled { opacity: .55; cursor: not-allowed; }
+
+/* Flashcard ôn từ (exercise_items kind=flashcard) */
+.book-view .flashcard-deck { max-width: 420px; margin: 0 auto; text-align: center; }
+.book-view .flashcard {
+  height: 220px; border-radius: var(--radius); background: var(--paper-light); border: 1px solid var(--line);
+  box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; cursor: pointer;
+  padding: 20px; margin-bottom: 16px; transition: transform .2s ease;
+}
+.book-view .flashcard:hover { transform: translateY(-2px); }
+.book-view .flashcard-front.hanzi { font-size: 3.2rem; }
+.book-view .flashcard-back { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.book-view .flashcard.status-known { box-shadow: 0 0 0 2px var(--jade), var(--shadow); }
+.book-view .flashcard.status-unknown { box-shadow: 0 0 0 2px var(--seal), var(--shadow); }
+.book-view .flashcard-actions { display: flex; gap: 12px; justify-content: center; }
+.book-view .flashcard-known { background: var(--jade); border-color: var(--jade); color: #fff; }
+
+
+/* ===================================================================================
+ * TRÌNH SOẠN BÀI HỌC (admin) — sửa trực tiếp trên giao diện giáo trình
+ * =================================================================================== */
+.book-editor-toolbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap;
+  padding: 12px 16px; margin-bottom: 16px; background: var(--paper-light); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  /* Ghim ngay dưới thanh trên cùng của khung quản trị (.admin-topbar cao 64px) */
+  position: sticky; top: 64px; z-index: 55;
+}
+.book-editor-toolbar-fields, .book-editor-toolbar-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.book-editor-number { display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; font-weight: 600; color: var(--ink-soft); }
+.book-editor-number input { width: 80px; }
+
+/* Nền giấy + bo góc cho vùng soạn / xem trước nằm trong khung admin */
+.book-view.book-editor,
+.book-editor-preview > .book-view {
+  border-radius: 16px; overflow: clip; border: 1px solid rgba(74,40,57,.14);
+  background: #FCEAF2;
+  background-image: radial-gradient(circle at 10% 5%, rgba(232,93,147,0.08), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(211,138,173,0.10), transparent 40%);
+}
+.book-view.book-editor .lesson-app nav.tabs,
+.book-editor-preview .lesson-app nav.tabs { top: calc(64px + var(--editor-toolbar-h, 66px)); }
+.book-editor-preview { position: relative; }
+
+/* Ô nhập đặt đúng chỗ chữ tĩnh */
+:where(.book-editor) .be-field {
+  font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit; text-align: inherit;
+  width: 100%; min-width: 0; margin: 0; padding: 2px 6px; border-radius: 6px;
+  background: rgba(255,255,255,.55); border: 1px dashed rgba(74,40,57,.24); box-shadow: none;
+}
+.book-editor .be-field:hover { border-color: var(--seal); }
+.book-editor .be-field:focus { outline: none; background: #fff; border: 1px solid var(--seal); box-shadow: 0 0 0 3px rgba(232,93,147,.16); }
+.book-editor .be-field::placeholder { color: rgba(112,70,91,.45); font-style: normal; }
+.book-editor .be-area { resize: vertical; overflow: hidden; line-height: inherit; display: block; }
+.book-editor .be-inline { display: inline-block; width: auto; min-width: 5ch; field-sizing: content; vertical-align: baseline; }
+.book-editor .be-num { width: 5ch; min-width: 5ch; text-align: center; }
+.book-editor .be-wide { min-width: 24ch; }
+
+/* Hero */
+.book-editor header.hero > * { position: relative; z-index: 2; }
+.book-editor header.hero input.seal { display: block; text-align: center; padding: 0; outline: none; font-family: 'Noto Serif SC', serif; font-size: 2.5rem; font-weight: 700; color: var(--paper-light); }
+.book-editor header.hero input.seal::placeholder { color: rgba(255,248,251,.6); }
+.book-editor .be-h1 { display: block; max-width: 720px; margin: 0 auto 6px; font-family: 'Noto Serif SC', serif; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 900; line-height: 1.2; text-align: center; }
+.book-editor header.hero .be-subtitle { display: block; max-width: 620px; margin: 0 auto 4px; text-align: center; }
+.book-editor header.hero .be-tag { width: auto; min-width: 280px; field-sizing: content; text-align: center; }
+
+/* Thanh tab: nút di chuyển / ẩn tab */
+.book-editor .be-tab { position: relative; display: inline-flex; align-items: center; }
+.book-editor .be-tab-tools { display: none; position: absolute; top: -12px; right: -4px; gap: 2px; z-index: 3; }
+.book-editor .be-tab:hover .be-tab-tools, .book-editor .be-tab:focus-within .be-tab-tools { display: inline-flex; }
+.book-editor .be-tab-tools button, .book-editor .be-controls button, .book-editor .be-mini {
+  width: 22px; height: 22px; padding: 0; border-radius: 50%; border: 1px solid var(--line); background: var(--paper-light);
+  color: var(--ink-soft); font-size: .78rem; line-height: 1; cursor: pointer; font-family: 'Be Vietnam Pro', sans-serif;
+}
+.book-editor .be-mini { width: auto; padding: 0 9px; border-radius: 999px; }
+.book-editor .be-tab-tools button:disabled, .book-editor .be-controls button:disabled { opacity: .35; cursor: default; }
+.book-editor .be-danger { color: #c63f3f !important; }
+.book-editor .be-tab-tools button:hover:not(:disabled), .book-editor .be-controls button:hover:not(:disabled), .book-editor .be-mini:hover { border-color: var(--seal); color: var(--seal-dark); }
+
+/* Đầu mục */
+.book-editor .section-head .be-h2 { display: block; max-width: 640px; margin: 0 auto 4px; font-family: 'Noto Serif SC', serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; text-align: center; }
+.book-editor .section-head .be-p { display: block; max-width: 720px; margin: 0 auto; font-family: 'Noto Serif', serif; font-style: italic; color: var(--ink-soft); text-align: center; }
+.book-editor textarea.book-source-note { display: block; width: 100%; max-width: 880px; margin: 14px auto 22px; }
+
+/* Danh sách: nút ↑ ↓ × đặt ở góc phần tử */
+.book-editor .be-item { position: relative; }
+.book-editor .be-controls { display: inline-flex; gap: 3px; flex-shrink: 0; }
+.book-editor .be-item > .be-controls { position: absolute; top: -9px; right: -7px; z-index: 4; opacity: 0; transition: opacity .15s; }
+.book-editor .be-item:hover > .be-controls, .book-editor .be-item:focus-within > .be-controls { opacity: 1; }
+.book-editor .vcard-top .be-controls, .book-editor .ex-block h3 .be-controls { margin-left: auto; }
+.book-editor .be-card { position: relative; }
+.book-editor .be-card-tools { position: absolute; top: 8px; right: 10px; z-index: 4; }
+
+/* Nút thêm */
+.book-editor .be-add {
+  border: 1px dashed var(--seal); background: rgba(255,248,251,.8); color: var(--seal-dark); border-radius: 999px;
+  padding: 5px 12px; font-family: 'Be Vietnam Pro', sans-serif; font-size: .74rem; font-weight: 700; cursor: pointer; margin: 6px 6px 0 0;
+}
+.book-editor .be-add:hover { background: var(--seal); color: #fff; }
+.book-editor .be-add-block { display: block; margin: 8px auto 26px; padding: 10px 20px; font-size: .85rem; }
+.book-editor .be-add-menu { position: relative; display: inline-block; }
+.book-editor .be-add-menu-list {
+  position: absolute; top: calc(100% + 4px); left: 0; z-index: 60; min-width: 220px; display: flex; flex-direction: column;
+  background: var(--paper-light); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); padding: 6px;
+}
+.book-editor .be-add-menu-list button { text-align: left; border: 0; background: transparent; padding: 8px 10px; border-radius: 6px; cursor: pointer; font-family: 'Be Vietnam Pro', sans-serif; font-size: .82rem; color: var(--ink); }
+.book-editor .be-add-menu-list button:hover { background: var(--paper); color: var(--seal-dark); }
+.book-editor nav.tabs .be-add-menu > .be-add { margin: 0; padding: 10px 18px; font-size: .88rem; }
+.book-editor .be-row { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 6px; }
+.book-editor .be-hint { font-size: .74rem; color: var(--ink-soft); font-style: italic; text-align: center; margin: 6px 0 18px; }
+.book-editor .be-check { display: flex; align-items: center; gap: 6px; font-size: .74rem; color: var(--ink-soft); margin: 4px 0 8px; cursor: pointer; }
+
+/* Từ mới */
+.book-editor .tianzige input.be-char {
+  position: relative; z-index: 2; width: 100%; height: 100%; border: 0; background: transparent; text-align: center; padding: 0;
+  font-family: 'Noto Serif SC', serif; font-size: 2.5rem; color: var(--ink); outline: none;
+}
+.book-editor .tianzige:focus-within { box-shadow: 0 0 0 3px rgba(232,93,147,.2); }
+.book-editor .vcard .be-field.word-pinyin, .book-editor .vcard .be-field.pos,
+.book-editor .vcard .be-field.meaning, .book-editor .vcard .be-field.meaning-en,
+.book-editor .vcard .sub-entry .be-field.sub-label { text-align: center; }
+.book-editor .wordlist-item .be-field { flex: 1 1 30%; }
+.book-editor .wordlist-item .be-field.wm { margin-left: 0; }
+.book-editor .char-row .be-add { align-self: center; }
+
+/* Hội thoại */
+.book-editor .dlg-line .be-grow { flex: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.book-editor .be-gap { text-align: center; font-size: .72rem; color: var(--ink-soft); margin: 6px 0 14px; }
+.book-editor .be-field.dlg-title, .book-editor .be-field.book-context { text-align: center; }
+
+/* Ngữ âm / bài tập */
+.book-editor .phonetics-hero h3 { display: flex; align-items: center; }
+.book-editor .phonetics-hero input.big-one { border: 0; text-align: center; padding: 0; outline: none; flex-shrink: 0; }
+.book-editor .mini-note .be-h4 { font-family: 'Noto Serif SC', serif; font-weight: 700; color: var(--seal-dark); margin-bottom: 7px; }
+.book-editor .ex-block h3 .be-field { flex: 1; }
+.book-editor .be-part { border-top: 1px dashed var(--line); padding-top: 10px; margin-top: 12px; }
+.book-editor .be-part-head { display: flex; align-items: center; justify-content: space-between; font-size: .68rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.book-editor .practice-grid, .book-editor .pinyin-grid, .book-editor .extension-grid { align-items: start; }
+.book-editor .practice-chip { cursor: default; }
+.book-editor .sentence-item .be-field { flex: 1; }
+.book-editor .tone-options .be-tone-option { display: inline-flex; align-items: center; gap: 3px; }
+.book-editor .tone-options .be-field { width: 9ch; }
+.book-editor .reading-box.be-field { font-family: 'Noto Serif SC', serif; font-size: 1.18rem; line-height: 2; padding: 18px; background: var(--paper); border: 1px dashed var(--line); }
+.book-editor .reading-box.be-prose { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1rem; line-height: 1.75; }
+.book-editor .be-admin-panel { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px; font-family: var(--font-sans); font-size: 14px; }
+.book-editor .teacher-extra-divider.be-field { display: block; width: 100%; text-align: center; }
+.book-editor textarea.exercise-copyable-text { font-family: 'Noto Serif SC', 'Noto Serif', serif; font-size: .9rem; line-height: 1.72; border: 0; border-radius: 0; background: transparent; max-height: none; }
+.book-editor .be-page-grid { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; padding: 14px 18px; }
+.book-editor .be-page-grid img { max-height: 280px; object-fit: contain; background: #fff; }
+.book-editor .be-page-grid .ui-file-upload { padding: 8px 10px; margin: 0; }
+.book-editor details.book-exercises > summary .be-field { font-weight: 800; }
+.book-editor footer .be-field.zh { font-family: 'Noto Serif SC', serif; }
+.book-editor textarea.exercise-copyable-text { max-height: 520px !important; overflow: auto !important; }
+
+/* Ô file chưa tải / tải hàng loạt / PDF */
+.book-editor .be-missing { color: var(--seal-dark); font-weight: 700; }
+.book-editor .be-missing-page {
+  height: 160px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px;
+  background: repeating-linear-gradient(45deg, #fff, #fff 10px, var(--paper) 10px, var(--paper) 20px);
+  color: var(--ink-soft); font-size: .8rem; font-weight: 600;
+}
+.book-editor .be-bulk-upload { display: inline-flex; align-items: center; gap: 8px; }
+.book-editor .be-bulk-upload label.be-add { display: inline-block; }
+.book-editor .be-pdf { margin: 14px 18px 18px; padding: 12px 14px; border: 1px dashed var(--line); border-radius: 10px; background: rgba(255,255,255,.6); }
+.book-editor .be-pdf label { font-size: .8rem; font-weight: 700; color: var(--seal-dark); }
+.book-view a.book-pdf-link { text-decoration: none; width: fit-content; margin-top: 0; }
+.book-view a.book-pdf-link:hover { background: rgba(232,93,147,.18); }
+.book-editor .book-exercises .book-page-grid.be-page-grid { display: grid !important; flex-direction: unset !important; align-items: start !important; gap: 14px !important; padding: 14px 18px !important; }
+.book-editor .book-exercises .be-page-grid .book-page-card { width: auto !important; max-width: none !important; border-radius: 10px !important; box-shadow: 0 5px 16px rgba(154,72,112,.12) !important; }
+.book-editor .book-exercises .be-page-grid .book-page-card img { width: 100% !important; max-height: 260px !important; object-fit: contain !important; cursor: default !important; }
+.book-editor .book-exercises .be-page-grid .book-page-card figcaption { font-size: .76rem !important; padding: 8px 10px !important; }
+.book-editor .be-field.be-num { width: 7ch !important; min-width: 7ch; field-sizing: fixed; padding: 2px 4px; }
+
+/* ===== Chuyển bài: "Bài trước / Bài sau" cuối bài ===== */
+.book-view .lesson-pager { display:flex; justify-content:space-between; gap:14px; margin:48px 0 0; padding-top:24px; border-top:1px dashed var(--line); }
+.book-view .lesson-pager-btn { display:flex; flex-direction:column; gap:3px; min-width:0; max-width:48%; padding:12px 18px; border-radius:var(--radius);
+    border:1px solid var(--line); background:var(--paper-light); color:var(--ink); cursor:pointer; font-family:'Be Vietnam Pro',sans-serif;
+    box-shadow:var(--shadow); transition:all .2s ease; }
+.book-view .lesson-pager-btn.prev { align-items:flex-start; text-align:left; }
+.book-view .lesson-pager-btn.next { align-items:flex-end; text-align:right; }
+.book-view .lesson-pager-btn:hover { border-color:var(--seal); transform:translateY(-1px); }
+.book-view .lesson-pager-dir { font-size:.78rem; font-weight:700; color:var(--seal-dark); letter-spacing:.3px; }
+.book-view .lesson-pager-name { font-family:'Noto Serif SC',serif; font-size:.95rem; }
+@media (max-width:560px) { .book-view .lesson-pager-btn { padding:10px 12px; } .book-view .lesson-pager-name { font-size:.84rem; } }
+
+/* ===== Bút thuận cho cả cụm từ / tên nước ===== */
+.book-view .country-row.has-stroke { grid-template-columns:1fr 1fr 1.6fr auto; align-items:center; }
+.book-view .book-proper-row.has-stroke { grid-template-columns:1.2fr 1.2fr 2fr auto; }
+.book-view .country-row .stroke-toggle-group, .book-view .book-proper-row .stroke-toggle-group { justify-self:end; }
+.book-view .country-row .inline-stroke-panel, .book-view .book-proper-row .inline-stroke-panel { grid-column:1/-1; margin-top:0; }
+@media (max-width:640px) {
+  .book-view .country-row.has-stroke, .book-view .book-proper-row.has-stroke { grid-template-columns:1fr 1fr; }
+  .book-view .country-row.has-stroke .stroke-toggle-group, .book-view .book-proper-row.has-stroke .stroke-toggle-group { grid-column:1/-1; justify-self:start; }
+}
+.book-view .vcard > .stroke-toggle-group { display:flex; justify-content:center; margin:12px auto 0; }
+/* Cụm nút bút thuận: nút bật/tắt + icon ↻ chạy lại (chỉ hiện khi đang mở) */
+.book-view .stroke-toggle-group { display:inline-flex; align-items:center; gap:6px; margin-left:auto; }
+.book-view .stroke-toggle-group .stroke-toggle { margin-left:0; }
+.book-view .stroke-toggle.on { background:var(--jade); border-color:var(--jade); color:#fff; }
+.book-view .stroke-toggle.on:hover { background:var(--jade); filter:brightness(1.05); }
+.book-view .stroke-replay { width:28px; height:28px; flex:none; display:inline-grid; place-items:center; padding:0; border-radius:50%;
+    border:1px solid var(--jade-light); background:rgba(168,87,131,.09); color:var(--jade); font-size:1rem; font-weight:800; line-height:1; cursor:pointer;
+    transition:background .2s ease, transform .35s ease; }
+.book-view .stroke-replay:hover { background:rgba(168,87,131,.18); transform:rotate(-120deg); }
+.book-view .vcard > .inline-stroke-panel { margin-top:10px; }
+.book-view .mini-writer .zh { font-size:2rem; display:grid; place-items:center; height:100%; position:relative; z-index:1; }
+
+/* ===== Hoàn thành bài / lớp đã kết thúc ===== */
+.book-view .lesson-complete { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin:48px 0 0;
+    padding:16px 20px; border-radius:var(--radius); border:1px solid var(--line); background:var(--paper-light); box-shadow:var(--shadow); }
+.book-view .lesson-complete > div { display:flex; flex-direction:column; gap:4px; min-width:0; flex:1 1 260px; }
+.book-view .lesson-complete strong { font-family:'Be Vietnam Pro',sans-serif; color:var(--ink); }
+.book-view .lesson-complete span { font-size:.84rem; color:var(--ink-soft); }
+.book-view .lesson-complete.done { border-color:var(--jade-light); background:rgba(168,87,131,.07); }
+.book-view .lesson-complete.done strong { color:var(--jade); }
+.book-view .lesson-complete + .lesson-pager { margin-top:24px; }
+.book-view .book-ended-banner { max-width:820px; margin:14px auto 0; padding:10px 14px; border-radius:10px; text-align:center;
+    background:rgba(232,93,147,.1); border:1px dashed var(--seal); color:var(--seal-dark); font-size:.86rem; font-weight:600; }
+
+/* ===== Thanh điều hướng trang xem bài: ‹ khoá học · chọn bài (lưới) · bài trước/sau =====
+ * Dính ngay dưới thanh trên cùng của khung (topbar của sidebar học viên / Navbar, đều cao 64px);
+ * thanh tab Từ mới / Bài khóa… dính ngay dưới thanh này. */
+.book-view { --book-sticky-top:64px; --lesson-navbar-h:56px; }
+.book-mode .admin-shell, .book-mode .admin-main { background:transparent; } /* để lộ nền giấy của giáo trình */
+.book-view > .lesson-navbar ~ .lesson-app nav.tabs { top:calc(var(--book-sticky-top) + var(--lesson-navbar-h)); }
+.book-view .lesson-navbar { position:sticky; top:var(--book-sticky-top); z-index:60; display:grid; grid-template-columns:1fr auto 1fr;
+    align-items:center; gap:12px; min-height:var(--lesson-navbar-h); padding:0 16px; font-family:'Be Vietnam Pro',sans-serif;
+    background:rgba(255,248,251,.9); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.book-view .lesson-navbar-course { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; justify-self:start; max-width:100%;
+    color:var(--ink-soft); text-decoration:none; font-size:.86rem; font-weight:600; padding:6px 10px; border-radius:10px; }
+.book-view .lesson-navbar-course span { color:var(--seal); font-weight:800; margin-right:2px; }
+.book-view .lesson-navbar-course:hover { background:rgba(232,93,147,.08); color:var(--seal-dark); }
+.book-view .lesson-navbar-center { display:flex; align-items:center; gap:6px; min-width:0; }
+.book-view .lesson-navbar-center button { font-family:inherit; cursor:pointer; border:1px solid var(--line); background:var(--paper-light);
+    color:var(--ink); border-radius:999px; transition:border-color .2s ease, background .2s ease; }
+.book-view .lesson-navbar-center button:hover:not(:disabled) { border-color:var(--seal); }
+.book-view .lesson-navbar-center button:disabled { opacity:.4; cursor:default; }
+.book-view .lesson-navbar-prev, .book-view .lesson-navbar-next { padding:7px 12px; font-size:.8rem; font-weight:600; white-space:nowrap; }
+.book-view .lesson-navbar-picker { display:flex; align-items:center; gap:8px; min-width:0; padding:7px 14px; font-size:.86rem; font-weight:600;
+    box-shadow:0 4px 14px rgba(154,72,112,.12); }
+.book-view .lesson-navbar-picker.open { border-color:var(--seal); }
+.book-view .lesson-navbar-picker .zh { font-family:'Noto Serif SC',serif; font-weight:800; color:var(--seal-dark); }
+.book-view .lesson-navbar-picker-title { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:260px; }
+.book-view .lesson-navbar-chevron { color:var(--ink-soft); font-size:.75rem; }
+.book-view .lesson-picker { position:absolute; top:calc(100% + 6px); left:50%; transform:translateX(-50%); z-index:70;
+    width:min(780px, calc(100vw - 32px)); max-height:60vh; overflow:auto; padding:14px; border-radius:16px;
+    background:var(--paper-light); border:1px solid var(--line); box-shadow:0 18px 50px rgba(74,40,57,.22); }
+.book-view .lesson-picker-head { display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin:0 2px 10px; }
+.book-view .lesson-picker-head strong { color:var(--ink); font-size:.92rem; }
+.book-view .lesson-picker-head span { color:var(--ink-soft); font-size:.78rem; }
+.book-view .lesson-picker-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:8px; }
+.book-view .lesson-picker-item { display:flex; flex-direction:column; gap:3px; text-align:left; padding:10px 12px; border-radius:12px; cursor:pointer;
+    border:1px solid var(--line); background:var(--paper); color:var(--ink); font-family:inherit; transition:border-color .15s ease, transform .15s ease; }
+.book-view .lesson-picker-item:hover:not(:disabled) { border-color:var(--seal); transform:translateY(-1px); }
+.book-view .lesson-picker-num { display:flex; justify-content:space-between; align-items:center; font-family:'Noto Serif SC',serif; font-weight:800; }
+.book-view .lesson-picker-num em { font-style:normal; font-size:.8rem; }
+.book-view .lesson-picker-num em.done { color:var(--jade); }
+.book-view .lesson-picker-title { font-size:.76rem; color:var(--ink-soft); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.book-view .lesson-picker-item.completed { border-color:var(--jade-light); }
+.book-view .lesson-picker-item.active { background:var(--seal); border-color:var(--seal); color:#fff; }
+.book-view .lesson-picker-item.active .lesson-picker-title, .book-view .lesson-picker-item.active em.done { color:#fff; }
+.book-view .lesson-picker-item.locked { opacity:.5; cursor:not-allowed; }
+@media (max-width:640px) {
+  .book-view { --lesson-navbar-h:92px; }
+  .book-view .lesson-navbar { grid-template-columns:1fr; gap:4px; padding:6px 12px 8px; }
+  .book-view .lesson-navbar-center { justify-content:space-between; }
+  .book-view .lesson-navbar-prev span, .book-view .lesson-navbar-next span { display:none; }
+  .book-view .lesson-navbar-picker { flex:1; justify-content:center; }
+  .book-view .lesson-navbar-picker-title { max-width:40vw; }
+  .book-view .lesson-picker-grid { grid-template-columns:repeat(auto-fill, minmax(130px, 1fr)); }
+}
+
+/* Icon ↻ ở góc ô chữ lớn (tianzige): bấm để chạy lại bút thuận — rõ hơn việc chỉ "bấm vào ô" */
+.book-view .char-runner-wrap { position:relative; display:inline-block; }
+.book-view .char-replay { position:absolute; top:-8px; right:-8px; z-index:3; width:22px; height:22px; padding:0;
+    display:grid; place-items:center; border-radius:50%; border:1px solid var(--jade-light); background:var(--paper-light);
+    color:var(--jade); font-size:.78rem; font-weight:800; line-height:1; cursor:pointer; opacity:.8;
+    box-shadow:0 2px 6px rgba(154,72,112,.18); transition:opacity .2s ease, background .2s ease, transform .35s ease; }
+.book-view .char-runner-wrap:hover .char-replay, .book-view .char-replay:focus-visible { opacity:1; }
+.book-view .char-replay:hover { background:var(--jade); border-color:var(--jade); color:#fff; transform:rotate(-120deg); }

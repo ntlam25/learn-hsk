@@ -1,110 +1,756 @@
 {
   "lessonNumber": 6,
-  "seal": "六课",
-  "titleZh": "第6课",
-  "titleVi": "Bài 6 · 你好",
-  "tag": "Từ mới · Bài khóa · Ngữ âm/Ngữ pháp · Luyện tập",
+  "seal": "复习",
+  "titleZh": "第六课",
+  "titleVi": "Bài 6 · 我学习汉语",
+  "tag": "Từ mới · Bài khóa · Luyện tập",
   "published": true,
   "vocab": [
-    { "num": 1, "chars": [{ "h": "请", "p": "qǐng" }, { "h": "问", "p": "wèn", "r": "门", "rm": "Bộ Môn (cánh cửa)" }],
-      "pinyin": "qǐngwèn", "pos": "Động từ", "meaning": "xin hỏi", "meaning_en": "excuse me, may I ask...", "note": "Âm Hán Việt: THỈNH VẤN",
-      "sub": { "chars": [{ "h": "问", "p": "wèn" }], "pinyin": "wèn", "pos": "Động từ", "meaning": "hỏi", "meaning_en": "to ask; to inquire", "note": "Âm Hán Việt: VẤN" } },
-    { "num": 2, "chars": [{ "h": "贵", "p": "guì", "r": "贝", "rm": "Bộ Bối (vật quý)" }, { "h": "姓", "p": "xìng" }],
-      "pinyin": "guìxìng", "pos": "Danh từ", "meaning": "quý danh", "meaning_en": "your (honorable) family name", "note": "Âm Hán Việt: QUÝ TÍNH",
-      "sub": { "chars": [{ "h": "姓", "p": "xìng" }], "pinyin": "xìng", "pos": "Động từ / Danh từ", "meaning": "họ", "meaning_en": "to be surnamed; family name", "note": "Thành phần hài thanh: 生 (shēng) — sinh ra" } },
-    { "num": 3, "chars": [{ "h": "叫", "p": "jiào" }], "pinyin": "jiào", "pos": "Động từ", "meaning": "gọi, tên là", "meaning_en": "to call; to name" },
-    { "num": 4, "chars": [{ "h": "名", "p": "míng", "r": "夕", "rm": "Bộ Tịch (chiều tối, đêm)" }, { "h": "字", "p": "zi" }],
-      "pinyin": "míngzi", "pos": "Danh từ", "meaning": "tên", "meaning_en": "name", "note": "Âm Hán Việt: DANH TỰ" },
-    { "num": 5, "chars": [{ "h": "哪", "p": "nǎ" }], "pinyin": "nǎ", "pos": "Đại từ", "meaning": "nào", "meaning_en": "which" },
-    { "num": 6, "chars": [{ "h": "国", "p": "guó", "r": "玉", "rm": "Bộ Ngọc (đá quý)" }], "pinyin": "guó", "pos": "Danh từ", "meaning": "quốc gia", "meaning_en": "country; nation" },
-    { "num": 7, "chars": [{ "h": "人", "p": "rén" }], "pinyin": "rén", "pos": "Danh từ", "meaning": "người", "meaning_en": "human being; person" },
-    { "num": 8, "chars": [{ "h": "认", "p": "rèn" }, { "h": "识", "p": "shi" }], "pinyin": "rènshi", "pos": "Động từ", "meaning": "biết, nhận biết, quen", "meaning_en": "to know", "note": "Âm Hán Việt: NHẬN THỨC" },
-    { "num": 9, "chars": [{ "h": "高", "p": "gāo" }, { "h": "兴", "p": "xìng" }], "pinyin": "gāoxìng", "pos": "Tính từ", "meaning": "cao hứng, vui vẻ, vui mừng", "meaning_en": "glad; happy; cheerful", "note": "Âm Hán Việt: CAO HƯNG" },
-    { "num": 10, "chars": [{ "h": "也", "p": "yě" }], "pinyin": "yě", "pos": "Phó từ", "meaning": "cũng", "meaning_en": "also; too" },
-    { "num": 11, "chars": [{ "h": "学", "p": "xué" }, { "h": "习", "p": "xí" }], "pinyin": "xuéxí", "pos": "Động từ", "meaning": "học tập", "meaning_en": "to study; to learn", "note": "Âm Hán Việt: HỌC TẬP" },
-    { "num": 12, "chars": [{ "h": "什", "p": "shén" }, { "h": "么", "p": "me" }], "pinyin": "shénme", "pos": "Đại từ", "meaning": "cái gì", "meaning_en": "what", "note": "Âm Hán Việt: THẬM MA" },
-    { "num": 13, "chars": [{ "h": "发", "p": "fā" }, { "h": "音", "p": "yīn", "r": "立", "rm": "Bộ Lập" }], "pinyin": "fāyīn", "pos": "Danh từ / Động từ", "meaning": "phát âm", "meaning_en": "pronunciation; to pronounce", "note": "Âm Hán Việt: PHÁT ÂM" },
-    { "num": 14, "chars": [{ "h": "汉", "p": "Hàn" }, { "h": "字", "p": "zì" }], "pinyin": "Hànzì", "pos": "Danh từ", "meaning": "chữ Hán", "meaning_en": "Chinese characters", "note": "Âm Hán Việt: HÁN TỰ" },
-    { "num": 15, "chars": [{ "h": "书", "p": "shū" }], "pinyin": "shū", "pos": "Danh từ", "meaning": "sách", "meaning_en": "book", "note": "Âm Hán Việt: THƯ" },
-    { "num": 16, "chars": [{ "h": "谁", "p": "shéi/shuí", "r": "讠", "rm": "Bộ Ngôn (lời nói) · 隹 bộ Chuy (thành phần hài thanh)" }], "pinyin": "shéi / shuí", "pos": "Đại từ", "meaning": "ai", "meaning_en": "who", "note": "Âm Hán Việt: THÙY" },
-    { "num": 17, "chars": [{ "h": "的", "p": "de" }], "pinyin": "de", "pos": "Trợ từ", "meaning": "của (trợ từ)", "meaning_en": "a particle used after an attributive to indicate possession", "note": "Âm Hán Việt: ĐÍCH" },
-    { "num": 18, "chars": [{ "h": "那", "p": "nà" }], "pinyin": "nà", "pos": "Đại từ", "meaning": "đó, đấy, kia", "meaning_en": "that" },
-    { "num": 19, "chars": [{ "h": "杂", "p": "zá" }, { "h": "志", "p": "zhì", "r": "士", "rm": "Bộ Sĩ (binh sĩ)" }], "pinyin": "zázhì", "pos": "Danh từ", "meaning": "tạp chí", "meaning_en": "magazine", "note": "Âm Hán Việt: TẠP CHÍ" },
-    { "num": 20, "chars": [{ "h": "…", "p": "" }, { "h": "文", "p": "wén" }], "pinyin": "……wén", "pos": "", "meaning": "ngôn ngữ … (dùng sau tên nước)", "meaning_en": "(written language)", "note": "Âm Hán Việt: VĂN",
+    {
+      "num": 1,
+      "chars": [
+        {
+          "h": "请"
+        },
+        {
+          "h": "问"
+        }
+      ],
+      "pinyin": "qǐngwèn",
+      "pos": "Động từ/Cụm từ",
+      "meaning": "xin hỏi",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
-        { "h": "中文", "p": "Zhōngwén", "m": "tiếng Trung" },
-        { "h": "阿拉伯文", "p": "Ālābówén", "m": "tiếng Ả Rập" },
-        { "h": "德文", "p": "Déwén", "m": "tiếng Đức" },
-        { "h": "俄文", "p": "Éwén", "m": "tiếng Nga" },
-        { "h": "法文", "p": "Fǎwén", "m": "tiếng Pháp" },
-        { "h": "韩文", "p": "Hánwén", "m": "tiếng Hàn" },
-        { "h": "日文", "p": "Rìwén", "m": "tiếng Nhật" },
-        { "h": "西班牙文", "p": "Xībānyáwén", "m": "tiếng Tây Ban Nha" },
-        { "h": "英文", "p": "Yīngwén", "m": "tiếng Anh" }
-      ] },
-    { "num": 21, "chars": [{ "h": "朋", "p": "péng" }, { "h": "友", "p": "you" }], "pinyin": "péngyou", "pos": "Danh từ", "meaning": "bạn bè", "meaning_en": "friend", "note": "Âm Hán Việt: BẰNG HỮU" }
+        {
+          "h": "问",
+          "p": "wèn",
+          "m": "hỏi"
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "chars": [
+        {
+          "h": "贵"
+        },
+        {
+          "h": "姓"
+        }
+      ],
+      "pinyin": "guìxìng",
+      "pos": "Danh từ/Cụm từ",
+      "meaning": "quý tính; xin hỏi họ",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
+      "wordlist": [
+        {
+          "h": "姓",
+          "p": "xìng",
+          "m": "họ; mang họ"
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "chars": [
+        {
+          "h": "叫"
+        }
+      ],
+      "pinyin": "jiào",
+      "pos": "Động từ",
+      "meaning": "gọi; tên là"
+    },
+    {
+      "num": 4,
+      "chars": [
+        {
+          "h": "名"
+        },
+        {
+          "h": "字"
+        }
+      ],
+      "pinyin": "míngzi",
+      "pos": "Danh từ",
+      "meaning": "tên"
+    },
+    {
+      "num": 5,
+      "chars": [
+        {
+          "h": "哪"
+        }
+      ],
+      "pinyin": "nǎ",
+      "pos": "Đại từ",
+      "meaning": "nào"
+    },
+    {
+      "num": 6,
+      "chars": [
+        {
+          "h": "国"
+        }
+      ],
+      "pinyin": "guó",
+      "pos": "Danh từ",
+      "meaning": "nước; quốc gia"
+    },
+    {
+      "num": 7,
+      "chars": [
+        {
+          "h": "人"
+        }
+      ],
+      "pinyin": "rén",
+      "pos": "Danh từ",
+      "meaning": "người"
+    },
+    {
+      "num": 8,
+      "chars": [
+        {
+          "h": "认"
+        },
+        {
+          "h": "识"
+        }
+      ],
+      "pinyin": "rènshi",
+      "pos": "Động từ",
+      "meaning": "biết; làm quen"
+    },
+    {
+      "num": 9,
+      "chars": [
+        {
+          "h": "高"
+        },
+        {
+          "h": "兴"
+        }
+      ],
+      "pinyin": "gāoxìng",
+      "pos": "Tính từ",
+      "meaning": "vui; vui mừng"
+    },
+    {
+      "num": 10,
+      "chars": [
+        {
+          "h": "也"
+        }
+      ],
+      "pinyin": "yě",
+      "pos": "Phó từ",
+      "meaning": "cũng"
+    },
+    {
+      "num": 11,
+      "chars": [
+        {
+          "h": "学"
+        },
+        {
+          "h": "习"
+        }
+      ],
+      "pinyin": "xuéxí",
+      "pos": "Động từ",
+      "meaning": "học; học tập"
+    },
+    {
+      "num": 12,
+      "chars": [
+        {
+          "h": "什"
+        },
+        {
+          "h": "么"
+        }
+      ],
+      "pinyin": "shénme",
+      "pos": "Đại từ",
+      "meaning": "gì; cái gì"
+    },
+    {
+      "num": 13,
+      "chars": [
+        {
+          "h": "发"
+        },
+        {
+          "h": "音"
+        }
+      ],
+      "pinyin": "fāyīn",
+      "pos": "Danh từ/Động từ",
+      "meaning": "phát âm; cách phát âm"
+    },
+    {
+      "num": 14,
+      "chars": [
+        {
+          "h": "汉"
+        },
+        {
+          "h": "字"
+        }
+      ],
+      "pinyin": "Hànzì",
+      "pos": "Danh từ",
+      "meaning": "chữ Hán"
+    },
+    {
+      "num": 15,
+      "chars": [
+        {
+          "h": "书"
+        }
+      ],
+      "pinyin": "shū",
+      "pos": "Danh từ",
+      "meaning": "sách"
+    },
+    {
+      "num": 16,
+      "chars": [
+        {
+          "h": "谁"
+        }
+      ],
+      "pinyin": "shéi / shuí",
+      "pos": "Đại từ",
+      "meaning": "ai"
+    },
+    {
+      "num": 17,
+      "chars": [
+        {
+          "h": "的"
+        }
+      ],
+      "pinyin": "de",
+      "pos": "Trợ từ",
+      "meaning": "trợ từ kết cấu, biểu thị sở hữu/hạn định"
+    },
+    {
+      "num": 18,
+      "chars": [
+        {
+          "h": "那"
+        }
+      ],
+      "pinyin": "nà",
+      "pos": "Đại từ",
+      "meaning": "đó; kia"
+    },
+    {
+      "num": 19,
+      "chars": [
+        {
+          "h": "杂"
+        },
+        {
+          "h": "志"
+        }
+      ],
+      "pinyin": "zázhì",
+      "pos": "Danh từ",
+      "meaning": "tạp chí"
+    },
+    {
+      "num": 20,
+      "chars": [
+        {
+          "h": "文"
+        }
+      ],
+      "pinyin": "…wén",
+      "pos": "Danh từ",
+      "meaning": "ngôn ngữ viết…",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
+      "wordlist": [
+        {
+          "h": "中文",
+          "p": "Zhōngwén",
+          "m": "tiếng Trung"
+        },
+        {
+          "h": "阿拉伯文",
+          "p": "Ālābówén",
+          "m": "tiếng Ả Rập"
+        },
+        {
+          "h": "德文",
+          "p": "Déwén",
+          "m": "tiếng Đức"
+        },
+        {
+          "h": "俄文",
+          "p": "Éwén",
+          "m": "tiếng Nga"
+        },
+        {
+          "h": "法文",
+          "p": "Fǎwén",
+          "m": "tiếng Pháp"
+        },
+        {
+          "h": "韩文",
+          "p": "Hánwén",
+          "m": "tiếng Hàn"
+        },
+        {
+          "h": "日文",
+          "p": "Rìwén",
+          "m": "tiếng Nhật"
+        },
+        {
+          "h": "西班牙文",
+          "p": "Xībānyáwén",
+          "m": "tiếng Tây Ban Nha"
+        },
+        {
+          "h": "英文",
+          "p": "Yīngwén",
+          "m": "tiếng Anh"
+        }
+      ]
+    },
+    {
+      "num": 21,
+      "chars": [
+        {
+          "h": "朋"
+        },
+        {
+          "h": "友"
+        }
+      ],
+      "pinyin": "péngyou",
+      "pos": "Danh từ",
+      "meaning": "bạn; bạn bè"
+    }
   ],
   "properNouns": [
-    { "chars": [{ "h": "麦", "p": "Mài" }, { "h": "克", "p": "kè" }], "pinyin": "Màikè", "meaning": "Mike", "pos": "Danh từ riêng" },
-    { "chars": [{ "h": "张", "p": "Zhāng" }, { "h": "东", "p": "Dōng" }], "pinyin": "Zhāng Dōng", "meaning": "Trương Đông (tên người Trung Quốc)", "pos": "Danh từ riêng",
-      "sub": { "chars": [{ "h": "张", "p": "Zhāng" }], "pinyin": "Zhāng", "meaning": "Trương, họ Trương", "meaning_en": "Zhang, a Chinese family name", "pos": "Danh từ riêng" } }
+    {
+      "hanzi": "麦克",
+      "pinyin": "Màikè",
+      "meaning": "Mike"
+    },
+    {
+      "hanzi": "张东",
+      "pinyin": "Zhāng Dōng",
+      "meaning": "Trương Đông"
+    },
+    {
+      "hanzi": "张",
+      "pinyin": "Zhāng",
+      "meaning": "họ Trương"
+    },
+    {
+      "hanzi": "中国",
+      "pinyin": "Zhōngguó",
+      "meaning": "Trung Quốc"
+    },
+    {
+      "hanzi": "德国",
+      "pinyin": "Déguó",
+      "meaning": "Đức"
+    },
+    {
+      "hanzi": "俄国",
+      "pinyin": "Éguó",
+      "meaning": "Nga"
+    },
+    {
+      "hanzi": "法国",
+      "pinyin": "Fǎguó",
+      "meaning": "Pháp"
+    },
+    {
+      "hanzi": "韩国",
+      "pinyin": "Hánguó",
+      "meaning": "Hàn Quốc"
+    },
+    {
+      "hanzi": "美国",
+      "pinyin": "Měiguó",
+      "meaning": "Mỹ"
+    },
+    {
+      "hanzi": "日本（国）",
+      "pinyin": "Rìběn (guó)",
+      "meaning": "Nhật Bản"
+    },
+    {
+      "hanzi": "英国",
+      "pinyin": "Yīngguó",
+      "meaning": "Anh"
+    }
   ],
   "dialogues": [
-    { "title": "（一）我学习汉语 · Wǒ xuéxí Hànyǔ",
+    {
+      "title": "（一）我学习汉语",
+      "context": "",
       "lines": [
-        { "role": "麦克", "text": "请问，你贵姓？", "py": "Qǐngwèn, nǐ guìxìng?" },
-        { "role": "张东", "text": "我姓张。", "py": "Wǒ xìng Zhāng." },
-        { "role": "麦克", "text": "你叫什么名字？", "py": "Nǐ jiào shénme míngzi?" },
-        { "role": "张东", "text": "我叫张东。", "py": "Wǒ jiào Zhāng Dōng." },
-        { "role": "麦克", "text": "你是哪国人？", "py": "Nǐ shì nǎ guó rén?" },
-        { "role": "张东", "text": "我是中国人。你是哪国人？", "py": "Wǒ shì Zhōngguó rén. Nǐ shì nǎ guó rén?" },
-        { "role": "麦克", "text": "我是美国人。", "py": "Wǒ shì Měiguó rén." },
-        { "role": "张东", "text": "认识你很高兴。", "py": "Rènshi nǐ hěn gāoxìng." },
-        { "role": "麦克", "text": "认识你我也很高兴。", "py": "Rènshi nǐ, wǒ yě hěn gāoxìng." },
-        { "role": "张东", "text": "你学习什么？", "py": "Nǐ xuéxí shénme?" },
-        { "role": "麦克", "text": "我学习汉语。", "py": "Wǒ xuéxí Hànyǔ." },
-        { "role": "张东", "text": "汉语难吗？", "py": "Hànyǔ nán ma?" },
-        { "role": "麦克", "text": "发音不太难，汉字很难。", "py": "Fāyīn bú tài nán, Hànzì hěn nán." }
-      ] },
-    { "title": "（二）这是什么书 · Zhè shì shénme shū",
+        {
+          "role": "麦克",
+          "text": "请问，你贵姓？"
+        },
+        {
+          "role": "张东",
+          "text": "我姓张。"
+        },
+        {
+          "role": "麦克",
+          "text": "你叫什么名字？"
+        },
+        {
+          "role": "张东",
+          "text": "我叫张东。"
+        },
+        {
+          "role": "麦克",
+          "text": "你是哪国人？"
+        },
+        {
+          "role": "张东",
+          "text": "我是中国人。你是哪国人？"
+        },
+        {
+          "role": "麦克",
+          "text": "我是美国人。"
+        },
+        {
+          "role": "张东",
+          "text": "认识你很高兴。"
+        },
+        {
+          "role": "麦克",
+          "text": "认识你我也很高兴。"
+        },
+        {
+          "role": "张东",
+          "text": "你学习什么？"
+        },
+        {
+          "role": "麦克",
+          "text": "我学习汉语。"
+        },
+        {
+          "role": "张东",
+          "text": "汉语难吗？"
+        },
+        {
+          "role": "麦克",
+          "text": "发音不太难，汉字很难。"
+        }
+      ]
+    },
+    {
+      "title": "（二）这是什么书",
+      "context": "（桌子上有两个邮包）",
       "lines": [
-        { "role": "A", "text": "这是什么？", "py": "Zhè shì shénme?" },
-        { "role": "B", "text": "这是书。", "py": "Zhè shì shū." },
-        { "role": "A", "text": "这是什么书？", "py": "Zhè shì shénme shū?" },
-        { "role": "B", "text": "这是中文书。", "py": "Zhè shì Zhōngwén shū." },
-        { "role": "A", "text": "这是谁的书？", "py": "Zhè shì shéi de shū?" },
-        { "role": "B", "text": "这是老师的书。", "py": "Zhè shì lǎoshī de shū." },
-        { "gap": true },
-        { "role": "A", "text": "那是什么？", "py": "Nà shì shénme?" },
-        { "role": "B", "text": "那是杂志。", "py": "Nà shì zázhì." },
-        { "role": "A", "text": "那是什么杂志？", "py": "Nà shì shénme zázhì?" },
-        { "role": "B", "text": "那是英文杂志。", "py": "Nà shì Yīngwén zázhì." },
-        { "role": "A", "text": "那是谁的杂志？", "py": "Nà shì shéi de zázhì?" },
-        { "role": "B", "text": "那是我朋友的杂志。", "py": "Nà shì wǒ péngyou de zázhì." }
-      ] }
+        {
+          "role": "A",
+          "text": "这是什么？"
+        },
+        {
+          "role": "B",
+          "text": "这是书。"
+        },
+        {
+          "role": "A",
+          "text": "这是什么书？"
+        },
+        {
+          "role": "B",
+          "text": "这是中文书。"
+        },
+        {
+          "role": "A",
+          "text": "这是谁的书？"
+        },
+        {
+          "role": "B",
+          "text": "这是老师的书。"
+        },
+        {
+          "role": "A",
+          "text": "那是什么？"
+        },
+        {
+          "role": "B",
+          "text": "那是杂志。"
+        },
+        {
+          "role": "A",
+          "text": "那是什么杂志？"
+        },
+        {
+          "role": "B",
+          "text": "那是英文杂志。"
+        },
+        {
+          "role": "A",
+          "text": "那是谁的杂志？"
+        },
+        {
+          "role": "B",
+          "text": "那是我朋友的杂志。"
+        }
+      ]
+    }
   ],
+  "phoneticsNotes": [],
+  "grammar": [],
   "exercises": {
-    "phonetics": [
-      { "subtitle": "(1) 辨音辨调 — Phân biệt âm, thanh điệu",
-        "items": ["dàxué", "dà xué", "xuéxí", "xuéqī", "Yīngyǔ", "yīnyuè", "Fǎyǔ", "Rìyǔ", "fānyì", "lǐyú", "yānjiǔ", "yánjiū"] }
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 6 (5 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
+      {
+        "pageNumber": 85,
+        "label": "练习",
+        "text": "六课 我学习汉语\n\nLesson 6 study Chinese\n\n\n1) EE Phonetics\n\n(1) HEP Distinguish the pronunciations and tones\ndòxué dàxuě xuéxí  xuéqi Yingyi yīnyuè\n\nFayh  Rìyù  fönyì         yi         yanjid  yánjiü\n变调The 3rd tone sandhi\n\nqing chi          qing hë           qing ting          qing shu5\n\nhén nán        hén máng       hěn hóng        hën téng\n\nhěn lëng         hën kě             méihéo             shéubiéo\n\nhén dà          wò pa            hén mòn          hěn è\n\nhio ma           xiðo ma           lio le               shčo le\n\n(3) $ The neutral tone\n\nzhuðzi            duōshao          dume             gingchu\nliángkuai         zánmen           máfan              mingzi\ndöng ma        léng ma          zěnme            nučnhuo\nwèile              tòngkuai          doifu                toidu\n(4) 声调搭配Collocations of tones\n\nfēiji               xingqi             gongjin            kāfēi\nxinwén                                qingnián           kēxué\ngangbi                                tingxié             gongll\nfonyi              tiānqì              ganjing             gaoxing\ntamen            xiūxi                dongxi             xiĝoxi\n\n2) 回答问题 Answer the questions\n(1) NÝ jiùo shénme mingzi?\n{2) Ni shì nă guó rén?\n\n(3) Ni xuéxí shénme?\n(4) Hànyùŭ nón ma?"
+      },
+      {
+        "pageNumber": 86,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n3) 完成会话 Complete the dialogues\n\nO) A:                               ?\nB: Wò xing Zhang.\nA:                                              mingzi?\nB: Wò jido Zhang Döng.\nAi                                              F\nB: Wò shi Zhöngguó rén. Ni shi nů guó rén?\nA: Wòshì                           rén.\nB:                                              1\nA: Wò xuéxí Hònyùŭ.\nB:                                              ?\n\nA: Fayin bú tài nón, Hànzì hén nán.\n\n(2) A: Zhè shi shénme?\n\nB:                                              x\n\nA:                                              shū?\nB: Zhè shi Zhongwén shū.\n\nA:                                              ?\n\nB: Zhe shi lSoshi de shi.\n\n(3)A:                                      ?\nB: No shi zázhì.\nA:                                       zázhì\\?\nB: Nà shi Yingwén zózhì.\nA:                                       zozhi?\n\nB: No shi wò de zázhì."
+      },
+      {
+        "pageNumber": 87,
+        "label": "练习",
+        "text": "Lesson6 I study Chinese \\\n\n0) #4 Substitution exercises\n\n(1) A: Ni shì nă guó rén?        (2) A: Nixuéxi shénme?\nB: Ws shì Zhöngguó rén.        B: We xuéxí\nMěiguó Hánguó               Yingyù         Éyù\nYingguó Déguó                 Féayv            Déyù\nRibén Făguó                 Xibānyáyü  Ryü\n\n(3) A: Zhe shìshénme zázhì? (4)A: No shishéi de shu?\n\nB: Zhé shi Yingwén zózhì.        B: Na shi Wéng lioshi de\nshi.\nDéwén       Făwén             tā\nZhongwén Éwén              Zhang lioshi\nHánwén       Riwén                wò péngyou\n\n5) 读后复述 Read and retell\n我叫    ,    人。我学习汉语。汉语的发音不\n太难，汉字很难。他叫张东，是中国人。他学习英语\n\n©) 交际会话 Communication\n(1) MIRE% Asking someone’s name\nA: Guixing?\nB: Wò xing Wáng, wé jiùo Wéng Wěiguó. Ni jiùo shénme\nmingzi?\nA: Ws jiùo Moike."
+      },
+      {
+        "pageNumber": 88,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n(2) HIRI Making a self-introduction\n\nWō jido Màikè. Wò shì Měiguó rén. W8 shi liúxuéshēng.\n(3) MIEI Asking someone’s nationality\n\nA: Ni shì nò guó rén?\n\nB: Wò shì Zhõngguó rén.\nC4) 指认“Identifying an item\n\nA: Zhè shì shénme shi?\n\nB: Zhè shi Zhongwén shū.\n\nA: No shi shénme cidin?\n\nB: Na shi Yingwén cídičn.\n\n1) BRP Write the characters\n[en 7 A\n\n人\n\nwen|”店门门间问\n\njo | v v wm\n\n间"
+      },
+      {
+        "pageNumber": 89,
+        "label": "练习",
+        "text": "第六课 我学习汉语 ©\nLesson 6 I study Chinese\n\nwó 门门月同同同国\n\na | |\n\nzhong，m吕中\n\n+             |        |\n\nwen >r\nx777\n\nzJ   |  |\nP| ZAR\n\n发   |  |\nYn| ”小立六译青音\n+   |  |\nPéng ) N A A M MA AA\nmH  |  |\nyu TZ ŻÄ\n\nso ° ah"
+      }
     ],
-    "questions": [
-      "你贵姓？你叫什么名字？",
-      "你是哪国人？",
-      "你学习什么？",
-      "认识你，你高兴吗？"
+    "blocks": [
+      {
+        "title": "<span class=\"hanzi\">语音 · Ngữ âm</span> — Phần 1",
+        "desc": "Đọc to theo đúng thanh điệu và luyện các hiện tượng ngữ âm dưới đây.",
+        "parts": [
+          {
+            "type": "subtitle",
+            "html": "(1) 辨音辨调 — Phân biệt âm, thanh điệu"
+          },
+          {
+            "type": "pinyin",
+            "items": [
+              "dàxué",
+              "dà xué",
+              "xuéxí",
+              "xuéqī",
+              "Yīngyǔ",
+              "yīnyuè",
+              "Fǎyǔ",
+              "Rìyǔ",
+              "fānyì",
+              "lǐyú",
+              "yānjiǔ",
+              "yánjiū"
+            ]
+          },
+          {
+            "type": "subtitle",
+            "html": "(2) 三声变调 — Biến điệu của thanh 3"
+          },
+          {
+            "type": "pinyin",
+            "items": [
+              "qǐng chī",
+              "qǐng hē",
+              "qǐng tīng",
+              "qǐng shuō",
+              "hěn nán",
+              "hěn máng",
+              "hěn hóng",
+              "hěn téng",
+              "hěn lěng",
+              "hěn kě",
+              "měihǎo",
+              "shǒubiǎo",
+              "hěn dà",
+              "wǒ pà",
+              "hěn màn",
+              "hěn è",
+              "hǎo ma",
+              "xiǎo ma",
+              "lǎo le",
+              "shǎo le"
+            ]
+          },
+          {
+            "type": "subtitle",
+            "html": "(3) 轻声 — Thanh nhẹ"
+          },
+          {
+            "type": "pinyin",
+            "items": [
+              "zhuōzi",
+              "duōshao",
+              "duōme",
+              "qīngchu",
+              "liángkuai",
+              "zánmen",
+              "máfan",
+              "míngzi",
+              "dǒng ma",
+              "lěng ma",
+              "zěnme",
+              "nuǎnhuo",
+              "wèile",
+              "tòngkuai",
+              "dàifu",
+              "tàidu"
+            ]
+          },
+          {
+            "type": "subtitle",
+            "html": "(4) 声调搭配 — Phối hợp thanh điệu"
+          },
+          {
+            "type": "pinyin",
+            "items": [
+              "fēijī",
+              "xīngqī",
+              "gōngjīn",
+              "kāfēi",
+              "xīnwén",
+              "yāoqiú",
+              "qīngnián",
+              "kēxué",
+              "gāngbǐ",
+              "hēibǎn",
+              "tīngxiě",
+              "gōnglǐ",
+              "fānyì",
+              "tiānqì",
+              "gānjìng",
+              "gāoxìng",
+              "tāmen",
+              "xiūxi",
+              "dōngxi",
+              "xiāoxi"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "<span class=\"hanzi\">回答问题</span> — Trả lời câu hỏi",
+        "desc": "Luyện nói — trả lời các câu hỏi sau bằng tiếng Trung.",
+        "parts": [
+          {
+            "type": "sentences",
+            "hanzi": false,
+            "items": [
+              "Nǐ jiào shénme míngzi?",
+              "Nǐ shì nǎ guó rén?",
+              "Nǐ xuéxí shénme?",
+              "Hànyǔ nán ma?"
+            ]
+          }
+        ]
+      }
     ]
   },
   "extra": {
-    "countries": [
-      { "h": "中国", "p": "Zhōngguó", "m": "Trung Quốc — China" },
-      { "h": "德国", "p": "Déguó", "m": "Nước Đức — Germany" },
-      { "h": "俄国", "p": "Éguó", "m": "Nước Nga — Russia" },
-      { "h": "法国", "p": "Fǎguó", "m": "Nước Pháp — France" },
-      { "h": "韩国", "p": "Hánguó", "m": "Nước Hàn — the Republic of Korea" },
-      { "h": "美国", "p": "Měiguó", "m": "Nước Mỹ — the United States" },
-      { "h": "日本（国）", "p": "Rìběn (guó)", "m": "Nước Nhật — Japan" },
-      { "h": "英国", "p": "Yīngguó", "m": "Nước Anh — the United Kingdom" }
-    ]
-  }
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Các bài luyện ngữ âm và trả lời câu hỏi theo nội dung bài giảng",
+        "note": ""
+      }
+    },
+    "properNounsTitle": {
+      "zh": "专名",
+      "vi": "Tên riêng"
+    },
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "谢谢",
+      "text": "· Chúc các bạn học tốt Bài 6!"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "06-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（一）· Nghe bài khóa 1",
+      "code": "06-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文（二）· Nghe bài khóa 2",
+      "code": "06-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "06-4",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 85,
+      "caption": "Trang bài tập trong PDF: 85",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 86,
+      "caption": "Trang bài tập trong PDF: 86",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 87,
+      "caption": "Trang bài tập trong PDF: 87",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 88,
+      "caption": "Trang bài tập trong PDF: 88",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 89,
+      "caption": "Trang bài tập trong PDF: 89",
+      "imageUrl": ""
+    }
+  ]
 }

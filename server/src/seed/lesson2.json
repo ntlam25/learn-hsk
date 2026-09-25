@@ -10,8 +10,7 @@
       "num": 1,
       "chars": [
         {
-          "h": "忙",
-          "p": ""
+          "h": "忙"
         }
       ],
       "pinyin": "máng",
@@ -34,8 +33,7 @@
       "num": 2,
       "chars": [
         {
-          "h": "吗",
-          "p": ""
+          "h": "吗"
         }
       ],
       "pinyin": "ma",
@@ -59,8 +57,7 @@
       "num": 3,
       "chars": [
         {
-          "h": "很",
-          "p": ""
+          "h": "很"
         }
       ],
       "pinyin": "hěn",
@@ -83,12 +80,10 @@
       "num": 4,
       "chars": [
         {
-          "h": "汉",
-          "p": ""
+          "h": "汉"
         },
         {
-          "h": "语",
-          "p": ""
+          "h": "语"
         }
       ],
       "pinyin": "Hànyǔ",
@@ -111,8 +106,7 @@
       "num": 5,
       "chars": [
         {
-          "h": "难",
-          "p": ""
+          "h": "难"
         }
       ],
       "pinyin": "nán",
@@ -135,8 +129,7 @@
       "num": 6,
       "chars": [
         {
-          "h": "太",
-          "p": ""
+          "h": "太"
         }
       ],
       "pinyin": "tài",
@@ -160,12 +153,10 @@
       "num": 7,
       "chars": [
         {
-          "h": "爸",
-          "p": ""
+          "h": "爸"
         },
         {
-          "h": "爸",
-          "p": ""
+          "h": "爸"
         }
       ],
       "pinyin": "bàba",
@@ -189,12 +180,10 @@
       "num": 8,
       "chars": [
         {
-          "h": "妈",
-          "p": ""
+          "h": "妈"
         },
         {
-          "h": "妈",
-          "p": ""
+          "h": "妈"
         }
       ],
       "pinyin": "māma",
@@ -218,8 +207,7 @@
       "num": 9,
       "chars": [
         {
-          "h": "他",
-          "p": ""
+          "h": "他"
         }
       ],
       "pinyin": "tā",
@@ -242,8 +230,7 @@
       "num": 10,
       "chars": [
         {
-          "h": "她",
-          "p": ""
+          "h": "她"
         }
       ],
       "pinyin": "tā",
@@ -266,8 +253,7 @@
       "num": 11,
       "chars": [
         {
-          "h": "男",
-          "p": ""
+          "h": "男"
         }
       ],
       "pinyin": "nán",
@@ -290,12 +276,10 @@
       "num": 12,
       "chars": [
         {
-          "h": "哥",
-          "p": ""
+          "h": "哥"
         },
         {
-          "h": "哥",
-          "p": ""
+          "h": "哥"
         }
       ],
       "pinyin": "gēge",
@@ -319,12 +303,10 @@
       "num": 13,
       "chars": [
         {
-          "h": "弟",
-          "p": ""
+          "h": "弟"
         },
         {
-          "h": "弟",
-          "p": ""
+          "h": "弟"
         }
       ],
       "pinyin": "dìdi",
@@ -348,12 +330,10 @@
       "num": 14,
       "chars": [
         {
-          "h": "妹",
-          "p": ""
+          "h": "妹"
         },
         {
-          "h": "妹",
-          "p": ""
+          "h": "妹"
         }
       ],
       "pinyin": "mèimei",
@@ -378,6 +358,7 @@
   "dialogues": [
     {
       "title": "课文",
+      "context": "",
       "lines": [
         {
           "role": "A",
@@ -398,111 +379,419 @@
       ]
     }
   ],
+  "phoneticsNotes": [
+    {
+      "title": "j、q、x + ü",
+      "content": "Khi j, q, x đứng trước ü, bỏ hai chấm khi viết: ju、qu、xu; cách đọc vẫn là ü."
+    },
+    {
+      "title": "鼻韵母 · Vận mẫu mũi",
+      "content": "an、en、ang、eng、ong. Phân biệt rõ -n và -ng."
+    },
+    {
+      "title": "i / ü 系列韵母",
+      "content": "ia、ie、iao、iou(-iu)、ian、in、iang、ing、iong；üe、üan、ün."
+    },
+    {
+      "title": "轻声 · Thanh nhẹ",
+      "content": "妈妈、爸爸、哥哥、弟弟、妹妹、吗: âm tiết thanh nhẹ đọc ngắn và không ghi dấu thanh."
+    },
+    {
+      "title": "半三声 · Nửa thanh 3",
+      "content": "Thanh 3 đứng trước thanh 1, 2, 4 hoặc thanh nhẹ thường chỉ đọc phần đi xuống: hěn máng、hǎo ma."
+    },
+    {
+      "title": "不 的变调 · Biến điệu 不",
+      "content": "Trước thanh 4, 不 đọc bú: 不大 bú dà；trước thanh 1, 2, 3 giữ bù: 不难 bù nán."
+    },
+    {
+      "title": "y / w 的写法",
+      "content": "Khi i, u, ü đứng đầu âm tiết, viết thành yi, wu, yu; cách đọc nguyên âm không đổi."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "吗 疑问句",
+      "content": "Thêm 吗 cuối câu trần thuật để tạo câu hỏi có/không: 你忙吗？汉语难吗？"
+    },
+    {
+      "title": "很 + 形容词",
+      "content": "Trong câu vị ngữ tính từ, 很 thường đứng trước tính từ: 我很好；他很忙。"
+    },
+    {
+      "title": "不太 + 形容词",
+      "content": "不太 biểu thị mức độ phủ định nhẹ: 不太难 = không khó lắm; 不太忙 = không bận lắm."
+    },
+    {
+      "title": "太 + 形容词 + 了",
+      "content": "Dùng để cảm thán mức độ: 太好了！太难了！"
+    }
+  ],
   "exercises": {
-    "notes": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 2 (4 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "j、q、x + ü",
-        "content": "Khi j, q, x đứng trước ü, bỏ hai chấm khi viết: ju、qu、xu; cách đọc vẫn là ü."
+        "pageNumber": 43,
+        "label": "练习",
+        "text": "第二课 汉语不太难\n\nLesson 2 Chinese is not very difficult\n\n3) =声变调 (2): =Æ The 3rd tone sandhi (2); The half 3rd tone\n音节后边跟一个第一声、第二声、第四声或轻声音节时，读\n，即，只读第三声前半的下降部分不读后半的上升部分，马\n上接读下面的音节。例如:\n\nA 3rd-tone syllable becomes a half 3rd tone when it is immediately\nfollowed by a 1st-, 2nd-, 4th- or neutral-tone syllable, which means only the\nfirst half (the falling part) of the tone is articulated and is immediately followed\nby the next syllable, e.g.\n\nyùyi         hën mång        wifon         hio ma\n\n\n1) FA Tones\nta               tă       tù —— tā        他 她\nming méng ming         — móng     tè\nhén     hěn     hèn —— hěn      很\nnan     nen     nen     nàn —— nén      难\nhan     hén     hòn     hòn 一一 Hònyù 汉语\nba      bá      bă      bs —— bàba     EE\nma      má      mă      mò 一一 m6ma 妈妈\nge      gé      ge      ge 一一 gége FF\nméi     měi     mèi 一一 mèimei 妹妹\ndi       di       di       di Oo ddi      弟弟\n\n2) 轻声 The neutral tone\n\nmāma               gëge                  tō de               tamen\nhóng de           máng ma           lái ma             bái de\nnéinai             hio ma             bõo le            põo le\ndidi                mèimei             lèi ma            lèi le"
       },
       {
-        "title": "鼻韵母 · Vận mẫu mũi",
-        "content": "an、en、ang、eng、ong. Phân biệt rõ -n và -ng."
+        "pageNumber": 44,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n3) ¥=声 The half 3rd tone\n\nhěn goo           hén nán           hěn dà               hčo ba\nni hē              ni lái              mifon               haole\nbén ban          běnlái            hěn bàng          hio ma\n\nA) HEWA Distinguish the pronunciations and tones\n\nbòn göng           bònköng            dònghóng            tönghóng\nhěn nén          hěn lón           hén lëng            kěnéng\nhénméng  hěn mòn         nánföng            nón fáng\n\n3) WIE Read and leam\n\nOEE 。 妈妈 好吗 g k\n难吗 很好 ike RK 很难\n\n(2) A: 你好吗?\nB: 很好\n\n\nB: ikt.\n\n(4) A: 汉语难吗?\nB: 汉语不难\n\n©) 回答问题 Answer the questions\n(1) Ni máng mo?\n(2) Hònyŭ nén ma?\n(3 ) Ni bàba hio ma?\n(4) Tā máng mo?"
       },
       {
-        "title": "i / ü 系列韵母",
-        "content": "ia、ie、iao、iou(-iu)、ian、in、iang、ing、iong；üe、üan、ün."
+        "pageNumber": 45,
+        "label": "练习",
+        "text": "第二课 汉语不太难\n\nLesson 2 Chinese is not very difficult\n\n1) 完成会话 Complete the dialogues\n\nG) A:                        !\nB; Nï ho!\n\n(2) A:                          ?\nB: Hěn máng.\n\n(3) A:                          r\n\nB: Hànyŭ bù nón.\n\n8) 交际会话 Communication\n\n间候 (1) Asking about someone's well-being (1)\nD A: Ni hčo ma?\n\nB: Hěn ho.\n\n® A: NI bàba mama héo ma?\nB: Tamen dõu hén hčo.\n\n@ A: Ni máng mo?\nB: Bú tài móng.\n\n@ A: Nibaba máng ma?\nB: Tā hěn máng.\n\n3) 写汉字 Write the characters\nCAE                     |\n\n$"
       },
       {
-        "title": "轻声 · Thanh nhẹ",
-        "content": "妈妈、爸爸、哥哥、弟弟、妹妹、吗: âm tiết thanh nhẹ đọc ngắn và không ghi dấu thanh."
-      },
-      {
-        "title": "半三声 · Nửa thanh 3",
-        "content": "Thanh 3 đứng trước thanh 1, 2, 4 hoặc thanh nhẹ thường chỉ đọc phần đi xuống: hěn máng、hǎo ma."
-      },
-      {
-        "title": "不 的变调 · Biến điệu 不",
-        "content": "Trước thanh 4, 不 đọc bú: 不大 bú dà；trước thanh 1, 2, 3 giữ bù: 不难 bù nán."
-      },
-      {
-        "title": "y / w 的写法",
-        "content": "Khi i, u, ü đứng đầu âm tiết, viết thành yi, wu, yu; cách đọc nguyên âm không đổi."
+        "pageNumber": 46,
+        "label": "练习",
+        "text": "NERE (3M) A-M 上\n\nhn G R\n~ |         |\n汉人   |   |\núl i riri\nsl |         T\nGa     |   |\nmo e > eT og og\n\n|\nw     |   |\n|         |\nm6 (类去如妈妈\n妈，     |   |\n则| ” ”交乏办从和爸\n\ne HHH\n\nhën |l 4 á PPPRP\n\n很           |       |\n\nmóng: v t Otè\n\nteH   |   |\n\nü| 4 phe\n\n嫩 |瑞风娄妙她\n\n她 HHH\n\nnón 7 a XA ea\n\na HHH"
       }
     ],
-    "grammar": [
+    "blocks": [
       {
-        "title": "吗 疑问句",
-        "content": "Thêm 吗 cuối câu trần thuật để tạo câu hỏi có/không: 你忙吗？汉语难吗？"
+        "title": "j q x 与 ü",
+        "desc": "Đọc và nhận dạng",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "jū / jú / jǔ / jù"
+              },
+              {
+                "ph": "qū / qú / qǔ / qù"
+              },
+              {
+                "ph": "xū / xú / xǔ / xù"
+              },
+              {
+                "ph": "jìxù"
+              },
+              {
+                "ph": "jùhuà"
+              },
+              {
+                "ph": "bìxū"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "很 + 形容词",
-        "content": "Trong câu vị ngữ tính từ, 很 thường đứng trước tính từ: 我很好；他很忙。"
+        "title": "鼻韵母",
+        "desc": "Phân biệt -n và -ng",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "nán / náng"
+              },
+              {
+                "ph": "hěn / héng"
+              },
+              {
+                "ph": "bèn / bèng"
+              },
+              {
+                "ph": "dǎn / dǎng"
+              },
+              {
+                "ph": "kōng / kěn"
+              },
+              {
+                "ph": "dǒng / děng"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "不太 + 形容词",
-        "content": "不太 biểu thị mức độ phủ định nhẹ: 不太难 = không khó lắm; 不太忙 = không bận lắm."
+        "title": "轻声",
+        "desc": "Đọc âm tiết nhẹ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "māma"
+              },
+              {
+                "ph": "bàba"
+              },
+              {
+                "ph": "gēge"
+              },
+              {
+                "ph": "dìdi"
+              },
+              {
+                "ph": "mèimei"
+              },
+              {
+                "ph": "nǐmen"
+              },
+              {
+                "ph": "hǎo ma"
+              },
+              {
+                "ph": "lèi le"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "太 + 形容词 + 了",
-        "content": "Dùng để cảm thán mức độ: 太好了！太难了！"
-      }
-    ],
-    "chips": [
+        "title": "不 的变调",
+        "desc": "Đọc đúng 不",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "不难 bù nán"
+              },
+              {
+                "ph": "不好 bù hǎo"
+              },
+              {
+                "ph": "不喝 bù hē"
+              },
+              {
+                "ph": "不来 bù lái"
+              },
+              {
+                "ph": "不大 bú dà"
+              },
+              {
+                "ph": "不累 bú lèi"
+              }
+            ]
+          }
+        ]
+      },
       {
-        "title": "认读练习",
-        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
-        "items": [
-          [
-            "忙",
-            "máng"
-          ],
-          [
-            "吗",
-            "ma"
-          ],
-          [
-            "很",
-            "hěn"
-          ],
-          [
-            "汉语",
-            "hànyǔ"
-          ],
-          [
-            "难",
-            "nán"
-          ],
-          [
-            "太",
-            "tài"
-          ],
-          [
-            "爸爸",
-            "bàba"
-          ],
-          [
-            "妈妈",
-            "māma"
-          ],
-          [
-            "他",
-            "tā"
-          ],
-          [
-            "她",
-            "tā"
-          ],
-          [
-            "它",
-            "tā"
-          ],
-          [
-            "男",
-            "nán"
-          ]
+        "title": "替换练习",
+        "desc": "Thay thế tính từ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "你忙吗？— 很忙。"
+              },
+              {
+                "ph": "汉语难吗？— 不太难。"
+              },
+              {
+                "ph": "爸爸忙吗？— 不太忙。"
+              },
+              {
+                "ph": "妈妈好吗？— 很好。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "汉字认读",
+        "desc": "Đọc và nhận mặt chữ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "忙"
+              },
+              {
+                "ph": "吗"
+              },
+              {
+                "ph": "很"
+              },
+              {
+                "ph": "汉语"
+              },
+              {
+                "ph": "难"
+              },
+              {
+                "ph": "太"
+              },
+              {
+                "ph": "爸爸"
+              },
+              {
+                "ph": "妈妈"
+              },
+              {
+                "ph": "他"
+              },
+              {
+                "ph": "她"
+              },
+              {
+                "ph": "它"
+              },
+              {
+                "ph": "男"
+              },
+              {
+                "ph": "哥哥"
+              },
+              {
+                "ph": "弟弟"
+              },
+              {
+                "ph": "妹妹"
+              }
+            ]
+          }
         ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "phonetics",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "phonetics": {
+        "title": "语音 · Ngữ âm",
+        "desc": "Quy tắc phát âm được làm nổi bật và có phần luyện nhận dạng",
+        "note": ""
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ cấu trúc và kiến thức trọng tâm",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Giữ các bài nhận dạng, đọc, nói và vận dụng; không tích hợp bài nghe cuối bài",
+        "note": ""
+      }
+    },
+    "phoneticsBlocks": [
+      {
+        "title": "认读练习",
+        "desc": "Nhìn chữ Hán rồi đọc phiên âm chính xác.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "忙 · máng"
+              },
+              {
+                "ph": "吗 · ma"
+              },
+              {
+                "ph": "很 · hěn"
+              },
+              {
+                "ph": "汉语 · hànyǔ"
+              },
+              {
+                "ph": "难 · nán"
+              },
+              {
+                "ph": "太 · tài"
+              },
+              {
+                "ph": "爸爸 · bàba"
+              },
+              {
+                "ph": "妈妈 · māma"
+              },
+              {
+                "ph": "他 · tā"
+              },
+              {
+                "ph": "她 · tā"
+              },
+              {
+                "ph": "它 · tā"
+              },
+              {
+                "ph": "男 · nán"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 2"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "02-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文 · Nghe bài khóa",
+      "code": "02-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "phonetics",
+      "label": "语音 · Nghe ngữ âm",
+      "code": "02-3",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "02-4",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 43,
+      "caption": "Trang bài tập trong PDF: 43",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 44,
+      "caption": "Trang bài tập trong PDF: 44",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 45,
+      "caption": "Trang bài tập trong PDF: 45",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 46,
+      "caption": "Trang bài tập trong PDF: 46",
+      "imageUrl": ""
+    }
+  ]
 }

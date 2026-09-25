@@ -17,47 +17,50 @@ function fromRow(row) {
 async function listByClass(classId) {
   const { data, error } = await supabase
     .from('enrollments')
-    .select('*, users(id, username, email, full_name)')
+    .select('*, users!enrollments_student_id_fkey(id, username, email, full_name)')
     .eq('class_id', classId)
     .order('created_at', { ascending: true });
   if (error) throw error;
   return data.map(fromRow);
 }
 
-// Danh sách course_id mà học viên được enroll (qua các lớp), dùng để lọc "khoá học của tôi"
-async function courseIdsForStudent(studentId) {
-  const { data, error } = await supabase
+// Các lớp học viên đang ở (kèm cột lớp thô để tính trạng thái kết thúc); courseId để lọc theo khoá
+async function classesForStudent(studentId, courseId) {
+  let query = supabase
     .from('enrollments')
-    .select('classes(course_id)')
+    .select('classes!inner(id, course_id, name, teacher_id, start_date, end_date, archived, users!classes_teacher_id_fkey(full_name, username))')
     .eq('student_id', studentId);
+  if (courseId) query = query.eq('classes.course_id', courseId);
+  const { data, error } = await query;
   if (error) throw error;
-  return [...new Set(data.map((r) => r.classes?.course_id).filter(Boolean))];
+  return data.map((r) => r.classes);
 }
 
-async function isStudentEnrolledInCourse(studentId, courseId) {
+async function findInClass(classId, studentId) {
   const { data, error } = await supabase
     .from('enrollments')
-    .select('id, classes!inner(course_id)')
+    .select('id')
+    .eq('class_id', classId)
     .eq('student_id', studentId)
-    .eq('classes.course_id', courseId)
     .limit(1);
   if (error) throw error;
-  return data.length > 0;
+  return data[0] || null;
 }
 
 async function create({ classId, studentId, enrolledBy }) {
   const { data, error } = await supabase
     .from('enrollments')
     .insert({ class_id: classId, student_id: studentId, enrolled_by: enrolledBy })
-    .select('*, users(id, username, email, full_name)')
+    .select('*, users!enrollments_student_id_fkey(id, username, email, full_name)')
     .single();
   if (error) throw error;
   return fromRow(data);
 }
 
-async function remove(id) {
-  const { error } = await supabase.from('enrollments').delete().eq('id', id);
+// Xoá ghi danh — luôn kèm classId để giáo viên không xoá nhầm học viên của lớp khác
+async function remove(id, classId) {
+  const { error } = await supabase.from('enrollments').delete().eq('id', id).eq('class_id', classId);
   if (error) throw error;
 }
 
-module.exports = { listByClass, courseIdsForStudent, isStudentEnrolledInCourse, create, remove };
+module.exports = { listByClass, classesForStudent, findInClass, create, remove };

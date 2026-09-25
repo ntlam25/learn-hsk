@@ -6,8 +6,15 @@ const userModel = require('../models/userModel');
 const courseModel = require('../models/courseModel');
 const lessonModel = require('../models/lessonModel');
 
-// Nạp toàn bộ lesson{n}.json trong thư mục này (Bài 1–15, dữ liệu gốc dùng cấu trúc
-// cũ exercises = { notes, grammar, chips, questions, reading, homework }).
+// Cách dùng:
+//   npm run seed              — tạo admin, khoá học và các bài còn thiếu
+//   npm run seed -- --update  — ghi đè NỘI DUNG CHỮ các bài đã có bằng dữ liệu giáo trình mới nhất
+//
+// Dữ liệu lesson{n}.json được sinh từ "Giáo trình Hán ngữ Bài 1–15.html" bằng
+// server/scripts/import_book.py. Seed không tải file: file nghe, ảnh trang sách và PDF do giáo viên
+// tải lên qua trình soạn bài. Bài mới được tạo sẵn các "ô" file (tên, mã, số trang) còn trống;
+// với --update, file nghe/ảnh đã tải lên được giữ nguyên.
+const UPDATE_EXISTING = process.argv.includes('--update');
 function loadLessonFiles() {
   return fs
     .readdirSync(__dirname)
@@ -16,19 +23,19 @@ function loadLessonFiles() {
     .sort((a, b) => a.lessonNumber - b.lessonNumber);
 }
 
-// Schema mới tách notes -> phoneticsNotes, grammar -> cột grammar riêng (để hiện tab
-// 语音/语法 độc lập); phần còn lại (chips/questions/reading/homework) vẫn ở "exercises".
-function toNewLessonShape(data, courseId) {
-  const oldExercises = data.exercises || {};
-  const { notes, grammar, ...restExercises } = oldExercises;
-  return {
-    ...data,
-    courseId,
-    phoneticsNotes: notes || [],
-    grammar: grammar || [],
-    exercises: restExercises,
-    isPreview: data.lessonNumber === 1, // Bài 1 cho xem trước công khai để giới thiệu khoá học
-  };
+// Dữ liệu kiểu cũ (exercises = { notes, grammar, chips, … }) → tách notes/grammar ra cột riêng.
+function fromLegacyShape(data) {
+  const { notes, grammar, ...restExercises } = data.exercises || {};
+  return { ...data, phoneticsNotes: notes || [], grammar: grammar || [], exercises: restExercises };
+}
+
+function toPayload(data, courseId, { keepFiles }) {
+  const payload = { ...(data.extra?.tabs ? data : fromLegacyShape(data)), courseId, isPreview: data.lessonNumber === 1 };
+  if (keepFiles) {
+    delete payload.audioTracks; // không gửi → server giữ nguyên file nghe / ảnh trang đã tải
+    delete payload.pages;
+  }
+  return payload;
 }
 
 async function ensureAdmin() {
@@ -74,13 +81,18 @@ async function run() {
 
   for (const data of lessons) {
     const exists = await lessonModel.findByNumber(course.id, data.lessonNumber);
-    if (exists) {
-      console.log(`[seed] Bài ${data.lessonNumber} đã tồn tại, bỏ qua.`);
+    if (exists && !UPDATE_EXISTING) {
+      console.log(`[seed] Bài ${data.lessonNumber} đã tồn tại, bỏ qua (thêm --update để ghi đè nội dung).`);
       continue;
     }
-    const payload = { ...toNewLessonShape(data, course.id), createdBy: admin.id };
-    await lessonModel.create(payload);
-    console.log(`[seed] Đã tạo Bài ${data.lessonNumber} (${data.titleVi}).`);
+    const payload = toPayload(data, course.id, { keepFiles: !!exists });
+    if (exists) {
+      await lessonModel.update(exists.id, payload);
+      console.log(`[seed] Đã cập nhật Bài ${data.lessonNumber} (${data.titleVi}).`);
+    } else {
+      await lessonModel.create({ ...payload, createdBy: admin.id });
+      console.log(`[seed] Đã tạo Bài ${data.lessonNumber} (${data.titleVi}).`);
+    }
   }
 
   console.log('[seed] Hoàn tất.');
@@ -88,6 +100,6 @@ async function run() {
 }
 
 run().catch((err) => {
-  console.error('[seed] Lỗi:', err);
+  console.error('[seed] Lỗi:', err.message || err);
   process.exit(1);
 });

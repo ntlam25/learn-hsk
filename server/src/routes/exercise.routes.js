@@ -10,6 +10,8 @@ router.use(requireAuth, requireRole('student'));
 router.post('/exercise-items/:itemId/submit', asyncHandler(ctrl.submit));
 router.post('/exercise-items/:itemId/review', asyncHandler(ctrl.review));
 router.get('/flashcard-reviews', asyncHandler(ctrl.myReviews));
+router.get('/progress', asyncHandler(ctrl.myProgress));
 router.post('/progress', asyncHandler(ctrl.markProgress));
+router.put('/progress/vocab', asyncHandler(ctrl.saveKnownVocab));
 
 module.exports = router;

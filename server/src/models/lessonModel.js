@@ -64,6 +64,7 @@ function audioFromRow(row) {
     audioUrl: row.audio_url,
     durationSec: row.duration_sec,
     code: row.code,
+    sizeBytes: row.size_bytes,
     sortOrder: row.sort_order,
   };
 }
@@ -108,9 +109,10 @@ async function syncChildren(lessonId, payload) {
       lesson_id: lessonId,
       category: t.category,
       label: t.label || '',
-      audio_url: t.audioUrl,
+      audio_url: t.audioUrl || '', // cho phép "ô" chưa tải file (tải sau qua trình soạn)
       duration_sec: t.durationSec ?? null,
       code: t.code || '',
+      size_bytes: t.sizeBytes ?? null,
       sort_order: t.sortOrder ?? i,
     }));
     if (rows.length) {
@@ -124,7 +126,7 @@ async function syncChildren(lessonId, payload) {
     const rows = (payload.pages || []).map((p, i) => ({
       lesson_id: lessonId,
       page_number: p.pageNumber ?? i + 1,
-      image_url: p.imageUrl,
+      image_url: p.imageUrl || '',
       caption: p.caption || '',
     }));
     if (rows.length) {
@@ -198,6 +200,37 @@ async function listAdminByCourse(courseId) {
   return data.map(fromRow);
 }
 
+// Số từ mới của từng bài (id → số từ) — cho báo cáo lớp / % đã thuộc
+async function vocabCounts(lessonIds) {
+  if (!lessonIds.length) return {};
+  const { data, error } = await supabase.from('lessons').select('id, vocab').in('id', lessonIds);
+  if (error) throw error;
+  return Object.fromEntries(data.map((r) => [r.id, Array.isArray(r.vocab) ? r.vocab.length : 0]));
+}
+
+// Số file nghe đã tải / ảnh trang sách của từng bài: { lessonId: { audio, pages } }
+async function mediaCounts(lessonIds) {
+  if (!lessonIds.length) return {};
+  const [audioRes, pagesRes] = await Promise.all([
+    supabase.from('lesson_audio_tracks').select('lesson_id').in('lesson_id', lessonIds).neq('audio_url', ''),
+    supabase.from('lesson_pages').select('lesson_id').in('lesson_id', lessonIds).neq('image_url', ''),
+  ]);
+  if (audioRes.error) throw audioRes.error;
+  if (pagesRes.error) throw pagesRes.error;
+  const out = Object.fromEntries(lessonIds.map((id) => [id, { audio: 0, pages: 0 }]));
+  audioRes.data.forEach((r) => out[r.lesson_id].audio++);
+  pagesRes.data.forEach((r) => out[r.lesson_id].pages++);
+  return out;
+}
+
+// Câu quiz / thẻ flashcard của nhiều bài (id, lessonId, kind, points)
+async function exerciseItemsFor(lessonIds) {
+  if (!lessonIds.length) return [];
+  const { data, error } = await supabase.from('exercise_items').select('id, lesson_id, kind, points').in('lesson_id', lessonIds);
+  if (error) throw error;
+  return data.map((r) => ({ id: r.id, lessonId: r.lesson_id, kind: r.kind, points: r.points }));
+}
+
 async function findByNumber(courseId, lessonNumber) {
   const res = await supabase.from('lessons').select('id').eq('course_id', courseId).eq('lesson_number', lessonNumber).single();
   return unwrapSingle(res);
@@ -226,6 +259,9 @@ async function remove(id) {
 }
 
 module.exports = {
+  vocabCounts,
+  mediaCounts,
+  exerciseItemsFor,
   listPublicByCourse,
   listPreview,
   getFullById,

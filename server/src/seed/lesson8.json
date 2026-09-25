@@ -10,8 +10,7 @@
       "num": 1,
       "chars": [
         {
-          "h": "买",
-          "p": ""
+          "h": "买"
         }
       ],
       "pinyin": "mǎi",
@@ -34,12 +33,10 @@
       "num": 2,
       "chars": [
         {
-          "h": "水",
-          "p": ""
+          "h": "水"
         },
         {
-          "h": "果",
-          "p": ""
+          "h": "果"
         }
       ],
       "pinyin": "shuǐguǒ",
@@ -62,12 +59,10 @@
       "num": 3,
       "chars": [
         {
-          "h": "苹",
-          "p": ""
+          "h": "苹"
         },
         {
-          "h": "果",
-          "p": ""
+          "h": "果"
         }
       ],
       "pinyin": "píngguǒ",
@@ -90,13 +85,13 @@
       "num": 4,
       "chars": [
         {
-          "h": "斤",
-          "p": ""
+          "h": "斤"
         }
       ],
       "pinyin": "jīn",
       "pos": "Lượng từ",
       "meaning": "cân Trung Quốc (0,5 kg)",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "公斤",
@@ -121,17 +116,16 @@
       "num": 5,
       "chars": [
         {
-          "h": "多",
-          "p": ""
+          "h": "多"
         },
         {
-          "h": "少",
-          "p": ""
+          "h": "少"
         }
       ],
       "pinyin": "duōshao",
       "pos": "Đại từ",
       "meaning": "bao nhiêu",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "多",
@@ -161,17 +155,16 @@
       "num": 6,
       "chars": [
         {
-          "h": "块",
-          "p": ""
+          "h": "块"
         },
         {
-          "h": "元",
-          "p": ""
+          "h": "元"
         }
       ],
       "pinyin": "kuài (yuán)",
       "pos": "Lượng từ",
       "meaning": "đồng; tệ",
+      "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
       "wordlist": [
         {
           "h": "角（毛）",
@@ -189,8 +182,7 @@
       "num": 7,
       "chars": [
         {
-          "h": "贵",
-          "p": ""
+          "h": "贵"
         }
       ],
       "pinyin": "guì",
@@ -201,12 +193,10 @@
       "num": 8,
       "chars": [
         {
-          "h": "太",
-          "p": ""
+          "h": "太"
         },
         {
-          "h": "了",
-          "p": ""
+          "h": "了"
         }
       ],
       "pinyin": "tài…le",
@@ -217,12 +207,10 @@
       "num": 9,
       "chars": [
         {
-          "h": "便",
-          "p": ""
+          "h": "便"
         },
         {
-          "h": "宜",
-          "p": ""
+          "h": "宜"
         }
       ],
       "pinyin": "piányi",
@@ -233,16 +221,13 @@
       "num": 10,
       "chars": [
         {
-          "h": "一",
-          "p": ""
+          "h": "一"
         },
         {
-          "h": "点",
-          "p": ""
+          "h": "点"
         },
         {
-          "h": "儿",
-          "p": ""
+          "h": "儿"
         }
       ],
       "pinyin": "(yì) diǎnr",
@@ -253,8 +238,7 @@
       "num": 11,
       "chars": [
         {
-          "h": "来",
-          "p": ""
+          "h": "来"
         }
       ],
       "pinyin": "lái",
@@ -265,8 +249,7 @@
       "num": 12,
       "chars": [
         {
-          "h": "吧",
-          "p": ""
+          "h": "吧"
         }
       ],
       "pinyin": "ba",
@@ -289,8 +272,7 @@
       "num": 13,
       "chars": [
         {
-          "h": "还",
-          "p": ""
+          "h": "还"
         }
       ],
       "pinyin": "hái",
@@ -313,12 +295,10 @@
       "num": 14,
       "chars": [
         {
-          "h": "别",
-          "p": ""
+          "h": "别"
         },
         {
-          "h": "的",
-          "p": ""
+          "h": "的"
         }
       ],
       "pinyin": "biéde",
@@ -341,12 +321,10 @@
       "num": 15,
       "chars": [
         {
-          "h": "橘",
-          "p": ""
+          "h": "橘"
         },
         {
-          "h": "子",
-          "p": ""
+          "h": "子"
         }
       ],
       "pinyin": "júzi",
@@ -370,12 +348,10 @@
       "num": 16,
       "chars": [
         {
-          "h": "怎",
-          "p": ""
+          "h": "怎"
         },
         {
-          "h": "么",
-          "p": ""
+          "h": "么"
         }
       ],
       "pinyin": "zěnme",
@@ -398,8 +374,7 @@
       "num": 17,
       "chars": [
         {
-          "h": "卖",
-          "p": ""
+          "h": "卖"
         }
       ],
       "pinyin": "mài",
@@ -422,8 +397,7 @@
       "num": 18,
       "chars": [
         {
-          "h": "两",
-          "p": ""
+          "h": "两"
         }
       ],
       "pinyin": "liǎng",
@@ -447,12 +421,10 @@
       "num": 19,
       "chars": [
         {
-          "h": "一",
-          "p": ""
+          "h": "一"
         },
         {
-          "h": "共",
-          "p": ""
+          "h": "共"
         }
       ],
       "pinyin": "yígòng",
@@ -475,8 +447,7 @@
       "num": 20,
       "chars": [
         {
-          "h": "给",
-          "p": ""
+          "h": "给"
         }
       ],
       "pinyin": "gěi",
@@ -499,8 +470,7 @@
       "num": 21,
       "chars": [
         {
-          "h": "找",
-          "p": ""
+          "h": "找"
         }
       ],
       "pinyin": "zhǎo",
@@ -524,6 +494,7 @@
   "dialogues": [
     {
       "title": "课文",
+      "context": "（A在买水果）",
       "lines": [
         {
           "role": "A",
@@ -580,99 +551,332 @@
       ]
     }
   ],
+  "phoneticsNotes": [
+    {
+      "title": "多音节词重音",
+      "content": "Từ có ba âm tiết trở lên thường nhấn âm tiết cuối: 留学生、图书馆、飞机场、火车站、大使馆。"
+    },
+    {
+      "title": "一的变调",
+      "content": "一斤 yì jīn、一共 yígòng: trước thanh 1/2/3 đọc yì; trước thanh 4 đọc yí."
+    },
+    {
+      "title": "轻声",
+      "content": "多少 duōshao、橘子 júzi、别的 biéde: âm cuối đọc nhẹ."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "太……了",
+      "content": "Cảm thán mức độ cao: 太贵了、太多了、太好吃了。"
+    },
+    {
+      "title": "多少钱一斤？",
+      "content": "Hỏi giá theo đơn vị: 苹果多少钱一斤？— 三块一斤。"
+    },
+    {
+      "title": "两 và 二",
+      "content": "两 đứng trước lượng từ: 两斤、两个；二 dùng để đếm và trong số: 二、十二、二十。"
+    },
+    {
+      "title": "Tiền tệ",
+      "content": "1 元/块 = 10 角/毛. 两块五 thường hiểu là 2,5 tệ trong khẩu ngữ."
+    },
+    {
+      "title": "还要别的吗？",
+      "content": "还 + động từ: còn/tiếp tục; 别的: thứ khác. Mẫu dùng khi hỏi khách còn mua thêm gì không."
+    }
+  ],
   "exercises": {
-    "notes": [
+    "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 8 (5 trang)",
+    "bookNote": "Đã bổ sung đầy đủ phần <b>练习</b> của sách. Các bài luyện tập cũ trong HTML vẫn được giữ bên dưới như bài bổ sung của giáo viên.",
+    "textPages": [
       {
-        "title": "多音节词重音",
-        "content": "Từ có ba âm tiết trở lên thường nhấn âm tiết cuối: 留学生、图书馆、飞机场、火车站、大使馆。"
+        "pageNumber": 101,
+        "label": "练习",
+        "text": "第八课 ER-FEDH ©\nLesson8 How much is halfa kilo of apples\n\n(1) 太足了,便宜点儿吧。\n(2) 你给二十二吧。\n\n2) “二\"+量词一两(lieng )+量词 “二\"(一“两\")+ measure word\n“二”在盟间前常读成“ling”，写作“两\"。例如:\nWhen “—\" is used with a measure word, it is usually replaced by “P ling”,\neg\n\nMEK           两个人           5%\n*二个盆头          *二个人          k\n\n 语音 Yiyin Phonetics\n\n1) TEE (2) Word stress (2)\n三个音节以上的多音节词，词重音大多也在最后一个音节上。例如;\nIn multisyllabic words with three or more syllables, the stress usually falls\non the last syllable too, e.g.\ntúshüguðn liúxuéshēng  féijiching  huðchēzhàn\n\nIe v. @\n\n1) EE Phonetics\n\n(1) BEFSH Distinguish the pronunciations and tones\n\nshū                   běn                    zhi                   bi                  dão\nzhuð         yi             chó          bēi         bão\nhuo                 huòr                 zì                    bao              xin\nxié           wà            yi            moo        bio\ndan xin           tán xin             chítáng             shítáng\ntóuděng       tóu téng         dòngcí           tóngshì"
       },
       {
-        "title": "一的变调",
-        "content": "一斤 yì jīn、一共 yígòng: trước thanh 1/2/3 đọc yì; trước thanh 4 đọc yí."
+        "pageNumber": 102,
+        "label": "练习",
+        "text": "am ms sn i\n\n\n(2 ) 声油搭配 Collocations of tones\nBéijing        měitiān hiochi  wéncan\n\nyiqián         yüyán          kénéng lixing\nfidio          xi zo          kõuyù         kěyï\ncăisè          hõðokàn         zěnyàng wůfòn\nmiiqin         xihuan         jigjie          yănjing\n(3) 儿化和前 The retroflex finals\nxičoháir       hiowénr       méi shir      lióo tianr\nyidienr        yixior           yihuir         yíkuàir\nyčudičnr chòng gër yčnjingr míngpáir\nqù năr        qù nòr         zài nor       zoi zher\n(4) 轻南The neutral tone\ngao de        dide           nón de       nü de\nbái de         hóng de        lù de          rènao\nyuèliang běnzi           jičozi          zhuðzi\n\n(5) ZPE Multisyllabic liaison\n\nliúxuéshēng       túshüguðn                hng\nhuschézhan  chüzüchěë            dàshigučn\nzúqiúchěng        diànyingyuàn        yindonghui\ntoijiquén           huazhuangpin xidochidion\ntài guì le            toi suan le            tòi là le\n\ntài tión le         tài xión le           tài yóu le\ntài pang le        tài yučn le          toi lèi le\n\ntài kùn le          toi léng le           tài rè le"
       },
       {
-        "title": "轻声",
-        "content": "多少 duōshao、橘子 júzi、别的 biéde: âm cuối đọc nhẹ."
+        "pageNumber": 103,
+        "label": "练习",
+        "text": "第八课 ER-FEDH      (w)\n\nLesson8 How much is halfa kilo of apples\n\n2) 认读 Identify and read\n买苹果     FR     ESN     买米饭     买包子\n多少钱     ED     多少人     多少学生 多少老师\n还买吗        还要吗        还去吗        还吃吗         还喝吗\n还买           还要           还去           还吃            还喝\n\n3) 看图会话 Complete the dialogues based on the pictures\n\nS p p\n\nFAS     葡萄 18元/斤      西瓜2元/斤\nxiāngjiõo                   pútao                     xiguG\nbanana.                      grape                    watermelon\n<     Y\ng% |!    Eo\nA      Eia              x\n梨4元/斤       桃8元/斤      WASIT\ni                         táo                     cõoméi\npear                       peach                    strawberry\n\n(1) A: Nin măi shénme?\nB:\nA: Nin mõi duoshao?\nB:\nA: Hái yo bié de ma?\n\nA: Yíigòng"
+      },
+      {
+        "pageNumber": 104,
+        "label": "练习",
+        "text": "NERE [第3版 第一般 上\n\n\n(2) A:\n\nB: Wé măi júzi. Yi jīn duōshao qián?\nAs\n\nB: Wò măi wù jin. Yigong duöshao qián?\nA:\n\nB: Bú yòo le. Xièxie!\n\n1) 交际会话 Communication\n(1) 买东西。Shopping\nA: Ni yào shénme?\nB: Wé măi píngguð.\n(2) 间价格 Asking about prices\nA: Pinggué duðshao qián yì jin?\nB: Yijin wù kuòi wù.\n\nE) 538P Write the characters\n\nyuen ”三末元\n\n元\n\nmbo ”三毛\n\n毛\n\nfn | ”人入分分\n\n分\n\n加| EPR\n\nH"
+      },
+      {
+        "pageNumber": 105,
+        "label": "练习",
+        "text": "ZAR 匡果一斤多少钱\n\nLesson8 How much is halfa kilo of apples\n\nMAAE\n|      |    |\n多    |   j\n0 n y\n=      ]\npa    OO\nWI 7T EREE\nT]    ]   ]\nz    |   |\nmi EFR\nEa    HH\nmj AA rEEE\n|      |    ]\n卖    |   |\n|\nE      HEH\nin AAAA\n|      l    ]\n两 o   iii]\nbé °” 533 AA\n[T]    |    |\n别-    BETE\noči” t 2 Y INANI y\n|      |    ]\n给    |   |\nho tI r RRR\n\n|"
       }
     ],
-    "grammar": [
+    "blocks": [
       {
-        "title": "太……了",
-        "content": "Cảm thán mức độ cao: 太贵了、太多了、太好吃了。"
+        "title": "味道和感觉",
+        "desc": "Đọc cấu trúc 太……了",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "太贵了"
+              },
+              {
+                "ph": "太酸了"
+              },
+              {
+                "ph": "太辣了"
+              },
+              {
+                "ph": "太甜了"
+              },
+              {
+                "ph": "太咸了"
+              },
+              {
+                "ph": "太油了"
+              },
+              {
+                "ph": "太远了"
+              },
+              {
+                "ph": "太累了"
+              },
+              {
+                "ph": "太冷了"
+              },
+              {
+                "ph": "太热了"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "多少钱一斤？",
-        "content": "Hỏi giá theo đơn vị: 苹果多少钱一斤？— 三块一斤。"
+        "title": "买卖问价",
+        "desc": "Luyện hỏi giá",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "苹果多少钱一斤？"
+              },
+              {
+                "ph": "橘子怎么卖？"
+              },
+              {
+                "ph": "鸡蛋多少钱一个？"
+              },
+              {
+                "ph": "一共多少钱？"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "两 và 二",
-        "content": "两 đứng trước lượng từ: 两斤、两个；二 dùng để đếm và trong số: 二、十二、二十。"
+        "title": "替换练习",
+        "desc": "Thay thế từ",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "买苹果"
+              },
+              {
+                "ph": "买馒头"
+              },
+              {
+                "ph": "买饺子"
+              },
+              {
+                "ph": "买米饭"
+              },
+              {
+                "ph": "还买吗"
+              },
+              {
+                "ph": "还要吗"
+              },
+              {
+                "ph": "还吃吗"
+              },
+              {
+                "ph": "还喝吗"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "Tiền tệ",
-        "content": "1 元/块 = 10 角/毛. 两块五 thường hiểu là 2,5 tệ trong khẩu ngữ."
-      },
-      {
-        "title": "还要别的吗？",
-        "content": "还 + động từ: còn/tiếp tục; 别的: thứ khác. Mẫu dùng khi hỏi khách còn mua thêm gì không."
-      }
-    ],
-    "chips": [
-      {
-        "title": "认读练习",
-        "desc": "Đọc chữ Hán rồi đối chiếu phiên âm.",
-        "items": [
-          [
-            "买",
-            "mǎi"
-          ],
-          [
-            "卖",
-            "mài"
-          ],
-          [
-            "水果",
-            "shuǐguǒ"
-          ],
-          [
-            "苹果",
-            "píngguǒ"
-          ],
-          [
-            "斤",
-            "jīn"
-          ],
-          [
-            "公斤",
-            "gōngjīn"
-          ],
-          [
-            "了",
-            "le"
-          ],
-          [
-            "吧",
-            "ba"
-          ],
-          [
-            "多",
-            "duō"
-          ],
-          [
-            "少",
-            "shǎo"
-          ],
-          [
-            "多少",
-            "duōshao"
-          ],
-          [
-            "块",
-            "kuài"
-          ]
+        "title": "情景任务",
+        "desc": "Đóng vai mua hàng",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "Người bán báo giá 3 loại hoa quả."
+              },
+              {
+                "ph": "Người mua mặc cả ít nhất 1 lần."
+              },
+              {
+                "ph": "Dùng 两、斤、块、角 và 一共."
+              },
+              {
+                "ph": "Kết thúc bằng trả tiền và trả tiền thừa."
+              }
+            ]
+          }
         ]
       }
     ]
   },
-  "extra": {}
+  "extra": {
+    "tabs": [
+      "vocab",
+      "dialogue",
+      "phonetics",
+      "grammar",
+      "exercise"
+    ],
+    "heads": {
+      "vocab": {
+        "title": "生词 · Từ mới",
+        "desc": "Đã sắp xếp lại đúng thứ tự và cách đánh số của sách giáo trình (Bản 3)",
+        "note": "Các mục không đánh số được đặt trong ô “Từ đi kèm” và không tính thành từ mới độc lập."
+      },
+      "dialogue": {
+        "title": "课文 · Bài khóa",
+        "desc": "Bài khóa chỉ hiển thị chữ Hán",
+        "note": "✅ Nội dung bên dưới lấy sách làm chuẩn. Đã bỏ phiên âm trực tiếp dưới câu để học sinh luyện nhận mặt chữ."
+      },
+      "phonetics": {
+        "title": "语音 · Ngữ âm",
+        "desc": "Điểm phát âm cần chú ý và luyện nhận dạng",
+        "note": ""
+      },
+      "grammar": {
+        "title": "语法 · Ngữ pháp",
+        "desc": "Ghi nhớ mẫu câu trọng tâm của bài",
+        "note": ""
+      },
+      "exercise": {
+        "title": "练习 · Luyện tập",
+        "desc": "Đã loại bỏ các bài nghe và phần điền cuối bài",
+        "note": ""
+      }
+    },
+    "phoneticsBlocks": [
+      {
+        "title": "认读练习",
+        "desc": "Đọc chữ Hán rồi đối chiếu phiên âm.",
+        "parts": [
+          {
+            "type": "chips",
+            "items": [
+              {
+                "ph": "买 · mǎi"
+              },
+              {
+                "ph": "卖 · mài"
+              },
+              {
+                "ph": "水果 · shuǐguǒ"
+              },
+              {
+                "ph": "苹果 · píngguǒ"
+              },
+              {
+                "ph": "斤 · jīn"
+              },
+              {
+                "ph": "公斤 · gōngjīn"
+              },
+              {
+                "ph": "了 · le"
+              },
+              {
+                "ph": "吧 · ba"
+              },
+              {
+                "ph": "多 · duō"
+              },
+              {
+                "ph": "少 · shǎo"
+              },
+              {
+                "ph": "多少 · duōshao"
+              },
+              {
+                "ph": "块 · kuài"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+    "footer": {
+      "zh": "温故而知新",
+      "text": "· Ôn cũ biết mới — Bài 8"
+    }
+  },
+  "audioTracks": [
+    {
+      "category": "vocab",
+      "label": "生词 · Nghe từ mới",
+      "code": "08-2",
+      "audioUrl": ""
+    },
+    {
+      "category": "text",
+      "label": "课文 · Nghe bài khóa",
+      "code": "08-1",
+      "audioUrl": ""
+    },
+    {
+      "category": "practice",
+      "label": "练习 · Nghe luyện tập",
+      "code": "08-3",
+      "audioUrl": ""
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 101,
+      "caption": "Trang bài tập trong PDF: 101",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 102,
+      "caption": "Trang bài tập trong PDF: 102",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 103,
+      "caption": "Trang bài tập trong PDF: 103",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 104,
+      "caption": "Trang bài tập trong PDF: 104",
+      "imageUrl": ""
+    },
+    {
+      "pageNumber": 105,
+      "caption": "Trang bài tập trong PDF: 105",
+      "imageUrl": ""
+    }
+  ]
 }

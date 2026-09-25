@@ -11,6 +11,7 @@ const adminRouter = express.Router();
 adminRouter.use(requireAuth, requireRole('admin', 'teacher'));
 adminRouter.get('/', asyncHandler(ctrl.listAdmin));
 adminRouter.get('/:id', asyncHandler(ctrl.getById));
+adminRouter.get('/:id/overview', asyncHandler(ctrl.overview));
 adminRouter.post('/', asyncHandler(ctrl.create));
 adminRouter.put('/:id', asyncHandler(ctrl.update));
 adminRouter.delete('/:id', requireRole('admin'), asyncHandler(ctrl.remove));

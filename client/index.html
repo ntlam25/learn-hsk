@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giáo trình Hán ngữ · Xem &amp; Quản trị bài học</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <!-- HanziWriter dùng để vẽ hiệu ứng bút thuận chữ Hán, giữ nguyên như bản HTML gốc -->
     <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.7/dist/hanzi-writer.min.js"></script>
   </head>
   <body>
+    <script>
+      // Áp dụng chế độ tối trước khi React render để tránh nháy màu
+      try {
+        if (localStorage.getItem('hanzi_theme') === 'dark') document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

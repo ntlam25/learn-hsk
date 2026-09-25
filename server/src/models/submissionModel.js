@@ -23,30 +23,4 @@ async function create({ exerciseItemId, studentId, answer, isCorrect, score }) {
   return fromRow(data);
 }
 
-// Điểm/số câu đúng của 1 học viên trên toàn bộ các exercise_item thuộc danh sách lesson (dùng cho báo cáo lớp)
-async function summaryForStudentLessons(studentId, lessonIds) {
-  if (!lessonIds.length) return { totalPoints: 0, correctCount: 0, submittedCount: 0 };
-  const { data: items, error: itemsErr } = await supabase
-    .from('exercise_items')
-    .select('id')
-    .in('lesson_id', lessonIds)
-    .eq('kind', 'quiz');
-  if (itemsErr) throw itemsErr;
-  const itemIds = items.map((i) => i.id);
-  if (!itemIds.length) return { totalPoints: 0, correctCount: 0, submittedCount: 0 };
-
-  const { data, error } = await supabase
-    .from('submissions')
-    .select('score, is_correct')
-    .eq('student_id', studentId)
-    .in('exercise_item_id', itemIds);
-  if (error) throw error;
-
-  return {
-    totalPoints: data.reduce((sum, s) => sum + (s.score || 0), 0),
-    correctCount: data.filter((s) => s.is_correct).length,
-    submittedCount: data.length,
-  };
-}
-
-module.exports = { create, summaryForStudentLessons };
+module.exports = { create };
