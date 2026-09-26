@@ -41,7 +41,6 @@ alter table courses enable row level security;
 -- ============== lessons ==============
 create table if not exists lessons (
   id uuid primary key default gen_random_uuid(),
-  course_id uuid not null references courses(id) on delete cascade,
   lesson_number integer not null,
   seal text default '',
   title_zh text default '',
@@ -59,11 +58,10 @@ create table if not exists lessons (
   published boolean not null default true,
   created_by uuid references users(id) on delete set null,
   created_at timestamptz not null default now(),
-  updated_at timestamptz not null default now(),
-  unique (course_id, lesson_number)
+  updated_at timestamptz not null default now()
 );
 
-create index if not exists idx_lessons_course on lessons (course_id);
+create index if not exists idx_lessons_number on lessons (lesson_number);
 create index if not exists idx_lessons_published on lessons (published);
 create index if not exists idx_lessons_preview on lessons (is_preview);
 
@@ -184,6 +182,18 @@ create index if not exists idx_enrollments_student on enrollments (student_id);
 create index if not exists idx_enrollments_class on enrollments (class_id);
 
 alter table enrollments enable row level security;
+
+-- ============== course_lessons (một bài dùng lại được ở nhiều khoá; không gắn khoá nào = bài độc lập) ==============
+create table if not exists course_lessons (
+  course_id uuid not null references courses(id) on delete cascade,
+  lesson_id uuid not null references lessons(id) on delete cascade,
+  created_at timestamptz not null default now(),
+  primary key (course_id, lesson_id)
+);
+
+create index if not exists idx_course_lessons_lesson on course_lessons (lesson_id);
+
+alter table course_lessons enable row level security;
 
 -- ============== class_lessons (giáo viên mở/khoá từng bài cho từng lớp) ==============
 -- Bài mở với lớp khi released = true hoặc đã tới release_at.

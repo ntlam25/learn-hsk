@@ -5,6 +5,7 @@ const userModel = require('../models/userModel');
 const lessonModel = require('../models/lessonModel');
 const progressModel = require('../models/progressModel');
 const { supabase } = require('../config/supabase');
+const { idsFrom, BAD_IDS } = require('../utils/bulk');
 const { USERNAME_RE, generateJoinCode, generateTempPassword } = require('../utils/accounts');
 
 const MAX_BATCH = 200;
@@ -81,6 +82,15 @@ async function remove(req, res) {
   if (!klass) return;
   await classModel.remove(klass.id);
   res.json({ message: 'Đã xoá.' });
+}
+
+// POST /api/admin/classes/bulk-delete  body: { ids } — giáo viên chỉ xoá được lớp mình phụ trách
+async function removeMany(req, res) {
+  const ids = idsFrom(req.body);
+  if (!ids) return res.status(400).json(BAD_IDS);
+  const deleted = await classModel.removeMany(ids, { teacherId: req.user.role === 'teacher' ? req.user.id : undefined });
+  const skipped = ids.length - deleted;
+  res.json({ message: `Đã xoá ${deleted} lớp.${skipped ? ` Bỏ qua ${skipped} lớp không thuộc quyền của bạn.` : ''}`, deleted, skipped });
 }
 
 // POST /api/admin/classes/:classId/join-code — đổi mã mời (mã cũ hết hiệu lực)
@@ -212,6 +222,16 @@ async function removeStudent(req, res) {
   if (!klass) return;
   await enrollmentModel.remove(req.params.enrollmentId, klass.id);
   res.json({ message: 'Đã xoá học viên khỏi lớp.' });
+}
+
+// POST /api/admin/classes/:classId/students/bulk-remove  body: { enrollmentIds }
+async function removeStudents(req, res) {
+  const klass = await assertOwnClass(req, res);
+  if (!klass) return;
+  const ids = idsFrom(req.body, 'enrollmentIds');
+  if (!ids) return res.status(400).json(BAD_IDS);
+  const removed = await enrollmentModel.removeMany(ids, klass.id);
+  res.json({ message: `Đã xoá ${removed} học viên khỏi lớp.`, removed });
 }
 
 // ---------------------------------------------------------------- bài học của lớp
@@ -359,12 +379,14 @@ module.exports = {
   create,
   update,
   remove,
+  removeMany,
   regenerateJoinCode,
   listStudents,
   addStudent,
   bulkAddStudents,
   createStudentAccounts,
   removeStudent,
+  removeStudents,
   listLessons,
   setLessons,
   report,

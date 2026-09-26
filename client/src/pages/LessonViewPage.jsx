@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import api from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import { useCourseNav } from '../context/CourseNavContext';
@@ -52,6 +52,9 @@ function denyText(data) {
 // chung (sidebar học viên / thanh điều hướng). Bật class html.book-mode để book.css áp nền/phông của giáo trình.
 export default function LessonViewPage() {
   const { id } = useParams();
+  // Bài dùng chung nhiều khoá: ?course= cho biết đang học trong khoá nào (thanh chọn bài, sidebar, link về khoá)
+  const [searchParams] = useSearchParams();
+  const courseParam = searchParams.get('course') || undefined;
   const { user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -78,13 +81,13 @@ export default function LessonViewPage() {
     setLesson(null);
     setError(null);
     api
-      .get(`/lessons/${id}`)
+      .get(`/lessons/${id}`, { params: { courseId: courseParam } })
       .then((res) => setLesson(normalizeLesson(res.data)))
       .catch((err) => {
         const data = err.response?.data;
         setError({ text: denyText(data), reason: data?.reason, courseId: data?.courseId });
       });
-  }, [id]);
+  }, [id, courseParam]);
 
   // Danh sách bài cho thanh chọn bài: học viên thấy cả bài chưa mở (🔒, kèm trạng thái hoàn thành từng bài)
   useEffect(() => {
@@ -178,7 +181,7 @@ export default function LessonViewPage() {
   }, [siblings, lesson, progress?.status]);
 
   function selectLesson(l) {
-    navigate(`/lessons/${l.id}`);
+    navigate(`/lessons/${l.id}${lesson?.courseId ? `?course=${lesson.courseId}` : ''}`);
     try {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch {

@@ -87,6 +87,15 @@ async function remove(id) {
   if (error) throw error;
 }
 
+// Xoá nhiều lớp; teacherId (giáo viên) → chỉ xoá lớp mình phụ trách. Trả về số lớp đã xoá.
+async function removeMany(ids, { teacherId } = {}) {
+  let query = supabase.from('classes').delete().in('id', ids);
+  if (teacherId) query = query.eq('teacher_id', teacherId);
+  const { data, error } = await query.select('id');
+  if (error) throw error;
+  return data.length;
+}
+
 // ---------- class_lessons: giáo viên mở/khoá từng bài cho lớp ----------
 
 function isReleased(row) {
@@ -118,4 +127,4 @@ async function setLessonStates(classId, items) {
   if (error) throw error;
 }
 
-module.exports = { list, getById, getByJoinCode, create, update, remove, lessonStates, setLessonStates, isEnded };
+module.exports = { list, getById, getByJoinCode, create, update, remove, removeMany, lessonStates, setLessonStates, isEnded };

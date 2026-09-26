@@ -13,6 +13,8 @@ courseLessonsRouter.get('/', asyncHandler(ctrl.listByCourse));
 const adminRouter = express.Router();
 adminRouter.use(requireAuth, requireRole('admin', 'teacher'));
 adminRouter.get('/', asyncHandler(ctrl.listAdmin));
+adminRouter.post('/import', asyncHandler(ctrl.importMany));
+adminRouter.post('/bulk-delete', asyncHandler(ctrl.removeMany));
 adminRouter.get('/:id', asyncHandler(ctrl.getAdminById));
 adminRouter.post('/', asyncHandler(ctrl.create));
 adminRouter.put('/:id', asyncHandler(ctrl.update));

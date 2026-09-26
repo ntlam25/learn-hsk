@@ -77,7 +77,7 @@ export default function MyCoursesPage() {
               </div>
             </Link>
             {c.resumeLesson ? (
-              <Link to={`/lessons/${c.resumeLesson.id}`} className="btn-primary my-course-resume">
+              <Link to={`/lessons/${c.resumeLesson.id}?course=${c.course.id}`} className="btn-primary my-course-resume">
                 {c.resumeLesson.started ? '▶ Học tiếp' : '▶ Bắt đầu học'} · Bài {c.resumeLesson.lessonNumber}
               </Link>
             ) : (

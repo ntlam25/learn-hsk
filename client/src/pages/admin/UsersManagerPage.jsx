@@ -4,6 +4,8 @@ import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
 import Select from '../../components/ui/Select';
 import Button from '../../components/ui/Button';
+import BulkBar, { SelectAllCell, SelectCell } from '../../components/ui/BulkBar';
+import useRowSelection from '../../hooks/useRowSelection';
 
 const ROLE_OPTIONS = [
   { value: 'admin', label: 'Quản trị viên' },
@@ -22,6 +24,8 @@ export default function UsersManagerPage() {
   const [search, setSearch] = useState('');
   const [roleFilter, setRoleFilter] = useState('');
   const [error, setError] = useState('');
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const selection = useRowSelection((users || []).filter((u) => u.id !== currentUser?.id).map((u) => u.id));
 
   function load() {
     api
@@ -59,6 +63,22 @@ export default function UsersManagerPage() {
     }
   }
 
+  async function handleBulkDelete() {
+    if (!confirm(`Xoá ${selection.count} tài khoản đã chọn?
+Toàn bộ tiến độ học, bài nộp của các tài khoản này cũng bị xoá. Hành động này không thể hoàn tác.`)) return;
+    setBulkBusy(true);
+    try {
+      const res = await api.post('/admin/users/bulk-delete', { ids: selection.selected });
+      toast.success(res.data.message);
+      selection.clear();
+      load();
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Xoá thất bại.');
+    } finally {
+      setBulkBusy(false);
+    }
+  }
+
   return (
     <main className="page admin-dashboard-page">
       <div className="admin-header">
@@ -92,6 +112,7 @@ export default function UsersManagerPage() {
         <table className="admin-table">
           <thead>
             <tr>
+              <SelectAllCell selection={selection} disabled={users.length === 0} />
               <th>Tên đăng nhập</th>
               <th>Email</th>
               <th>Họ tên</th>
@@ -104,7 +125,8 @@ export default function UsersManagerPage() {
             {users.map((u) => {
               const isSelf = u.id === currentUser?.id;
               return (
-                <tr key={u.id}>
+                <tr key={u.id} className={selection.isSelected(u.id) ? 'row-selected' : ''}>
+                  <SelectCell selection={selection} id={u.id} disabled={isSelf} title={isSelf ? 'Không thể xoá tài khoản của chính bạn' : undefined} />
                   <td>{u.username}</td>
                   <td>{u.email}</td>
                   <td>{u.fullName || '—'}</td>
@@ -135,7 +157,7 @@ export default function UsersManagerPage() {
             })}
             {users.length === 0 && (
               <tr>
-                <td colSpan={6} className="empty-state">
+                <td colSpan={7} className="empty-state">
                   Không tìm thấy người dùng nào.
                 </td>
               </tr>
@@ -143,6 +165,11 @@ export default function UsersManagerPage() {
           </tbody>
         </table>
       )}
+      <BulkBar selection={selection} noun="tài khoản">
+        <Button variant="chip-danger" onClick={handleBulkDelete} disabled={bulkBusy}>
+          {bulkBusy ? 'Đang xoá…' : `Xoá ${selection.count} tài khoản`}
+        </Button>
+      </BulkBar>
     </main>
   );
 }

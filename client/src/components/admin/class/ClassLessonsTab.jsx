@@ -124,7 +124,7 @@ export default function ClassLessonsTab({ klass }) {
                 <span className={'class-status ' + (l.open && l.published ? 'active' : 'archived')}>
                   {!l.published ? 'Ẩn (chưa publish)' : l.open ? 'Đang mở' : l.releaseAt ? 'Chờ tới ngày mở' : 'Khoá'}
                 </span>{' '}
-                <Link to={`/lessons/${l.id}`} className="btn-chip">
+                <Link to={`/lessons/${l.id}?course=${klass.courseId}`} className="btn-chip">
                   Xem
                 </Link>
               </td>

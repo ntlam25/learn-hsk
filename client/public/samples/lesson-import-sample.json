@@ -1,0 +1,205 @@
+{
+  "_huong_dan": [
+    "FILE MẪU IMPORT BÀI HỌC HÀNG LOẠT — Hán ngữ.",
+    "JSON không có comment, nên mọi khoá bắt đầu bằng dấu gạch dưới (_note, _huong_dan, _vi_du…) là GHI CHÚ: hệ thống tự bỏ qua khi import. Có thể giữ hoặc xoá.",
+    "Cấu trúc gốc: { \"lessons\": [ bài 1, bài 2, … ] }. Cũng chấp nhận file là một mảng [ … ] hoặc chỉ một bài { … }.",
+    "Nơi nhập được chọn trên giao diện (không ghi courseId trong file): một khoá học, hoặc 'Bài độc lập' — bài chưa thuộc khoá nào, gắn vào khoá sau trong trình soạn bài.",
+    "BẮT BUỘC mỗi bài: lessonNumber (số nguyên ≥ 1, không trùng trong file) và titleVi. Mọi trường khác đều tuỳ chọn — bỏ trường nào thì bài không có phần đó.",
+    "Chế độ 'Bỏ qua': bài có số trùng với bài đã có trong khoá sẽ bị bỏ qua. Chế độ 'Ghi đè': cập nhật bài đã có — CHỈ các trường có mặt trong file bị thay; trường vắng mặt giữ nguyên.",
+    "Khi ghi đè, ô file nghe / trang sách có URL trống sẽ giữ file đã tải lên trước đó (khớp theo category + code, hoặc theo số trang).",
+    "Mọi chuỗi hiển thị (meaning, note, content, desc, title…) được phép chứa HTML đơn giản: <b>, <i>, <br/>, <span class=\"hanzi\">…</span>.",
+    "File seed có sẵn server/src/seed/lesson{n}.json cũng là file import hợp lệ (mỗi file là một bài)."
+  ],
+  "lessons": [
+    {
+      "_note": "BÀI MẪU ĐẦY ĐỦ — minh hoạ mọi phần của một bài.",
+
+      "lessonNumber": 1,
+      "_note_lessonNumber": "BẮT BUỘC. Số thứ tự bài trong khoá, dùng để nhận biết bài trùng.",
+      "seal": "一课",
+      "_note_seal": "Con dấu đỏ ở đầu bài (2–3 chữ Hán).",
+      "titleZh": "第1课",
+      "titleVi": "Bài 1 · 你好",
+      "_note_titleVi": "BẮT BUỘC. Tên bài tiếng Việt hiển thị ở danh sách bài.",
+      "tag": "Từ mới · Bài khóa · Ngữ âm · Ngữ pháp · Luyện tập",
+      "_note_tag": "Dòng nhãn nhỏ dưới tiêu đề.",
+      "published": true,
+      "_note_published": "true = xuất bản (học viên thấy khi lớp đã mở bài), false = ẩn. Bỏ trống khi tạo mới = true.",
+      "isPreview": false,
+      "_note_isPreview": "true = bài xem trước, ai cũng xem được không cần vào lớp.",
+      "sourcePdfUrl": "",
+      "_note_sourcePdfUrl": "Link PDF gốc của bài (tuỳ chọn, có thể tải lên sau trong trình soạn bài).",
+
+      "_note_vocab": "TAB 生词 · Từ mới. Mỗi phần tử là một thẻ từ.",
+      "vocab": [
+        {
+          "num": 1,
+          "_note_num": "Số thứ tự hiển thị 'Từ 1'. Bỏ trống thì tự đánh theo vị trí.",
+          "chars": [{ "h": "你" }],
+          "_note_chars": "Các ô chữ Hán (có hoạt hình nét viết). Mỗi ô: h = chữ, p = pinyin riêng của chữ (tuỳ chọn), r = bộ thủ, rm = nghĩa bộ thủ. Viết gọn được: \"chars\": \"你好\".",
+          "pinyin": "nǐ",
+          "pos": "Đại từ",
+          "_note_pos": "Từ loại.",
+          "meaning": "bạn; anh; chị; ông; bà",
+          "meaningEn": "you",
+          "_note_meaningEn": "Nghĩa tiếng Anh (tuỳ chọn).",
+          "examples": [
+            ["你好！", "Nǐ hǎo!", "Xin chào!"],
+            { "h": "你好吗？", "p": "", "m": "Bạn khỏe không?" }
+          ],
+          "_note_examples": "Câu ví dụ: [chữ Hán, pinyin, nghĩa]. Pinyin để \"\" nếu không muốn hiện. Cũng viết được dạng object { h, p, m }."
+        },
+        {
+          "num": 2,
+          "chars": "好",
+          "pinyin": "hǎo",
+          "pos": "Tính từ",
+          "meaning": "tốt; khỏe; đẹp; ngon",
+          "wordlistLabel": "Từ đi kèm (không đánh số riêng)",
+          "wordlist": [{ "h": "你好", "p": "nǐ hǎo", "m": "xin chào" }],
+          "_note_wordlist": "Danh sách từ ghép / từ liên quan trong cùng thẻ: h = chữ Hán, p = pinyin, m = nghĩa. wordlistLabel là tiêu đề ô này.",
+          "note": "Trong 你好, 你 đứng trước một thanh 3 nên đọc thành <b>ní</b>.",
+          "_note_note": "Ô ghi chú vàng dưới thẻ từ (có thể dùng HTML).",
+          "examples": [["我很好。", "", "Tôi rất khỏe."]]
+        }
+      ],
+
+      "_note_properNouns": "Bảng tên riêng (专名) trong tab Từ mới.",
+      "properNouns": [
+        { "hanzi": "北京", "pinyin": "Běijīng", "meaning": "Bắc Kinh" }
+      ],
+
+      "_note_dialogues": "TAB 课文 · Bài khóa. Mỗi phần tử là một đoạn hội thoại.",
+      "dialogues": [
+        {
+          "title": "（一）你好",
+          "context": "Hai người bạn gặp nhau.",
+          "_note_context": "Dòng mô tả bối cảnh (tuỳ chọn).",
+          "lines": [
+            { "role": "A", "text": "**你好**！", "py": "Nǐ hǎo!" },
+            { "role": "B", "text": "你好！" },
+            { "gap": true },
+            { "loc": "在学校" },
+            { "role": "玛丽", "text": "你好吗？" }
+          ],
+          "_note_lines": "Mỗi lượt nói: role = tên vai (avatar lấy 2 ký tự đầu), text = câu thoại (**…** để tô đậm cụm trọng tâm), py = pinyin (tuỳ chọn). { \"gap\": true } = khoảng trống; { \"loc\": \"…\" } = dòng chuyển địa điểm."
+        }
+      ],
+
+      "_note_phoneticsNotes": "TAB 语音 · Ngữ âm: các thẻ ghi chú nhỏ (title + content).",
+      "phoneticsNotes": [
+        { "title": "Thanh điệu", "content": "Tiếng Hán phổ thông có 4 thanh và thanh nhẹ: mā · má · mǎ · mà · ma." },
+        { "title": "Biến điệu thanh 3", "content": "Hai thanh 3 đứng liền nhau thì thanh 3 đầu đọc thành thanh 2: nǐ hǎo → <b>ní hǎo</b>." }
+      ],
+
+      "_note_grammar": "TAB 语法 · Ngữ pháp: mỗi mục có title + content (HTML). Có thể thay content bằng \"parts\" (giống parts ở phần Luyện tập) để hiển thị dạng ô luyện.",
+      "grammar": [
+        { "title": "Câu chào hỏi 你好", "content": "Cấu trúc: <b>Đại từ + 好</b>。 Ví dụ: 你好！ 老师好！" }
+      ],
+
+      "_note_exercises": "TAB 练习 · Luyện tập.",
+      "exercises": {
+        "bookTitle": "📘 Bài tập nguyên bản trong sách - Bài 1 (1 trang)",
+        "bookNote": "Nội dung chữ của trang bài tập trong sách.",
+        "_note_bookTitle": "bookTitle / bookNote: tiêu đề và ghi chú của khu vực 'bài tập nguyên bản trong sách' (tuỳ chọn).",
+        "textPages": [
+          { "pageNumber": 12, "label": "练习", "text": "一、读下列音节\nbā  pā  mā  fā" }
+        ],
+        "_note_textPages": "Văn bản chép từ trang sách (học viên sao chép được). pageNumber = số trang, text giữ nguyên xuống dòng.",
+        "blocks": [
+          {
+            "title": "<span class=\"hanzi\">认读</span> — Nhận đọc",
+            "desc": "Bấm vào ô sau khi đọc xong để đánh dấu.",
+            "parts": [
+              { "type": "subtitle", "html": "(1) Chữ Hán + phiên âm" },
+              { "type": "chips", "items": [{ "ph": "你好", "pp": "nǐ hǎo" }, { "ph": "__āi → bāi" }] },
+              { "type": "pinyin", "items": ["bā", "pá", "mǎ", "fà"] },
+              { "type": "sentences", "hanzi": true, "items": ["你好！", "你好吗？"] },
+              { "type": "reading", "prose": false, "html": "你好！<br/>我很好。" },
+              { "type": "extensions", "items": [{ "h": "您好", "p": "nín hǎo", "m": "chào (kính trọng)" }] },
+              { "type": "homework", "items": ["✓ Ghi âm đọc bài khóa.", "✓ Chép mỗi từ mới 5 lần."] }
+            ],
+            "_note_parts": "Các kiểu part: subtitle {html} · chips {items:[{ph, pp?}]} ô chữ + phiên âm · pinyin {items:[chuỗi]} · sentences {hanzi: true/false, items:[chuỗi]} danh sách câu đánh số · reading {prose, html} đoạn văn · extensions {items:[{h,p,m}]} từ mở rộng · homework {items:[chuỗi]} · toneQuiz (xem extra.phoneticsBlocks)."
+          }
+        ]
+      },
+
+      "_note_exerciseItems": "Câu hỏi CÓ CHẤM ĐIỂM (quiz) và thẻ flashcard của học viên. Khi ghi đè bài đã có, danh sách này thay toàn bộ câu cũ (mất kết quả làm bài cũ) — bỏ trường này nếu không muốn đụng tới.",
+      "exerciseItems": [
+        {
+          "kind": "quiz",
+          "type": "multiple_choice",
+          "prompt": { "question": "“你好” nghĩa là gì?", "options": ["Tạm biệt", "Xin chào", "Cảm ơn"] },
+          "correctAnswer": { "optionIndex": 1 },
+          "_note_correctAnswer": "optionIndex đếm từ 0: 0 = lựa chọn đầu tiên. Ở đây 1 = \"Xin chào\".",
+          "points": 1
+        },
+        {
+          "kind": "flashcard",
+          "prompt": { "hanzi": "你", "pinyin": "nǐ", "meaning": "bạn" }
+        }
+      ],
+
+      "_note_audioTracks": "Các 'ô' file nghe. Có thể để audioUrl trống rồi tải file lên sau trong trình soạn bài. category: vocab (Từ mới) · text (Bài khóa) · phonetics (Ngữ âm) · practice (Luyện tập). code = mã file theo sách (vd 01-1).",
+      "audioTracks": [
+        { "category": "vocab", "label": "生词 · Nghe từ mới", "code": "01-1", "audioUrl": "" },
+        { "category": "text", "label": "课文 · Nghe bài khóa", "code": "01-2", "audioUrl": "" }
+      ],
+
+      "_note_pages": "Ảnh trang sách (phần bài tập nguyên bản). imageUrl có thể để trống rồi tải ảnh lên sau.",
+      "pages": [
+        { "pageNumber": 12, "caption": "Trang bài tập trong sách: 12", "imageUrl": "" }
+      ],
+
+      "_note_extra": "Tuỳ chỉnh hiển thị. Toàn bộ 'extra' là tuỳ chọn — bỏ trống thì hệ thống dùng mặc định.",
+      "extra": {
+        "tabs": ["vocab", "dialogue", "phonetics", "grammar", "exercise"],
+        "_note_tabs": "Các tab hiển thị và thứ tự. Bỏ trống = tự suy từ nội dung có sẵn.",
+        "heads": {
+          "vocab": { "title": "生词 · Từ mới", "desc": "Học 2 từ mới của bài.", "note": "" },
+          "exercise": { "title": "练习 · Luyện tập", "desc": "", "note": "" }
+        },
+        "_note_heads": "Tiêu đề / mô tả / ghi chú đầu mỗi tab (vocab, dialogue, phonetics, grammar, exercise). Tab nào không khai báo thì dùng mặc định.",
+        "properNounsTitle": { "zh": "专名", "vi": "Tên riêng" },
+        "phoneticsHero": {
+          "big": "3",
+          "title": "Biến điệu thanh 3",
+          "rules": [{ "title": "3 + 3 → 2 + 3", "form": "nǐ hǎo → ní hǎo", "desc": "Hai thanh 3 liền nhau." }],
+          "note": "<b>Ghi nhớ:</b> chữ viết không đổi, chỉ cách đọc thay đổi."
+        },
+        "_note_phoneticsHero": "Khung nổi bật đầu tab Ngữ âm (tuỳ chọn): big = chữ lớn, rules = các thẻ quy tắc.",
+        "phoneticsBlocks": [
+          {
+            "title": "Chọn cách đọc đúng",
+            "desc": "",
+            "parts": [
+              {
+                "type": "toneQuiz",
+                "wrongText": "Chưa đúng — hãy nhớ quy tắc 3 + 3.",
+                "items": [{ "word": "你好", "options": ["nǐ hǎo", "ní hǎo"], "answer": 1, "note": "3 + 3 → 2 + 3" }]
+              }
+            ],
+            "_note_toneQuiz": "Quiz luyện tại chỗ (không chấm điểm): answer = vị trí đáp án đúng, đếm từ 0."
+          }
+        ],
+        "teacherDivider": "✦ Bài luyện tập bổ sung của giáo viên ✦",
+        "footer": { "zh": "温故而知新", "text": "· Ôn cũ biết mới — Bài 1" }
+      }
+    },
+
+    {
+      "_note": "BÀI MẪU TỐI GIẢN — chỉ cần lessonNumber + titleVi, thêm phần nào có phần đó.",
+      "lessonNumber": 2,
+      "titleZh": "第2课",
+      "titleVi": "Bài 2 · 汉语不太难",
+      "seal": "二课",
+      "vocab": [
+        { "chars": "汉语", "pinyin": "Hànyǔ", "pos": "Danh từ", "meaning": "tiếng Hán", "examples": [["我学汉语。", "", "Tôi học tiếng Hán."]] },
+        { "chars": "难", "pinyin": "nán", "pos": "Tính từ", "meaning": "khó" }
+      ],
+      "dialogues": [
+        { "title": "汉语难吗？", "lines": [{ "role": "A", "text": "汉语难吗？" }, { "role": "B", "text": "不太难。" }] }
+      ]
+    }
+  ]
+}

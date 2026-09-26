@@ -26,6 +26,7 @@ const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173')
   .map((s) => s.trim());
 
 app.use(cors({ origin: allowedOrigins }));
+app.use('/api/admin/lessons/import', express.json({ limit: '10mb' })); // import JSON nhiều bài một lúc
 app.use(express.json({ limit: '2mb' }));
 
 app.get('/api/health', (req, res) => res.json({ ok: true }));

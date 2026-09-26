@@ -260,6 +260,41 @@ html.book-mode body { margin:0;
 .book-view .reading-box { padding:18px; background:var(--paper); border:1px solid var(--line); border-radius:10px; font-family:'Noto Serif SC',serif; font-size:1.18rem; line-height:2; }
 .book-view .homework-list { display:grid; gap:9px; }
 .book-view .homework-item { padding:10px 12px; background:rgba(211,138,173,.10); border:1px dashed var(--gold); border-radius:8px; }
+
+/* --- Luyện tập: tinh chỉnh bố cục (bổ sung, không đổi DOM của giáo trình) --- */
+/* Khoảng cách giữa các phần liền nhau trong một khối (ô chữ → câu → đoạn văn → bài về nhà) */
+.book-view .ex-block > :is(.practice-grid,.pinyin-grid,.sentence-list,.reading-box,.homework-list,.tone-quiz,.extension-grid)
+  + :is(.practice-grid,.pinyin-grid,.sentence-list,.reading-box,.homework-list,.tone-quiz,.extension-grid) { margin-top:18px; }
+.book-view .ex-block > .ex-desc + .ex-subtitle { margin-top:4px; }
+.book-view .ex-subtitle { display:flex; align-items:center; gap:10px; }
+.book-view .ex-subtitle::after { content:''; flex:1; height:1px; background:var(--line); }
+
+/* Ô chữ Hán + phiên âm */
+.book-view .practice-grid { grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+.book-view .practice-chip { background:var(--paper-light); box-shadow:0 1px 2px rgba(74,40,57,.05); }
+.book-view .practice-chip:hover { border-color:var(--seal); }
+.book-view .practice-chip .ph { font-size:1.2rem; line-height:1.4; }
+
+/* Danh sách câu: số thứ tự dạng huy hiệu, nền nhẹ, đánh dấu đã đọc có dấu ✓ */
+.book-view .sentence-list { gap:8px; }
+.book-view .sentence-item { position:relative; padding:10px 44px 10px 12px; background:var(--paper-light); border-color:transparent;
+    border-bottom:1px solid var(--line); border-radius:10px; font-size:1.12rem; }
+.book-view .sentence-item:hover { border-color:var(--line); background:var(--paper); }
+.book-view .sentence-num { display:inline-flex; align-items:center; justify-content:center; min-width:28px; height:28px; padding:0 6px;
+    border-radius:999px; background:var(--seal-soft, rgba(232,93,147,.1)); color:var(--seal-dark); font-size:.75rem; }
+.book-view .sentence-item::after { content:'✓'; position:absolute; right:12px; top:50%; transform:translateY(-50%); width:22px; height:22px;
+    display:grid; place-items:center; border-radius:50%; border:1.5px solid var(--line); color:transparent; font-size:.75rem; font-weight:700;
+    font-family:'Be Vietnam Pro',sans-serif; transition:all .18s ease; }
+.book-view .sentence-item.done { background:rgba(168,87,131,.08); border-color:transparent; border-bottom-color:var(--jade); }
+.book-view .sentence-item.done::after { background:var(--jade); border-color:var(--jade); color:#fff; }
+
+/* Đoạn văn: vạch nhấn bên trái như trích dẫn */
+.book-view .reading-box { position:relative; padding:16px 20px 16px 24px; background:var(--paper-light); border-color:var(--line);
+    border-left:4px solid var(--seal); border-radius:4px 12px 12px 4px; }
+
+/* Bài tập về nhà: danh sách gọn, viền trái thay cho viền nét đứt */
+.book-view .homework-list { gap:6px; padding:14px 16px; border-radius:12px; background:rgba(211,138,173,.08); border:1px solid rgba(211,138,173,.28); }
+.book-view .homework-item { padding:6px 0 6px 12px; background:none; border:none; border-left:2px solid var(--gold); border-radius:0; font-size:.95rem; line-height:1.55; }
 @media(max-width:620px) {
   .book-view .phonetics-hero { padding:16px; }
 }
@@ -503,15 +538,44 @@ html.book-mode body { font-size: medium; transition: none; }
 /* Flashcard ôn từ (exercise_items kind=flashcard) */
 .book-view .flashcard-deck { max-width: 420px; margin: 0 auto; text-align: center; }
 .book-view .flashcard {
-  height: 220px; border-radius: var(--radius); background: var(--paper-light); border: 1px solid var(--line);
-  box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; cursor: pointer;
-  padding: 20px; margin-bottom: 16px; transition: transform .2s ease;
+  height: 220px; margin-bottom: 16px; perspective: 1000px; cursor: pointer; border-radius: var(--radius);
+  transition: transform .2s ease; outline: none;
 }
 .book-view .flashcard:hover { transform: translateY(-2px); }
-.book-view .flashcard-front.hanzi { font-size: 3.2rem; }
-.book-view .flashcard-back { display: flex; flex-direction: column; gap: 8px; align-items: center; }
-.book-view .flashcard.status-known { box-shadow: 0 0 0 2px var(--jade), var(--shadow); }
-.book-view .flashcard.status-unknown { box-shadow: 0 0 0 2px var(--seal), var(--shadow); }
+.book-view .flashcard:focus-visible .flashcard-face { box-shadow: 0 0 0 3px var(--seal-ring), var(--shadow); }
+.book-view .flashcard-inner {
+  position: relative; width: 100%; height: 100%; transform-style: preserve-3d;
+  transition: transform .6s cubic-bezier(.4, .2, .2, 1);
+}
+.book-view .flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+.book-view .flashcard-face {
+  position: absolute; inset: 0; display: flex; flex-direction: column; gap: 8px; align-items: center; justify-content: center;
+  padding: 20px; border-radius: var(--radius); background: var(--paper-light); border: 1px solid var(--line); box-shadow: var(--shadow);
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.book-view .flashcard-front .hanzi { font-size: 3.2rem; }
+.book-view .flashcard-back { transform: rotateY(180deg); background: linear-gradient(160deg, var(--paper-light), var(--seal-soft)); }
+.book-view .flashcard-hint { position: absolute; bottom: 12px; font-size: .72rem; color: var(--muted); letter-spacing: .04em; }
+.book-view .flashcard.status-known .flashcard-face { box-shadow: 0 0 0 2px var(--jade), var(--shadow); }
+.book-view .flashcard.status-unknown .flashcard-face { box-shadow: 0 0 0 2px var(--seal), var(--shadow); }
+@media (prefers-reduced-motion: reduce) {
+  .book-view .flashcard-inner { transition: none; }
+}
+.book-view .flashcard-nav { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px; }
+.book-view .flashcard-nav .ex-desc { margin: 0; }
+.book-view .flashcard-nav-btn {
+  width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper-light);
+  color: var(--seal); font-size: 1.3rem; line-height: 1; cursor: pointer; transition: all .2s ease;
+}
+.book-view .flashcard-nav-btn:hover:not(:disabled) { border-color: var(--seal); background: var(--seal-soft); }
+.book-view .flashcard-nav-btn:disabled { opacity: .35; cursor: not-allowed; }
+.book-view .flashcard-dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-bottom: 14px; }
+.book-view .flashcard-dot {
+  width: 10px; height: 10px; padding: 0; border-radius: 50%; border: 1.5px solid var(--line); background: var(--paper-light); cursor: pointer;
+}
+.book-view .flashcard-dot.known { background: var(--jade); border-color: var(--jade); }
+.book-view .flashcard-dot.unknown { border-color: var(--seal); }
+.book-view .flashcard-dot.active { transform: scale(1.35); box-shadow: 0 0 0 2px var(--seal-ring); }
 .book-view .flashcard-actions { display: flex; gap: 12px; justify-content: center; }
 .book-view .flashcard-known { background: var(--jade); border-color: var(--jade); color: #fff; }
 

@@ -11,7 +11,7 @@ function fromRow(row) {
     published: row.published,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
-    lessonCount: row.lessons?.[0]?.count,
+    lessonCount: row.course_lessons?.[0]?.count,
     classCount: row.classes?.[0]?.count,
   };
 }
@@ -45,7 +45,7 @@ async function listPublic() {
 async function listAdmin() {
   const { data, error } = await supabase
     .from('courses')
-    .select('*, lessons(count), classes(count)')
+    .select('*, course_lessons(count), classes(count)')
     .order('created_at', { ascending: false });
   if (error) throw error;
   return data.map(fromRow);
@@ -73,4 +73,10 @@ async function remove(id) {
   return fromRow(data);
 }
 
-module.exports = { listPublic, listAdmin, getById, create, update, remove };
+async function removeMany(ids) {
+  const { data, error } = await supabase.from('courses').delete().in('id', ids).select('id');
+  if (error) throw error;
+  return data.length;
+}
+
+module.exports = { listPublic, listAdmin, getById, create, update, remove, removeMany };

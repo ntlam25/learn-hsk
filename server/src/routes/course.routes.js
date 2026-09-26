@@ -13,7 +13,11 @@ adminRouter.get('/', asyncHandler(ctrl.listAdmin));
 adminRouter.get('/:id', asyncHandler(ctrl.getById));
 adminRouter.get('/:id/overview', asyncHandler(ctrl.overview));
 adminRouter.post('/', asyncHandler(ctrl.create));
+adminRouter.post('/bulk-delete', requireRole('admin'), asyncHandler(ctrl.removeMany));
 adminRouter.put('/:id', asyncHandler(ctrl.update));
+adminRouter.post('/:id/lessons', asyncHandler(ctrl.addLessons));
+adminRouter.post('/:id/lessons/bulk-remove', asyncHandler(ctrl.removeLessons));
+adminRouter.delete('/:id/lessons/:lessonId', asyncHandler(ctrl.removeLesson));
 adminRouter.delete('/:id', requireRole('admin'), asyncHandler(ctrl.remove));
 
 module.exports = { publicRouter, adminRouter };

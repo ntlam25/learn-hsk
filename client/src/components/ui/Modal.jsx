@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function Modal({ open, title, onClose, children, footer }) {
+export default function Modal({ open, title, onClose, children, footer, className = '' }) {
   useEffect(() => {
     if (!open) return;
     function onKeyDown(e) {
@@ -14,7 +14,7 @@ export default function Modal({ open, title, onClose, children, footer }) {
 
   return (
     <div className="ui-modal-overlay" onClick={onClose}>
-      <div className="ui-modal" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
+      <div className={'ui-modal' + (className ? ' ' + className : '')} role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
         <div className="ui-modal-header">
           <h2>{title}</h2>
           <button type="button" className="ui-modal-close" onClick={onClose} aria-label="Đóng">

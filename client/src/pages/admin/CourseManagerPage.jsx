@@ -4,6 +4,9 @@ import api from '../../api/client';
 import { useToast } from '../../context/ToastContext';
 import Button from '../../components/ui/Button';
 import CourseFormModal from '../../components/admin/CourseFormModal';
+import BulkBar, { SelectAllCell, SelectCell } from '../../components/ui/BulkBar';
+import useRowSelection from '../../hooks/useRowSelection';
+import { useAuth } from '../../context/AuthContext';
 
 export default function CourseManagerPage() {
   const toast = useToast();
@@ -11,6 +14,10 @@ export default function CourseManagerPage() {
   const [loadError, setLoadError] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
   const [editingCourse, setEditingCourse] = useState(null);
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const { user } = useAuth();
+  const isAdmin = user?.role === 'admin'; // chỉ admin xoá được khoá học
+  const selection = useRowSelection(isAdmin ? (courses || []).map((c) => c.id) : []);
 
   function load() {
     api.get('/admin/courses').then((res) => setCourses(res.data)).catch(() => setLoadError('Không tải được danh sách khoá học.'));
@@ -34,13 +41,33 @@ export default function CourseManagerPage() {
   }
 
   async function handleDelete(course) {
-    if (!confirm(`Xoá khoá học "${course.title}"? Toàn bộ bài học trong khoá sẽ bị xoá theo.`)) return;
+    if (!confirm(`Xoá khoá học "${course.title}"?
+Các lớp của khoá bị xoá theo; bài học KHÔNG bị xoá (vẫn ở khoá khác hoặc thành bài độc lập).`)) return;
     try {
       await api.delete(`/admin/courses/${course.id}`);
       toast.success('Đã xoá khoá học.');
       load();
     } catch (err) {
       toast.error(err.response?.data?.message || 'Xoá thất bại.');
+    }
+  }
+
+  async function handleBulkDelete() {
+    const classCount = (courses || []).filter((c) => selection.isSelected(c.id)).reduce((s, c) => s + (c.classCount || 0), 0);
+    const warn = classCount ? `
+${classCount} lớp học của các khoá này sẽ bị xoá theo.` : '';
+    if (!confirm(`Xoá ${selection.count} khoá học đã chọn?${warn}
+Bài học KHÔNG bị xoá. Hành động này không thể hoàn tác.`)) return;
+    setBulkBusy(true);
+    try {
+      const res = await api.post('/admin/courses/bulk-delete', { ids: selection.selected });
+      toast.success(res.data.message);
+      selection.clear();
+      load();
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Xoá thất bại.');
+    } finally {
+      setBulkBusy(false);
     }
   }
 
@@ -59,6 +86,7 @@ export default function CourseManagerPage() {
         <table className="admin-table">
           <thead>
             <tr>
+              {isAdmin && <SelectAllCell selection={selection} disabled={!courses.length} />}
               <th>Tên khoá học</th>
               <th>HSK</th>
               <th>Bài học</th>
@@ -69,7 +97,8 @@ export default function CourseManagerPage() {
           </thead>
           <tbody>
             {courses.map((c) => (
-              <tr key={c.id}>
+              <tr key={c.id} className={selection.isSelected(c.id) ? 'row-selected' : ''}>
+                {isAdmin && <SelectCell selection={selection} id={c.id} />}
                 <td>
                   <Link to={`/admin/courses/${c.id}`} className="admin-table-zh admin-table-link">
                     {c.title}
@@ -104,6 +133,12 @@ export default function CourseManagerPage() {
           </tbody>
         </table>
       )}
+
+      <BulkBar selection={selection} noun="khoá học">
+        <Button variant="chip-danger" onClick={handleBulkDelete} disabled={bulkBusy}>
+          {bulkBusy ? 'Đang xoá…' : `Xoá ${selection.count} khoá`}
+        </Button>
+      </BulkBar>
 
       <CourseFormModal
         open={modalOpen}

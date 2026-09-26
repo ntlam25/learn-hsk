@@ -63,4 +63,10 @@ async function remove(id, classId) {
   if (error) throw error;
 }
 
-module.exports = { listByClass, classesForStudent, findInClass, create, remove };
+async function removeMany(ids, classId) {
+  const { data, error } = await supabase.from('enrollments').delete().in('id', ids).eq('class_id', classId).select('id');
+  if (error) throw error;
+  return data.length;
+}
+
+module.exports = { listByClass, classesForStudent, findInClass, create, remove, removeMany };
