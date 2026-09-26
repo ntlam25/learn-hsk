@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import api from '../../api/client';
 import { useToast } from '../../context/ToastContext';
-import Select from '../../components/ui/Select';
+import MultiSelect from '../../components/ui/MultiSelect';
 import Checkbox from '../../components/ui/Checkbox';
 import Button from '../../components/ui/Button';
 import BookLessonView from '../../components/book/BookLessonView';
@@ -21,7 +21,7 @@ import {
 import { TAB_META, TAB_KEYS, defaultFooter, normalizeLesson } from '../../lib/lessonContent';
 
 const EMPTY_LESSON = {
-  courseId: '',
+  courseIds: [],
   lessonNumber: '',
   seal: '',
   titleZh: '',
@@ -57,7 +57,7 @@ export default function LessonEditorPage({ mode }) {
   const navigate = useNavigate();
   const toast = useToast();
   const [lesson, setLesson] = useState(() =>
-    mode === 'create' ? normalizeLesson({ ...EMPTY_LESSON, courseId: searchParams.get('courseId') || '' }) : null
+    mode === 'create' ? normalizeLesson({ ...EMPTY_LESSON, courseIds: searchParams.get('courseId') ? [searchParams.get('courseId')] : [] }) : null
   );
   const [courses, setCourses] = useState([]);
   const [error, setError] = useState('');
@@ -95,17 +95,17 @@ export default function LessonEditorPage({ mode }) {
     }
   }, [mode, id]);
 
-  // Gợi ý số bài tiếp theo khi tạo mới trong một khoá
+  // Gợi ý số bài tiếp theo khi tạo mới trong một khoá (hoặc trong các bài độc lập)
   useEffect(() => {
-    if (mode !== 'create' || !lesson?.courseId || lesson.lessonNumber) return;
+    if (mode !== 'create' || !lesson || lesson.lessonNumber) return;
     api
-      .get('/admin/lessons', { params: { courseId: lesson.courseId } })
+      .get('/admin/lessons', { params: { courseId: lesson.courseIds?.[0] || 'none' } })
       .then((res) => {
         const next = res.data.reduce((m, l) => Math.max(m, l.lessonNumber || 0), 0) + 1;
         setLesson((l) => (l.lessonNumber ? l : { ...l, lessonNumber: next }));
       })
       .catch(() => {});
-  }, [mode, lesson?.courseId, lesson?.lessonNumber]);
+  }, [mode, lesson?.courseIds, lesson?.lessonNumber]);
 
   function setField(field, value) {
     setLesson((l) => ({ ...l, [field]: typeof value === 'function' ? value(l[field]) : value }));
@@ -130,7 +130,6 @@ export default function LessonEditorPage({ mode }) {
 
   async function handleSave() {
     setError('');
-    if (!lesson.courseId) return setError('Chọn khoá học trước khi lưu.');
     if (!lesson.lessonNumber) return setError('Nhập số bài.');
     if (!lesson.titleVi?.trim()) return setError('Nhập phụ đề bài học (dòng in nghiêng dưới tiêu đề).');
     setSaving(true);
@@ -188,10 +187,12 @@ export default function LessonEditorPage({ mode }) {
     <main className="page admin-editor-page">
       <div className="book-editor-toolbar" ref={setToolbarEl}>
         <div className="book-editor-toolbar-fields">
-          <Select
-            value={lesson.courseId}
-            onChange={(v) => setField('courseId', v)}
-            placeholder="-- Chọn khoá học --"
+          {/* Một bài dùng chung được ở nhiều khoá; không chọn khoá nào = bài độc lập */}
+          <MultiSelect
+            className="book-editor-courses"
+            value={lesson.courseIds || []}
+            onChange={(v) => setField('courseIds', v)}
+            placeholder="Bài độc lập (chưa thuộc khoá)"
             options={courses.map((c) => ({ value: c.id, label: `${c.title}${c.hskLevel ? ` (${c.hskLevel})` : ''}` }))}
           />
           <label className="book-editor-number">

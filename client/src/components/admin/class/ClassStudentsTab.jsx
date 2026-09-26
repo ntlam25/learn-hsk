@@ -3,6 +3,8 @@ import api from '../../../api/client';
 import { useToast } from '../../../context/ToastContext';
 import { formatDate } from '../../../lib/format';
 import Button from '../../ui/Button';
+import BulkBar, { SelectAllCell, SelectCell } from '../../ui/BulkBar';
+import useRowSelection from '../../../hooks/useRowSelection';
 import CopyButton from './CopyButton';
 
 const BULK_STATUS = {
@@ -154,6 +156,8 @@ export default function ClassStudentsTab({ klass, onCountChange }) {
   const [students, setStudents] = useState(null);
   const [identifier, setIdentifier] = useState('');
   const [tool, setTool] = useState(null); // 'bulk' | 'accounts'
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const selection = useRowSelection((students || []).map((e) => e.id));
 
   const load = useCallback(() => {
     api
@@ -188,6 +192,22 @@ export default function ClassStudentsTab({ klass, onCountChange }) {
     load();
   }
 
+  async function removeSelected() {
+    if (!confirm(`Xoá ${selection.count} học viên đã chọn khỏi lớp?
+Tài khoản và tiến độ học vẫn được giữ nếu thêm lại sau.`)) return;
+    setBulkBusy(true);
+    try {
+      const res = await api.post(`/admin/classes/${klass.id}/students/bulk-remove`, { enrollmentIds: selection.selected });
+      toast.success(res.data.message);
+      selection.clear();
+      load();
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Xoá học viên thất bại.');
+    } finally {
+      setBulkBusy(false);
+    }
+  }
+
   return (
     <>
       <fieldset>
@@ -217,6 +237,7 @@ export default function ClassStudentsTab({ klass, onCountChange }) {
         <table className="admin-table">
           <thead>
             <tr>
+              <SelectAllCell selection={selection} disabled={!students.length} />
               <th>Học viên</th>
               <th>Email</th>
               <th>Vào lớp</th>
@@ -225,7 +246,8 @@ export default function ClassStudentsTab({ klass, onCountChange }) {
           </thead>
           <tbody>
             {students.map((e) => (
-              <tr key={e.id}>
+              <tr key={e.id} className={selection.isSelected(e.id) ? 'row-selected' : ''}>
+                <SelectCell selection={selection} id={e.id} />
                 <td>
                   <div className="admin-table-zh">{e.student?.fullName || e.student?.username}</div>
                   <div className="admin-table-vi">@{e.student?.username}</div>
@@ -244,7 +266,7 @@ export default function ClassStudentsTab({ klass, onCountChange }) {
             ))}
             {students.length === 0 && (
               <tr>
-                <td colSpan={4} className="empty-state">
+                <td colSpan={5} className="empty-state">
                   Lớp chưa có học viên nào.
                 </td>
               </tr>
@@ -252,6 +274,11 @@ export default function ClassStudentsTab({ klass, onCountChange }) {
           </tbody>
         </table>
       )}
+      <BulkBar selection={selection} noun="học viên">
+        <Button variant="chip-danger" onClick={removeSelected} disabled={bulkBusy}>
+          {bulkBusy ? 'Đang xoá…' : `Xoá ${selection.count} học viên khỏi lớp`}
+        </Button>
+      </BulkBar>
     </>
   );
 }

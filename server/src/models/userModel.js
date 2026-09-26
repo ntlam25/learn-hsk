@@ -95,6 +95,12 @@ async function remove(id) {
   if (error) throw error;
 }
 
+async function removeMany(ids) {
+  const { data, error } = await supabase.from('users').delete().in('id', ids).select('id');
+  if (error) throw error;
+  return data.length;
+}
+
 async function updateProfile(id, { fullName, avatarUrl }) {
   const row = {};
   if (fullName !== undefined) row.full_name = fullName;
@@ -114,6 +120,7 @@ module.exports = {
   listAll,
   updateRole,
   remove,
+  removeMany,
   updateProfile,
   fromRow,
 };

@@ -6,6 +6,10 @@ import { useToast } from '../../context/ToastContext';
 import Button from '../../components/ui/Button';
 import CourseFormModal from '../../components/admin/CourseFormModal';
 import ClassFormModal from '../../components/admin/ClassFormModal';
+import ImportLessonsModal from '../../components/admin/lesson/ImportLessonsModal';
+import AddExistingLessonsModal from '../../components/admin/lesson/AddExistingLessonsModal';
+import BulkBar, { SelectAllCell, SelectCell } from '../../components/ui/BulkBar';
+import useRowSelection from '../../hooks/useRowSelection';
 import { formatDate } from '../../lib/format';
 import { classStatus } from '../../lib/classStatus';
 
@@ -39,6 +43,13 @@ function ContentChips({ lesson: l }) {
   );
 }
 
+// Lọc bài theo ô tìm kiếm (tên bài, nhãn, "bài N")
+function filterLessons(lessons, search) {
+  const term = search.trim().toLowerCase();
+  if (!term) return lessons;
+  return lessons.filter((l) => [l.titleZh, l.titleVi, l.tag, `bài ${l.lessonNumber}`].some((v) => String(v || '').toLowerCase().includes(term)));
+}
+
 // Trang chi tiết khoá học (admin/GV): thông tin khoá, số liệu, danh sách bài học và các lớp đang dùng khoá
 export default function CourseDetailPage() {
   const { courseId } = useParams();
@@ -50,6 +61,10 @@ export default function CourseDetailPage() {
   const [search, setSearch] = useState('');
   const [editOpen, setEditOpen] = useState(false);
   const [classOpen, setClassOpen] = useState(false);
+  const [importOpen, setImportOpen] = useState(false);
+  const [addOpen, setAddOpen] = useState(false);
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const selection = useRowSelection(data ? filterLessons(data.lessons, search).map((l) => l.id) : []);
 
   const load = useCallback(() => {
     api
@@ -70,14 +85,35 @@ export default function CourseDetailPage() {
     }
   }
 
-  async function deleteLesson(lesson) {
-    if (!confirm(`Xoá "Bài ${lesson.lessonNumber} · ${lesson.titleVi}"? Hành động này không thể hoàn tác.`)) return;
+  // Gỡ bài khỏi khoá này — bài vẫn còn (ở khoá khác, hoặc thành bài độc lập); xoá hẳn bài ở trang Bài học
+  async function detachLesson(lesson) {
+    const others = (lesson.courseIds || []).filter((id) => id !== courseId).length;
+    const after = others ? `Bài vẫn còn ở ${others} khoá khác.` : 'Bài sẽ thành bài độc lập (không mất nội dung).';
+    if (!confirm(`Gỡ "Bài ${lesson.lessonNumber} · ${lesson.titleVi}" khỏi khoá này?
+${after}`)) return;
     try {
-      await api.delete(`/admin/lessons/${lesson.id}`);
-      toast.success('Đã xoá bài học.');
+      await api.delete(`/admin/courses/${courseId}/lessons/${lesson.id}`);
+      toast.success('Đã gỡ bài khỏi khoá.');
       load();
     } catch (err) {
-      toast.error(err.response?.data?.message || 'Xoá thất bại.');
+      toast.error(err.response?.data?.message || 'Gỡ bài thất bại.');
+    }
+  }
+
+  async function detachSelected() {
+    const n = selection.count;
+    if (!confirm(`Gỡ ${n} bài đã chọn khỏi khoá này?
+Bài không bị xoá — vẫn còn ở các khoá khác hoặc thành bài độc lập.`)) return;
+    setBulkBusy(true);
+    try {
+      const res = await api.post(`/admin/courses/${courseId}/lessons/bulk-remove`, { lessonIds: selection.selected });
+      toast.success(res.data.message);
+      selection.clear();
+      load();
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Gỡ bài thất bại.');
+    } finally {
+      setBulkBusy(false);
     }
   }
 
@@ -95,9 +131,7 @@ export default function CourseDetailPage() {
 
   const { course, lessons, classes, stats } = data;
   const term = search.trim().toLowerCase();
-  const shown = term
-    ? lessons.filter((l) => [l.titleZh, l.titleVi, l.tag, `bài ${l.lessonNumber}`].some((v) => String(v || '').toLowerCase().includes(term)))
-    : lessons;
+  const shown = filterLessons(lessons, search);
   const nextNumber = lessons.reduce((m, l) => Math.max(m, l.lessonNumber), 0) + 1;
 
   return (
@@ -123,6 +157,12 @@ export default function CourseDetailPage() {
           </Link>
           <Button variant="secondary" onClick={() => setEditOpen(true)}>
             Sửa khoá học
+          </Button>
+          <Button variant="secondary" onClick={() => setImportOpen(true)}>
+            Import JSON
+          </Button>
+          <Button variant="secondary" onClick={() => setAddOpen(true)}>
+            Thêm bài có sẵn
           </Button>
           <Link to={`/admin/lessons/new?courseId=${course.id}`} className="btn-primary">
             + Bài học
@@ -156,6 +196,7 @@ export default function CourseDetailPage() {
         <table className="admin-table">
           <thead>
             <tr>
+              <SelectAllCell selection={selection} disabled={!shown.length} />
               <th>Bài</th>
               <th>Tiêu đề</th>
               <th>Nội dung</th>
@@ -167,13 +208,19 @@ export default function CourseDetailPage() {
           </thead>
           <tbody>
             {shown.map((l) => (
-              <tr key={l.id}>
+              <tr key={l.id} className={selection.isSelected(l.id) ? 'row-selected' : ''}>
+                <SelectCell selection={selection} id={l.id} />
                 <td>
                   <span className="course-lesson-num">{l.lessonNumber}</span>
                 </td>
                 <td>
                   <div className="admin-table-zh">{l.titleZh}</div>
                   <div className="admin-table-vi">{l.titleVi}</div>
+                  {l.courseIds?.length > 1 && (
+                    <span className="course-chip shared" title="Bài dùng chung — sửa nội dung sẽ áp dụng cho mọi khoá chứa bài">
+                      Dùng chung · {l.courseIds.length} khoá
+                    </span>
+                  )}
                 </td>
                 <td>
                   <ContentChips lesson={l} />
@@ -196,22 +243,22 @@ export default function CourseDetailPage() {
                 </td>
                 <td>{formatDate(l.updatedAt, { withTime: true })}</td>
                 <td className="admin-table-actions">
-                  <Link to={`/lessons/${l.id}`} className="btn-chip">
+                  <Link to={`/lessons/${l.id}?course=${course.id}`} className="btn-chip">
                     Xem
                   </Link>
                   <Link to={`/admin/lessons/${l.id}/edit`} className="btn-chip">
                     Sửa
                   </Link>
-                  <Button variant="chip-danger" onClick={() => deleteLesson(l)}>
-                    Xoá
+                  <Button variant="chip-danger" onClick={() => detachLesson(l)} title="Gỡ khỏi khoá (không xoá bài)">
+                    Gỡ
                   </Button>
                 </td>
               </tr>
             ))}
             {shown.length === 0 && (
               <tr>
-                <td colSpan={7} className="empty-state">
-                  {lessons.length ? 'Không có bài nào khớp từ khoá.' : 'Khoá học chưa có bài nào. Bấm "+ Bài học" để thêm.'}
+                <td colSpan={8} className="empty-state">
+                  {lessons.length ? 'Không có bài nào khớp từ khoá.' : 'Khoá học chưa có bài nào. Bấm "+ Bài học", "Thêm bài có sẵn" hoặc "Import JSON" để thêm.'}
                 </td>
               </tr>
             )}
@@ -292,6 +339,21 @@ export default function CourseDetailPage() {
           load();
         }}
       />
+      <BulkBar selection={selection} noun="bài">
+        <Button variant="chip-danger" onClick={detachSelected} disabled={bulkBusy} title="Gỡ khỏi khoá (không xoá bài)">
+          {bulkBusy ? 'Đang gỡ…' : `Gỡ ${selection.count} bài khỏi khoá`}
+        </Button>
+      </BulkBar>
+      <AddExistingLessonsModal
+        open={addOpen}
+        courseId={course.id}
+        onClose={() => setAddOpen(false)}
+        onAdded={() => {
+          setAddOpen(false);
+          load();
+        }}
+      />
+      <ImportLessonsModal open={importOpen} courseId={course.id} onClose={() => setImportOpen(false)} onImported={load} />
       <ClassFormModal
         open={classOpen}
         editing={null}

@@ -35,13 +35,26 @@ async function courseAccess(studentId, courseId) {
   };
 }
 
-// { canView, canSubmit, reason: null | 'not_enrolled' | 'locked' | 'ended', releaseAt }
+// { canView, canSubmit, reason: null | 'not_enrolled' | 'locked' | 'ended', releaseAt, courseId }
+// Bài dùng chung ở nhiều khoá: xét mọi khoá chứa bài, lấy quyền tốt nhất (courseId = khoá cho quyền đó).
+// Chỉ tính lớp thuộc khoá đang chứa bài — bài đã gỡ khỏi khoá thì trạng thái mở cũ ở lớp của khoá đó không còn tác dụng.
 async function studentLessonAccess(studentId, lesson) {
-  const access = await courseAccess(studentId, lesson.courseId);
-  if (!access.enrolled) return { canView: false, canSubmit: false, reason: 'not_enrolled', releaseAt: null };
-  const st = access.lesson(lesson.id);
-  if (!st.open) return { canView: false, canSubmit: false, reason: 'locked', releaseAt: st.releaseAt };
-  return { canView: true, canSubmit: st.canSubmit, reason: st.canSubmit ? null : 'ended', releaseAt: null };
+  const courseIds = lesson.courseIds || [];
+  let best = { canView: false, canSubmit: false, reason: 'not_enrolled', releaseAt: null, courseId: null };
+  for (const courseId of courseIds) {
+    const access = await courseAccess(studentId, courseId);
+    if (!access.enrolled) continue;
+    const st = access.lesson(lesson.id);
+    if (st.open) {
+      const result = { canView: true, canSubmit: st.canSubmit, reason: st.canSubmit ? null : 'ended', releaseAt: null, courseId };
+      if (st.canSubmit) return result;
+      best = result;
+    } else if (!best.canView) {
+      const releaseAt = best.releaseAt && (!st.releaseAt || best.releaseAt < st.releaseAt) ? best.releaseAt : st.releaseAt;
+      best = { canView: false, canSubmit: false, reason: 'locked', releaseAt, courseId };
+    }
+  }
+  return best;
 }
 
 // Quyền theo vai trò: bài preview ai cũng xem, admin/GV xem & thử mọi bài (không lưu tiến độ học viên)

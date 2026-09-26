@@ -15,7 +15,7 @@ function lessonBadge(l) {
   return l.isPreview ? 'Xem trước' : 'Chưa học';
 }
 
-function LessonCard({ lesson: l, mine }) {
+function LessonCard({ lesson: l, mine, courseId }) {
   const body = (
     <>
       <div className="lesson-card-seal">{l.status === 'completed' ? '✓' : l.seal || `${l.lessonNumber}课`}</div>
@@ -35,7 +35,7 @@ function LessonCard({ lesson: l, mine }) {
     );
   }
   return (
-    <Link to={`/lessons/${l.id}`} className={cls}>
+    <Link to={`/lessons/${l.id}?course=${courseId}`} className={cls}>
       {body}
     </Link>
   );
@@ -115,7 +115,7 @@ export default function CourseDetailPage() {
             </span>
           </div>
           {mine.resumeLesson && (
-            <Link to={`/lessons/${mine.resumeLesson.id}`} className="btn-primary">
+            <Link to={`/lessons/${mine.resumeLesson.id}?course=${courseId}`} className="btn-primary">
               {mine.resumeLesson.started ? '▶ Học tiếp' : '▶ Bắt đầu học'} · Bài {mine.resumeLesson.lessonNumber}
             </Link>
           )}
@@ -135,7 +135,7 @@ export default function CourseDetailPage() {
 
       <div className="lesson-grid">
         {list.map((l) => (
-          <LessonCard key={l.id} lesson={l} mine={enrolled} />
+          <LessonCard key={l.id} lesson={l} mine={enrolled} courseId={courseId} />
         ))}
       </div>
     </main>

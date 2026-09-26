@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import api from '../../api/client';
 import Button from '../../components/ui/Button';
+import BulkBar, { SelectAllCell, SelectCell } from '../../components/ui/BulkBar';
+import useRowSelection from '../../hooks/useRowSelection';
+import { useToast } from '../../context/ToastContext';
 import ClassFormModal from '../../components/admin/ClassFormModal';
 import { formatDate } from '../../lib/format';
 import { classStatus } from '../../lib/classStatus';
@@ -13,17 +16,43 @@ export default function ClassManagerPage() {
   const [loadError, setLoadError] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
   const [showArchived, setShowArchived] = useState(false);
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const toast = useToast();
 
-  useEffect(() => {
-    api.get('/admin/courses').then((res) => setCourses(res.data)).catch(() => {});
+  const loadClasses = useCallback(() => {
     api
       .get('/admin/classes')
       .then((res) => setClasses(res.data))
       .catch(() => setLoadError('Không tải được danh sách lớp.'));
   }, []);
 
+  useEffect(() => {
+    api.get('/admin/courses').then((res) => setCourses(res.data)).catch(() => {});
+    loadClasses();
+  }, [loadClasses]);
+
   const visible = (classes || []).filter((c) => showArchived || !c.archived);
   const archivedCount = (classes || []).filter((c) => c.archived).length;
+  const selection = useRowSelection(visible.map((c) => c.id));
+
+  async function handleBulkDelete() {
+    const students = visible.filter((c) => selection.isSelected(c.id)).reduce((s, c) => s + (c.studentCount || 0), 0);
+    const warn = students ? `
+${students} lượt học viên sẽ bị gỡ khỏi các lớp này (tài khoản học viên vẫn còn).` : '';
+    if (!confirm(`Xoá ${selection.count} lớp học đã chọn?${warn}
+Lịch mở bài của lớp cũng bị xoá. Hành động này không thể hoàn tác.`)) return;
+    setBulkBusy(true);
+    try {
+      const res = await api.post('/admin/classes/bulk-delete', { ids: selection.selected });
+      toast.success(res.data.message);
+      selection.clear();
+      loadClasses();
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Xoá thất bại.');
+    } finally {
+      setBulkBusy(false);
+    }
+  }
 
   return (
     <main className="page admin-dashboard-page">
@@ -51,6 +80,7 @@ export default function ClassManagerPage() {
         <table className="admin-table">
           <thead>
             <tr>
+              <SelectAllCell selection={selection} disabled={!visible.length} />
               <th>Lớp</th>
               <th>Giáo viên</th>
               <th>Học viên</th>
@@ -64,7 +94,8 @@ export default function ClassManagerPage() {
             {visible.map((c) => {
               const st = classStatus(c);
               return (
-                <tr key={c.id}>
+                <tr key={c.id} className={selection.isSelected(c.id) ? 'row-selected' : ''}>
+                  <SelectCell selection={selection} id={c.id} />
                   <td>
                     <div className="admin-table-zh">{c.name}</div>
                     <div className="admin-table-vi">{c.courseTitle}</div>
@@ -95,7 +126,7 @@ export default function ClassManagerPage() {
             })}
             {visible.length === 0 && (
               <tr>
-                <td colSpan={7} className="empty-state">
+                <td colSpan={8} className="empty-state">
                   Chưa có lớp học nào. Bấm "+ Tạo lớp" để bắt đầu.
                 </td>
               </tr>
@@ -103,6 +134,12 @@ export default function ClassManagerPage() {
           </tbody>
         </table>
       )}
+
+      <BulkBar selection={selection} noun="lớp">
+        <Button variant="chip-danger" onClick={handleBulkDelete} disabled={bulkBusy}>
+          {bulkBusy ? 'Đang xoá…' : `Xoá ${selection.count} lớp`}
+        </Button>
+      </BulkBar>
 
       <ClassFormModal
         open={modalOpen}

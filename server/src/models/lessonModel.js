@@ -1,13 +1,17 @@
 const { supabase } = require('../config/supabase');
 
-const PUBLIC_LIST_COLUMNS = 'id, course_id, lesson_number, seal, title_zh, title_vi, tag, is_preview, updated_at';
-const ADMIN_LIST_COLUMNS = 'id, course_id, lesson_number, seal, title_zh, title_vi, tag, is_preview, published, updated_at';
+const PUBLIC_LIST_COLUMNS = 'id, lesson_number, seal, title_zh, title_vi, tag, is_preview, updated_at';
+const ADMIN_LIST_COLUMNS = 'id, lesson_number, seal, title_zh, title_vi, tag, is_preview, published, updated_at';
+// Quan hệ khoá ↔ bài nằm ở bảng nối course_lessons: một bài dùng lại được ở nhiều khoá, không khoá nào = bài độc lập.
+const WITH_COURSES = 'course_lessons(course_id)';
+// Lọc theo khoá qua bí danh in_course (.eq('in_course.course_id', …)), vẫn lấy đủ mọi khoá của bài vào course_lessons
+const IN_COURSE = `in_course:course_lessons!inner(course_id), ${WITH_COURSES}`;
 
 function fromRow(row) {
   if (!row) return null;
   return {
     id: row.id,
-    courseId: row.course_id,
+    ...(row.course_lessons ? { courseIds: row.course_lessons.map((c) => c.course_id) } : {}),
     lessonNumber: row.lesson_number,
     seal: row.seal,
     titleZh: row.title_zh,
@@ -31,7 +35,6 @@ function fromRow(row) {
 
 function toRow(payload) {
   const row = {};
-  if (payload.courseId !== undefined) row.course_id = payload.courseId;
   if (payload.lessonNumber !== undefined) row.lesson_number = payload.lessonNumber;
   if (payload.seal !== undefined) row.seal = payload.seal;
   if (payload.titleZh !== undefined) row.title_zh = payload.titleZh;
@@ -159,8 +162,8 @@ async function syncChildren(lessonId, payload) {
 async function listPublicByCourse(courseId) {
   const { data, error } = await supabase
     .from('lessons')
-    .select(PUBLIC_LIST_COLUMNS)
-    .eq('course_id', courseId)
+    .select(`${PUBLIC_LIST_COLUMNS}, ${IN_COURSE}`)
+    .eq('in_course.course_id', courseId)
     .eq('published', true)
     .order('lesson_number', { ascending: true });
   if (error) throw error;
@@ -170,31 +173,40 @@ async function listPublicByCourse(courseId) {
 async function listPreview() {
   const { data, error } = await supabase
     .from('lessons')
-    .select(`${PUBLIC_LIST_COLUMNS}, courses(title, hsk_level)`)
+    .select(`${PUBLIC_LIST_COLUMNS}, course_lessons(courses(title, hsk_level))`)
     .eq('published', true)
     .eq('is_preview', true)
     .order('lesson_number', { ascending: true });
   if (error) throw error;
-  return data.map((row) => ({ ...fromRow(row), courseTitle: row.courses?.title, hskLevel: row.courses?.hsk_level }));
+  // Bài nằm ở nhiều khoá thì hiện tên khoá đầu tiên
+  return data.map(({ course_lessons: links, ...row }) => {
+    const course = links?.[0]?.courses;
+    return { ...fromRow(row), courseTitle: course?.title, hskLevel: course?.hsk_level };
+  });
 }
 
 async function getFullById(id) {
-  const res = await supabase.from('lessons').select('*').eq('id', id).single();
+  const res = await supabase.from('lessons').select(`*, ${WITH_COURSES}`).eq('id', id).single();
   const lesson = unwrapSingle(res);
   return attachChildren(lesson);
 }
 
 async function listAdmin() {
-  const { data, error } = await supabase.from('lessons').select(ADMIN_LIST_COLUMNS).order('lesson_number', { ascending: true });
+  const { data, error } = await supabase
+    .from('lessons')
+    .select(`${ADMIN_LIST_COLUMNS}, ${WITH_COURSES}`)
+    .order('lesson_number', { ascending: true });
   if (error) throw error;
   return data.map(fromRow);
 }
 
+// courseId null = các bài độc lập (không gắn khoá nào)
 async function listAdminByCourse(courseId) {
+  if (!courseId) return (await listAdmin()).filter((l) => !l.courseIds.length);
   const { data, error } = await supabase
     .from('lessons')
-    .select(ADMIN_LIST_COLUMNS)
-    .eq('course_id', courseId)
+    .select(`${ADMIN_LIST_COLUMNS}, ${IN_COURSE}`)
+    .eq('in_course.course_id', courseId)
     .order('lesson_number', { ascending: true });
   if (error) throw error;
   return data.map(fromRow);
@@ -231,25 +243,84 @@ async function exerciseItemsFor(lessonIds) {
   return data.map((r) => ({ id: r.id, lessonId: r.lesson_id, kind: r.kind, points: r.points }));
 }
 
+// Bài có số `lessonNumber` trong một khoá (courseId null = trong các bài độc lập)
 async function findByNumber(courseId, lessonNumber) {
-  const res = await supabase.from('lessons').select('id').eq('course_id', courseId).eq('lesson_number', lessonNumber).single();
-  return unwrapSingle(res);
+  return (await listAdminByCourse(courseId)).find((l) => l.lessonNumber === lessonNumber) || null;
+}
+
+// payload.courseIds (mảng) — hoặc payload.courseId (1 khoá, cho seed/import) — là các khoá chứa bài
+function courseIdsOf(payload) {
+  if (Array.isArray(payload.courseIds)) return payload.courseIds.filter(Boolean);
+  if (payload.courseId !== undefined) return payload.courseId ? [payload.courseId] : [];
+  return undefined;
+}
+
+// Đặt lại toàn bộ khoá chứa bài (giữ nguyên các liên kết không đổi)
+async function setCourses(lessonId, courseIds) {
+  const wanted = [...new Set(courseIds)];
+  const { error: delErr } = await supabase
+    .from('course_lessons')
+    .delete()
+    .eq('lesson_id', lessonId)
+    .not('course_id', 'in', `(${wanted.length ? wanted.join(',') : '00000000-0000-0000-0000-000000000000'})`);
+  if (delErr) throw delErr;
+  if (wanted.length) {
+    const rows = wanted.map((courseId) => ({ course_id: courseId, lesson_id: lessonId }));
+    const { error } = await supabase.from('course_lessons').upsert(rows, { onConflict: 'course_id,lesson_id', ignoreDuplicates: true });
+    if (error) throw error;
+  }
+}
+
+// Gắn nhiều bài có sẵn vào một khoá
+async function addToCourse(courseId, lessonIds) {
+  if (!lessonIds.length) return;
+  const rows = lessonIds.map((lessonId) => ({ course_id: courseId, lesson_id: lessonId }));
+  const { error } = await supabase.from('course_lessons').upsert(rows, { onConflict: 'course_id,lesson_id', ignoreDuplicates: true });
+  if (error) throw error;
+}
+
+// Gỡ bài khỏi một khoá (bài vẫn còn, các khoá khác không ảnh hưởng)
+async function removeFromCourse(courseId, lessonId) {
+  const { data, error } = await supabase.from('course_lessons').delete().eq('course_id', courseId).eq('lesson_id', lessonId).select();
+  if (error) throw error;
+  return data.length > 0;
 }
 
 async function create(payload) {
   const { data, error } = await supabase.from('lessons').insert(toRow(payload)).select().single();
   if (error) throw error;
   const lesson = fromRow(data);
+  const courseIds = courseIdsOf(payload);
+  if (courseIds?.length) await setCourses(lesson.id, courseIds);
   await syncChildren(lesson.id, payload);
   return getFullById(lesson.id);
 }
 
 async function update(id, payload) {
-  const res = await supabase.from('lessons').update(toRow(payload)).eq('id', id).select().single();
+  const row = toRow(payload);
+  const res = Object.keys(row).length
+    ? await supabase.from('lessons').update(row).eq('id', id).select().single()
+    : await supabase.from('lessons').select('*').eq('id', id).single();
   const lesson = unwrapSingle(res);
   if (!lesson) return null;
+  // Chỉ đổi khoá khi gửi courseIds; courseId đơn lẻ (seed/import) không gỡ bài khỏi các khoá khác
+  if (Array.isArray(payload.courseIds)) await setCourses(id, payload.courseIds);
   await syncChildren(id, payload);
   return getFullById(id);
+}
+
+// Xoá hẳn nhiều bài (gỡ khỏi mọi khoá) — trả về số bài đã xoá
+async function removeMany(ids) {
+  const { data, error } = await supabase.from('lessons').delete().in('id', ids).select('id');
+  if (error) throw error;
+  return data.length;
+}
+
+// Gỡ nhiều bài khỏi một khoá (bài vẫn còn)
+async function removeManyFromCourse(courseId, lessonIds) {
+  const { data, error } = await supabase.from('course_lessons').delete().eq('course_id', courseId).in('lesson_id', lessonIds).select('lesson_id');
+  if (error) throw error;
+  return data.length;
 }
 
 async function remove(id) {
@@ -268,6 +339,11 @@ module.exports = {
   listAdmin,
   listAdminByCourse,
   findByNumber,
+  setCourses,
+  addToCourse,
+  removeFromCourse,
+  removeManyFromCourse,
+  removeMany,
   create,
   update,
   remove,

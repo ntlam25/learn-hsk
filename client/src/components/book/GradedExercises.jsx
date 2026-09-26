@@ -81,6 +81,7 @@ export function GradedQuiz({ lessonId, items, number, canSubmit, onResult }) {
 export function FlashcardDeck({ lessonId, items, canSubmit = true }) {
   const { user } = useAuth();
   const [reviews, setReviews] = useState({});
+  const [loadedReviews, setLoadedReviews] = useState({}); // trạng thái lúc mở bài — chỉ dùng để xếp thứ tự thẻ
   const [flipped, setFlipped] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -92,17 +93,21 @@ export function FlashcardDeck({ lessonId, items, canSubmit = true }) {
         const map = {};
         res.data.forEach((r) => (map[r.exerciseItemId] = r.status));
         setReviews(map);
+        setLoadedReviews(map);
       })
       .catch(() => {});
   }, [lessonId, user]);
 
+  // Thẻ chưa thuộc lên trước, đã thuộc xuống cuối — xếp theo trạng thái lúc mở bài và giữ nguyên trong lúc ôn,
+  // để bấm Trước/Sau không bị nhảy thẻ khi vừa đánh dấu.
   const ordered = useMemo(() => {
-    const rank = (it) => (reviews[it.id] === 'known' ? 2 : reviews[it.id] === 'unknown' ? 0 : 1);
+    const rank = (it) => (loadedReviews[it.id] === 'known' ? 2 : loadedReviews[it.id] === 'unknown' ? 0 : 1);
     return [...items].sort((a, b) => rank(a) - rank(b));
-  }, [items, reviews]);
+  }, [items, loadedReviews]);
 
   if (!ordered.length) return null;
-  const card = ordered[Math.min(index, ordered.length - 1)];
+  const current = Math.min(index, ordered.length - 1);
+  const card = ordered[current];
   const status = reviews[card.id];
   const knownCount = ordered.filter((it) => reviews[it.id] === 'known').length;
 
@@ -119,25 +124,73 @@ export function FlashcardDeck({ lessonId, items, canSubmit = true }) {
     setIndex((i) => Math.min(i + 1, ordered.length - 1));
   }
 
+  function go(i) {
+    setFlipped(false);
+    setIndex(Math.max(0, Math.min(i, ordered.length - 1)));
+  }
+
   return (
     <>
       <h3 className="group-title">
         卡片 <span className="vi">Flashcard ôn từ vựng</span>
       </h3>
       <div className="flashcard-deck">
-        <p className="ex-desc">
-          Thẻ {index + 1}/{ordered.length} · Đã thuộc: {knownCount}/{ordered.length}
-        </p>
-        <div className={'flashcard' + (status ? ` status-${status}` : '')} onClick={() => setFlipped((f) => !f)}>
-          {!flipped ? (
-            <div className="flashcard-front hanzi">{card.prompt?.hanzi}</div>
-          ) : (
-            <div className="flashcard-back">
+        <div className="flashcard-nav">
+          <button type="button" className="flashcard-nav-btn" onClick={() => go(current - 1)} disabled={current === 0} aria-label="Thẻ trước">
+            ‹
+          </button>
+          <p className="ex-desc">
+            Thẻ {current + 1}/{ordered.length} · Đã thuộc: {knownCount}/{ordered.length}
+          </p>
+          <button
+            type="button"
+            className="flashcard-nav-btn"
+            onClick={() => go(current + 1)}
+            disabled={current === ordered.length - 1}
+            aria-label="Thẻ sau"
+          >
+            ›
+          </button>
+        </div>
+        {/* key theo thẻ: sang thẻ mới thì dựng lại ở mặt trước ngay, không chạy hiệu ứng lật về (tránh lộ nghĩa thẻ sau) */}
+        <div
+          key={card.id}
+          className={'flashcard' + (flipped ? ' flipped' : '') + (status ? ` status-${status}` : '')}
+          role="button"
+          tabIndex={0}
+          aria-label={flipped ? 'Lật về mặt chữ Hán' : 'Lật thẻ để xem phiên âm và nghĩa'}
+          onClick={() => setFlipped((f) => !f)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              setFlipped((f) => !f);
+            }
+          }}
+        >
+          <div className="flashcard-inner">
+            <div className="flashcard-face flashcard-front" aria-hidden={flipped}>
+              <div className="hanzi">{card.prompt?.hanzi}</div>
+              <span className="flashcard-hint">Bấm để lật</span>
+            </div>
+            <div className="flashcard-face flashcard-back" aria-hidden={!flipped}>
               <div className="word-pinyin">{card.prompt?.pinyin}</div>
               <div className="meaning">{card.prompt?.meaning}</div>
             </div>
-          )}
+          </div>
         </div>
+        {ordered.length > 1 && (
+          <div className="flashcard-dots">
+            {ordered.map((it, i) => (
+              <button
+                key={it.id}
+                type="button"
+                className={'flashcard-dot' + (i === current ? ' active' : '') + (reviews[it.id] ? ` ${reviews[it.id]}` : '')}
+                onClick={() => go(i)}
+                aria-label={`Thẻ ${i + 1}`}
+              />
+            ))}
+          </div>
+        )}
         <div className="flashcard-actions">
           <button type="button" className="copy-exercise-text" onClick={() => mark('unknown')}>
             Chưa thuộc
