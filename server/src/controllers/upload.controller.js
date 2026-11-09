@@ -2,7 +2,7 @@ const crypto = require('crypto');
 const path = require('path');
 const { supabase, BUCKET } = require('../config/supabase');
 
-const ALLOWED_FOLDERS = new Set(['images', 'audio', 'book-pages', 'documents']);
+const ALLOWED_FOLDERS = new Set(['images', 'audio', 'book-pages', 'documents', 'birthday']);
 
 function safeFolder(folder) {
   return ALLOWED_FOLDERS.has(folder) ? folder : 'images';

@@ -258,6 +258,25 @@ create trigger trg_lessons_updated_at
   before update on lessons
   for each row execute function set_updated_at();
 
+-- ============== birthday_wishes (cây ước nguyện ở trang /sinh-nhat-mai) ==============
+create table if not exists birthday_wishes (
+  id uuid primary key default gen_random_uuid(),
+  recipient text not null default 'mai',
+  content text not null check (char_length(content) between 1 and 200),
+  created_at timestamptz not null default now()
+);
+create index if not exists idx_birthday_wishes_recipient on birthday_wishes (recipient, created_at desc);
+alter table birthday_wishes enable row level security;
+
+-- ============== birthday_pages (nội dung trang sinh nhật, sửa ở /admin/birthday) ==============
+create table if not exists birthday_pages (
+  slug text primary key,
+  content jsonb not null default '{}'::jsonb,
+  updated_by uuid references users(id) on delete set null,
+  updated_at timestamptz not null default now()
+);
+alter table birthday_pages enable row level security;
+
 -- ============== Storage bucket cho ảnh/audio/pdf ==============
 -- Cách 1 (khuyên dùng): vào Dashboard -> Storage -> New bucket
 --   Tên: lesson-media, đánh dấu "Public bucket".

@@ -1,12 +1,13 @@
 import { useAuth } from '../context/AuthContext';
 import AppShell from './AppShell';
-import { IconClass, IconCourse, IconLesson, IconSettings, IconUsers } from './icons';
+import { IconClass, IconCourse, IconGift, IconLesson, IconSettings, IconUsers } from './icons';
 
 const NAV_ITEMS = [
   { to: '/admin', icon: IconLesson, label: 'Bài học', end: true },
   { to: '/admin/courses', icon: IconCourse, label: 'Khoá học', alsoActive: ['/lessons/'] }, // đang xem bài cũng sáng mục Khoá học
   { to: '/admin/classes', icon: IconClass, label: 'Lớp học' },
   { to: '/admin/users', icon: IconUsers, label: 'Người dùng', adminOnly: true },
+  { to: '/admin/birthday', icon: IconGift, label: 'Trang sinh nhật', adminOnly: true },
   { to: '/admin/settings', icon: IconSettings, label: 'Cài đặt', adminOnly: true },
 ];
 
@@ -17,6 +18,7 @@ const TITLE_RULES = [
   { prefix: '/admin/courses', label: 'Quản lý khoá học' },
   { prefix: '/admin/classes', label: 'Quản lý lớp học' },
   { prefix: '/admin/users', label: 'Quản lý người dùng' },
+  { prefix: '/admin/birthday', label: 'Trang sinh nhật' },
   { prefix: '/admin/settings', label: 'Cài đặt hệ thống' },
   { prefix: '/admin/account', label: 'Tài khoản của tôi' },
   { prefix: '/lessons/', label: 'Xem bài học' },

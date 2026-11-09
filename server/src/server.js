@@ -14,6 +14,7 @@ const classRoutes = require('./routes/class.routes');
 const meRoutes = require('./routes/me.routes');
 const { publicRouter: publicSettingsRoutes, adminRouter: adminSettingsRoutes } = require('./routes/settings.routes');
 const uploadRoutes = require('./routes/upload.routes');
+const { publicRouter: publicBirthdayRoutes, adminRouter: adminBirthdayRoutes } = require('./routes/birthday.routes');
 
 // Khởi tạo client Supabase sớm để lỗi thiếu biến môi trường (SUPABASE_URL,
 // SUPABASE_SERVICE_ROLE_KEY) hiện ra ngay khi start thay vì khi có request đầu tiên.
@@ -49,6 +50,9 @@ app.use('/api/settings', publicSettingsRoutes);
 app.use('/api/admin/settings', adminSettingsRoutes);
 
 app.use('/api/admin/uploads', uploadRoutes);
+
+app.use('/api/birthday', publicBirthdayRoutes);
+app.use('/api/admin/birthday', adminBirthdayRoutes);
 
 // Xử lý lỗi tập trung — mọi controller async ném lỗi sẽ rơi vào đây (nhờ asyncHandler)
 app.use((err, req, res, next) => {
