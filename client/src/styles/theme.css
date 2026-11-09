@@ -3185,3 +3185,56 @@ a.course-chip:hover {
     display: none;
   }
 }
+
+/* ===== Trang quản trị: nội dung trang sinh nhật (/admin/birthday) ===== */
+.bday-admin .bday-admin-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.bday-admin .bday-admin-inline input { flex: 1; min-width: 0; }
+.bday-admin-letter {
+  flex: 0 0 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--seal);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+.bday-admin-photo {
+  display: grid;
+  grid-template-columns: 240px 1fr auto;
+  gap: 16px;
+  align-items: start;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.bday-admin-photo:first-of-type { padding-top: 4px; }
+.bday-admin-photo-fields label { margin-bottom: 8px; }
+.bday-admin-photo-actions { display: flex; gap: 6px; align-items: center; }
+.bday-admin-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+.bday-admin .bday-admin-file {
+  flex-direction: row;
+  margin: 0;
+  cursor: pointer;
+}
+.bday-admin-wishes { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.bday-admin-wishes li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+.bday-admin-wishes time { color: var(--muted); font-size: 0.78rem; white-space: nowrap; }
+@media (max-width: 720px) {
+  .bday-admin-photo { grid-template-columns: 1fr; }
+  .bday-admin-wishes li { flex-direction: column; gap: 4px; }
+}

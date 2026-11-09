@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Routes, Route, Navigate, Outlet, useLocation, useParams } from 'react-router-dom';
 import api from './api/client';
 import Navbar from './components/Navbar';
@@ -24,6 +24,10 @@ import JoinClassPage from './pages/JoinClassPage';
 import SettingsPage from './pages/admin/SettingsPage';
 import UsersManagerPage from './pages/admin/UsersManagerPage';
 import ProtectedRoute from './components/ProtectedRoute';
+
+// Trang mừng sinh nhật (độc lập, tải riêng chunk để không làm nặng app chính)
+const BirthdayMaiPage = lazy(() => import('./pages/BirthdayMaiPage'));
+const BirthdayEditorPage = lazy(() => import('./pages/admin/BirthdayEditorPage'));
 
 // Link cũ /admin/classes/:id/report → tab Báo cáo của trang lớp
 function ClassReportRedirect() {
@@ -59,6 +63,16 @@ export default function App() {
   return (
     <div className="app-shell">
       <Routes>
+        {/* Trang toàn màn hình, không sidebar/navbar, không cần đăng nhập */}
+        <Route
+          path="/sinh-nhat-mai"
+          element={
+            <Suspense fallback={null}>
+              <BirthdayMaiPage />
+            </Suspense>
+          }
+        />
+
         <Route element={<PublicLayout />}>
           <Route path="/lessons/:id" element={<LessonViewPage />} />
           <Route path="/" element={<LessonListPage />} />
@@ -106,6 +120,16 @@ export default function App() {
             element={
               <ProtectedRoute allowedRoles={['admin']}>
                 <SettingsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/birthday"
+            element={
+              <ProtectedRoute allowedRoles={['admin']}>
+                <Suspense fallback={<div className="page-loading">Đang tải…</div>}>
+                  <BirthdayEditorPage />
+                </Suspense>
               </ProtectedRoute>
             }
           />
